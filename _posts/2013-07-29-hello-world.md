@@ -5,6 +5,7 @@ date: 2013-07-29 09:15
 comments: true
 categories: 
 ---
+
 Hi, This a demo post of [Logdown](http://logdown.com). 
 
 Logdown use Markdown as main syntax, you can find more example by reading this [document on Wikipedia](http://en.wikipedia.org/wiki/Markdown)
@@ -19,7 +20,7 @@ Logdown also support drag & drop image uploading ( required Beta / Premium membe
 
 ### Plain Code
 
-```
+```ruby
 puts "Hello World!"
 ```
 
@@ -40,7 +41,7 @@ puts "Hello World!"
 
 ### Mathjax
 
-```mathjax
+```
 x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 ```
 

@@ -13,9 +13,9 @@ categories:
 
 另一个跟Octopress比较不同的是Markdown的解析器. Octopress用的是Liquid, 而Hexo用的是Marked. 大部分情况下都没什么差别. 而之所以发现这个不同是因为刚开始的generate的时候不断报错
 
-```undefined:11
-if ((typeof _context !== "undefined" && typeof _context.> posts !== "undefined
-                                                        ^
+```ruby
+undefined:11
+if ((typeof _context !== "undefined" && typeof _context.> posts !== "undefined                                               ^
 SyntaxError: Unexpected token >
     at Object.Function (unknown source)
     at createRenderFunc (/usr/local/Cellar/node/0.8.20/lib/node_modules/hexo/node_modules/swig/lib/swig.js:44:10)
@@ -30,6 +30,7 @@ SyntaxError: Unexpected token >
 
 
 ```{{ > posts}}``
+
 吐血啊, 找了我老久. 原来是这个东西忘了套上 ```{% raw %} {{> posts}} {% endraw %}```
 在Octopress(Liquid)里没套上的话则直接无视掉, 而Hexo(Marked)则直接嘣掉.
 
