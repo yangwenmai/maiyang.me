@@ -9,15 +9,15 @@ markdown: redcarpet
 
 excerpt_separator: <!-- more -->
 
-title : 进击的xp!
-tagline: OpenCV OpenCL 
+title : 奋斗吧!骚年！
+tagline: maiyang
 author : 
-  name : pengx17
-  email : pengxiao@outlook.com
-  github : https://github.com/pengx17
-  weibo : http://www.weibo.com/1773498301/profile
-  linkedin : http://cn.linkedin.com/pub/peng-xiao/40/92a/636
-  qq : 248901881
+  name : maiyang
+  email : 
+  github : https://github.com/yangwenmai
+  weibo : 
+  linkedin : 
+  qq : 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
 # Most places will/should use BASE_PATH to make the urls
@@ -26,11 +26,11 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://pengx17.me
+production_url : http://maiyang.github.io
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
-pengx :
+maiyang :
   version : 0.3.0
 
   # All links will be namespaced by BASE_PATH if defined.
@@ -83,7 +83,7 @@ pengx :
   comments :
     provider : duoshuo
     duoshuo :
-      short_name : pengx17
+      short_name : maiyang
    
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.
