@@ -1,10 +1,16 @@
 ---
 layout: post
 title: '苹果推送异常处理'
+keywords: certificate_unknown
 date: 2014-08-29 10:20
+description: '苹果推送异常处理'
+categories: [Archive]
+tags: [certificate_unknown]
 comments: true
-categories: 
+group: archive
+icon: file-o
 ---
+
 # 异常"Received fatal alert: certificate_unknown"
 
 从网络上搜索此异常，给出最多的解答是证书导出不正确。根据说明的步骤和方法再次导出后，我分别使用IntelliJ idea和Eclipse开发工具进行iOS push的时候，程序一直报错
