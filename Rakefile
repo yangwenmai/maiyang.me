@@ -96,7 +96,7 @@ task :page do
     post.puts "title: \"#{title}\""
     post.puts 'group: static'
     post.puts "---"
-    post.puts "{% include pengx/setup %}"
+    post.puts "{% include maiyang/setup %}"
   end
 end # task :page
 
@@ -145,7 +145,7 @@ namespace :theme do
           page.puts "layout: default"
           page.puts "---"
         end 
-        page.puts "{% include pengx/setup %}"
+        page.puts "{% include maiyang/setup %}"
         page.puts "{% include themes/#{theme_name}/#{File.basename(filename)} %}" 
       end
     end

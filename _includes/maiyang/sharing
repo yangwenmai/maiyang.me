@@ -1,0 +1,8 @@
+{% if site.safe and site.maiyang.sharing.provider and page.maiyang.sharing != false %}
+
+{% case site.maiyang.sharing.provider %}
+{% when "custom" %}
+  {% include custom/sharing %}
+{% endcase %}
+
+{% endif %}

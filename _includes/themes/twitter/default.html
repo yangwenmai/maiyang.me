@@ -25,14 +25,14 @@
     <link href="/css/typo.css" rel="stylesheet">
     <link href="/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
     <link href="/css/syntax.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/css/pengx.css" rel="stylesheet">
+    <link href="/css/maiyang.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400' rel='stylesheet' type='text/css'>
     
     <!-- javascript files -->
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/js/pengx.js"></script>
+    <script type="text/javascript" src="/js/maiyang.js"></script>
     
     <link rel="shortcut icon" href="/image/favicon.ico">
     <!-- Le fav and touch icons -->
@@ -43,8 +43,8 @@
     -->
 
     <!-- atom & rss feed -->
-    <link href="{{ BASE_PATH }}{{ site.pengx.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
-    <link href="{{ BASE_PATH }}{{ site.pengx.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+    <link href="{{ BASE_PATH }}{{ site.maiyang.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="{{ BASE_PATH }}{{ site.maiyang.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
 
     <script type="text/javascript">
     </script>
@@ -64,7 +64,7 @@
             <ul class="nav">
               {% assign pages_list = site.pages %}
               {% assign group = 'navigation' %}
-              {% include pengx/navigation_list %}
+              {% include maiyang/navigation_list %}
             </ul>
           </div>
         </div>
@@ -81,6 +81,6 @@
         </small>
       </div>
     </div>
-    {% include pengx/analytics %}
+    {% include maiyang/analytics %}
   </body>
 </html>
