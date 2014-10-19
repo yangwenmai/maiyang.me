@@ -7,6 +7,8 @@ categories: [ruby, java, app版本比较]
 ---
 ###手机应用应用版本比较（Java）###
 	
+<!-- more -->
+
 	/**
 	 * 版本比较
 	 * @param version1

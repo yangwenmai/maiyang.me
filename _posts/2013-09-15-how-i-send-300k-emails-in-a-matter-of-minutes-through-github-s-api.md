@@ -33,6 +33,7 @@ categories:
 
 我在130个问题(4分钟)后停止了这个脚本，并且立即开始发送道歉还给Github支持一封邮件，我还没有得到答案。我通过他们的服务器在短短几分钟内就发送了大约30万封邮件。如果我没有看IRC，我肯定会在一小时内发送大约400万封邮件给460个人。
 
+<!-- more -->
 > Let me assure you that i’m extremely sorry about this incident. I know that things like this can interrupt daily workflows quite a bit, even if getting rid of those mails is not a Herculean task. I’d be rather upset if a repo maintainer pulled something like this on me. Please accept my deepest apologies.
 
 让我向你保证，这次事件我感到非常抱歉。我知道这次事件或多或少中断日常工作流程，即使如果摆脱这些邮件也不是一个困难的任务。如果一个资源库主要维护者做类似的事给我，我会相当心烦。请接受我深深的道歉。

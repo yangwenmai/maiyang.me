@@ -42,6 +42,7 @@ AMD的GPU是由多个Comput Unit（CU，运算单元）组成的，CU的数目�
 
 不同的CU之间是独立运行的；但是对于同一个CU里的PE所执行的每个work-item，则是按SIMD的模式执行。
 
+<!-- more -->
 如Figure 1：
 ![NGCN_CU][NGCN_CU]
 <div class="text-center">Figure 1, Evergreen GPU架构图，via[[1]]</div>

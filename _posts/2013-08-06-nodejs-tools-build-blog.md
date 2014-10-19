@@ -13,6 +13,8 @@ categories:
 
 另一个跟Octopress比较不同的是Markdown的解析器. Octopress用的是Liquid, 而Hexo用的是Marked. 大部分情况下都没什么差别. 而之所以发现这个不同是因为刚开始的generate的时候不断报错
 
+<!-- more -->
+
 ```
 undefined:11
 if ((typeof _context !== "undefined" && typeof _context.> posts !== "undefined

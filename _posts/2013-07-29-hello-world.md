@@ -14,6 +14,8 @@ Logdown also support drag & drop image uploading ( required Beta / Premium membe
 
 ![](http://logdown.com/images/logo.png)
 
+<!-- more -->
+
 ## Bloging with code snippet:
 
 `inline code`

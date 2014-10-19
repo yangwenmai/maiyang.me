@@ -28,6 +28,8 @@ categories:
 
 	代码如下：
 
+<!-- more -->
+
 	 `public static String getPicType(String path) {
 		try {
 			// 从指定路径下读取一个文件
