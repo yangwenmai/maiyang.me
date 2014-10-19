@@ -1,0 +1,14 @@
+{% if site.safe and site.maiyang.analytics.provider and page.maiyang.analytics != false %}
+
+{% case site.maiyang.analytics.provider %}
+{% when "google" %}
+  {% include maiyang/analytics-providers/google %}
+{% when "getclicky" %}
+  {% include maiyang/analytics-providers/getclicky %}
+{% when "mixpanel" %}
+  {% include maiyang/analytics-providers/mixpanel %}
+{% when "custom" %}
+  {% include custom/analytics %}
+{% endcase %}
+
+{% endif %}
