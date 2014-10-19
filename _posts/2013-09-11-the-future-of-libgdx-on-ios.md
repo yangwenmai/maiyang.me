@@ -35,6 +35,8 @@ We will start packaging the RoboVM backend starting with 0.9.9, which should now
 > 如果您目前正工作在一个游戏上，你应该避免更新Xamarin到最新的iOS版本。坚持libgdx0.9.8或0.9.9的到来，或任何在这两个版本之间的nightly release..如果您已经更新Xamarin的iOS，你可以降级到一个工作版本（6.2.7.1 PKG）在这个问题上讨论。
 > 我们将从0.9.9开始包装RoboVM后端，现在应该有奇偶校验功能与Xamarin后端，谢谢由RoboVM的创作者Niklas Therning付出的巨大努力。你应该没有很大的问题就能够“移植”你的游戏（因人而异）。
 
+<!-- more -->
+
 > Here are the pros and cons of this change:
 
 下面是这一改变的利弊：

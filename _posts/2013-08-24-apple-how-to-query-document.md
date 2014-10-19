@@ -47,6 +47,7 @@ match search term 必须完全匹配搜索词
 
 ![](http://book.qiniudn.com/helpread.png)
 
+<!-- more -->
 值得注意的是，标题下面这几样：
 
 Inherits from 继承关系，继承自

@@ -32,6 +32,9 @@ UILabel和字体大小匹配
     
     [self.view addSubview:label2];
 }`
+
+<!-- more -->
+
 5.  （第五集：UIButton）
 UIButton继承自UIControl,UIControl又继承自UIView，所以UIButton的属性也包括UIView和UIControl的。
 UIButton有几种类型：Custom、Rounded Rect、Detail Disclosure、Info Light、Info Dark、Add Contact.

@@ -16,7 +16,9 @@ adobe官方关于[OBJECT tag syntax说明](http://helpx.adobe.com/flash/kb/objec
 了解清楚解决方案中的核心用法之后继续下一步就水到渠成了。
 
 主要分为以下几个步骤：
+
 <!--more-->
+
 1. 创建android项目
 2. 创建一个用于播放flash的activity
 ```

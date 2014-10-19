@@ -30,6 +30,7 @@ SSO授权优势：不需要重复输入新浪微博用户名、密码，只需�
 
 *3、注意事项*
 
+<!-- more -->
 
 - SSO登录方式必须要在onActivityResult中配置。
 - `com.weibo.sdk.android.WeiboException: {"error":"User does not exists!","error_code":20003,"request":`

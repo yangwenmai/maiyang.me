@@ -24,6 +24,7 @@ Previously we leveraged [Xamarin iOS] plus a port of IKVM by Michael Bayne of Pl
 
 > RoboVM fixes many of these issues. The JNI bridge is considerably faster, there are less layers of abstractions, all of the Android runtime classes are available, it will allow us to write games in Scala and JVM languages other than Java, and best of all, it’s entirely open-source under Apache 2. Libgdx development on iOS thus becomes essentially free, apart from the Apple tax (developer license, need for a Mac). Note that Trillian AB will eventually have to start looking into options to further fund RoboVM. If we get a chance as a community to help fund RoboVM, we should definitely do so. RoboVM is shaping up to be an excellent tool, and i think it’s worthwhile to support, just like Xamarin.
 
+<!-- more -->
 RoboVM修复许多这些问题。JNI桥接迅速被考虑，有少许抽象层，所有Android运行时类都可用，它将允许我们用Scala和其他类似JAVA的JVM语言写游戏，最好的它使基于Apache 2完全开源的。libgx开发在ios上终于是免费的，分离来自于苹果的重负(开发授权，需要一台Mac)。注意Trillian AB 终于将不得不开始寻找更进一步的RoboVM基金会选项。如果我们有机会作为一个社区去帮助RoboVM基金会,我们应该那样去做。RoboVM正在被塑造成一个极好的工具，并且我认为它是值得支持的，就像Xamarin。
 
 > Niklas Therning from Trillian AB, creator of RoboVM, has laid the foundation for our RoboVM backend by porting our Xamarin/IKVM based libgdx backend over to RoboVM. We’ve since been fixing up many issues and missing features, and are reaching feature parity with the Android backend. You can follow the [todo list on Github](https://github.com/libgdx/libgdx/blob/master/backends/gdx-backend-robovm/todos.txt).

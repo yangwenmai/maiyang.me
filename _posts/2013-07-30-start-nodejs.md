@@ -18,7 +18,7 @@ NodeJS现在已经广为流传，我也来凑个热闹，若有不妥，敬请�
 从搜索引擎中去搜素NodeJS,了解它的分布（包括官方网站、百度百科、第三方NodeJS社区）。
 
 二、
-
+<!-- more -->
 在google中搜索nodejs出来的第一条记录是：Node入门» 一本全面的Node.js教程 - The Node Beginner Book（http://www.nodebeginner.org/），我真正学习的第一步就是从这里开始的。
 
 根据自己的需要去选择学习吧。

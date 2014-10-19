@@ -17,6 +17,7 @@ Gradle是构建和依赖管理系统，用Groovy和一些特定域的语言sugar
 
 下面是定义了一个libgdx工程在Grdle的许多依赖是什么，也用于FreeType和Bullet扩展（还没有GWT和iOS）。
 
+<!-- more -->
 > `project(":core") {
     apply plugin: "java"
  
