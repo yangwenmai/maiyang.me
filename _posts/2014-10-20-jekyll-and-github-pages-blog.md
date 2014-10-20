@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 'jekyll配合github pages搭建个人博客'
+title: '我和jekyll、github的悲惨幸福故事'
 keywords: 个人博客, jekyll, github pages
 date: 2014-10-20 23:59
-description: 'jekyll配合github pages搭建个人博客'
+description: '某一天，我发现我喜欢上了github,随后就有了我和jekyll、github的悲惨幸福故事'
 categories: [jekyll, github pages, 个人博客, 总结]
 tags: [jekyll,github pages, 个人博客]
 comments: true
@@ -19,7 +19,7 @@ icon: file-o
 回到今天的正题，技术圈一度风靡的jekyll配合github pages服务搭建自己的博客，可以绑定自己的域名，可以自定义样式，默认使用github提供的[maiyang](http://maiyang.github.io)二级域名。
 
 怎么开始呢？
-
+<!-- more -->
 首先，你得申请一个github账号，然后你再生成一个项目，进入setting，即可将本项目作为一个github pages来使用了，成功之后大约10分钟，你就可以访问setting中指定的xxx.github.io。风格简洁。
 
 其次，你可能已经看到很多人各式各样的基于github.io的风格，其中那肯定有你喜欢的风格，你只需要去fork一份他的博客项目代码，做部分修改调整即可发布上线了，是不是非常简单呢。这里推荐(https://github.com/pengx17/pengx17.github.io)/(https://github.com/codepiano/codepiano.github.com)
