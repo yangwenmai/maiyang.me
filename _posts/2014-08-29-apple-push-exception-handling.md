@@ -4,7 +4,7 @@ title: '苹果推送异常处理'
 keywords: certificate_unknown
 date: 2014-08-29 10:20
 description: '苹果推送异常处理'
-categories: [Archive]
+categories: [苹果推送, push, 异常]
 tags: [certificate_unknown]
 comments: true
 group: archive
