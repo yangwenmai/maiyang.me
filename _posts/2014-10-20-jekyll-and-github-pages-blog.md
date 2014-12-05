@@ -19,6 +19,7 @@ icon: file-o
 回到今天的正题，技术圈一度风靡的jekyll配合github pages服务搭建自己的博客，可以绑定自己的域名，可以自定义样式，默认使用github提供的[maiyang](http://maiyang.github.io)二级域名。
 
 怎么开始呢？
+
 <!-- more -->
 首先，你得申请一个github账号，然后你再生成一个项目，进入setting，即可将本项目作为一个github pages来使用了，成功之后大约10分钟，你就可以访问setting中指定的xxx.github.io。风格简洁。
 
