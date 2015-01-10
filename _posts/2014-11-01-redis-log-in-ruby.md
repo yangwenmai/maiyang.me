@@ -25,7 +25,10 @@ gem 'redis_logger', :git => "git://github.com/hellolucky/redis_logger.git"
 sidekiq-redis-logger适用于ruby sinatra
 打印log如下：
 >
-
+[Redis] command=SMEMBERS args="user:1"
+[Redis] call_time=1.22 ms
+[Redis] command=SMEMBERS args="user:1"
+[Redis] call_time=1.21 ms
 
 redis_logger适用于ruby on rails
 打印log如下：
