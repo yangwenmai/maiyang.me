@@ -16,7 +16,9 @@ icon: file-o
 然后在命令行终端执行：
 
 `brew install nginx`
+
 ....
+
 ----
 
 通过homebrew，nginx默认被安装在`/usr/local/Cellar/nginx/1.6.2`, conf文件默认被安装在`/usr/local/etc/nginx/nginx.conf`
