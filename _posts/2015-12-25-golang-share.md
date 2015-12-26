@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 'Golang 技术分享'
+title: 'Golang 开发技术分享'
 keywords: Golang, 分享, share
 date: 2015-12-25 15:33
-description: 'Golang技术分享'
+description: 'Golang 开发技术分享'
 categories: [Golang, 分享, share]
 tags: [Golang, 分享, share]
 comments: true
@@ -11,6 +11,7 @@ group: archive
 icon: file-o
 ---
 
+概要说明
 ....
 ----
 
@@ -63,18 +64,23 @@ icon: file-o
 ### Golang开发工具 ###
 
 > [liteide](https://github.com/visualfc/liteide)
+
 > sublime text2 ，golang插件
+> 
 > vim，golang插件 vim-go
+> 
 > intellij idea，[golang插件](https://plugins.jetbrains.com/plugin/5047?pr=idea&showAllUpdates=true)
+> 
 > webstorm，[golang插件](https://plugins.jetbrains.com/plugin/5047?pr=idea&showAllUpdates=true)
+> 
 > atom
 
 以上开发工具，我都使用过，目前一直在用的vim和WebStorm。
 
 ### golint 代码规范 ###
 
-安装[golint]
+安装[golint](https://github.com/golang/lint)
 
 > go get -u github.com/golang/lint/golint
 
-[golint 配置](https://github.com/golang/lint)
+
