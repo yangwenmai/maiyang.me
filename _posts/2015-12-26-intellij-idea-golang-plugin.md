@@ -95,9 +95,14 @@ WebStorm是 jetbrains 公司开发的一款IDE工具，跟大名鼎鼎的Intelli
 
 注意，WebStorm 的Go imports file 功能也是需要goimports被正确安装后才可以使用的。
 
-golint 代码规范，目前还未应用到WebStorm中去。
+### Intellij IDEA 15 ###
 
-在Terminal中，可以使用。
+Golang 插件已经支持Intellij IDEA 15的支持，最给力的莫过于增加了 Debugger， QuickDoc。
+![debugging a Go project](https://cloud.githubusercontent.com/assets/140920/11431045/f5eb28ac-94a0-11e5-83bb-1b00f7419ea3.png),还有更多其他功能支持，自己去发现吧。
+
+Golang 代码规范golint检查，目前还不知道怎么整合进WebStorm/Intellij IDEA 15中去，有朋友知道的，请告诉我。
+
+目前我们可以在Terminal中使用。
 
 安装[golint](https://github.com/golang/lint)
 
