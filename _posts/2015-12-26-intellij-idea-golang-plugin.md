@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 'Golang 开发工具'
+title: 'Golang 开发必备'
 keywords: Golang, 工具, IDE, IntelliJ idea, WebStorm, vim
 date: 2015-12-26 22:43
-description: 'Golang 开发工具'
+description: 'Golang 开发必备'
 categories: [Golang, 工具]
 tags: [Golang, 工具]
 comments: true
