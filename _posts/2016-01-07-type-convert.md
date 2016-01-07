@@ -1,11 +1,11 @@
 ---
 layout: post
-title: '类型转换'
-keywords: 类型转换
+title: 'Golang开发之类型转换'
+keywords: Golang, 类型转换
 date: 2016-01-07 09:00
-description: '类型转换'
-categories: [dev]
-tags: [类型, 转换]
+description: 'Golang 类型转换'
+categories: [dev, golang]
+tags: [类型, 转换, Golang]
 comments: true
 group: archive
 icon: file-o
