@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 'Golang Unicode字符串转义引起的问题'
+title: 'Golang Unicode字符串转义神坑'
 keywords: podcast
 date: 2016-01-09 01:00
-description: 'Golang Unicode字符串转义引起的问题'
+description: 'Golang Unicode字符串转义神坑'
 categories: [golang, unicode]
 tags: [golang, unicode, 问题]
 comments: true
