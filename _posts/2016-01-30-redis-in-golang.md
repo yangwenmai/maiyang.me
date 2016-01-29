@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 'Golang redis.v3源码分析'
+title: 'Golang redis.v3源代码分析'
 keywords: redis, golang
 date: 2016-01-30 00:00
-description: 'reids golang客户端源码分析'
+description: 'reids golang客户端源代码分析'
 categories: [gifts]
 tags: [gifts]
 comments: true
