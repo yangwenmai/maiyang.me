@@ -39,14 +39,14 @@ icon: file-o
 ## redis client初始化 ##
 
 该redis客户端支持连接池的，基本的redis初始化代码如下图：
-![](redis_init.png)
+![NewClient](http://mmbiz.qpic.cn/mmbiz/2jnWxKdgFb9k6QJiamAcT39l64bJe1N5cy4zj5JPKZmCMib5BWJplUbscXibr7MyLT5Lsle3wfNsYwD8l8mvPia4bQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
 
 ### 初始化配置选项 ###
 
 NewClient的参数是redis.Options，
 
 参数说明如下图：
-![](redis_options.png)
+![Options](http://mmbiz.qpic.cn/mmbiz/2jnWxKdgFb9k6QJiamAcT39l64bJe1N5cYAFMajAXd0FDolJqciaYJfUrP8f8xvBFl5752SyMwKz5EiaGE82xwQ5A/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
 
 ### 案例 ###
 
@@ -55,7 +55,7 @@ NewClient的参数是redis.Options，
 当我们在初始化redis client的时候，配置了Logger之后，在进行redis操作的时候就会按照其logger格式化输出。
 
 代码如下图：
-![](redis_logger.png)
+![redis_logger](http://mmbiz.qpic.cn/mmbiz/2jnWxKdgFb9k6QJiamAcT39l64bJe1N5csmSzz1U2cxcv1cxorCTtib9GTDEHDusElELAyyicfEt8pBATN7zk0vIg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
 
 通过logger输出，会打印
 
@@ -65,7 +65,7 @@ NewClient的参数是redis.Options，
 
 因为不管是什么类型的cmd，都会调用reset(), 基本默认值是nil
 
-![](redis_cmd.png)
+![redis_cmd](http://mmbiz.qpic.cn/mmbiz/2jnWxKdgFb9k6QJiamAcT39l64bJe1N5cJiaqDIj05agTlGBw5yFriccKeI2WUCEtmiay3b8Z7XQ8UCrzYukZJ9vJQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
 
 不同的cmd有不同的默认值：0, false, "", nil,
 
@@ -83,5 +83,5 @@ NewClient的参数是redis.Options，
 
 详细对比cmd对应实现了的方法，其实StringCmd比StatusCmd多以下方法`Int64()`,`Uint64()`,`Float64()`,他们只是将String转换成对应的类型而已。
 
-![](redis_get.png)
-![](redis_status.png)
+![redis_get](http://mmbiz.qpic.cn/mmbiz/2jnWxKdgFb9k6QJiamAcT39l64bJe1N5cbs2yswUtMLoiaNmkibrVY7ThHiaJSKF0ibGCezyt3LFWr0qsLl2fXbWdOQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
+![redis_status](http://mmbiz.qpic.cn/mmbiz/2jnWxKdgFb9k6QJiamAcT39l64bJe1N5cKuRswaHfFr8r02BCDnRJzhtI5bfZsYFUHyibTk07qIxicd4C5mjCEHvg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
