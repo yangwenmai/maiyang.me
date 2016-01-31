@@ -32,10 +32,6 @@ icon: file-o
 
 说到这里，大家以为我是软文了，其实真不是的。能专注做一件事很不简单，何况作者专注了这么长时间，作者是90后哦，看过作者的简介，我相信没人不佩服他。
 
-----
-
-回归正题
-
 ## redis client初始化 ##
 
 该redis客户端支持连接池的，基本的redis初始化代码如下图：
@@ -48,7 +44,7 @@ NewClient的参数是redis.Options，
 参数说明如下图：
 ![Options](http://mmbiz.qpic.cn/mmbiz/2jnWxKdgFb9k6QJiamAcT39l64bJe1N5cYAFMajAXd0FDolJqciaYJfUrP8f8xvBFl5752SyMwKz5EiaGE82xwQ5A/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
 
-### 案例 ###
+### 例子分析 ###
 
 今天换一个例子来说明，String（字符串）
 
