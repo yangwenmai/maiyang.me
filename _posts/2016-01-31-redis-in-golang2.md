@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 'Golang redis.v3 源代码分析升级版'
+title: 'Golang redis.v3 源代码再分析'
 keywords: redis, golang
 date: 2016-01-31 09:30
-description: 'reids golang客户端源代码分析升级版'
+description: 'reids golang客户端源代码再分析'
 categories: [golang]
 tags: [redis]
 comments: true
@@ -16,7 +16,7 @@ icon: file-o
 昨天的文章发出之后，有读者反馈
 >你是明白了，你还要让所有用户都打开源码才知道你说的啥么... 还是在手机上..... 建议把涉及的关键源码也贴出来 手机就无障碍理解你的意思了。
 
-再次感谢这位朋友，是你的反馈让我重新审视昨天发的文章。在手机上确实无法看到关键代码，很难理解文中的源码分析，所以今天马上进行升级，希望今天的部分可以让大家无障碍的阅读和学习，且在文章内容上也做了进一步的深入。
+再次感谢这位朋友，是你让我重新审视昨天发的文章。在手机上无法看到关键代码，很难理解文中的源码分析，所以今天再进行分析，希望今天的部分可以让大家无障碍的阅读和学习，且在文章内容上也做了进一步的深入。
 
 <!-- more -->
 
@@ -25,20 +25,25 @@ icon: file-o
 >
 >[《Redis设计与实现-第一版》](http://origin.redisbook.com/)，注：虽然是基于2.6的，但是完全不影响我们对redis基本数据结构的学习，暂时不想买书的朋友，可以看这本。而且还有[基于2.6的源代码注释](https://github.com/huangz1990/annotated_redis_source)
 >
->[《Redis设计与实现-第二版》](http://redisbook.com/)
+>[《Redis设计与实现-第二版》](http://redisbook.com/),[基于3.0的源代码注释](https://github.com/huangz1990/redis-3.0-annotated)
+
 
 以上两本书，你都值得拥有。
 
 说到这里，大家以为我是软文了，其实真不是的。能专注做一件事很不简单，何况作者专注了这么长时间，作者是90后哦，看过作者的简介，我相信没人不佩服他。
 
-## 初始化 ##
+----
+
+回归正题
+
+## redis client初始化 ##
 
 该redis客户端支持连接池的，基本的redis初始化代码如下图：
 ![](redis_init.png)
 
 ### 初始化配置选项 ###
 
-NewClient的参数是redis.Options，里面的参数有`Addr`,`Password`,`PoolSize`,`IdleTimeout`,`DialTimeout`,`ReadTimeout`,`WriteTimeout`,`Logger`。
+NewClient的参数是redis.Options，
 
 参数说明如下图：
 ![](redis_options.png)
