@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Golang redis.v3源代码分析升级版'
+title: 'Golang redis.v3 源代码分析升级版'
 keywords: redis, golang
 date: 2016-01-31 09:30
 description: 'reids golang客户端源代码分析升级版'
