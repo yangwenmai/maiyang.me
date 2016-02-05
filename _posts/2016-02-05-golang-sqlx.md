@@ -30,7 +30,7 @@ http://stackoverflow.com/questions/20271123/how-to-execute-an-in-lookup-in-sql-u
 
 在答案中有一个最优的通用方法，database/sql扩展库：https://github.com/jmoiron/sqlx
 
->ids := []int{1, 2, 3}
+ids := []int{1, 2, 3}
 q,args,err := sqlx.In("SELECT id,username FROM users WHERE id IN(?);", ids) //creates the query string and arguments
 //you should check for errors of course
 q = sqlx.Rebind(sqlx.DOLLAR,q) //only if postgres
