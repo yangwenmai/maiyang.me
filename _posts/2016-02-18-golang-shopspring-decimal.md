@@ -29,50 +29,48 @@ icon: file-o
 
 ### 案例分析 ###
 
-1. 第一个例子
+**第一个例子**
 
-`
 var f1 float32 = 9.90
 fmt.Println(f1*100)
 var f2 float64 = 9.90
 fmt.Println(f2*100)
-`
+
 得到的结果是：
-`
+
 989.99994
 990
-`
+
 
 如果你是开发新手，是不是感觉到很奇葩，很诡异，如此简单的运算，计算机居然给出来这样的结果。
 
-2. 第二个例子
+**第二个例子**
 
 >在字符串与浮点类型之间转换
 
 由于浮点数有精度的问题，精度不一样，ParseFloat 和 FormatFloat 可能达不到互逆的效果。
 
-`
+
 s := strconv.FormatFloat(1234.5678, 'g', 8, 32)
 fmt.Println(s)
 fmt.Println(strconv.ParseFloat(s, 32))
 s = strconv.FormatFloat(1234.5678, 'g', 8, 64)
 fmt.Println(s)
 fmt.Println(strconv.ParseFloat(s, 64))
-`
+
 得到的结果是
-`
+
 1234.5677
 1234.5677490234375 <nil>
 1234.5678
 1234.5678 <nil>
-`
+
 
 通过上面的例子，大家会不会觉得float64就是解决float32的精度问题呢？float64就基本安全了呢？
 
 如果你真那么认为的话，只能用前国家主席的话来说你了。
 
-3. 最后一个例子
-
+**最后一个例子**
 
 var n float64 = 0
 for i := 0; i < 1000; i++ {
@@ -84,7 +82,7 @@ fmt.Println(n)
 
 9.999999999999831
 
-http://play.golang.org/p/TQBd4yJe6B
+可运行地址：http://play.golang.org/p/TQBd4yJe6B
 
 你还会不会觉得float64就安全了呢？
 
