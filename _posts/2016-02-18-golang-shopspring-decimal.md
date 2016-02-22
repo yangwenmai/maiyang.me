@@ -25,11 +25,11 @@ icon: file-o
 
 今天的主题是浮点类型的精度问题。
 
->本篇文章所涉及的代码都是基于Golang的，不知道Golang是什么的话，就google吧。
+本篇文章所涉及的代码都是基于Golang的，不知道Golang是什么的话，就google吧。
 
 ### 案例分析 ###
 
-**第一个例子**
+第一个例子
 
 var f1 float32 = 9.90
 fmt.Println(f1*100)
@@ -44,9 +44,9 @@ fmt.Println(f2*100)
 
 如果你是开发新手，是不是感觉到很奇葩，很诡异，如此简单的运算，计算机居然给出来这样的结果。
 
-**第二个例子**
+第二个例子
 
->在字符串与浮点类型之间转换
+在字符串与浮点类型之间转换
 
 由于浮点数有精度的问题，精度不一样，ParseFloat 和 FormatFloat 可能达不到互逆的效果。
 
@@ -70,7 +70,7 @@ fmt.Println(strconv.ParseFloat(s, 64))
 
 如果你真那么认为的话，只能用前国家主席的话来说你了。
 
-**最后一个例子**
+最后一个例子
 
 var n float64 = 0
 for i := 0; i < 1000; i++ {
@@ -100,18 +100,18 @@ fmt.Println(n)
 
 安装
 
->go get github.com/shopspring/decimal
+go get github.com/shopspring/decimal
 
 用法
 
-	package main
+package main
 
-	import (
+import (
     "fmt"
     "github.com/shopspring/decimal"
-	)
+)
 
-	func main() {
+func main() {
     price, err := decimal.NewFromString("136.02")
     if err != nil {
         panic(err)
@@ -133,7 +133,7 @@ fmt.Println(n)
     fmt.Println("Taxes:", total.Sub(preTax))                // Taxes: 37.482861375
     fmt.Println("Total:", total)                            // Total: 459.824961375
     fmt.Println("Tax rate:", total.Sub(preTax).Div(preTax)) // Tax rate: 0.08875
-	}
+}
 
 更多针对此库的分析，且看后文。
 
