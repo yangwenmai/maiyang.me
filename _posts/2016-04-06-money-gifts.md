@@ -5,7 +5,7 @@ keywords: 赞赏
 date: 2016-04-06 20:45
 description: '拿到原创之后的第十二天，我又拿到了赞赏'
 categories: [golang]
-tags: [golang， database]
+tags: [golang, int32]
 comments: true
 group: archive
 icon: file-o
