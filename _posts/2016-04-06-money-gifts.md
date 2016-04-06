@@ -1,7 +1,7 @@
 ---
 layout: post
-title: '我也有了赞赏'
-keywords: 赞赏
+title: '我的文章也可以收费了'
+keywords: 赞赏, int32
 date: 2016-04-06 20:45
 description: '拿到原创之后的第十二天，我又拿到了赞赏'
 categories: [golang]
