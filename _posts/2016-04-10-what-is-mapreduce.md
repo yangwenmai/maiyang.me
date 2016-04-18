@@ -50,6 +50,13 @@ Hadoop是根据Google公司发表的MapReduce和Google文件系统的论文自�
 2. [MapReduce 论文](http://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf)
 3. [MapReduce 论文(中文)](http://blog.bizcloudsoft.com/wp-content/uploads/Google-MapReduce%E4%B8%AD%E6%96%87%E7%89%88_1.0.pdf)
 
-### 写在最后 ###
+----
 
-茶歇驿站，一直在坚持，一直也在提高博文的质量，谢谢大家一直以来的关注和建议。现在你们可以直接给我提意见了，我也会保证每天都上去看看的，不然遗漏了大家的消息，就愧对这来之不易的原创、留言功能了。
+茶歇驿站
+
+一个让你可以在茶歇之余，停下来看一看，里面的内容可以给你一些帮助。
+
+这里的内容主要是团队管理，个人管理，后台技术相关，其他个人杂想。
+
+![茶歇驿站二维码]()
+
