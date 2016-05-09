@@ -1,11 +1,11 @@
 ---
 layout: post
-title: 'Golang之Schedule'
-keywords: golang, schedule
-date: 2016-04-12 20:00
-description: 'Golang 任务调度源码分析'
+title: 'golang net/http close'
+keywords: golang, http, close
+date: 2016-05-04 20:00
+description: 'golang net/http close'
 categories: [golang]
-tags: [golang, schedule]
+tags: [golang, http]
 comments: true
 group: archive
 icon: file-o
@@ -13,7 +13,9 @@ icon: file-o
 
 
 
+
 <!-- more -->
+
 
 ### 延伸阅读 ###
 
