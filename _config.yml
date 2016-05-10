@@ -2,7 +2,7 @@ permalink: /:categories/:year/:month/:day/:title
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 auto: true
-pygments: true
+highlighter: rouge
 paginate: 10
 # enable github favored Markdown
 markdown: kramdown
