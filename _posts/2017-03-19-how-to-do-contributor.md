@@ -2,7 +2,7 @@
 layout: post
 title: '如何成为开源项目的Contributor'
 keywords: 开源, Pull Request, github, TiDB, Contributor
-date: 2017-03-18 07:00
+date: 2017-03-19 23:00
 description: '为开源项目提交PR'
 categories: [开源]
 tags: [习惯, github, TiDB, Contributor]
@@ -84,7 +84,7 @@ case types.KindNull:
 	return
 `
 
-如果你是现在获取 TiDB master 分支代码的话，应该能看到以下信息：
+如果你是现在获取 TiDB master 分支代码的话，`git log`应该能看到以下信息：
 
 `
 ...
@@ -93,6 +93,8 @@ case types.KindNull:
 `
 
 修复之后，就是提交 bug 了。
+
+整个流程是这样的：
 
 1. 先 fork TiDB 项目到自己的 Github Repository。
 2. 本地拉取自己 fork 的 TiDB 项目。
@@ -103,7 +105,7 @@ case types.KindNull:
 7. 坐等 merge （还有一系列的流程要走-不过活跃的项目速度比你想象的要快）。
 
 我在这个过程中学到的：
-1. 对项目要足够理解，不理解不要紧，有多人review
+1. 对项目要足够理解，不理解不要紧，至少有多人review
 2. 代码实现，特别是 bugfix，更应该有 test case。
 3. CLA
 
@@ -114,8 +116,7 @@ Github 有一套代码 merge 流程，以下是我对它的简单理解：
 3. `Review required`，单单这一项就要过几轮。我的这个 bugfix 经过了3个人。
 	At least one approved review is required by reviewers with write access.
 
-另外，我还看到了这样的词语`LGTM`,`PTAL`。他们分别是什么意思呢？感觉很多东西都够我深入学习了解的。
-
+另外，我还看到了这样的词语`LGTM`,`PTAL`。
 LGTM: looks-good-to-me，表示你的代码审查通过了。
 
 ###总结###
@@ -124,7 +125,7 @@ LGTM: looks-good-to-me，表示你的代码审查通过了。
 2. 知道怎么样提交PR
 3. 变量命名规范，代码注释，单元测试（特别是这个）
 4. CI 自动化构建检查
-5. 开源项目的 Contributor 授权
+5. 开源项目的 Contributor 授权（CLA）
 
 ### 延伸阅读 ###
 
