@@ -2,7 +2,7 @@
 layout: post
 title: '限流:漏桶算法和令牌桶算法'
 keywords: 限流, 漏桶算法, 令牌桶算法
-date: 2017-05-29 07:00:00
+date: 2017-05-28 17:50:00
 description: '什么是限流，限流有哪些可用算法？'
 categories: [技术, 算法]
 tags: [算法]
