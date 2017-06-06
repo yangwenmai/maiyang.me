@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 'Golang redis.v3 源代码分析之3'
+title: 'gopkg.in/redis.v3 源码分析'
 keywords: redis, golang
 date: 2017-06-06 23:45
-description: 'redis golang 客户端源代码分析之3'
+description: 'redis golang 客户端源码分析之3'
 categories: [golang]
 tags: [redis,golang]
 comments: true
@@ -11,7 +11,7 @@ group: archive
 icon: file-o
 ---
 
-	本文耗时60分钟，阅读需要5分钟。
+	本文耗时60分钟，阅读需要10分钟。
 
 ----
 
