@@ -3,7 +3,7 @@ layout: post
 title: 'Golang redis.v3 源代码再分析'
 keywords: redis, golang
 date: 2016-01-31 09:30
-description: 'reids golang客户端源代码再分析'
+description: 'redis golang客户端源代码再分析'
 categories: [golang]
 tags: [redis]
 comments: true
