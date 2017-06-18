@@ -81,3 +81,16 @@ NewClient的参数是redis.Options，
 
 ![redis_get](http://mmbiz.qpic.cn/mmbiz/2jnWxKdgFb9k6QJiamAcT39l64bJe1N5cbs2yswUtMLoiaNmkibrVY7ThHiaJSKF0ibGCezyt3LFWr0qsLl2fXbWdOQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
 ![redis_status](http://mmbiz.qpic.cn/mmbiz/2jnWxKdgFb9k6QJiamAcT39l64bJe1N5cKuRswaHfFr8r02BCDnRJzhtI5bfZsYFUHyibTk07qIxicd4C5mjCEHvg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
+
+----
+
+**茶歇驿站**
+
+一个让你可以在茶歇之余，停下来看一看，里面的内容或许对你有一些帮助。
+
+这里的内容主要是团队管理，个人管理，后台技术相关，其他个人杂想。
+
+![茶歇驿站二维码](http://oqos7hrvp.bkt.clouddn.com/blog/tech_tea.jpg)
+
+当然，你觉得对你有帮助，也可以给我打赏。
+![打赏](http://oqos7hrvp.bkt.clouddn.com/blog/wxpay.png)
