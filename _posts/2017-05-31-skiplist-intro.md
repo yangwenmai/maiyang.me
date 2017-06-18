@@ -57,7 +57,7 @@ icon: file-o
 
 这里的内容主要是团队管理，个人管理，后台技术相关，其他个人杂想。
 
-![茶歇驿站二维码](http://ww4.sinaimg.cn/large/824dcde4gw1f358o5j022j20by0bywf8.jpg)
+![茶歇驿站二维码](http://oqos7hrvp.bkt.clouddn.com/blog/tech_tea.jpg)
 
 当然，你觉得对你有帮助，也可以给我打赏。
-![打赏](http://wx4.sinaimg.cn/large/824dcde4gy1fet6crbuxbj20yi1auaej.jpg)
+![打赏](http://oqos7hrvp.bkt.clouddn.com/blog/wxpay.png)
