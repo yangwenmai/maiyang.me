@@ -1,9 +1,9 @@
 ---
 layout: post
-title: '一小时入门 golang'
-keywords: redis, golang
-date: 2017-06-19 22:20
-description: '一小时入门 golang'
+title: '一小时入门 golang QA'
+keywords: redis, golang, QA
+date: 2017-07-11 08:20
+description: '一小时入门 golang QA'
 categories: [golang]
 tags: [golang]
 comments: true
@@ -11,7 +11,7 @@ group: archive
 icon: file-o
 ---
 
-	本文耗时x分钟，阅读需要x分钟。
+	本文耗时30分钟，阅读需要5分钟。
 
 ----
 
