@@ -1,30 +1,60 @@
 ---
 layout: post
 title: '记使用proxy_pass时遇到的一个关于路径中传参的一个有趣问题'
-keywords: nginx, lua, proxy_pass
+keywords: nginx, lua, proxy_pass, openresty
 date: 2017-08-06 07:40
 description: '记使用proxy_pass时遇到的一个关于路径中传参的一个有趣问题'
 categories: [nginx]
-tags: [nginx, lua]
+tags: [nginx, lua, openresty]
 comments: true
 group: archive
 icon: file-o
 ---
 
-本文转发自openresty讨论区：[记使用proxy_pass时遇到的一个关于路径中传参的一个有趣问题](https://groups.google.com/forum/#!topic/openresty/5j2cxTl_Cj0)
-因众所周知的原因，我把它的相关内容转发到这里，希望对大家能有所帮助。
+前几天我们新开发了一个服务，需要将之前的几个接口转发到新服务的新接口上，很自然的我们只需要做一次统一转发处理接口。
+
+我们是基于 Nginx+Lua+Openresty 构建的统一接口网关，所以处理这个问题非常简便，只需要在nginx conf中针对相应接口做一次转发即可，这里使用到 location URL 规则匹配和 proxy_pass 。
+
+但是当我设置 location 匹配规则之后(因为有多个接口，所以匹配规则是前缀匹配)，因为在转发之前，我们还有一个逻辑是处理请求的，所以调用了 lua 插件，但是就因为 lua 插件里面对于 proxy_pass 的处理，导致不能转发完整 URL 以及 URL 后面的 query 参数。
+
+举个例子：
+
+location /old_service/v1/old_api/ {
+    rewrite_by_lua_file "rule.lua";
+    proxy_pass http://new_server/new_service/v1/module/;
+}
+
+接口：
+/old_service/v1/old_api/get_info->/new_service/v1/module/get_info;
+/old_service/v1/old_api/query_info->/new_service/v1/module/query_info;
+
+有问题的时候：
+new_service 接收到的接口是：/new_service/v1/module 报404-找不到相应的接口。
+
+问题就出在：rewrite_by_lua_file "rule.lua";
+
+<!-- more -->
+
+搜索查找到这篇文章，知道了其中的缘由了。
+
+来自 openresty 讨论区：[记使用proxy_pass时遇到的一个关于路径中传参的一个有趣问题](https://groups.google.com/forum/#!topic/openresty/5j2cxTl_Cj0)
+
+以下是讨论详细内容：
 
 Tom:
 hi，章老师，同学们，大家好
 
 最近在用proxy_pass时，遇到一个比较有趣的事。
 1.   
-1.1location /proxy/lua {
-        set_by_lua_file $proxy_server /code/lua/server.lua;                                                                                                           
+1.1
+    
+    location /proxy/lua {
+        set_by_lua_file $proxy_server /code/lua/server.lua;                                   
         proxy_pass $proxy_server;
     } 
 
 /code/lua/server.lua文件内容：
+
 local url = "tom.test.web.com/proxy/lua"
 return url
 
@@ -34,6 +64,7 @@ return url
 
 然后把lua文件修改为：
 1.2.
+
 local url = "tom.test.web.com"
 return url
 
@@ -42,16 +73,21 @@ return url
 
 不解，遂继续以下试验，不用lua：
 2.   
-2.1   location /proxy/lua {                                                                                                
+2.1   
+    
+    location /proxy/lua {                                                     
         proxy_pass tom.test.web.com;
     } 
 
 发起请求：http://localhost/proxy/lua?name=tom&age=20
 远程机器上查看Access日志："GET /proxy/lua?name=tom&age=20 HTTP/1.0"，参数传递过来了。
 
-2.2 location /proxy/lua {                                                                                                
+2.2 
+
+    location /proxy/lua {                                                     
         proxy_pass tom.test.web.com/proxy/lua;
-    } 
+    }
+
 发起请求：http://localhost/proxy/lua?name=tom&age=20
 监控日志："GET /proxy/lua?name=tom&age=20 HTTP/1.0"   参数传递过来了。
 
@@ -60,18 +96,23 @@ return url
 然后觉得可能是变量问题，继续用Nginx变量重新进行试验：
 
 3. 
-3.1    location /proxy/lua {      
-        set $proxy_server "tom.test.web.com/proxy/lua";                                                                                 
+3.1    
+
+    location /proxy/lua {      
+        set $proxy_server "tom.test.web.com/proxy/lua";    
         proxy_pass $proxy_server;
     } 
 
 发起请求：http://localhost/proxy/lua?name=tom&age=20
 监控远程机器日志："GET /proxy/lua HTTP/1.0"          参数没有传过来
 
-3.2    location /proxy/lua {      
+3.2    
+
+    location /proxy/lua {      
         set $proxy_server "tom.test.web.com";                                                                                 
         proxy_pass $proxy_server;
-    } 
+    }
+
 发起请求：http://localhost/proxy/lua?name=tom&age=20
 监控远程机器日志："GET /proxy/lua?name=tom&age=20 HTTP/1.0"       参数传过来了
 
@@ -79,23 +120,31 @@ return url
 故又进行了如下试验：
 加参数进行试验：
 4.
-4.1.location /proxy/lua {      
+4.1.
+
+    location /proxy/lua {      
         set $proxy_server "tom.test.web.com/proxy/lua?name=tom&age=20";                                                                                 
         proxy_pass $proxy_server;
-    } 
+    }
+
 发起请求：http://localhost/proxy/lua?name=tom&age=20
 监控远程机器日志："GET /proxy/lua?name=tom&age=20 HTTP/1.0"
 
-4.2.location /proxy/lua {      
-        set $proxy_server "tom.test.web.com?name=tom&age=20";                                                                                 
+4.2.
+
+    location /proxy/lua {      
+        set $proxy_server "tom.test.web.com?name=tom&age=20";              
         proxy_pass $proxy_server;
-    } 
+    }
+
 发起请求：http://localhost/proxy/lua?name=tom&age=20
 监控远程机器日志："GET /proxy/lua?name=tom&age=20 HTTP/1.0"
 4.3
-location /proxy/lua {                                                                                     
+
+    location /proxy/lua {                                                                                     
         proxy_pass tom.test.web.com?name=tom&age=20;
-    } 
+    }
+
 发起请求：http://localhost/proxy/lua?name=tom&age=20
 监控远程机器日志：请求未过来，页面400 Bad Request
 
@@ -110,12 +159,23 @@ location /proxy/lua {
 
 麻烦了解的同学详细解释下。
 
-刘永明：proxy_pass是会把$request_uri补上的；4.3 的写法本身是无法通过-t检查的吧 ？  你做了那么多测试，干脆也把post做下吧？
+----
 
-Tom:正常通过检查的，我用的版本号：openresty/1.5.11.1
+刘永明：
+
+proxy_pass是会把$request_uri补上的；4.3 的写法本身是无法通过-t检查的吧 ？  你做了那么多测试，干脆也把post做下吧？
+
+----
+
+Tom:
+
+正常通过检查的，我用的版本号：openresty/1.5.11.1
 嗯，但是通过变量设置proxy_pass的URL时，却没有把传过来的参数补上，这块和非变量设置的URL有差异，我查阅了下Nginx的源码，没有发现这块有啥区别，想咨询下深入研究源码的同学，帮解答一下.
 
+----
+
 Zexuan Luo:
+
 关于第一个问题：
 这部分代码逻辑，位于 http/modules/ngx_http_proxy_module.c#ngx_http_proxy_create_request
 
@@ -166,9 +226,11 @@ SO 上有一个相关的讨论：http://stackoverflow.com/questions/8130692/with
 关于第二个问题：
 再看看回答第一个时贴出的代码，你会发现，所谓的拷贝参数，就是把 ?xxx 这部分内容 copy 到 proxy_pass 字面量上去。
 所以配置
-location /proxy {                                                          
-    proxy_pass http://localhost:8080/test?a=c;                             
-}
+
+    location /proxy {                                                          
+        proxy_pass http://localhost:8080/test?a=c;                             
+    }
+
 然后请求
 curl -i "localhost:8080/proxy?a"
 在 access.log 里会看到
