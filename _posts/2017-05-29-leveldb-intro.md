@@ -47,6 +47,8 @@ LevelDB本身只是一个lib库，在源码目录make编译即可，然后在我
 - 当memtable插入的数据到了一个界限之后，会转为Immutable memtable, 由新的memtable支持写入操作.同时，leveldb在后台会通过调度程序将 Immutable memtable dump到磁盘上的sstable文件中。
 - sstable内部的数据是key有序的。由Immutable memtable不断dump出来的 sstable文件越来越多，会进行compact操作，形成新的level的sstable文 件。
 
+<!-- more -->
+
 ## 详细分析
 
 leveldb 运行后会在目录下产生几个文件，简要说下各个文件的含义：

@@ -84,6 +84,8 @@ Go 的发展历程
 
 现在也有集成度比较高的，比方说：gometalinter
 
+<!-- more -->
+
 一个简单的 Go 程序：
 
 ```golang

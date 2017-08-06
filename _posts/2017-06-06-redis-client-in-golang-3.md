@@ -51,6 +51,8 @@ redis: you open connections too fast (last error: xxx)
 
 备注:GitHub 上已经没有3.1.4.1的分支了，那我直接给大家贴源码吧。
 
+<!-- more -->
+
 ````go
 // 来源于:pool.go
 // Establish a new connection
