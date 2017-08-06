@@ -48,6 +48,8 @@ icon: file-o
 3. 提交`.travis.yml`到 Github，自动触发持续集成，
 4. 你可以到[travis-ci-status](https://travis-ci.org/yangwenmai/ratelimit) 查看结果
 
+<!-- more -->
+
 下面给一个我的`.travis.yml`例子:
 ```yml
 language: go # 声明构建语言环境

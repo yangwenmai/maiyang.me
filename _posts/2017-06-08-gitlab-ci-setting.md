@@ -35,6 +35,8 @@ icon: file-o
 
 所以，我们应该把这个选项都全部勾选上，用于要求被Merge的代码一定是通过  build 的。
 
+<!-- more -->
+
 ## .gitlab-ci.yml 文件
 
 `.gitlab-ci.yml` 示例,拿到这个文件之后，只需要修改一下REPO_NAME，即可将build状态应用到你自己的项目中了。
