@@ -207,6 +207,8 @@ chown influxdb:influxdb /mnt/db
 
 接下来将简单介绍一下 InfluxDB 的使用。
 
+![InfluxDB 基础关系](http://upload-images.jianshu.io/upload_images/1508430-d932d8d72f4e41e7.png)
+
 ## InfluxDB 使用 ##
 
 InfluxDB 启动成功后，在命令行中运行`influx`即可进入命令行模式。
