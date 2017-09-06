@@ -28,19 +28,19 @@ MySQL 当前主要的运行版本是 5.5 5.6 5.7，下面的实战主要以 5.5 
 ```sql
 # 主键
 CREATE TABLE `test_key_len` (
-  `name` varchar(2000) NOT NULL DEFAULT '',
+  `name` varchar(769) NOT NULL DEFAULT '',
   PRIMARY KEY (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 # 索引
 CREATE TABLE `test_key_len` (
-  `name` varchar(2000) NOT NULL DEFAULT '',
+  `name` varchar(769) NOT NULL DEFAULT '',
   KEY `idx_name` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 # 唯一索引
 CREATE TABLE `test_key_len` (
-  `name` varchar(2000) NOT NULL DEFAULT '',
+  `name` varchar(769) NOT NULL DEFAULT '',
   UNIQUE KEY `idx_name` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 ```
@@ -73,8 +73,10 @@ CREATE TABLE `test_key_len` (
 
 另外：
 1. 注意错误信息的长度单位是 bytes ，所以 column 能支持的长度跟你创建的字符集也有关系。
-utf8mb4 支持4字节，utf8 支持双字节
+utf8mb4 支持4字节，utf8 支持3字节（区分范围就是 769 和 1025 ）
 2. 如果是其他存储引擎的话，这个长度也是不一样的。
+
+如果是 MyISAM 的 `Specified key was too long; max key length is 1000 bytes`，区分范围就是 1000/4 或者 1000/3。
 
 ----
 
