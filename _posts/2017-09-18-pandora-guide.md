@@ -4,7 +4,7 @@ title: 'Pandora 大数据平台的入门与实战'
 keywords: Pandora, bigdata, tsdb, qiniu, grafana, logkit
 date: 2017-09-18 06:10
 description: '心动不如行动，轻轻松松带你玩转大数据，Pandora 大数据平台的入门与实战，包括基本介绍，操作指引，问题总结等'
-categories: [pandora, bigdata]
+categories: [pandora]
 tags: [pandora, bigdata, tsdb, logkit, grafana]
 comments: true
 group: archive
