@@ -3,7 +3,7 @@ layout: post
 title: 'logkit 进阶玩法'
 keywords: Pandora, bigdata, TSDB, qiniu, Grafana, logkit, LogDB, Kibana
 date: 2017-09-24 08:10
-description: '本文主要是对 logkit 的使用过程中的问题总结（QA-也算是本文的特点吧）。
+description: '本文是对 logkit 的使用过程中的问题总结（QA-也算是本文的特点吧）。
 '
 categories: [pandora]
 tags: [Pandora, bigdata, TSDB, LogDB, logkit, Grafana, Kibana]
@@ -16,25 +16,9 @@ icon: file-o
 
 ----
 
-## 题外话 ##
-
->我在 Google 上搜索 logkit 时，看到了下面这张图。
-
-![pic](http://oqos7hrvp.bkt.clouddn.com/blog/logkit_logo.png)
-
-佐世保最有名气的 [Logkit 汉堡](http://logkit.jp)，既然已经上了图，也不在乎再多上两张。
-
-![门店](http://oqos7hrvp.bkt.clouddn.com/blog/logkit_01.jpg)
-![LogKit 门店](http://oqos7hrvp.bkt.clouddn.com/blog/logkit_02.jpg)
-![LogKit 汉堡包](http://oqos7hrvp.bkt.clouddn.com/blog/logkit_03.jpg)
-
-不喜勿喷。
+*logkit(https://github.com/qiniu/logkit) 非常强大，一定要抽时间阅读分析源码。*
 
 ----
-
->言归正传，Pandora 平台提供的酷炫远不仅于此。
-
-## logkit 详解 ##
 
 ### 前情回顾 ###
 
@@ -51,9 +35,7 @@ icon: file-o
 - [logkit 主配置](https://github.com/qiniu/logkit/wiki/logkit主配置文件)
 - [Runner 数据采集配置](https://github.com/qiniu/logkit/wiki/Runner之数据采集配置)
 
-----
-
-你以为 logkit 只能进行构建日志检索系统吗？那你就错了。
+>Pandora 平台提供的酷炫远不仅于此，你以为 logkit 只能用于日志上报构建日志检索系统吗？那你就错了。
 
 **logkit 还可以被用来打点数据**
 
@@ -61,9 +43,11 @@ icon: file-o
 
 ----
 
+## logkit 详解 ##
+
 ### logkit 介绍 ###
 
->[logkit](https://github.com/qiniu/logkit) 是七牛 Pandora 开发的一个通用的日志收集工具，可以将不同数据源的数据方便的发送到 Pandora进行数据分析，除了基本的数据发送功能，logkit 还有容错、并发、监控、删除等功能。
+>[logkit](https://github.com/qiniu/logkit) 是七牛 Pandora 开发的一个通用的日志收集工具，可以将不同数据源的数据方便的发送到 Pandora 进行数据分析，除了基本的数据发送功能，logkit 还有容错、并发、监控、删除等功能。
 
 ![logkit_arch](http://oqos7hrvp.bkt.clouddn.com/blog/pandora_logkit_runner.png)
 
@@ -96,7 +80,7 @@ logkit 的 `README.md` 对于安装和使用的介绍非常详尽，我就不再
 
 为什么要打点到工作流？
 
->经济实惠（性价比高）。
+>经济实惠（性价比高），方便后续数据转换或存储保留。
 
 其实不同方式的打点，基本上没有太大差别，只需要进行 Runner 配置即可，接下来我就以文件和 MySQL 两种数据源的打点方式来简单介绍吧。
 
@@ -187,6 +171,8 @@ Q5: Runner 配置修改了批量上报间隔 `batch_interval` 为 300s ，但是
 
 ![batch_interval](http://oqos7hrvp.bkt.clouddn.com/blog/tsdb_export_internal_300s.jpg)
 
+>工作流的导出数据可能存在延时，具体延迟可以在工作流的导出任务中看到明细。
+
 Q6: 工作流导出数据到 TSDB 报错 `E7103: Timestamp of points are too far from` ?
 
 >时间戳可能是离现在太久，比如是一年前的；或者是未来的的时间戳。
@@ -227,15 +213,28 @@ Q10: 写数据到文件了，为什么没有上报呢？
 
 ----
 
-## 总结 ##
-
 *logkit(https://github.com/qiniu/logkit) 非常强大，一定要抽时间分析源码(已经从阅读要升华为分析了)。*
+
+## 题外话 ##
+
+>我在 Google 上搜索 logkit 时，看到了下面这张图。
+
+![pic](http://oqos7hrvp.bkt.clouddn.com/blog/logkit_logo.png)
+
+佐世保最有名气的 [Logkit 汉堡](http://logkit.jp)，既然已经上了图，也不在乎再多上两张。
+
+![门店](http://oqos7hrvp.bkt.clouddn.com/blog/logkit_01.jpg)
+![LogKit 门店](http://oqos7hrvp.bkt.clouddn.com/blog/logkit_02.jpg)
+![LogKit 汉堡包](http://oqos7hrvp.bkt.clouddn.com/blog/logkit_03.jpg)
+
+不喜勿喷。
 
 ## 参考资料 ##
 
 1. https://qiniu.github.io/pandora-docs/
 2. https://github.com/qiniu/logkit/wiki
 3. http://roodo.iguang.tw/mikiis/archives/40210071.html
+
 
 ----
 
