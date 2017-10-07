@@ -146,10 +146,10 @@ Q0: 在 Grafana 监控系统中如何按照特定字段进行排序？
 
 >tsdb 默认是按照 time 来进行的，但是你再导出数据时，可以进行指定。但是有一个前提要求是：你使用logkit收集时指定你所需要按照排序的字段为date就可以了。
 
-如果你在导出时找不到你想要选择的排序字段，如下图
+>如果你在导出时找不到你想要选择的排序字段，如下图
 ![tsdb_export_time](http://oqos7hrvp.bkt.clouddn.com/blog/tsdb_export_stat_date.jpg)
 
-那么你应该检查你的上报字段是不是 date 类型（必须是date类型，或者long类型才能作为时间戳）。
+>那么你应该检查你的上报字段是不是 date 类型（必须是date类型，或者long类型才能作为时间戳）。
 
 Q1: 怎么给上报的字段指定类型？
 
@@ -169,9 +169,8 @@ Q4: Runner 配置修改需要重启 logkit 吗？
 
 Q5: Runner 配置修改了批量上报间隔 `batch_interval` 为 300s ，但是 Grafana 展示数据显示不到 300s 呢？
 
-![batch_interval](http://oqos7hrvp.bkt.clouddn.com/blog/tsdb_export_internal_300s.jpg)
-
 >工作流的导出数据可能存在延时，具体延迟可以在工作流的导出任务中看到明细。
+![batch_interval](http://oqos7hrvp.bkt.clouddn.com/blog/tsdb_export_internal_300s.jpg)
 
 Q6: 工作流导出数据到 TSDB 报错 `E7103: Timestamp of points are too far from` ?
 
@@ -221,7 +220,7 @@ Q10: 写数据到文件了，为什么没有上报呢？
 
 ![pic](http://oqos7hrvp.bkt.clouddn.com/blog/logkit_logo.png)
 
-佐世保最有名气的 [Logkit 汉堡](http://logkit.jp)，既然已经上了图，也不在乎再多上两张。
+佐世保最有名气的 [LOG KIT 汉堡](http://logkit.jp)，既然已经上了图，也不在乎再多上两张。
 
 ![门店](http://oqos7hrvp.bkt.clouddn.com/blog/logkit_01.jpg)
 ![LogKit 门店](http://oqos7hrvp.bkt.clouddn.com/blog/logkit_02.jpg)
@@ -234,7 +233,6 @@ Q10: 写数据到文件了，为什么没有上报呢？
 1. https://qiniu.github.io/pandora-docs/
 2. https://github.com/qiniu/logkit/wiki
 3. http://roodo.iguang.tw/mikiis/archives/40210071.html
-
 
 ----
 
