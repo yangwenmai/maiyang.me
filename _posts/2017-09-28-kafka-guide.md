@@ -15,7 +15,7 @@ icon: file-o
 
 ----
 
-*kafka(http://kafka.apache.org/) ，非常强大，也是当前日志收集的不二之选*
+*kafka(http://kafka.apache.org/) 非常强大，也是当前日志收集的不二之选*
 
 ----
 
@@ -27,7 +27,8 @@ icon: file-o
 ## 单机单点安装测试 ##
 
 第一步：下载解压
-下载地址 ：http://kafka.apache.org/downloads.html
+
+>[下载地址](http://kafka.apache.org/downloads.html) http://kafka.apache.org/downloads.html
 
 > tar -xzf kafka_2.11-0.11.0.1.tgz
 > cd kafka_2.11-0.11.0.1
@@ -35,23 +36,22 @@ icon: file-o
 第二步：启动 zookeeper-server 和 kafka-server
 
 > bin/zookeeper-server-start.sh config/zookeeper.properties
-> 
 
 ---
 
 > bin/kafka-server-start.sh config/server.properties
 
-关于server.properties配置文件请参考《server.properties配置文件参数说明》
+关于 `server.properties` 配置文件请参考后文：《*server.properties配置文件参数说明*》
 
-第三步：新建一个topic
-创建一个名为“test”的Topic，只有一个分区和一个备份：
+第三步：新建一个 topic
+创建一个名为 “test” 的 Topic，只有一个分区和一个备份：
 
 > bin/kafka-topics.sh --create \
                       --zookeeper localhost:2181 \
                       --replication-factor 1 --partitions 1 \
                       --topic test
 
-创建好之后，可以通过运行以下命令，查看已创建的topic信息：
+创建好之后，可以通过运行以下命令，查看已创建的 topic 信息：
 
 > bin/kafka-topics.sh --list --zookeeper localhost:2181
 test
@@ -191,6 +191,8 @@ my test message 4
 
 >./bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic test --from-beginning --consumer-property group.id=local
 
+----
+
 ## server.properties配置文件参数说明 ##
 
 每个kafka broker中配置文件server.properties默认必须配置的属性如下：
@@ -213,6 +215,8 @@ log.cleaner.enable=false
 zookeeper.connect=localhost:2181
 zookeeper.connection.timeout.ms=1000000
 ```
+
+----
 
 **参数说明**
 
@@ -256,6 +260,8 @@ zookeeper.connection.timeout.ms=1000000
 |default.replication.factor =1 |是否允许自动创建topic，若是false，就需要通过命令创建topic|
 |num.partitions =1 |每个topic的分区个数，若是在topic创建时候没有指定的话会被topic创建时的指定参数覆盖|
 
+----
+
 **kafka中Leader,replicas配置参数**
 
 |参数 | 说明|
@@ -278,19 +284,23 @@ zookeeper.connection.timeout.ms=1000000
 |leader.imbalance.check.interval.seconds =300 | 检查leader是否不平衡的时间间隔
 |offset.metadata.max.bytes |客户端保留offset信息的最大空间大小|
 
+----
+
 **kafka中zookeeper参数配置**
 
-|参数  说明
+|参数| 说明|
+|----|----|
 |zookeeper.connect = localhost:2181  |zookeeper集群的地址，可以是多个，多个之间用逗号分割hostname1:port1,hostname2:port2,hostname3:port3|
 |zookeeper.session.timeout.ms=6000 |ZooKeeper的最大超时时间，就是心跳的间隔，若是没有反映，那么认为已经死了，不易过大|
 |zookeeper.connection.timeout.ms =6000 |ZooKeeper的连接超时时间|
 |zookeeper.sync.time.ms =2000  |ZooKeeper集群中leader和follower之间的同步时间|
 
+----
 
 ## 参考资料 ##
 
-1. http://kafka.apache.org/
-2. https://kafka.apache.org/quickstart
+1. [Kafka](http://kafka.apache.org/)
+2. [Kafka quickstart](https://kafka.apache.org/quickstart)
 3. [kafka quickstart 的中文翻译](https://www.kancloud.cn/hanxt/elk/159232)
 4. [如何为Kafka集群选择合适的Topics/Partitions数量？](https://www.iteblog.com/archives/1805.html)
 5. [create-multiple-consumers-in-kafka-in-command-line](https://stackoverflow.com/questions/26289518/create-multiple-consumers-in-kafka-in-command-line)
