@@ -16,7 +16,7 @@ icon: file-o
 
 ----
 
-*logkit(https://github.com/qiniu/logkit) 非常强大，大家可以抽空阅读分析一下源码。*
+*logkit(https://github.com/qiniu/logkit) 非常强大，一定要抽时间阅读分析源码。*
 
 <!-- more -->
 
