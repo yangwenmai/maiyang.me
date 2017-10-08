@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 'Kafka 入门实战'
+title: 'Kafka 入门指南'
 keywords: Kafka
 date: 2017-09-28 08:50
-description: 'Kafka 入门'
+description: 'Kafka 入门指南'
 categories: [kafka]
 tags: [Kafka]
 comments: true
@@ -11,11 +11,11 @@ group: archive
 icon: file-o
 ---
 
-	本文是 Kafka 本地使用方法汇总。
+	本文是 Kafka 的入门指南。
 
 ----
 
-*kafka(http://kafka.apache.org/) 非常强大，也是当前日志收集的不二之选*
+*kafka(http://kafka.apache.org/) 非常强大，应用场景也很多，性能很好。*
 
 ----
 

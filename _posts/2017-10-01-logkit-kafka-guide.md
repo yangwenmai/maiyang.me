@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'logkit 从 Kafka 读取数据的玩法'
+title: 'logkit 进阶玩法之 Grok 解析 Kafka 数据流'
 keywords: Pandora, bigdata, TSDB, qiniu, Grafana, logkit, LogDB, Kibana, Kafka
 date: 2017-10-01 08:58
 description: '本文是对 logkit 从 Kafka 读取数据的使用过程的问题总结。
@@ -12,7 +12,7 @@ group: archive
 icon: file-o
 ---
 
-    本文是我在使用 logkit 从 Kafka 读取数据的使用过程中的问题总结，希望可以帮助到大家。
+    本文是我在使用 logkit Grok 解析 Kafka 数据流的过程中的问题总结，希望可以帮助到大家。
 
 ----
 
@@ -35,6 +35,51 @@ icon: file-o
 另外也可以在工作流里面直接写 SQL 来解析处理，当然如果你要考虑成本和便携性的话，就使用 logkit 解析。
 
 今天的文章主要是在使用 grok 解析的过程中遇到的问题总结。
+
+```conf
+{
+  "name": "logkit.runner.20170930122759",
+  "reader": {
+    "kafka_groupid": "logkit_kfk_nginx_xxx_consumer",
+    "kafka_topic": "nginx_xxx",
+    "kafka_zookeeper": "xxxx:2181,xxxx:2181,xxxx:2181",
+    "mode": "kafka",
+    "name": "logkit.runner.20170930122759",
+    "read_from": "oldest",
+    "runner_name": "logkit.runner.20170930122759"
+  },
+  "parser": {
+    "grok_custom_patterns": "KFK_NGINX_XXX \"(?:%{NOTSPACE:remote_addr}?|%{DATA})\" \"(?:%{NOTSPACE:http_x_forwarded_for}?|%{DATA})\" \"(?:%{NOTSPACE:geoip_country_code}?|%{DATA})\" \"(?:%{USER:remote_user}?|%{DATA})\" \"(?:%{HTTPDATE:time_local:date}?|%{DATA})\" \"(?:%{WORD:verb} %{NOTSPACE:request}(?: HTTP/%{NUMBER:http_version})?|%{DATA})\" \"(?:%{NUMBER:status:long}?|%{DATA})\" \"(?:%{NUMBER:body_bytes_sent:long}?|%{DATA})\" \"(?:%{NOTSPACE:http_referer}?|%{DATA})\" (?:%{QUOTEDSTRING:http_user_agent}?|%{DATA}) \"(?:%{NOTSPACE:upstream_addrs}?|%{DATA})\" \"(?:%{NUMBER:upstream_response_time:float}?|-)\" \"(?:%{NUMBER:request_time:float}?|-})\" (?:%{QUOTEDSTRING:http_host}?|%{DATA}) (?:%{QUOTEDSTRING:uri}?|%{DATA}) (?:%{QUOTEDSTRING:service_name}?|%{DATA}) \"(?:%{NOTSPACE:msec_time:long}?|%{DATA})\"",
+    "grok_mode": "oneline",
+    "grok_patterns": "%{KFK_NGINX_XXX}",
+    "name": "pandora.parser.20170930110709",
+    "runner_name": "logkit.runner.20170930122759",
+    "timezone_offset": "0",
+    "type": "grok"
+  },
+  "senders": [
+    {
+      "fault_tolerant": "false",
+      "force_microsecond": "true",
+      "ft_memory_channel": "false",
+      "ft_save_log_path": "../ftsendor/",
+      "ft_strategy": "backup_only",
+      "pandora_ak": "",
+      "pandora_enable_logdb": "true",
+      "pandora_gzip": "true",
+      "pandora_host": "https://pipeline.qiniu.com",
+      "pandora_logdb_host": "https://logdb.qiniu.com",
+      "pandora_region": "nb",
+      "pandora_repo_name": "kfk_nginx_xxx",
+      "pandora_schema_free": "true",
+      "pandora_sk": "",
+      "runner_name": "logkit.runner.20170930122759",
+      "sender_type": "pandora"
+    }
+  ],
+  "web_folder": true
+}
+```
 
 ----
 
