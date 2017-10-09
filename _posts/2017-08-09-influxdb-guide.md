@@ -131,8 +131,7 @@ The system has internal defaults for every configuration file setting. View the 
 2. 设置 INFLUXDB_CONFIG_PATH 环境变量。
 
 `
-echo $INFLUXDB_CONFIG_PATH
-/etc/influxdb/influxdb.conf
+echo $INFLUXDB_CONFIG_PATH /etc/influxdb/influxdb.conf
 
 influxd
 `
