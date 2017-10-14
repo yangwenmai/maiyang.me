@@ -26,12 +26,7 @@ title: maiyang
   <span> 
   </div>
   <div class="archive">
-    {% if post.tldr %}
-	  {{ post.excerpt }}
-	  <a href="{{ post.url }}" > >> 继续阅读 <<  </a>
-	{% else %}
-	  {{ post.content }}
-	{% endif %}
+	  {{ post.content | split: '<!-- more -->' | first |}}<a href="{{ post.url }}" > >> 继续阅读 <<  </a>
   </div>
 </div>
   {% endfor %}
