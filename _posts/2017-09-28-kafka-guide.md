@@ -304,6 +304,7 @@ zookeeper.connection.timeout.ms=1000000
 3. [kafka quickstart 的中文翻译](https://www.kancloud.cn/hanxt/elk/159232)
 4. [如何为Kafka集群选择合适的Topics/Partitions数量？](https://www.iteblog.com/archives/1805.html)
 5. [create-multiple-consumers-in-kafka-in-command-line](https://stackoverflow.com/questions/26289518/create-multiple-consumers-in-kafka-in-command-line)
+6. [Kafka 指南](http://wdxtub.com/2016/08/15/kafka-guide/)
 
 ----
 

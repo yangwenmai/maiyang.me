@@ -171,9 +171,211 @@ cat /var/opt/gitlab/gitlab-rails/VERSION
   ssl_prefer_server_ciphers on;
   ```
 
+`sudo gitlab-ctl restart nginx`, 重启 nginx 。
+
 2. 配置 SMTP
 
   。。。  
+
+## 再升级的问题 ##
+
+当我从 9.5.3 升级为 10.0.3 时，操作步骤如下：
+
+```
+sudo yum install gitlab-ce-10.0.3-ce.0.el6.x86_64
+sudo gitlab-ctl stop unicorn;
+sudo gitlab-ctl stop sidekiq;
+sudo gitlab-ctl reconfigure;
+sudo gitlab-ctl start;
+```
+
+直接有如下提示：
+
+```
+Total download size: 338 M
+Is this ok [y/N]: y
+Downloading Packages:
+gitlab-ce-10.0.3-ce.0.el6.x86_64.rpm                                                                                                                          | 338 MB     01:04
+Running rpm_check_debug
+Running Transaction Test
+Transaction Test Succeeded
+Running Transaction
+gitlab preinstall:
+gitlab preinstall: Your version of PostgreSQL is no longer supported. Please upgrade your PostgreSQL version.
+gitlab preinstall: Check https://docs.gitlab.com/omnibus/update/#updating-gitlab-100-or-newer for details.
+gitlab preinstall:
+gitlab preinstall: Upgrade failed. Retry the upgrade after upgrading your PostgreSQL version.
+error: %pre(gitlab-ce-10.0.3-ce.0.el6.x86_64) scriptlet failed, exit status 1
+Error in PREIN scriptlet in rpm package gitlab-ce-10.0.3-ce.0.el6.x86_64
+error:   install: %pre scriptlet failed (2), skipping gitlab-ce-10.0.3-ce.0.el6
+  Verifying  : gitlab-ce-10.0.3-ce.0.el6.x86_64                                                                                                                                  1/2
+gitlab-ce-9.5.3-ce.0.el6.x86_64 was supposed to be removed but is not!
+  Verifying  : gitlab-ce-9.5.3-ce.0.el6.x86_64                                                                                                                                   2/2
+
+Failed:
+  gitlab-ce.x86_64 0:9.5.3-ce.0.el6                                                        gitlab-ce.x86_64 0:10.0.3-ce.0.el6
+
+Complete!
+```
+
+意思是需要升级 pg 数据库。
+
+接下来就是升级 pg 数据库。
+
+首先查看当前 pg 数据库的版本
+
+`>/opt/gitlab/embedded/bin/psql --version`
+
+`>psql (PostgreSQL) 9.2.18`
+
+升级数据库：
+
+```
+>sudo gitlab-ctl pg-upgrade
+
+Checking for an omnibus managed postgresql: OK
+Checking if we already upgraded: NOT OK
+Checking for a newer version of PostgreSQL to install: OK
+Upgrading PostgreSQL to 9.6.3
+Checking if PostgreSQL bin files are symlinked to the expected location: OK
+Toggling deploy page:cp /opt/gitlab/embedded/service/gitlab-rails/public/deploy.html /opt/gitlab/embedded/service/gitlab-rails/public/index.html
+Toggling deploy page: OK
+Toggling services:ok: down: gitaly: 0s, normally up
+ok: down: gitlab-monitor: 1s, normally up
+ok: down: logrotate: 0s, normally up
+ok: down: node-exporter: 1s, normally up
+ok: down: postgres-exporter: 0s, normally up
+ok: down: prometheus: 0s, normally up
+ok: down: redis-exporter
+...
+
+Running handlers:
+Running handlers complete
+Chef Client finished, 8/473 resources updated in 06 seconds
+Running reconfigure: OK
+Database upgrade is complete, running analyze_new_cluster.sh
+==== Upgrade has completed ====
+Please verify everything is working and run the following if so
+rm -rf /var/opt/gitlab/postgresql/data.9.2.18
+Toggling deploy page:rm -f /opt/gitlab/embedded/service/gitlab-rails/public/index.html
+Toggling deploy page: OK
+Toggling services:ok: run: gitaly: (pid 20136) 0s
+ok: run: gitlab-monitor: (pid 20152) 1s
+ok: run: logrotate: (pid 20156) 0s
+ok: run: node-exporter: (pid 20162) 1s
+ok: run: postgres-exporter: (pid 20169) 0s
+ok: run: prometheus: (pid 20174) 1s
+ok: run: redis-exporter: (pid 20219) 0s
+ok: run: sidekiq: (pid 20233) 0s
+Toggling services: OK
+```
+
+表示 pg 数据库升级成功，查看当前 pg 数据库版本。
+
+`>/opt/gitlab/embedded/bin/psql --version`
+
+`>psql (PostgreSQL) 9.6.3`
+
+然后我再进行一次 gitlab 升级的操作步骤。
+
+```
+sudo yum install gitlab-ce-9.5.3-ce.0.el6.x86_64
+sudo gitlab-ctl stop unicorn;
+sudo gitlab-ctl stop sidekiq;
+sudo gitlab-ctl reconfigure;
+sudo gitlab-ctl start;
+```
+
+执行 `sudo yum install gitlab-ce-9.5.3-ce.0.el6.x86_64` 之后，会有如下信息即表示安装成功。
+
+```Total download size: 338 M
+Is this ok [y/N]: y
+Downloading Packages:
+gitlab-ce-10.0.3-ce.0.el6.x86_64.rpm                                                                                                                          | 338 MB     01:01
+Running rpm_check_debug
+Running Transaction Test
+Transaction Test Succeeded
+Running Transaction
+gitlab preinstall:
+gitlab preinstall: This node does not appear to be running a database
+gitlab preinstall: Skipping version check, if you think this is an error exit now
+gitlab preinstall:
+  Updating   : gitlab-ce-10.0.3-ce.0.el6.x86_64                                                                                                                                  1/2
+  Cleanup    : gitlab-ce-9.5.3-ce.0.el6.x86_64                                                                                                                                   2/2
+Checking PostgreSQL executables: OK
+Found /etc/gitlab/skip-auto-migrations, exiting...
+
+     _______ __  __          __
+    / ____(_) /_/ /   ____ _/ /_
+   / / __/ / __/ /   / __ \`/ __ \
+  / /_/ / / /_/ /___/ /_/ / /_/ /
+  \____/_/\__/_____/\__,_/_.___/
+
+
+Upgrade complete! If your GitLab server is misbehaving try running
+  sudo gitlab-ctl restart
+before anything else.
+If you need to roll back to the previous version you can use the database
+backup made during the upgrade (scroll up for the filename).
+
+  Verifying  : gitlab-ce-10.0.3-ce.0.el6.x86_64                                                                                                                                  1/2
+  Verifying  : gitlab-ce-9.5.3-ce.0.el6.x86_64                                                                                                                                   2/2
+
+Updated:
+  gitlab-ce.x86_64 0:10.0.3-ce.0.el6
+
+Complete!
+```
+
+执行 `sudo gitlab-ctl reconfigure;` 有一个报错，这时候启动 gitlab ，打开网站也是报错 502 。
+
+错误信息是：
+
+```
+Running handlers:
+Running handlers complete
+Chef Client failed. 15 resources updated in 28 seconds
+```
+
+```
+* bash[migrate gitlab-rails database] action run
+    [execute] rake aborted!
+              PG::ConnectionBad: could not connect to server: No such file or directory
+                Is the server running locally and accepting
+                connections on Unix domain socket "/var/opt/gitlab/postgresql/.s.PGSQL.5432"?
+              /opt/gitlab/embedded/service/gitlab-rails/lib/tasks/gitlab/db.rake:49:in `block (3 levels) in <top (required)>'
+              /opt/gitlab/embedded/bin/bundle:23:in `load'
+              /opt/gitlab/embedded/bin/bundle:23:in `<main>'
+              Tasks: TOP => gitlab:db:configure
+              (See full trace by running task with --trace)
+
+    ================================================================================
+    Error executing action `run` on resource 'bash[migrate gitlab-rails database]'
+    ================================================================================
+
+    Mixlib::ShellOut::ShellCommandFailed
+    ------------------------------------
+...
+...
+Running handlers:
+Running handlers complete
+Chef Client failed. 15 resources updated in 28 seconds
+```
+
+出现这个错误的原因是因为我们升级了 pg 数据库，所以必须再执行 `sudo gitlab-ctl reconfigure;` 之前，执行 `sudo touch /etc/gitlab/skip-auto-migrations（避免pg升级导致数据合并的问题）`。
+
+然后再重新执行`sudo gitlab-ctl reconfigure;`
+
+```
+Running handlers:
+Running handlers complete
+Chef Client finished, 11/475 resources updated in 31 seconds
+gitlab Reconfigured!
+```
+
+再执行 gitlab 启动，然后就可以正常打开 gitlab 了。
+
+还有一个要注意的地方就是，每次升级后，你配置的 https 都得重新再配置一次（因为默认升级会覆盖 Nginx 的配置）。
 
 ## 参考资料 ##
 
