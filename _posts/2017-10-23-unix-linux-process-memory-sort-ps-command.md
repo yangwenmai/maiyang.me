@@ -15,8 +15,6 @@ icon: file-o
 
 ----
 
-<!--more-->
-
 Linux CentOS 下执行：
 >ps aux --sort -rss
 
