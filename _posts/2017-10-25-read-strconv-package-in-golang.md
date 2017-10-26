@@ -3,7 +3,7 @@ layout: post
 title: 'Golang strconv 包源码剖析'
 keywords: go, golang, source, strconv, float
 date: 2017-10-25 23:50
-description: 'Go 源码分析之 strconv ，主要是对于 float 的处理： ParseFloat'
+description: 'Go 源码分析之 strconv'
 categories: [Golang]
 tags: [go, strconv, float]
 comments: true
@@ -114,11 +114,6 @@ author: maiyang
 - 如果在解析了字符后，`n1 := n + uint64(v)`，如果 n1 < n 则表示有溢出，因为有可能 n 在上一次循环中已经达到了可以支持的最大值，再＋一个数值就会溢出。
 - goto 用法，不需要单独定义一个函数，也不需要每个地方都调用一长串 return 内容。
 
-## 结论：干货 ##
-
-1. 阅读源码（特别是 Go 标准包）非常有收获：小技巧和逻辑处理；
-2. 每一个注释你都必须要认真仔细的去分析；
-
 ```go
 /*
 源码分析：
@@ -134,25 +129,25 @@ func ParseUint(s string, base int, bitSize int) (uint64, error) {
         var err error
         var cutoff, maxVal uint64
 
-  // 如果 bitSize 为 0，则会自动根据系统位数来获取 uint 类型的 bit 大小
-  // 巧妙地运用 uint 获取 bit 大小
-  // const intSize = 32 << (^uint(0) >> 63)
-  // const IntSize = intSize
+        // 如果 bitSize 为 0，则会自动根据系统位数来获取 uint 类型的 bit 大小
+        // 巧妙地运用 uint 获取 bit 大小
+        // const intSize = 32 << (^uint(0) >> 63)
+        // const IntSize = intSize
         if bitSize == 0 {
                 bitSize = int(IntSize)
         }
 
-  // 对传入参数进行一些校验
+        // 对传入参数进行一些校验
         i := 0
         switch {
-          // 空字符串
+        // 空字符串
         case len(s) < 1:
                 err = ErrSyntax
                 goto Error
-// 进制允许范围
+        // 进制允许范围
         case 2 <= base && base <= 36:
                 // valid base; nothing to do
-          // 进制为 0 时，会根据字符串内容自动判断 base，和记录转数字操作时从字符串的第 i 位开始【如 0x122，则 base = 16，i = 2】，如果字符串不是 0 或 （0x|0X) 开头的数字，则默认 base = 10，i = 0
+        // 进制为 0 时，会根据字符串内容自动判断 base，和记录转数字操作时从字符串的第 i 位开始【如 0x122，则 base = 16，i = 2】，如果字符串不是 0 或 （0x|0X) 开头的数字，则默认 base = 10，i = 0
         case base == 0:
                 // Look for octal, hex prefix.
                 switch {
@@ -186,14 +181,14 @@ func ParseUint(s string, base int, bitSize int) (uint64, error) {
                 cutoff = maxUint64/uint64(base) + 1
         }
 
-  // 要转成数字所属 unit 类型的最大值
+        // 要转成数字所属 unit 类型的最大值
         maxVal = 1<<uint(bitSize) - 1
 
-  // 从字符串的最左边数字位开始转换数字
+        // 从字符串的最左边数字位开始转换数字
         for ; i < len(s); i++ {
                 var v byte
                 d := s[i]
-          // 通过 ASCII 码计算，得出字符串中对应索引 i 位置的数字
+                // 通过 ASCII 码计算，得出字符串中对应索引 i 位置的数字
                 switch {
                 case '0' <= d && d <= '9':
                         v = d - '0'
@@ -206,13 +201,13 @@ func ParseUint(s string, base int, bitSize int) (uint64, error) {
                         err = ErrSyntax
                         goto Error
                 }
-          // 当前数字不能 >= 进制数 base
+                // 当前数字不能 >= 进制数 base
                 if v >= byte(base) {
                         n = 0
                         err = ErrSyntax
                         goto Error
                 }
-          // 为了防止下面 n *= uint64(base) 溢出 panic 做的安全检查 
+                // 为了防止下面 n *= uint64(base) 溢出 panic 做的安全检查 
                 if n >= cutoff {
                         // n*base overflows
                         n = maxUint64
@@ -223,7 +218,7 @@ func ParseUint(s string, base int, bitSize int) (uint64, error) {
                 n *= uint64(base)
                 // 当前数字，实际是未进位之前的数字
                 n1 := n + uint64(v)
-                //  n1 < n 判断进位是否正常
+                // n1 < n 判断进位是否正常
                 // n1 > maxVal 判断未进位之前的数是否溢出
                 if n1 < n || n1 > maxVal {
                         // n+v overflows
@@ -241,6 +236,12 @@ Error:
 }
 ```
 
+
+## 结论：干货 ##
+
+1. 阅读源码（特别是 Go 标准包）非常有收获：小技巧和逻辑处理；
+2. 每一个注释你都必须要认真仔细的去分析；
+
 未完待续...
 
 ## 参考资料 ##
@@ -251,8 +252,8 @@ Error:
 
 **茶歇驿站**
 
-一个让你可以在茶歇之余，停下来看一看，里面的内容或许对你有一些帮助。
+一个可以让你停下来看一看，在茶歇之余给你帮助的小站。
 
-这里的内容主要是团队管理，个人管理，后台技术相关，其他个人杂想。
+这里的内容主要是后端技术，个人管理，团队管理，以及其他个人杂想。
 
 ![茶歇驿站二维码](http://oqos7hrvp.bkt.clouddn.com/blog/tech_tea.jpg)
