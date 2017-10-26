@@ -3,7 +3,7 @@ layout: post
 title: '[译]RoboVM后台更新'
 date: 2013-09-19 02:51
 comments: true
-categories: 
+categories: Libgdx
 ---
 > A couple of quick updates. First of all, you can track the progress and todos on the RoboVM backend in [this file](https://github.com/libgdx/libgdx/blob/master/backends/gdx-backend-robovm/todos.txt).
 

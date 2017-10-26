@@ -4,7 +4,7 @@ title: '深圳梧桐山“老虎涧”溯溪登山户外游'
 keywords: 梧桐山, 老虎涧, 登山, 溯溪, 野炊
 date: 2016-05-09 09:00
 description: '深圳梧桐山“老虎涧”溯溪登山户外游'
-categories: [户外]
+categories: 生活
 tags: [梧桐山, 老虎涧, 登山, 溯溪, 野炊]
 comments: true
 group: archive
@@ -33,7 +33,7 @@ icon: file-o
 
 *挑战老虎涧，体验人生至美境界！*
 
-<!-- more -->
+<!--more-->
 
 ### 行程过程 ###
 

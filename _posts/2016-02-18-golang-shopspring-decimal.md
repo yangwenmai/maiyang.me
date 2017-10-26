@@ -4,7 +4,7 @@ title: '浮点精度问题终极解决方案'
 keywords: decimal, 浮点, 精度
 date: 2016-02-18 09:00
 description: 'golang 浮点进度问题终极解决方案'
-categories: [golang]
+categories: [Golang]
 tags: [decimal]
 comments: true
 group: archive
@@ -21,7 +21,7 @@ icon: file-o
 
 所以我将在此之后进行不定期更新，保证每一篇文章都是有料的，至少可以给你带来价值的。
 
-<!-- more -->
+<!--more-->
 
 今天的主题是浮点类型的精度问题。
 

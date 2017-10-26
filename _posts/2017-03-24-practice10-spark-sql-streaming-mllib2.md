@@ -4,7 +4,7 @@ title: '习惯养成记之10-图解spark mllib'
 keywords: 习惯, 时间管理, spark, spark mllib
 date: 2017-03-24 06:27
 description: '习惯养成记之10'
-categories: [习惯]
+categories: 个人管理
 tags: [习惯]
 comments: true
 group: archive
@@ -13,7 +13,7 @@ icon: file-o
 
 昨天是习惯养成记的第九天，也是开始习惯养成打卡的第11天。
 
-<!-- more -->
+<!--more-->
 
 昨天早上看了 Spark MLlib 的一部分内容，晚上有其他重要事项就没有阅读《图解Spark》。
 

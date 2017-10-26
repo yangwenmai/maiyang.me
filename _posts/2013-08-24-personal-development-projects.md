@@ -3,7 +3,7 @@ layout: post
 title: '个人开发项目'
 date: 2013-08-24 09:18
 comments: true
-categories: 
+categories: 技术
 ---
 maitodo
 ------

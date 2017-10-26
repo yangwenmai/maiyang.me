@@ -4,8 +4,8 @@ title: '不合理使用SQL语句带来的坑'
 keywords: sql, mysql, golang
 date: 2016-04-01 9:00
 description: '记自己在实际使用中不合理使用SQL语句带来的维护成本和错误跟进的坑'
-categories: [golang]
-tags: [golang， database]
+categories: [Golang]
+tags: [golang, database]
 comments: true
 group: archive
 icon: file-o
@@ -17,7 +17,7 @@ icon: file-o
 
 该错误信息在Golang标准库database.sql.sql.go文件中，函数func (rs *Rows) Scan(dest ...interface{}) error 中。
 
-<!-- more -->
+<!--more-->
 
 还有常见的一种错误：
 

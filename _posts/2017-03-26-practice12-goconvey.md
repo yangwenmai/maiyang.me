@@ -4,7 +4,7 @@ title: 'goconvey 入门实战'
 keywords: goconvey 入门实战
 date: 2017-03-26 09:08
 description: 'gocovey 介绍'
-categories: [golang, go, test]
+categories: [Golang]
 tags: [golang]
 comments: true
 group: archive
@@ -15,7 +15,7 @@ icon: file-o
 
 昨天是不是习惯养成记的“时间”，不过是开始打卡的第13天。
 
-<!-- more -->
+<!--more-->
 
 昨天是周六，所以对于之前确定的习惯养成计划来说，是没有什么安排的。
 

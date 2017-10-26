@@ -4,7 +4,7 @@ title: '30天习惯养成计划总结'
 keywords: 
 date: 2017-04-13 06:00
 description: '习惯总结'
-categories: [习惯]
+categories: 个人管理
 tags: [习惯]
 comments: true
 group: archive
@@ -13,7 +13,7 @@ icon: file-o
 
 	本文耗时60分钟，阅读需要5分钟。
 
-<!-- more -->
+<!--more-->
 
 在小波老师的倡导下，我与一群小伙伴们参加了《30天习惯养成计划》，感受到了习惯的力量。
 

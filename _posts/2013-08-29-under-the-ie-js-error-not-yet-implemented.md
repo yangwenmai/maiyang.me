@@ -3,7 +3,7 @@ layout: post
 title: 'IE下JS错误“尚未实现”'
 date: 2013-08-29 03:14
 comments: true
-categories: 
+categories: JavaScript
 ---
 ###IE下JS错误“尚未实现”解决办法
 

@@ -3,7 +3,7 @@ layout: post
 title: '[译]特殊的Xamarin Libgdx 0.9.9预发布版本'
 date: 2013-10-04 02:24
 comments: true
-categories: 
+categories: Libgdx
 ---
 > So, i’m about to purge all Xamarin related things from our repository. For those users that are still using Xamarin, i prepared a special release, which you can find here. I also created a [Git tag](https://github.com/libgdx/libgdx/tree/0.9.9-xamarin) so you can still browse the source online easily.
 

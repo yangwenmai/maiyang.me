@@ -1,11 +1,15 @@
 ---
 layout: post
-title: 'iOS开发工具帮助'
-date: 2013-07-30 10:37
+title: "iOS 开发工具帮助"
+date: 2013-07-30 10:37:00 +0800
 comments: true
-categories: 
+categories: iOS
+tags: ios 工具 帮助
+author: maiyang
+mathjax: true
 ---
-####将自己从零开始开发iOS应用所遇到的各种使用帮助记录在这里，以供后期查看和分享给其他同事####
+
+#### 将自己从零开始开发iOS应用所遇到的各种使用帮助记录在这里，以供后期查看和分享给其他同事####
 
 Xcode使用帮助
 ------------

@@ -3,7 +3,8 @@ layout: post
 title: '[Ruby]gemfile.lock文件引发的困惑'
 date: 2014-03-07 02:28
 comments: true
-categories: [ruby, json, gemfile.lock, JBuilder]
+categories: Ruby
+tags: [ruby, json, gemfile.lock, JBuilder]
 ---
 Gemfile.lock的英文说明：
     

@@ -11,6 +11,9 @@ group: archive
 icon: file-o
 ---
 
+* content
+{:toc}
+
 	本文是 Kafka 的入门指南。
 
 ----
@@ -43,7 +46,7 @@ icon: file-o
 
 关于 `server.properties` 配置文件请参考后文：《*server.properties配置文件参数说明*》
 
-<!-- more -->
+<!--more-->
 
 第三步：新建一个 topic
 创建一个名为 “test” 的 Topic，只有一个分区和一个备份：

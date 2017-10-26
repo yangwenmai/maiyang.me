@@ -3,7 +3,7 @@ layout: post
 title: '如何在mac上安装cocos2d-x-2.2'
 date: 2013-10-22 16:11
 comments: true
-categories: 
+categories: cocos2d-x
 ---
 网络上有很多的安装cocos2d-x教程，但是我搜索之后发现，大部分都是关于1.x版本的，而cocos2d-x-2.X版本已经发生了根本的变化，所以导致很多人都无法正常安装和使用。
 

@@ -3,7 +3,7 @@ layout: post
 title: 'SQL四种语言:DDL,DML,DCL,TCL'
 date: 2013-08-24 07:35
 comments: true
-categories: 
+categories: 数据库
 ---
 1.DDL（Data Definition Language）数据库定义语言statements are used to define the database structure or schema.
 

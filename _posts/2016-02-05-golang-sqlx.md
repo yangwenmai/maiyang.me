@@ -4,7 +4,7 @@ title: 'Golang sqlx'
 keywords: sqlx
 date: 2016-02-05 15:50
 description: 'golang sqlx 分析'
-categories: [golang]
+categories: [Golang]
 tags: [sql]
 comments: true
 group: archive
@@ -15,7 +15,7 @@ icon: file-o
 
 一般来说in的参数都是很难确定的，SQL语句为了提升执行效率，都会进行预编译的。那么就有一个问题了，参数未定怎么预编译呢？无法确定完整完整SQL，无法确定占位符?个数。
 
-<!-- more -->
+<!--more-->
 
 一般来说我们可以通过自己解析参数来确定个数，拼接SQL语句的。
 

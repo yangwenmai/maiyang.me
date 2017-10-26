@@ -4,7 +4,7 @@ title: '30天习惯养成计划第19天'
 keywords: 习惯养成，每天看一本书，进行一点学习
 date: 2017-04-01 06:14
 description: '阅读-得到APP直播'
-categories: [习惯]
+categories: 个人管理
 tags: [习惯]
 comments: true
 group: archive
@@ -13,7 +13,7 @@ icon: file-o
 
 	本文耗时10分钟，阅读需要2分钟。
 
-<!-- more -->
+<!--more-->
 
 昨天是 30天习惯养成计划 的第 19 天，我做了以下这些事情。
 

@@ -4,7 +4,7 @@ title: 'gopkg.in/redis.v3 源码分析'
 keywords: redis, golang
 date: 2017-06-06 23:45
 description: 'redis golang 客户端源码分析之3'
-categories: [golang]
+categories: [Golang]
 tags: [redis,golang]
 comments: true
 group: archive
@@ -51,7 +51,7 @@ redis: you open connections too fast (last error: xxx)
 
 备注:GitHub 上已经没有3.1.4.1的分支了，那我直接给大家贴源码吧。
 
-<!-- more -->
+<!--more-->
 
 ````go
 // 来源于:pool.go

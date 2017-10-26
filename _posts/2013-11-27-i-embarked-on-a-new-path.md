@@ -3,7 +3,7 @@ layout: post
 title: '我踏上了新路'
 date: 2013-11-27 02:44
 comments: true
-categories: 
+categories: 生活
 ---
 ##概述
 在上周，我告别了带我进入互联网游戏行业的公司-范特西，并于昨日正式加入创业团队-小恩爱。

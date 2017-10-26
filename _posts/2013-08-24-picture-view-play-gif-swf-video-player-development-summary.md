@@ -3,7 +3,7 @@ layout: post
 title: '图片查看、gif播放、swf视频播放的开发总结'
 date: 2013-08-24 07:54
 comments: true
-categories: 
+categories: Android
 ---
 # 图片查看、gif播放、swf视频播放的开发总结 #
 
@@ -28,7 +28,7 @@ categories:
 
 	代码如下：
 
-<!-- more -->
+<!--more-->
 
 	 `public static String getPicType(String path) {
 		try {

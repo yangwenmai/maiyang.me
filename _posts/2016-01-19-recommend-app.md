@@ -4,7 +4,7 @@ title: '育儿经：新手爸妈的福音育儿经'
 keywords: recommend
 date: 2016-01-19 09:30
 description: '新手爸妈的福音-育儿经'
-categories: [child, recommend]
+categories: 生活
 tags: [child]
 comments: true
 group: archive
@@ -17,7 +17,7 @@ icon: file-o
 
 如果想要用一个来解决问题，目前还是比较困难，至少我们用过的APP都是在特定时期内发挥特定的作用。
 
-<!-- more -->
+<!--more-->
 
 今天，就推荐几款目前我们家正在使用的，希望能对用得上的人有帮助。
 

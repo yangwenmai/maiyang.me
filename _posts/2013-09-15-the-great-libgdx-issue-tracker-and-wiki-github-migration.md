@@ -3,7 +3,7 @@ layout: post
 title: '[译]重大的libgdx问题跟踪和Wiki Github迁移'
 date: 2013-09-15 02:41
 comments: true
-categories: 
+categories: Libgdx
 ---
 > A little less than a year ago, we moved all our code from Google Code to Github. That was a nerve racking but ultimately beneficial task. Since our move, we had almost [600 pull requests](https://github.com/libgdx/libgdx/pulls?direction=desc&page=1&sort=created&state=closed)!
 

@@ -4,7 +4,7 @@ title: '代码规范之esformatter'
 keywords: JavaScript, esformatter
 date: 2016-01-01 23:55
 description: 'esformatter'
-categories: [JavaScript, esformatter, vim]
+categories: JavaScript
 tags: [esformatter, vim]
 comments: true
 group: archive
@@ -13,7 +13,7 @@ icon: file-o
 
 最近我们在开始使用react.js来开发全新的后台系统，react主要文件就是js/jsx，习惯了Golang的gofmt，自然而然的想到也应该有类似的js/jsx的代码风格格式化插件吧？
 
-<!-- more -->
+<!--more-->
 
 找我们最好的老师Google，输入`js format`
 排在前面的两个都是JavaScript的在线格式化网站，继续往下看，应该能够看到[JsFormat](https://github.com/jdc0589/JsFormat)。

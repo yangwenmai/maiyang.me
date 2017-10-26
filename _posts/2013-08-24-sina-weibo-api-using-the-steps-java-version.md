@@ -3,7 +3,7 @@ layout: post
 title: 'sina weibo api使用步骤（Java版）'
 date: 2013-08-24 07:53
 comments: true
-categories: 
+categories: Java
 ---
 首先下载java sdk并导入eclipse中 http://open.weibo.com/wiki/index.php/SDK
 然后，在http://open.weibo.com/上创建应用（必须要有新浪微博账号）。创建完毕系统会给出App Key和App Secret。

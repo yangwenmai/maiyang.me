@@ -4,7 +4,7 @@ title: '搭建 etcd 集群'
 keywords: etcd 入门，以及搭建 etcd 集群
 date: 2017-03-27 08:08
 description: '搭建 etcd 集群'
-categories: [golang, go]
+categories: [Golang]
 tags: [golang]
 comments: true
 group: archive
@@ -15,7 +15,7 @@ icon: file-o
 
 昨天不是习惯养成记的“时间”，不过我已开始打卡第14天了。
 
-<!-- more -->
+<!--more-->
 
 ### etcd 是什么 ###
 

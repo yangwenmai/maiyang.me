@@ -4,7 +4,7 @@ title: '任务调度浅析'
 keywords: cron, task, schedule
 date: 2016-02-24 09:00
 description: 'golang 任务调度'
-categories: [golang]
+categories: [Golang]
 tags: [cron, task]
 comments: true
 group: archive
@@ -13,7 +13,7 @@ icon: file-o
 
 >在大型系统中，任务调度是一项基础性的需求。对于一些需要重复、定时执行或者耗时比较长的任务经常会被剥离出来单独处理，而随着任务规模与复杂性的上升，任务调度系统也就随需而生。设计良好的任务调度系统具备可靠性及伸缩性，它可以管理并监控任务的执行流程，以保证任务的正确执行。
 
-<!-- more -->
+<!--more-->
 
 ### Java ###
 

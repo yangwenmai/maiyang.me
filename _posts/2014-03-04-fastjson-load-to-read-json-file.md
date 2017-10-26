@@ -3,7 +3,8 @@ layout: post
 title: 'fastjson加载读取json文件'
 date: 2014-03-04 14:26
 comments: true
-categories: [fastjson, druid, 温少]
+categories: Java
+tags: [fastjson, druid, 温少]
 ---
 Java的json解析库（`fastjson`）, 出品于阿里牛人[@温高铁](http://weibo.com/wengaotie)。
 

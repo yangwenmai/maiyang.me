@@ -4,7 +4,7 @@ title: '万恶的某度'
 keywords: search
 date: 2016-01-13 08:30
 description: '万恶的某度'
-categories: [search]
+categories: 生活
 tags: [search]
 comments: true
 group: archive
@@ -20,7 +20,7 @@ icon: file-o
 
 在之前去哪儿上市之后，百度持股比例将为54.82%，所以今天要讨论的两大热词都跟百度有关系的。
 
-<!-- more -->
+<!--more-->
 
 在开始之前，先推荐一下公众号。
 

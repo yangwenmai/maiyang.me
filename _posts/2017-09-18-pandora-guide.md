@@ -4,12 +4,15 @@ title: '使用 Pandora 平台轻松玩转大数据'
 keywords: Pandora, bigdata, TSDB, qiniu, Grafana, logkit, LogDB, Kibana
 date: 2017-09-18 06:10
 description: '心动不如行动，使用 Pandora 轻松玩转大数据，本文主要包括基本介绍，操作指引，问题总结等'
-categories: [pandora]
+categories: [Pandora]
 tags: [Pandora, bigdata, TSDB, LogDB, logkit, Grafana, Kibana]
 comments: true
 group: archive
 icon: file-o
 ---
+
+* content
+{:toc}
 
 	本文是我在使用 Pandora 大数据平台的过程中遇到的问题总结，希望可以帮助到大家。
 
@@ -104,7 +107,7 @@ Pandora 大数据平台的基本流程如下：
 3. 日志检索：创建仓库[数据存储时限：最大可设置为永久]
 4. 容器应用市场：目前官方应用提供有Grafana，Kibana，XSpark；（这 3 个默认是没有开通的，还需要再申请开通），第三方应用暂无；
 
-<!-- more -->
+<!--more-->
 
 ## 构建实时和离线工作流 ##
 

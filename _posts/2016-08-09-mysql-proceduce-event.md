@@ -4,7 +4,7 @@ title: 'MySQL 怎么写定时存储过程'
 keywords: MySQL, 存储过程
 date: 2016-08-09 09:00
 description: 'MySQL 怎么写定时存储过程'
-categories: [MySQL, produce, event]
+categories: 数据库
 tags: [MySQL]
 comments: true
 group: archive
@@ -16,7 +16,7 @@ icon: file-o
 1. 自己写程序处理（Java,Ruby,Golang,Python,Shell等等）
 2. 数据自身提供的触发器、存储过程、定时器
 
-<!-- more -->
+<!--more-->
 
 MySQL 怎么来写定时的存储过程呢？我简单讲讲，算是入门吧。
 

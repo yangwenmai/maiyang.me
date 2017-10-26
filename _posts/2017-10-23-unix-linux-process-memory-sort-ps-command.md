@@ -4,7 +4,7 @@ title: 'Linux 怎么用 ps 命令对内存使用量排序？'
 keywords: linux, unix, ps, sort, memory
 date: 2017-10-23 15:30
 description: 'Linux 怎么用 ps 命令对内存使用量排序？'
-categories: [linux]
+categories: [Linux]
 tags: [linux, ps, memory]
 comments: true
 group: archive
@@ -15,7 +15,7 @@ icon: file-o
 
 ----
 
-<!-- more -->
+<!--more-->
 
 Linux CentOS 下执行：
 >ps aux --sort -rss

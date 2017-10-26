@@ -4,7 +4,7 @@ title: '在Mac上安装nginx'
 keywords: Mac, nginx, install
 date: 2015-07-22 20:46
 description: '在Mac上安装nginx'
-categories: [Mac, nginx, install]
+categories: 工具
 tags: [Mac, nginx, install]
 comments: true
 group: archive
@@ -27,7 +27,7 @@ icon: file-o
 
 在开发过程中，我们可能还期望将端口去掉，绑定域名提供测试。
 
-<!-- more -->
+<!--more-->
 
 解决办法：
 

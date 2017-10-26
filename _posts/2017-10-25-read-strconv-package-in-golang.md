@@ -4,12 +4,14 @@ title: 'Golang strconv 包源码剖析'
 keywords: go, golang, source, strconv, float
 date: 2017-10-25 23:50
 description: 'Go 源码分析之 strconv ，主要是对于 float 的处理： ParseFloat'
-categories: [go]
+categories: [Golang]
 tags: [go, strconv, float]
 comments: true
-group: archive
-icon: file-o
+author: maiyang
 ---
+
+* content
+{:toc}
 
     本文是对 Go strconv 包部分源码剖析，我自己收获很多，希望我这篇博文让你也能有收获。
 
@@ -30,7 +32,8 @@ icon: file-o
 3. 从可导出函数到非导出函数（根据逻辑代码来跳转）
 4. 有需要时也要读 `_test.go`
 
-<!-- more -->
+<!--more-->
+
 ----
 
 ## 源码清单 ##
@@ -115,6 +118,128 @@ icon: file-o
 
 1. 阅读源码（特别是 Go 标准包）非常有收获：小技巧和逻辑处理；
 2. 每一个注释你都必须要认真仔细的去分析；
+
+```go
+/*
+源码分析：
+atoi.go
+
+ParseUint 作用是将一个 string 转成一个 uint ，其中参数 s 是要转成 uint 类型的字符串，base 是进制数[表示字符串中的数字是 base 进制的]，bitSize 是 bit 大小[转成 uint 之后，该 uint 在内存中占多少 bit]
+*/
+package strconv
+
+// ParseUint is like ParseInt but for unsigned numbers.
+func ParseUint(s string, base int, bitSize int) (uint64, error) {
+        var n uint64
+        var err error
+        var cutoff, maxVal uint64
+
+  // 如果 bitSize 为 0，则会自动根据系统位数来获取 uint 类型的 bit 大小
+  // 巧妙地运用 uint 获取 bit 大小
+  // const intSize = 32 << (^uint(0) >> 63)
+  // const IntSize = intSize
+        if bitSize == 0 {
+                bitSize = int(IntSize)
+        }
+
+  // 对传入参数进行一些校验
+        i := 0
+        switch {
+          // 空字符串
+        case len(s) < 1:
+                err = ErrSyntax
+                goto Error
+// 进制允许范围
+        case 2 <= base && base <= 36:
+                // valid base; nothing to do
+          // 进制为 0 时，会根据字符串内容自动判断 base，和记录转数字操作时从字符串的第 i 位开始【如 0x122，则 base = 16，i = 2】，如果字符串不是 0 或 （0x|0X) 开头的数字，则默认 base = 10，i = 0
+        case base == 0:
+                // Look for octal, hex prefix.
+                switch {
+                case s[0] == '0' && len(s) > 1 && (s[1] == 'x' || s[1] == 'X'):
+                        if len(s) < 3 {
+                                err = ErrSyntax
+                                goto Error
+                        }
+                        base = 16
+                        i = 2
+    case s[0] == '0':
+                        base = 8
+                        i = 1
+                default:
+                        base = 10
+                }
+
+        default:
+                err = errors.New("invalid base " + Itoa(base))
+                goto Error
+        }
+
+        // Cutoff is the smallest number such that cutoff*base > maxUint64.
+        // Use compile-time constants for common cases.
+        switch base {
+        case 10:
+                cutoff = maxUint64/10 + 1
+        case 16:
+                cutoff = maxUint64/16 + 1
+        default:
+                cutoff = maxUint64/uint64(base) + 1
+        }
+
+  // 要转成数字所属 unit 类型的最大值
+        maxVal = 1<<uint(bitSize) - 1
+
+  // 从字符串的最左边数字位开始转换数字
+        for ; i < len(s); i++ {
+                var v byte
+                d := s[i]
+          // 通过 ASCII 码计算，得出字符串中对应索引 i 位置的数字
+                switch {
+                case '0' <= d && d <= '9':
+                        v = d - '0'
+                case 'a' <= d && d <= 'z':
+                        v = d - 'a' + 10
+ case 'A' <= d && d <= 'Z':
+                        v = d - 'A' + 10
+                default:
+                        n = 0
+                        err = ErrSyntax
+                        goto Error
+                }
+          // 当前数字不能 >= 进制数 base
+                if v >= byte(base) {
+                        n = 0
+                        err = ErrSyntax
+                        goto Error
+                }
+          // 为了防止下面 n *= uint64(base) 溢出 panic 做的安全检查 
+                if n >= cutoff {
+                        // n*base overflows
+                        n = maxUint64
+                        err = ErrRange
+                        goto Error
+                }
+                // 上一个数字 * base
+                n *= uint64(base)
+                // 当前数字，实际是未进位之前的数字
+                n1 := n + uint64(v)
+                //  n1 < n 判断进位是否正常
+                // n1 > maxVal 判断未进位之前的数是否溢出
+                if n1 < n || n1 > maxVal {
+                        // n+v overflows
+                        n = maxUint64
+                        err = ErrRange
+                        goto Error
+                }
+                n = n1
+        }
+
+        return n, nil
+
+Error:
+    return n, &NumError{"ParseUint", s, err}
+}
+```
 
 未完待续...
 

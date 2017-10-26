@@ -4,7 +4,7 @@ title: '九寨沟黄龙四日游'
 keywords: 九寨沟, 黄龙, 旅游
 date: 2016-06-17 23:00
 description: '九寨沟黄龙四日游'
-categories: [trip]
+categories: 生活
 tags: [trip]
 comments: true
 group: archive
@@ -19,7 +19,7 @@ icon: file-o
 
 不过不管是什么季节去，在那里你都能领略到她的美。
 
-<!-- more -->
+<!--more-->
 
 我们的行程是九寨沟黄龙四日游，是在美团上团购的，价格非常诱人。而且整个行程下来，我们的感受是超值。
 

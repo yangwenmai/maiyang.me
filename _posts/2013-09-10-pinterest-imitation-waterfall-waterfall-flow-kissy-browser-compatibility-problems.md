@@ -3,7 +3,7 @@ layout: post
 title: '仿pinterest瀑布流KISSY的Waterfall浏览器兼容问题'
 date: 2013-09-10 03:01
 comments: true
-categories: 
+categories: JavaScript
 ---
 # 瀑布流概述
 > 略
@@ -27,7 +27,7 @@ categories:
 
 - 其他，比方说花瓣网的瀑布流实现就非常牛逼，不仅完成了瀑布流的工作，而且还处理页面上的数据存储，避免因为大数据量时造成页面的卡顿情况的发生。
 
-<!-- more -->
+<!--more-->
 
 # 瀑布流KISSYUI兼容问题
 

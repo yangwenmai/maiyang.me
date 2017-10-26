@@ -4,7 +4,7 @@ title: 'level介绍'
 keywords: level,kv
 date: 2017-05-29 10:30:00
 description: 'level介绍'
-categories: [level]
+categories: [技术]
 tags: [level]
 comments: true
 group: archive
@@ -47,7 +47,7 @@ LevelDB本身只是一个lib库，在源码目录make编译即可，然后在我
 - 当memtable插入的数据到了一个界限之后，会转为Immutable memtable, 由新的memtable支持写入操作.同时，leveldb在后台会通过调度程序将 Immutable memtable dump到磁盘上的sstable文件中。
 - sstable内部的数据是key有序的。由Immutable memtable不断dump出来的 sstable文件越来越多，会进行compact操作，形成新的level的sstable文 件。
 
-<!-- more -->
+<!--more-->
 
 ## 详细分析
 

@@ -1,9 +1,12 @@
 ---
 layout: post
 title: 'Hello World'
-date: 2013-07-29 09:15
+date: 2013-07-29 09:15:00 +0800
 comments: true
-categories: 
+categories: 其他
+tags: 
+author: maiyang
+mathjax: true
 ---
 
 Hi, This a demo post of [Logdown](http://logdown.com). 
@@ -14,7 +17,7 @@ Logdown also support drag & drop image uploading ( required Beta / Premium membe
 
 ![](http://logdown.com/images/logo.png)
 
-<!-- more -->
+<!--more-->
 
 ## Bloging with code snippet:
 

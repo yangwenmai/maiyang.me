@@ -4,7 +4,7 @@ title: '习惯养成记之08-图解spark'
 keywords: 习惯, 时间管理, spark, spark sql, 运行架构
 date: 2017-03-22 06:32
 description: '习惯养成记之08'
-categories: [习惯]
+categories: 个人管理
 tags: [习惯]
 comments: true
 group: archive
@@ -13,7 +13,7 @@ icon: file-o
 
 昨天是习惯养成记的第七天，也是开始习惯养成打卡的第9天。
 
-<!-- more -->
+<!--more-->
 
 下面是一些笔记：
 

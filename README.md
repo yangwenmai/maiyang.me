@@ -1,5 +1,9 @@
 # maiyang 个人博客
 
-### 克隆自：[pengx17](https://github.com/pengx17/pengx17.github.io)，并加入少许修改。
+### 克隆自：[gaohaoyang.github.io](https://github.com/Gaohaoyang/gaohaoyang.github.io)，并加入少许修改。
 
-个人博客，请遵守 [CC BY-SA 3.0协议](http://creativecommons.org/licenses/by-sa/3.0/deed.zh)
+**[中文版 Chinese README 请点击这里 🇨🇳](https://github.com/Gaohaoyang/gaohaoyang.github.io/blob/master/README-zh-cn.md)**
+
+## License
+
+[MIT License](https://github.com/Gaohaoyang/gaohaoyang.github.io/blob/master/LICENSE.md)

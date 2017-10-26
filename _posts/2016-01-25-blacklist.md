@@ -4,7 +4,7 @@ title: '被加入运营商黑名单怎么办？'
 keywords: 运营商, 黑名单
 date: 2016-01-25 20:35
 description: '被加入运营商黑名单怎么办？'
-categories: [blacklist]
+categories: 生活
 tags: [gift]
 comments: true
 group: archive
@@ -17,7 +17,7 @@ icon: file-o
 
 运营商可以美其名曰，为了消除垃圾短信，骚扰电话，不得已而为之啊。但是其实在运营商黑名单里面是有很大一部分是我们普罗大众群体的。
 
-<!-- more -->
+<!--more-->
 
 ### 黑名单的来由 ###
 

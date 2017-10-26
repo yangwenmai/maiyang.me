@@ -4,12 +4,15 @@ title: 'MySQL 数据库索引列长度限制'
 keywords: MySQL, index, length
 date: 2017-08-09 07:30
 description: '数据库 SQL 语句在不同环境执行报错的一次知识补充。'
-categories: [mysql]
+categories: [数据库]
 tags: [mysql, index]
 comments: true
 group: archive
 icon: file-o
 ---
+
+* content
+{:toc}
 
     本文耗时 60 分钟。
 

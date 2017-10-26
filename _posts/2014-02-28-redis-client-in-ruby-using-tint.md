@@ -3,7 +3,8 @@ layout: post
 title: 'redis在Ruby上客户端使用疑云'
 date: 2014-02-28 03:24
 comments: true
-categories: [ruby, rails, redis, hiredis, synchrony]
+categories: Ruby
+tags: [ruby, rails, redis, hiredis, synchrony]
 ---
 ruby中使用redis客户端
 1. 首先在Gemfile里面添加

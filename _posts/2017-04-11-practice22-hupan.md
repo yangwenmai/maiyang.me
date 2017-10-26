@@ -4,7 +4,7 @@ title: '30天习惯养成计划第20天'
 keywords: 
 date: 2017-04-11 06:34
 description: '浪过之后还得继续'
-categories: [习惯]
+categories: 个人管理
 tags: [习惯]
 comments: true
 group: archive
@@ -13,7 +13,7 @@ icon: file-o
 
 	本文耗时10分钟，阅读需要2分钟。
 
-<!-- more -->
+<!--more-->
 
 昨天是 30天习惯养成计划 的第 20 天，我做了以下这些事情。
 

@@ -4,7 +4,7 @@ title: 'Chrome插件之标签管理'
 keywords: chrome, 插件, tab
 date: 2016-01-06 09:00
 description: '标签管理介绍'
-categories: [chrome, plugin]
+categories: 工具
 tags: [chrome, 工具]
 comments: true
 group: archive
@@ -14,7 +14,7 @@ icon: file-o
 不管你是Windows，Linux，Mac用户，Chrome 都是必备浏览器了。
 特别对于Web开发来说，更是必备了。
 
-<!-- more -->
+<!--more-->
 
 [Chrome App Store](https://chrome.google.com/webstore/category/apps)上有非常多好用，实用的插件，大家可以抽空去看看。
 

@@ -4,7 +4,7 @@ title: 'Golang redis.v3源代码分析'
 keywords: redis, golang
 date: 2016-01-30 00:00
 description: 'redis golang客户端源代码分析'
-categories: [golang]
+categories: [Golang]
 tags: [redis]
 comments: true
 group: archive
@@ -15,7 +15,7 @@ icon: file-o
 
 redis本身的内容，我就不多说了，有很多书籍可以查阅。
 
-<!-- more -->
+<!--more-->
 
 比方说：
 [《Redis实战-译本》](http://redisinaction.com/)、[《Redis设计与实现-第一版》](http://origin.redisbook.com/)、[《Redis设计与实现-第二版》](http://redisbook.com/)，这三本书都是跟黄健宏有关。

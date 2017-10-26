@@ -4,12 +4,15 @@ title: '一小时入门 golang'
 keywords: redis, golang
 date: 2017-06-19 22:20
 description: '一小时入门 golang'
-categories: [golang]
+categories: [Golang]
 tags: [golang]
 comments: true
 group: archive
 icon: file-o
 ---
+
+* content
+{:toc}
 
 	本文耗时x分钟，阅读需要x分钟。
 
@@ -84,7 +87,7 @@ Go 的发展历程
 
 现在也有集成度比较高的，比方说：gometalinter
 
-<!-- more -->
+<!--more-->
 
 一个简单的 Go 程序：
 

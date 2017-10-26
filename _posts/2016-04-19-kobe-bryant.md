@@ -4,7 +4,7 @@ title: '再见科比，再见青春'
 keywords: 爱, 科比,
 date: 2016-04-19 04:00
 description: '如果爱，请深爱，再见科比，再见青春'
-categories: [nba]
+categories: 生活
 tags: [nba, basketball, kobe]
 comments: true
 group: archive
@@ -15,7 +15,7 @@ icon: file-o
 
 此处有音乐，“如果爱，请深爱”。
 
-<!-- more -->
+<!--more-->
 [科比图](http://mmbiz.qpic.cn/mmbiz/2jnWxKdgFb8NRyLicKQcGkgq8oJbYs1VvZqN5uLVSyV0xXWuMANyYmBBY1GV0FluvNOm2xHD2ZEEekCEA8Lh0Fg/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1)
 
 ### 科比励志故事 ###

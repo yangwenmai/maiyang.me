@@ -11,6 +11,9 @@ group: archive
 icon: file-o
 ---
 
+* content
+{:toc}
+
     本文耗时 1小时10分钟，预计阅读/实战时长 1 小时（要多练习）。
 
 ----
@@ -32,7 +35,7 @@ https://portal.influxdata.com/downloads#influxdb
 
 注意：InfluxDB 的安装是需要 root 账号或者有管理员账号权限的账户。
 
-<!-- more -->
+<!--more-->
 
 ### 各种平台的各种下载安装方式 ###
 

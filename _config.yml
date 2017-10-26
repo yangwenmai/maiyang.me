@@ -1,114 +1,60 @@
-permalink: /:categories/:year/:month/:day/:title 
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-auto: true
-highlighter: rouge
-paginate: 10
-# enable github favored Markdown
+# Site settings
+title: 茶歇驿站
+brief-intro: 成长之路由我相伴。
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://maiyang.me" # the base hostname & protocol for your site
+
+permalink: /:year/:month/:day/:title/
+
+# other links
+twitter_username: 
+facebook_username: 
+github_username: yangwenmai
+email: yangwen.yw@gmail.com
+weibo_username: yangwen0o0
+zhihu_username: 
+linkedIn_username: 
+dribbble_username:
+
+description_footer: 茶歇驿站
+
+# comments
+# two ways to comment, only choose one, and use your own short name
+# 两种评论插件，选一个就好了，使用自己的 short_name
+duoshuo_shortname: maiyang
+disqus_shortname: 
+
+# statistic analysis 统计代码
+# 百度统计 id，将统计代码替换为自己的百度统计id，即
+# hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
+# xxxxx字符串
+baidu_tongji_id: 
+google_analytics_id: UA-42862533-1 # google 分析追踪id
+
+# Build settings
 markdown: kramdown
 
-excerpt_separator: <!-- more -->
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
-title : 奋斗吧!骚年！
-tagline: maiyang
-author : 
-  name : maiyang
-  github : https://github.com/yangwenmai
-  weibo : http://weibo.com/yangwen0o0
-  qq : 
+# port
+# port: 1234
 
-# The production_url is only used when full-domain names are needed
-# such as sitemap.txt 
-# Most places will/should use BASE_PATH to make the urls
-#
-# If you have set a CNAME (pages.github.com) set your custom domain here.
-# Else if you are pushing to username.github.io, replace with your username.
-# Finally if you are pushing to a GitHub project page, include the project name at the end.
-#
-production_url : http://maiyang.github.io
+# url
+category_dir: category/
+tag_dir: tag/
 
-# All Jekyll-Bootstrap specific configurations are namespaced into this hash
-#
-maiyang :
-  version : 0.3.0
+# excerpt
+excerpt_separator: "<!--more-->"
 
-  # All links will be namespaced by BASE_PATH if defined.
-  # Links in your website should always be prefixed with {{BASE_PATH}}
-  # however this value will be dynamically changed depending on your deployment situation.
-  #
-  # CNAME (http://yourcustomdomain.com)
-  #   DO NOT SET BASE_PATH 
-  #   (urls will be prefixed with "/" and work relatively)
-  #
-  # GitHub Pages (http://username.github.io)
-  #   DO NOT SET BASE_PATH 
-  #   (urls will be prefixed with "/" and work relatively)
-  #
-  # GitHub Project Pages (http://username.github.io/project-name)
-  #
-  #   A GitHub Project site exists in the `gh-pages` branch of one of your repositories.
-  #  REQUIRED! Set BASE_PATH to: http://username.github.io/project-name
-  #
-  # CAUTION:
-  #   - When in Localhost, your site will run from root "/" regardless of BASE_PATH
-  #   - Only the following values are falsy: ["", null, false]
-  #   - When setting BASE_PATH it must be a valid url.
-  #     This means always setting the protocol (http|https) or prefixing with "/"
-  BASE_PATH : false
-
-  # By default, the asset_path is automatically defined relative to BASE_PATH plus the enabled theme.
-  # ex: [BASE_PATH]/assets/themes/[THEME-NAME]
-  #
-  # Override this by defining an absolute path to assets here.
-  # ex: 
-  #   http://s3.amazonaws.com/yoursite/themes/watermelon
-  #   /assets
-  #
-  ASSET_PATH : false
-
-  # These paths are to the main pages Jekyll-Bootstrap ships with.
-  # Some JB helpers refer to these paths; change them here if needed.
-  #
-  archive_path: /posts.html
-  categories_path : /categories.html
-  tags_path : /posts.html
-  atom_path : /atom.xml
-  rss_path : /rss.xml
-
-  # Settings for comments helper
-  # Set 'provider' to the comment provider you want to use.
-  # Set 'provider' to false to turn commenting off globally.
-  #
-  comments :
-    provider : duoshuo
-    duoshuo :
-      short_name : maiyang
-   
-  # Settings for analytics helper
-  # Set 'provider' to the analytics provider you want to use.
-  # Set 'provider' to false to turn analytics off globally.
-  #        
-  analytics :
-    provider : google 
-    google : 
-        tracking_id : 'UA-42862533-1'
-
-  # Settings for sharing helper. 
-  # Sharing is for things like tweet, plusone, like, reddit buttons etc.
-  # Set 'provider' to the sharing provider you want to use.
-  # Set 'provider' to false to turn sharing off globally.
-  #
-  sharing :
-    provider : false
-    
-  # Settings for all other include helpers can be defined by creating 
-  # a hash with key named for the given helper. ex:
-  #
-  #   pages_list :
-  #     provider : "custom"   
-  #
-  # Setting any helper's provider to 'custom' will bypass the helper code
-  # and include your custom code. Your custom file must be defined at:
-  #   ./_includes/custom/[HELPER]
-  # where [HELPER] is the name of the helper you are overriding.
-  
+# paginate
+plugins: [jekyll-paginate]
+paginate: 8

@@ -4,7 +4,7 @@ title: 'Golang之Schedule'
 keywords: golang, schedule
 date: 2016-04-12 20:00
 description: 'Golang 任务调度源码分析'
-categories: [golang]
+categories: [Golang]
 tags: [golang, schedule]
 comments: true
 group: archive
@@ -13,7 +13,7 @@ icon: file-o
 
 
 
-<!-- more -->
+<!--more-->
 
 ### 延伸阅读 ###
 

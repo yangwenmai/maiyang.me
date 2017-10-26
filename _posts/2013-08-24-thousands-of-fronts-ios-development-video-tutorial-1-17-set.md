@@ -3,7 +3,7 @@ layout: post
 title: '【千锋】iOS开发视频教程学习（1-17集）'
 date: 2013-08-24 07:52
 comments: true
-categories: 
+categories: iOS
 ---
 iOS开发视频教程-第一季
 -----
@@ -33,7 +33,7 @@ UILabel和字体大小匹配
     [self.view addSubview:label2];
 }`
 
-<!-- more -->
+<!--more-->
 
 5.  （第五集：UIButton）
 UIButton继承自UIControl,UIControl又继承自UIView，所以UIButton的属性也包括UIView和UIControl的。

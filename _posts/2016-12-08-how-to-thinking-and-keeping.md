@@ -4,7 +4,7 @@ title: 'I am back!你在哪里？'
 keywords: 工作, 思考, 习惯
 date: 2016-12-08 01:00
 description: '习惯性思考工作的内容和产出，会让你受益匪浅'
-categories: [工作, 思考]
+categories: 个人管理
 tags: [工作, 思考, 习惯]
 comments: true
 group: archive
@@ -17,7 +17,7 @@ icon: file-o
 
 	习惯一旦被打破，你之前所有的坚持不懈，都会徒劳。
 
-<!-- more -->
+<!--more-->
 
 今天也没有什么特别的主题要说，只为继续拾起以往的那份热血和坚持，让它能成为一个习惯，让我能重拾思考。
 

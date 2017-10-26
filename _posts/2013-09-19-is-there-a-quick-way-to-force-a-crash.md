@@ -3,7 +3,7 @@ layout: post
 title: '[译]是否有快速强制Crash的方法?'
 date: 2013-09-19 08:56
 comments: true
-categories: 
+categories: iOS
 ---
 > Forcing a crash is a great way to test out the SDK, but is actually a little more tricky than you might think.
 

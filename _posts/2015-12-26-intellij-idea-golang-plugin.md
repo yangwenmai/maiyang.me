@@ -4,12 +4,13 @@ title: 'Golang 开发必备'
 keywords: Golang, 工具, IDE, IntelliJ idea, WebStorm, vim
 date: 2015-12-26 22:43
 description: 'Golang 开发必备'
-categories: [Golang, 工具]
+categories: Golang
 tags: [Golang, 工具]
 comments: true
 group: archive
 icon: file-o
 ---
+
 概要说明
 ....
 ----
@@ -27,7 +28,7 @@ icon: file-o
 
 以上开发工具，我都使用过，目前一直在用的vim和WebStorm。
 
-<!-- more -->
+<!--more-->
 
 接下来，我就详细介绍一下vim和WebStom的安装和使用，希望给新手或者不知道怎么选择的开发者一些参考。
 

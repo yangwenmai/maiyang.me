@@ -4,12 +4,15 @@ title: 'TiDB 集群的入门与实战'
 keywords: TiDB, TiKV, MySQL, PingCAP
 date: 2017-09-15 08:20
 description: 'TiDB 集群搭建，问题总结，使用帮助，简单操作介绍。'
-categories: [mysql, tidb]
+categories: [TiDB]
 tags: [mysql, tidb, tikv]
 comments: true
 group: archive
 icon: file-o
 ---
+
+* content
+{:toc}
 
     本文耗时较长，包括实战演练以及经验总结。
 
@@ -27,7 +30,7 @@ icon: file-o
 - 总结
 - 参考资料
 
-<!-- more -->
+<!--more-->
 
 ## 准备工作 ##
 

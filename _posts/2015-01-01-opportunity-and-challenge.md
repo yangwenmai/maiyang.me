@@ -4,8 +4,8 @@ title: '2015年的计划'
 keywords: 2015, 机遇, 挑战, 计划
 date: 2015-01-01 00:01
 description: '记录自己2015年的个人目标和想法，自己的机遇和挑战'
-categories: [2015, 机遇, 挑战, 计划]
-tags: [2015, 机遇, 挑战, 计划]
+categories: 生活
+tags: [机遇, 挑战, 计划]
 comments: true
 group: archive
 icon: file-o

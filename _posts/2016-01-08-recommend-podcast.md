@@ -4,7 +4,7 @@ title: '推荐的podcast'
 keywords: podcast
 date: 2016-01-08 01:00
 description: '个人推荐podcast'
-categories: [recommend, podcast]
+categories: 生活
 tags: [个人, 生活, podcast]
 comments: true
 group: archive
@@ -15,7 +15,7 @@ icon: file-o
 
 iOS设备可以在App Store上搜索podcast，有很多的泛客户端推荐。
 
-<!-- more -->
+<!--more-->
 
 映入眼帘的是苹果官方自带的`播客 podcast`, 还有Overcast, Castro。
 

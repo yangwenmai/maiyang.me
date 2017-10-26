@@ -4,7 +4,7 @@ title: 'golang net/http close'
 keywords: golang, http, close
 date: 2016-05-04 20:00
 description: 'golang net/http close'
-categories: [golang]
+categories: [Golang]
 tags: [golang, http]
 comments: true
 group: archive
@@ -14,7 +14,7 @@ icon: file-o
 
 
 
-<!-- more -->
+<!--more-->
 
 
 ### 延伸阅读 ###

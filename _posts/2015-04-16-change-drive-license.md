@@ -4,7 +4,7 @@ title: '更换驾照'
 keywords: 驾照, driving license, 异地转入, 深圳
 date: 2015-04-16 23:59
 description: '更换驾照'
-categories: [驾照, 深圳, 生活]
+categories: 生活
 tags: [驾照, driving license, 异地转入, 深圳]
 comments: true
 group: archive
@@ -20,7 +20,7 @@ icon: file-o
 要求是：异地驾驶证可直接在深圳办理相关流程，前提是你的驾驶证必须在有效期内，办理时间是在快到期的最后90天内。
 
 
-<!-- more -->
+<!--more-->
 
 从网络上了解到，办理迁入和换证，在西丽车管所可以办理，可提前在网上预约，但是人很多，需要提前预约。我不建议亲自去，浪费时间和精力。
 

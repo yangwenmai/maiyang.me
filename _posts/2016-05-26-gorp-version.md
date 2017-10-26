@@ -4,7 +4,7 @@ title: '乐观锁'
 keywords: version, mysql, golang
 date: 2016-05-26 20:00
 description: '结合gorp的实现，分析乐观锁'
-categories: [tech]
+categories: 技术
 tags: [version, mysql, golang]
 comments: true
 group: archive
@@ -13,7 +13,7 @@ icon: file-o
 
 
 
-<!-- more -->
+<!--more-->
 
 ## 乐观锁 ##
 在关系数据库管理系统里，乐观并发控制，又名“乐观锁”，Optimistic Concurrency Control，缩写“OCC”，是一种并发控制的方法。

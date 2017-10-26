@@ -1,12 +1,18 @@
 ---
 layout: post
-title: 'iOS单元测试OCUnit使用帮助'
+title: 'iOS 单元测试 OCUnit 使用帮助'
 date: 2013-07-30 10:39
 comments: true
-categories: 
+categories: iOS
+tags: ios OCUnit 帮助
+author: maiyang
+mathjax: true
 ---
+
 iOS单元测试OCUnit使用帮助
+
 ----------
+
 - 通过xcode创建的包含Unit Test的项目是使用的OCUnit单元测试
 OCUnitProjectTests.h代码如下：
 
@@ -15,7 +21,7 @@ OCUnitProjectTests.h代码如下：
 @end
 `
 
-<!-- more -->
+<!--more-->
 
 OCUnitProjectTests.m代码如下：
 

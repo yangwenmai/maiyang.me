@@ -3,7 +3,7 @@ layout: post
 title: '[译]更多RoboVM后台更新'
 date: 2013-09-19 03:27
 comments: true
-categories: 
+categories: Libgdx
 ---
 > Today i continued working on some RoboVM backend todos. **Multi-touch** is now working properly, the fix was rather simple, once you understand that you have to enable multi-touch on a view in a single line of code on iOS.
 

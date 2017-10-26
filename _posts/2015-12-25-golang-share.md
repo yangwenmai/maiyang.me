@@ -4,7 +4,7 @@ title: 'Golang 开发技术分享'
 keywords: Golang, 分享, share
 date: 2015-12-25 15:33
 description: 'Golang 开发技术分享'
-categories: [Golang, 分享, share]
+categories: Golang
 tags: [Golang, 分享, share]
 comments: true
 group: archive
@@ -25,7 +25,7 @@ icon: file-o
 	1. 项目依赖问题。 
 	2. json 解析struct问题。
 
-<!-- more -->
+<!--more-->
 
 ### 代码依赖 ###
 

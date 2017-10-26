@@ -4,7 +4,7 @@ title: '旅行游记'
 keywords: 
 date: 2017-04-02 23:24
 description: '旅行游记，可以说是游记，也可以说是详细行程表，或许能对你的形成有所帮助'
-categories: [旅游]
+categories: 生活
 tags: [旅行, 杭州, 西湖, 安吉]
 comments: true
 group: archive
@@ -13,7 +13,7 @@ icon: file-o
 
 	本文耗时分钟，阅读需要分钟。
 
-<!-- more -->
+<!--more-->
 
 本篇旅行游记，可以说是游记，也可以说是我自己的详细行程表，如果能对你有所帮助，那也算是功德一件，如果没有，那你来看看这些美景吧。
 

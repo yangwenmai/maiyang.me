@@ -3,7 +3,7 @@ layout: post
 title: '[译]Nextpeer拥抱GDX，GDX后面拥抱Nextpeer'
 date: 2013-09-14 10:39
 comments: true
-categories: 
+categories: Libgdx
 ---
 ![Nextpeer](http://tctechcrunch2011.files.wordpress.com/2013/08/nextpeer.png?w=300)
 原文链接：http://www.badlogicgames.com/wordpress/?p=3166

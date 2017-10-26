@@ -4,7 +4,7 @@ title: 'Golang开发之类型转换'
 keywords: Golang, 类型转换
 date: 2016-01-07 09:00
 description: 'Golang 类型转换'
-categories: [dev, golang]
+categories: Golang
 tags: [类型, 转换, Golang]
 comments: true
 group: archive
@@ -13,7 +13,7 @@ icon: file-o
 
 相信大家对于开发过程中的类型转换都不陌生吧，今天主要讲一下不同语言的类型转换，主要是Java，Ruby，Golang。
 
-<!-- more -->
+<!--more-->
 
 常见的类型转换，应该是 string（字符串） 转换成 int（整型），或者 int （整型）转换成 string (字符串)。
 

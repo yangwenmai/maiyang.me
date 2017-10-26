@@ -4,7 +4,7 @@ title: 'biangbiang面'
 keywords: 中国古汉字
 date: 2016-03-21 21:00
 description: 'biangbiang面'
-categories: [word]
+categories: 生活
 tags: [word]
 comments: true
 group: archive
@@ -23,7 +23,7 @@ icon: file-o
 
 大家伙儿，顿时都开始各种科普，各种乐活。
 
-<!-- more -->
+<!--more-->
 
 ### wiki百科解释 ###
 

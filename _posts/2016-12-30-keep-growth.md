@@ -4,7 +4,7 @@ title: '保持成长'
 keywords: 思考, 成长
 date: 2016-12-30 01:50
 description: '成长需要保持'
-categories: [成长, 思考]
+categories: 个人管理
 tags: [成长, 思考, 习惯]
 comments: true
 group: archive
@@ -13,7 +13,7 @@ icon: file-o
 
 坚持，保持！
 
-<!-- more -->
+<!--more-->
 
 坚持，保持！
 

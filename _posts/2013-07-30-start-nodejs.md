@@ -1,10 +1,14 @@
 ---
 layout: post
-title: '学习NodeJS之旅'
-date: 2013-07-30 10:36
+title: "学习 NodeJS 之旅"
+date: 2013-07-30 10:36:00 +0800
 comments: true
-categories: 
+categories: nodejs
+tags: nodejs
+author: maiyang
+mathjax: true
 ---
+
 NodeJS现在已经广为流传，我也来凑个热闹，若有不妥，敬请指正。
 
 一直以来从各个社区学习和了解到很多知识，很感激他们无私的分享，所以今儿我也来献个丑。
@@ -18,7 +22,7 @@ NodeJS现在已经广为流传，我也来凑个热闹，若有不妥，敬请�
 从搜索引擎中去搜素NodeJS,了解它的分布（包括官方网站、百度百科、第三方NodeJS社区）。
 
 二、
-<!-- more -->
+<!--more-->
 在google中搜索nodejs出来的第一条记录是：Node入门» 一本全面的Node.js教程 - The Node Beginner Book（http://www.nodebeginner.org/），我真正学习的第一步就是从这里开始的。
 
 根据自己的需要去选择学习吧。

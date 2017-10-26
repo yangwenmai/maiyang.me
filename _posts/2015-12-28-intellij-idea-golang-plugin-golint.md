@@ -4,8 +4,8 @@ title: '代码规范之golint'
 keywords: Golang, 工具, IDE, IntelliJ IDEA, golint
 date: 2015-12-28 19:00
 description: 'Intellij IDEA 15 搭配 golint'
-categories: [Golang, 工具, IntelliJ IDEA, golint]
-tags: [Golang, 工具]
+categories: Golang
+tags: [Golang, 工具, 工具, IntelliJ IDEA, golint]
 comments: true
 group: archive
 icon: file-o
@@ -15,7 +15,7 @@ icon: file-o
 
 昨天的文章主要分享的是Golang 必备开发工具，并且重点介绍了vim和IntelliJ IDEA(WebStorm)，文中提到了golint（go 代码检查工具）。
 
-<!-- more -->
+<!--more-->
 
 那我就先来做一个统计，看看大家平常怎么做好代码规范的呢？
 1. 哪些方法来做代码规范呢？
@@ -39,6 +39,7 @@ golint 代码检查，官方提供了vim和emacs的配置使用说明，上一�
 在配置好GOPATH之后，golint命令就可以在Terminal中运行了，例子如下：
 $GOPATH/server/demo/demo.go
 
+```go
 	package main
 	
 	import "fmt"
@@ -53,6 +54,7 @@ $GOPATH/server/demo/demo.go
 		fmt.Println(tt)
 		fmt.Println(DEMO_TT)
 	}
+```
 
 $GOPATH/server/demo> golint .
 $GOPATH/server/demo> golint demo.go

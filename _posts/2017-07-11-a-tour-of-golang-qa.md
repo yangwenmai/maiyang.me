@@ -4,12 +4,15 @@ title: '一小时入门 golang QA'
 keywords: redis, golang, QA
 date: 2017-07-11 08:20
 description: '一小时入门 golang QA'
-categories: [golang]
+categories: [Golang]
 tags: [golang]
 comments: true
 group: archive
 icon: file-o
 ---
+
+* content
+{:toc}
 
 	本文耗时30分钟，阅读需要5分钟。
 
@@ -54,7 +57,7 @@ A4:有计算机基础一两天入门没问题，一周上手开发，精通不�
 Q5：@胡戎 对于依赖管理和go项目的git管理方法比如哪些文件需要放进git，clone下来后需要做什么，您能指导下吗？比如node项目clone下来直接npm install，go有gopath，管理项目应该怎么做呢？所有的的项目只要放在gopath内还是每个项目一个gopath呢？这个系统中，网关、配置中心以及请求跟踪用什么方案？
 A5:依赖可以放到vendor里面，也可以放在gopath下。一个项目可以一个gopath，也可以多个项目一个gopath，看你自己的实际情况和需要。
 
-<!-- more -->
+<!--more-->
 
 Q6：@崔峥@电视淘宝 请老师推荐一套完善的基于Go语言实现的微服务系统。请老师推荐，Go语言界有哪些完善的微服务系统，满足：组件丰富，开发框架统一，并且有巨头推动？
 A6:https://github.com/smallnest/rpcx

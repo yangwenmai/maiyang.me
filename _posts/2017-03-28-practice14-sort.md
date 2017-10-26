@@ -4,7 +4,7 @@ title: '习惯养成记之11-编程之法'
 keywords: 编程之法
 date: 2017-03-28 06:28
 description: '编程之法-面试和算法心得'
-categories: [习惯]
+categories: 个人管理
 tags: [习惯]
 comments: true
 group: archive
@@ -15,7 +15,7 @@ icon: file-o
 
 昨天是习惯养成记的第十一天，也是开始习惯养成打卡的第15天。
 
-<!-- more -->
+<!--more-->
 
 昨天早上去公司比较早，地铁上依然很多人，看来大家都很勤劳！没办法还得接着站着看书了。
 

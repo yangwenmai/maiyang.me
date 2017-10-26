@@ -4,7 +4,7 @@ title: '版本浅析'
 keywords: version, compare, golang
 date: 2016-05-25 20:00
 description: '日常版本分析'
-categories: [tech]
+categories: 技术
 tags: [version, compare, golang]
 comments: true
 group: archive
@@ -20,7 +20,7 @@ icon: file-o
 
 >svn，git
 
-<!-- more -->
+<!--more-->
 
 ### 语义化版本 ###
 

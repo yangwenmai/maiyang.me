@@ -3,11 +3,12 @@ layout: post
 title: '手机应用版本比较（Java&Ruby)'
 date: 2014-02-28 02:44
 comments: true
-categories: [ruby, java, app版本比较]
+categories: Ruby
+tags: [ruby, java, app版本比较]
 ---
 ###手机应用应用版本比较（Java）###
 	
-<!-- more -->
+<!--more-->
 
 	/**
 	 * 版本比较

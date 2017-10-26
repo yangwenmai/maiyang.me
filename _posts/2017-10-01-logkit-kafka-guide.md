@@ -5,12 +5,15 @@ keywords: Pandora, bigdata, TSDB, qiniu, Grafana, logkit, LogDB, Kibana, Kafka
 date: 2017-10-01 08:58
 description: '本文是对 logkit 从 Kafka 读取数据的使用过程的问题总结。
 '
-categories: [pandora]
+categories: [logkit]
 tags: [Pandora, bigdata, TSDB, LogDB, logkit, Grafana, Kibana, Kafka]
 comments: true
 group: archive
 icon: file-o
 ---
+
+* content
+{:toc}
 
     本文是我在使用 logkit Grok 解析 Kafka 数据流的过程中的问题总结，希望可以帮助到大家。
 
@@ -18,7 +21,7 @@ icon: file-o
 
 *logkit(https://github.com/qiniu/logkit) 非常强大，一定要抽时间阅读分析源码。*
 
-<!-- more -->
+<!--more-->
 
 ### 前文回顾 ###
 

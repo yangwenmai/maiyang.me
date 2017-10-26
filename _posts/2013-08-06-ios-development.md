@@ -1,13 +1,18 @@
 ---
 layout: post
-title: 'iOS开发那些事'
-date: 2013-08-06 07:13
+title: "iOS 开发那些事"
+date: 2013-08-06 07:13:00 +0800
 comments: true
-categories: 
+categories: iOS
+tags: ios
+author: maiyang
+mathjax: true
 ---
-####将自己从零开始开发iOS应用所遇到的各种使用帮助记录在这里，以供后期查看和分享给其他同事####
+
+#### 将自己从零开始开发iOS应用所遇到的各种使用帮助记录在这里，以供后期查看和分享给其他同事####
 
 Xcode使用帮助
+
 ------------
 1. show line numbers
 	- 打开xcode开发工具
@@ -25,7 +30,7 @@ OCUnitProjectTests.h代码如下：
 @end
 `
 
-<!-- more -->
+<!--more-->
 
 OCUnitProjectTests.m代码如下：
 

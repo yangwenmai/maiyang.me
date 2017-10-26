@@ -4,12 +4,15 @@ title: 'Golang 的十二条最佳实践'
 keywords: golang, go, practice
 date: 2017-10-21 09:35
 description: '本文是对 Golang 十二条最佳实践的解读。'
-categories: [golang]
+categories: [Golang]
 tags: [Go, Golang, BestPractices]
 comments: true
 group: archive
 icon: file-o
 ---
+
+* content
+{:toc}
 
     本文是对十二条 Golang 最佳实践的解读。
 
@@ -28,7 +31,7 @@ icon: file-o
 11. 使用 goroutines 来管理状态
 12. 避免 goroutine 泄漏
 
-<!-- more -->
+<!--more-->
 
 ### 最佳实践 ###
 

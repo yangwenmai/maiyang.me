@@ -4,7 +4,7 @@ title: '黑客的浏览器'
 keywords: browser, hacker, 黑客, 浏览器
 date: 2015-01-10 09:21
 description: '黑客浏览器'
-categories: [browser, hacker, 黑客, 浏览器]
+categories: 工具
 tags: [browser, hacker, 黑客，浏览器]
 comments: true
 group: archive
@@ -16,7 +16,7 @@ icon: file-o
 
 首先来个重磅的，那就是黑客的浏览器---chrome vim插件([vimium](https://github.com/philc/vimium))
 
-<!-- more -->
+<!--more-->
 
 chrome上的插件地址[chrome plugin vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=en-US)
 

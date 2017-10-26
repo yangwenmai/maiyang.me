@@ -3,7 +3,7 @@ layout: post
 title: '[译]Libgdx和子弹物理RoboVM iOS上通过'
 date: 2013-09-30 17:28
 comments: true
-categories: 
+categories: Libgdx
 ---
 > Silky smooth 60fps. All hail Xoppa!
 

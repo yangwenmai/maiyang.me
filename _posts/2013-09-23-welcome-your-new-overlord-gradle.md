@@ -3,7 +3,7 @@ layout: post
 title: '[译]欢迎你的新领地：Gradle'
 date: 2013-09-23 04:17
 comments: true
-categories: 
+categories: Android
 ---
 > I’ve been sick the last few days, and figured i’d learn [Gradle](http://www.gradle.org/). I created a [Gradle based libgdx template](https://github.com/libgdx/libgdx-gradle-template), which you can start using now. It **will eventually replace our current Setup-UI** to make my life more enjoyable. IT will also allow you to build and run your libgdx projects on the CLI, Eclipse, IntelliJ and even Netbeans. And on top of that, you’ll not have to juggle any JARs or native libraries anymore, everthing is taken care off for you. You can update to different version of gdx, and easily include extensions or other 3rd party libraries. So, what is this magical Gradle?
 
@@ -17,7 +17,7 @@ Gradle是构建和依赖管理系统，用Groovy和一些特定域的语言sugar
 
 下面是定义了一个libgdx工程在Grdle的许多依赖是什么，也用于FreeType和Bullet扩展（还没有GWT和iOS）。
 
-<!-- more -->
+<!--more-->
 > `project(":core") {
     apply plugin: "java"
  

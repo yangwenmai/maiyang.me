@@ -4,7 +4,7 @@ title: '解决苹果设备的拼写自动检查功能'
 keywords: apple, check
 date: 2016-03-12 14:40
 description: '解决苹果设备的拼写自动检查功能'
-categories: [apple]
+categories: 技术
 tags: [check]
 comments: true
 group: archive
@@ -15,7 +15,7 @@ icon: file-o
 
 今天周末，给大家分享一点我个人的小经验，希望对大家能有点帮助。
 
-<!-- more -->
+<!--more-->
 
 ### 苹果设备的拼写自动检查 ###
 

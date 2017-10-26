@@ -5,12 +5,15 @@ keywords: Pandora, bigdata, TSDB, qiniu, Grafana, logkit, LogDB, Kibana
 date: 2017-09-24 08:10
 description: '本文是对 logkit 的使用过程中的问题总结（QA-也算是本文的特点吧）。
 '
-categories: [pandora]
+categories: [logkit]
 tags: [Pandora, bigdata, TSDB, LogDB, logkit, Grafana, Kibana]
 comments: true
 group: archive
 icon: file-o
 ---
+
+* content
+{:toc}
 
 	本文是我在使用 logkit 过程中遇到的问题总结，希望可以帮助到大家。
 
@@ -39,7 +42,7 @@ icon: file-o
 
 **logkit 还可以被用来打点数据**
 
-<!-- more -->
+<!--more-->
 
 ----
 

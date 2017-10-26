@@ -3,7 +3,7 @@ layout: post
 title: '[译]RoboVM后台在libgdx nighties里的第一次演示'
 date: 2013-09-12 09:23
 comments: true
-categories: 
+categories: Libgdx
 ---
 原文链接[RoboVM backend in libgdx nightlies and first performance figures!](http://www.badlogicgames.com/wordpress/?p=3161)
 
@@ -23,7 +23,7 @@ categories:
 
 - 安装必要的prerequisits。为了RoboVM意味着要安装一个Eclipse插件， 插件URL：http://download.robovm.org/eclipse/ 并且在你的Mac上安装XCode. 就这样!
 
-<!-- more -->
+<!--more-->
 - Download the setup-ui JAR, run it (double click), and create a new libgdx project, using the nightlies (click the button with the “N” on it to download the nightlies in the setup-ui)
 
 - 下载setup-ui JAR包，运行它(双击)， 并且创建一个新的libgdx项目， 用这个nightlies版本(在setup-ui里点击“N”按钮下载)

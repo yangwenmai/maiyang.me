@@ -4,7 +4,7 @@ title: 'memcache和redis的连接池connection_pool使用'
 keywords: memcache, redis, connection_pool, 连接池
 date: 2014-11-05 10:30
 description: 'memcache和redis在ruby中的客户端dalli和hiredis在高并发下连接池的使用'
-categories: [memcache, redis, ruby, 连接池]
+categories: Ruby
 tags: [memcache, redis, ruby, 连接池]
 comments: true
 group: archive
@@ -14,7 +14,7 @@ icon: file-o
 memcache 的Ruby客户端比较常用的是(DalliCache)[https://github.com/mperham/dalli]。
 连接池项目(connection_pool)[https://github.com/mperham/connection_pool]。
 
-<!-- more -->
+<!--more-->
 实战分析：
 
 在application.rb 中添加

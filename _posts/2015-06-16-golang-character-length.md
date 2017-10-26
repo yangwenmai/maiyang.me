@@ -4,7 +4,7 @@ title: 'Golang 中获取字符个数以及 emoji 表情处理'
 keywords: Golang, 字符串, emoji, 表情
 date: 2015-06-16 14:00
 description: 'Golang 中获取字符个数以及 emoji 表情处理'
-categories: [Golang, 字符串, emoji, 表情]
+categories: Golang
 tags: [Golang, 字符串, emoji, 表情]
 comments: true
 group: archive
@@ -21,7 +21,7 @@ icon: file-o
 	fmt.Println(len(s)) // 13
 	fmt.Println([]byte(s)) // [72 101 108 108 111 44 32 228 184 150 231 149 140]
 
-<!-- more -->
+<!--more-->
 
 那么如何统计 Golang 字符串长度呢？有下面几种方法：
 
@@ -32,6 +32,7 @@ icon: file-o
 
 对应代码如下：
 
+```go
 	package count
 
     import "bytes"
@@ -53,11 +54,13 @@ icon: file-o
     func f4(s string) int {
         return utf8.RuneCountInString(s)
     }
+```
 
 用上面 4 个函数计算字符串"Hello, 世界" 都会得到正确的字符个数：9。那究竟哪个方法更好一些呢？做一下测试看看：
 
 创建文件：count_test.go，内容如下：
 
+```go
 	package count
 
     import "bytes"
@@ -106,6 +109,7 @@ icon: file-o
             f4(s)
         }
     }
+```
 
 在命令行中运行命令：`go test count_test.go -bench ".*"`，输出如下内容：
 
@@ -127,7 +131,7 @@ ok  	command-line-arguments	6.635s
 
 如果 MySQL 升级比较麻烦，那么我们还可以通过过滤 emoji 表情，不支持它的存储来达到正常使用的效果。
 
-`
+```go
 // 过滤 emoji 表情
 func FilterEmoji(content string) string {
 	new_content := ""
@@ -139,5 +143,5 @@ func FilterEmoji(content string) string {
 	}
 	return new_content
 }
-`
+```
 

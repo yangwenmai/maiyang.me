@@ -4,7 +4,7 @@ title: '时间管理系列之一'
 keywords: 时间管理系列之一
 date: 2016-01-22 20:00
 description: '时间管理系列之一'
-categories: [manage]
+categories: 个人管理
 tags: [manage]
 comments: true
 group: archive
@@ -18,7 +18,7 @@ icon: file-o
 
 趁我们还年轻，好好管理自己的时间吧。
 
-<!-- more -->
+<!--more-->
 
 每个人对时间的概念/认知都不同，那需不需要管理时间，每个人也有不同的答案。
 

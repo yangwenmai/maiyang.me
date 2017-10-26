@@ -4,7 +4,7 @@ title: 'Gitlab-ci 配置说明'
 keywords: gitlab-ci
 date: 2017-06-08 07:10:00
 description: 'gitlab-ci 配置说明'
-categories: [ci]
+categories: [gitlab]
 tags: [gitlab,ci]
 comments: true
 group: archive
@@ -35,7 +35,7 @@ icon: file-o
 
 所以，我们应该把这个选项都全部勾选上，用于要求被Merge的代码一定是通过  build 的。
 
-<!-- more -->
+<!--more-->
 
 ## .gitlab-ci.yml 文件
 

@@ -3,7 +3,7 @@ layout: post
 title: '[译]Box2D API的改变'
 date: 2013-09-15 03:09
 comments: true
-categories: 
+categories: Libgdx
 ---
 > We are cleaning up the core a little, and in the process eliminate usage of Java collections and replacing them with our own collections.
 

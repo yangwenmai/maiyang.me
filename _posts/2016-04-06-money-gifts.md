@@ -4,7 +4,7 @@ title: '我的文章也可以收费了'
 keywords: 赞赏, int32
 date: 2016-04-06 20:45
 description: '拿到原创之后的第十二天，我又拿到了赞赏'
-categories: [golang]
+categories: 生活
 tags: [golang, int32]
 comments: true
 group: archive
@@ -14,7 +14,7 @@ icon: file-o
 距离上一次“水贴”，不到半个月，今天我又要来一篇“水贴”了。
 今天我可以更粗暴，因为我可以向你们要钱了。
 
-<!-- more -->
+<!--more-->
 
 虽然我的公众号，除了发到朋友圈，以及发给大群之外，阅读数很低。基本上也就是我自己在刷存在感，但是我还是继续在坚持，特别是在先后被邀请开通原创、留言、赞赏。
 

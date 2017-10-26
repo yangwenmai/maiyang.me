@@ -4,7 +4,7 @@ title: 'Linux Shell 算术运算 bc'
 keywords: 
 date: 2017-04-01 23:39
 description: ''
-categories: [学习]
+categories: Linux
 tags: [学习]
 comments: true
 group: archive
@@ -13,7 +13,7 @@ icon: file-o
 
 	本文耗时60分钟，阅读需要5分钟。
 
-<!-- more -->
+<!--more-->
 
 bc是一种任意精度的计算语言，注意是一种语言。它提供了一些语法结构，比如条件判断、循环等，可以说是很强大的。还用来进行进制转换。
 

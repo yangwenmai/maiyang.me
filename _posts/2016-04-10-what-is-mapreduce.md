@@ -4,7 +4,7 @@ title: '什么是MapReduce'
 keywords: map, reduce, MapReduce, Hadoop
 date: 2016-04-10 11:34
 description: '什么是MapReduce'
-categories: [data]
+categories: 技术
 tags: [data]
 comments: true
 group: archive
@@ -15,7 +15,7 @@ icon: file-o
 
 我简单介绍一下：
 
-<!-- more -->
+<!--more-->
 
 ### 引子 ###
 

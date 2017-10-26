@@ -4,7 +4,7 @@ title: '在ruby中redis客户端在log上的使用'
 keywords: redis, log, ruby
 date: 2014-11-01 10:30
 description: '在ruby中redis客户端在log上的使用'
-categories: [redis, log, ruby]
+categories: Ruby
 tags: [redis, log, ruby]
 comments: true
 group: archive
@@ -20,7 +20,7 @@ gem sidekiq-redis-logger
 
 gem 'redis_logger', :git => "git://github.com/hellolucky/redis_logger.git"
 
-<!-- more -->
+<!--more-->
 
 sidekiq-redis-logger适用于ruby sinatra
 打印log如下：

@@ -4,7 +4,7 @@ title: 'go-sql-driver null问题'
 keywords: go-sql-driver
 date: 2016-01-21 00:00
 description: 'go-sql-driver null问题'
-categories: [go-sql-driver]
+categories: Golang
 tags: [go-sql-driver, null]
 comments: true
 group: archive
@@ -15,7 +15,7 @@ Golang 标准库自带了[database/sql](https://godoc.org/database/sql)，对于
 
 列表见：https://github.com/golang/go/wiki/SQLDrivers
 
-<!-- more -->
+<!--more-->
 
 数据库使用最多的，无非是MySQL---https://github.com/go-sql-driver/mysql
 

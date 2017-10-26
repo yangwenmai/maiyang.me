@@ -1,18 +1,23 @@
 ---
 layout: post
 title: 'Objective-C单例'
-date: 2013-07-30 10:44
+date: 2013-07-30 10:44:00 +0800
 comments: true
-categories: 
+categories: iOS
+tags: ios oc
+author: maiyang
+mathjax: true
 ---
+
 Objective-C 单例模式
+
 ------
 - 方法一：
 	单例模式是在实际项目开发中用到比较多的一种设计模式，设计原理是整个系统只产生一个对象实例，通过一个统一的方法对外提供这个实例给外部使用。
 	
 	在Java中，构造单例一般将类的构造函数声明为private类型，然后通过一个静态方法对外提供实例对象，那么，在OC中，如何实现单例的，请看下面完整代码。
 
-<!-- more -->
+<!--more-->
 
 ```
 @implementation Car

@@ -4,7 +4,7 @@ title: 'URL编码简析'
 keywords: url, encode
 date: 2016-02-03 00:30
 description: 'URL编码简析,rfc1738协议'
-categories: [url]
+categories: 技术
 tags: [url]
 comments: true
 group: archive
@@ -17,7 +17,7 @@ URL，每个人都不陌生，即便是非专业人士，也能懂。
 
 >URL，就是网址。
 
-<!-- more -->
+<!--more-->
 
 URL只能使用英文字母、阿拉伯数字和某些标点符号，不能使用其他文字或符号。这个在RFC1738协议中有明确要求的。
 

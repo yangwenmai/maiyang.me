@@ -4,7 +4,7 @@ title: '习惯养成记之12-阅读'
 keywords: 阅读之法
 date: 2017-03-29 06:04
 description: '阅读之法-究竟应该如何阅读'
-categories: [习惯]
+categories: 个人管理
 tags: [习惯]
 comments: true
 group: archive
@@ -15,7 +15,7 @@ icon: file-o
 
 昨天是习惯养成记的第十二天，也是开始习惯养成打卡的第16天。
 
-<!-- more -->
+<!--more-->
 
 自从开始看算法类书籍时，自己的精力总是无法集中起来。有点要打破习惯的迹象，所以我要开始调整。
 

@@ -4,7 +4,7 @@ title: '30天习惯养成计划第21天'
 keywords: 
 date: 2017-04-11 08:34
 description: '长谈-让我把话说完（罗永浩+罗振宇）'
-categories: [访谈]
+categories: 个人管理
 tags: [访谈]
 comments: true
 group: archive
@@ -13,7 +13,7 @@ icon: file-o
 
 	本文耗时10分钟，阅读需要2分钟。
 
-<!-- more -->
+<!--more-->
 
 ### 路途中的阅读笔记 ###
 

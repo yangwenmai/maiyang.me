@@ -4,7 +4,7 @@ title: '你不知道的哪些缩写'
 keywords: 对于程序员来说，上 Github 是再正常不过的了，那你知道 Github 上面的那些缩写是什么含义吗？
 date: 2017-04-01 06:40
 description: '对于程序员来说，上 Github 是再正常不过的了，那你知道 Github 上面的那些缩写是什么含义吗？'
-categories: [学习]
+categories: 个人管理
 tags: [学习]
 comments: true
 group: archive
@@ -13,7 +13,7 @@ icon: file-o
 
 	本文耗时60分钟，阅读需要5分钟。
 
-<!-- more -->
+<!--more-->
 
 作为一个程序员，你肯定会上 Github 吧，那你知道在 Github 上面的那些缩写是什么含义吗？
 

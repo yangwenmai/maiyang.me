@@ -4,7 +4,7 @@ title: '给你的Github项目增加持续集成，基于travis-ci和Coveralls'
 keywords: Github, Golang, Travis-ci, Coveralls
 date: 2017-06-17 07:00
 description: '给你的Github项目增加持续集成，基于travis-ci和Coveralls'
-categories: [golang]
+categories: [Golang]
 tags: [github,golang,ci]
 comments: true
 group: archive
@@ -48,7 +48,7 @@ icon: file-o
 3. 提交`.travis.yml`到 Github，自动触发持续集成，
 4. 你可以到[travis-ci-status](https://travis-ci.org/yangwenmai/ratelimit) 查看结果
 
-<!-- more -->
+<!--more-->
 
 下面给一个我的`.travis.yml`例子:
 ```yml

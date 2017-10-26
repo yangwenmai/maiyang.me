@@ -3,7 +3,7 @@ layout: post
 title: 'mac安装cocoapods不成功解决办法'
 date: 2014-03-08 11:02
 comments: true
-categories: 
+categories: 工具
 ---
 cocoapods的安装办法，请参见[cocoapods官网](http://cocoapods.org/)
 `sudo gem install cocoapods`

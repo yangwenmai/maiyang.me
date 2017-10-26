@@ -3,7 +3,7 @@ layout: post
 title: '[译]Xamarin的问题和构建变更'
 date: 2013-09-30 02:56
 comments: true
-categories: 
+categories: Libgdx
 ---
 > I’ve been checking on the progress on the Xamarin front. As you may remember, we are phasing out the Xamarin backend.
 

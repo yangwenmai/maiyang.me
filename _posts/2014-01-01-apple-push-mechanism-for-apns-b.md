@@ -3,7 +3,7 @@ layout: post
 title: '苹果推送机制APNs（二）'
 date: 2014-01-01 16:07
 comments: true
-categories: 
+categories: 推送
 ---
 上一篇介绍了一下APNs的基本原理和处理流程，通过介绍，对APNs的机制有了大致的了解后，我们就来看看如何把APNS服务集成到我们自己的项目中来，首先登陆我们的Apple Developer后台为将要使用推送服务的App新建一个App ID，如下图，点击新建后输入基本信息：
 

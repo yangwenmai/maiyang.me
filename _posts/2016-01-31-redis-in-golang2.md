@@ -4,7 +4,7 @@ title: 'Golang redis.v3 源代码再分析'
 keywords: redis, golang
 date: 2016-01-31 09:30
 description: 'redis golang客户端源代码再分析'
-categories: [golang]
+categories: [Golang]
 tags: [redis]
 comments: true
 group: archive
@@ -18,7 +18,7 @@ icon: file-o
 
 再次感谢这位朋友，是你让我重新审视昨天发的文章。在手机上无法看到关键代码，很难理解文中的源码分析，所以今天再进行分析，希望今天的部分可以让大家无障碍的阅读和学习，且在文章内容上也做了进一步的深入。
 
-<!-- more -->
+<!--more-->
 
 还是继续推荐[黄健宏](http://huangz.me/)de书籍：
 >[《Redis实战-译本》](http://redisinaction.com/)

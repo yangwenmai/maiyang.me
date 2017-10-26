@@ -4,7 +4,7 @@ title: '持续学习'
 keywords: 学习
 date: 2017-04-20 07:00:00
 description: '持续学习'
-categories: [学习]
+categories: 个人管理
 tags: [学习]
 comments: true
 group: archive

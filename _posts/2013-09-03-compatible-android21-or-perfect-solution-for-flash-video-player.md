@@ -3,7 +3,7 @@ layout: post
 title: '兼容android2.1以上flash视频播放的完美解决方案'
 date: 2013-09-03 07:45
 comments: true
-categories: 
+categories: Android
 ---
 通过androi官方文档，android是在2.1以后的版本开始支持flash视频播放的。
 参见官方说明。

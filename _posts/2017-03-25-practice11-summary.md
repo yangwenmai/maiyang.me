@@ -4,7 +4,7 @@ title: '习惯养成记之11-半程总结'
 keywords: 习惯, 时间管理, spark, spark graphx, 总结
 date: 2017-03-25 06:32
 description: '习惯养成记之11，半程总结，确定今后的改进计划'
-categories: [习惯]
+categories: 个人管理
 tags: [习惯]
 comments: true
 group: archive
@@ -15,7 +15,7 @@ icon: file-o
 
 昨天是习惯养成记的第十天，也是开始习惯养成打卡的第12天。
 
-<!-- more -->
+<!--more-->
 
 昨天早上快速阅读把《图解Spark》剩余的Graphx和SparkR章节看完了。从整体上来讲，整书都是以源码分析Spark的各组件运行原理、流程来介绍的，对于没有任何开发经验的同学来说，这本书的讲解方式可能比较难以理解，毕竟通书都是以Scala语言为基础来进行介绍的。
 

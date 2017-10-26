@@ -4,12 +4,15 @@ title: '记使用proxy_pass时遇到的一个关于路径中传参的一个有�
 keywords: nginx, lua, proxy_pass, openresty
 date: 2017-08-06 07:40
 description: '记使用proxy_pass时遇到的一个关于路径中传参的一个有趣问题'
-categories: [nginx]
+categories: [Nginx]
 tags: [nginx, lua, openresty]
 comments: true
 group: archive
 icon: file-o
 ---
+
+* content
+{:toc}
 
 前几天我们新开发了一个服务，需要将之前的几个接口转发到新服务的新接口上，很自然的我们只需要做一次统一转发处理接口。
 
@@ -33,7 +36,7 @@ new_service 接收到的接口是：/new_service/v1/module 报404-找不到相�
 
 问题就出在：rewrite_by_lua_file "rule.lua";
 
-<!-- more -->
+<!--more-->
 
 搜索查找到这篇文章，知道了其中的缘由了。
 

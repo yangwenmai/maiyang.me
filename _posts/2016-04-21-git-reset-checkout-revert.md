@@ -4,7 +4,7 @@ title: 'git reset, revert, checkout介绍及区别'
 keywords: git, reset, revert, checkout
 date: 2016-04-21 21:40
 description: 'git reset, git revert, git checkout介绍及区别'
-categories: [git]
+categories: [Git]
 tags: [git, reset, revert, checkout]
 comments: true
 group: archive
@@ -17,7 +17,7 @@ icon: file-o
 
 首先，其实这3个命令的主要功能就是撤销(undo)。
 
-<!-- more -->
+<!--more-->
 
 ### 基本概念 ###
 

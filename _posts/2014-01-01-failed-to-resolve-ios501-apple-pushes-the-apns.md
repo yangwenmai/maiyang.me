@@ -3,7 +3,8 @@ layout: post
 title: '解决ios5.0.1之苹果推送APNs失败'
 date: 2014-01-01 16:15
 comments: true
-categories: [Apple, iOS, APNs, 苹果推送]
+categories: 推送
+tags: Apple, iOS, APNs, 苹果
 ---
 说来也巧，我在去年的最后一天晚上（2013年12月31日），成功的修复了一个强劲的bug--小恩爱应用在iOS5.0.1设备无法成功进行消息推送。
 

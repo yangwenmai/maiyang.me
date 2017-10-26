@@ -4,7 +4,7 @@ title: '习惯养成记之09-图解spark'
 keywords: 习惯, 时间管理, spark, spark sql, spark streaming
 date: 2017-03-23 06:45
 description: '习惯养成记之09'
-categories: [习惯]
+categories: 个人管理
 tags: [习惯]
 comments: true
 group: archive
@@ -13,7 +13,7 @@ icon: file-o
 
 昨天是习惯养成记的第八天，也是开始习惯养成打卡的第10天。
 
-<!-- more -->
+<!--more-->
 
 Spark SQL 和 Spark Streaming倒还能看的懂一点点，Spark MLlib则有点吃力了，毕竟之前没有接触过，一点认知都没有，所以我是略读。
 

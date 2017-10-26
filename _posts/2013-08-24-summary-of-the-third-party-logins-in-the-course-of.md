@@ -3,7 +3,7 @@ layout: post
 title: '第三方登录使用过程中的总结'
 date: 2013-08-24 07:54
 comments: true
-categories: 
+categories: 技术
 ---
 ----------
 SSO授权优势：不需要重复输入新浪微博用户名、密码，只需要一步操作，直接点击授权按钮即可完成授权，增强了操作简便性及帐号安全性。
@@ -30,7 +30,7 @@ SSO授权优势：不需要重复输入新浪微博用户名、密码，只需�
 
 *3、注意事项*
 
-<!-- more -->
+<!--more-->
 
 - SSO登录方式必须要在onActivityResult中配置。
 - `com.weibo.sdk.android.WeiboException: {"error":"User does not exists!","error_code":20003,"request":`

@@ -1,10 +1,14 @@
 ---
 layout: post
 title: '【转】苹果如何查询文档'
-date: 2013-08-24 03:27
+date: 2013-08-24 03:27:00 +0800
 comments: true
-categories: 
+categories: iOS
+tags: 文档 苹果
+author: maiyang
+mathjax: true
 ---
+
 # Quick Help
 最快捷的查询帮助文档的方法是不需要键入任何关键词的。你只需要在Xcode代码编辑器里，按住Option键，然后点击你想查询的关键词，就会获得关键词的帮助信息。如下图：
 ![](http://book.qiniudn.com/quickhelponkeyword.png)
@@ -47,7 +51,7 @@ match search term 必须完全匹配搜索词
 
 ![](http://book.qiniudn.com/helpread.png)
 
-<!-- more -->
+<!--more-->
 值得注意的是，标题下面这几样：
 
 Inherits from 继承关系，继承自

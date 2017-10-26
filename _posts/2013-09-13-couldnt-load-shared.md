@@ -3,7 +3,7 @@ layout: post
 title: 'Couldnt load shared library'
 date: 2013-09-13 02:10
 comments: true
-categories: 
+categories: Libgdx
 ---
 
 在用libgdx游戏引擎进行案例开发时，遇到以上问题，*google，stackoverflow.com,github.com/...issue,libgdx community*

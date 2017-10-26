@@ -3,7 +3,8 @@ layout: post
 title: 'MacBookPro自动切换网络和代理'
 date: 2014-03-14 02:23
 comments: true
-categories: [Shell, macbookpro, 网络设置, networksetup, 代理]
+categories: 工具
+tags: [Shell, macbookpro, 网络设置, networksetup, 代理]
 ---
 ##背景1
   在公司网络是使用dhcp分配的，但是经常要变更IP，所以我自己就使用网络偏好设置，更改为（使用dhcp-手动设定地址），保证我的IP是不变的，便于代码调试。

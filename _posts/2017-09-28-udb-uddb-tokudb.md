@@ -5,12 +5,15 @@ keywords: UDB, UDDB, InnoDB, TokuDB
 date: 2017-09-24 08:10
 description: '本文是对 UDB、UDDB（Percona、TokuDB） 的使用过程中的问题总结。
 '
-categories: [mysql]
+categories: [数据库]
 tags: [MySQL, UDB, UDDB, Percona, TokuDB]
 comments: true
 group: archive
 icon: file-o
 ---
+
+* content
+{:toc}
 
 	本文是我对 UDB, UDDB, TokuDB 的使用分析，以及一些问题总结，希望可以帮助到大家。
 
@@ -35,7 +38,7 @@ icon: file-o
 
 鉴于我个人经验，我对 AWS,Aliyun 的产品没有怎么广泛使用，所以也没有什么发言权，今天就只说说我们正在使用的吧。
 
-<!-- more -->
+<!--more-->
 
 ## 云数据库MySQL UDB ##
 

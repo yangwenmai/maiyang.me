@@ -4,7 +4,7 @@ title: 'Golang Unicode字符串转义神坑'
 keywords: podcast
 date: 2016-01-09 01:00
 description: 'Golang Unicode字符串转义神坑'
-categories: [golang, unicode]
+categories: Golang
 tags: [golang, unicode, 问题]
 comments: true
 group: archive
@@ -19,7 +19,7 @@ icon: file-o
 
 `https://zh.wikipedia.org/wiki/%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6`
 
-<!-- more -->
+<!--more-->
 
 代码最有说服力，我直接贴代码吧！
 
