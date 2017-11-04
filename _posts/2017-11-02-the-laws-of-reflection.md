@@ -33,7 +33,11 @@ Go语言反射法则 - The Laws of Reflection
 
 由于反射是建立在类型系统(type system)上的，所以我们先来复习一下Go语言中的类型。
 
-Go是一门静态类型的语言。每个变量都有一个静态类型，在编译时每个类型都明确并固定下来，例如：int, float32, *MyType, []byte 等。如果我们声明
+Go是一门静态类型的语言。每个变量都有一个静态类型，在编译时每个类型都明确并固定下来，例如：int, float32, *MyType, []byte 等。 
+
+<!--more-->
+
+如果我们声明
 
 ```go
 type MyInt int
