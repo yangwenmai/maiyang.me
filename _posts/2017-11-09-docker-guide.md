@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 'Docker-Compose 管理多个 Docker 容器构建自己的 Wordpress'
+title: '基于 Docker 构建 Wordpress'
 keywords: Docker, Docker-Compose, Wordpress
 date: 2017-11-10 23:33
-description: 'Docker-Compose 管理多个 Docker 容器构建自己的 Wordpress'
+description: '基于 Docker 构建 Wordpress'
 categories: [docker]
 tags: [Docker-Compose, Docker, Wordpress]
 comments: true
@@ -13,30 +13,63 @@ author: mai
 * content
 {:toc}
 
-    本文是一篇Docker-Compose管理多个Docker容器的一个构建 Wordpress 的入门级指南。
+    本文是一篇基于 Docker构建 Wordpress 的入门级指南。
 
 ----
 
-Docker的安装和使用，以及 Docker 基本使用命令，都可以参考官网，我这里只是简单介绍一下：
+Docker 的安装以及 Docker 基本命令，都可以参考官网了解和学习，我这里只是简单介绍一下如何构建 Wordpress：
 
-## 安装 ##
+## 基本准备之一安装 Docker ##
 
 >见官网。
 
-## 拉取镜像 ##
+常用的命令：
 
-安装好之后，执行拉取镜像。
+- `docker --version`
+- `docker-compose --version`
+- `docker-machine --version`
+- `docker ps`
+- `docker ps -a`
+- `docker run hello-world` # 如果能显示：“”，则表示docker安装成功了。
+    - Hello from Docker! This message shows that your installation appears to be working correctly.
+- `docker run -it -rm ubuntu:latest bash` # 启动一个ubuntu，并且进入bash命令行
+- `docker run -d -p 80:80 --name webserver nginx` # 启动一个Nginx
+
+## 基本准备之二 ##
+
+拉取镜像：
 
 >docker pull mysql
 
 >docker pull wordpress
 
-## 编辑 docker-compose.yml ##
+<!--more-->
 
-在你确定的目录下开始管理docker-wordpress服务，比方说`~/docker_wordpress/`
+## 配置所需 ##
+
+在你确定的目录下开始安装 wordpress，比方说`~/docker_wordpress/`
+
+给 MySQL 和 wordpress 存储创建目录，
+
+```
+mkdir -p ./mysql/conf
+mkdir -p ./mysql/data
+mkdir -p ./data
+```
+
+然后再配置 MySQL 的基本配置：`vim ./mysql/conf/my.cnf`
+
+```conf
+[mysqld]
+max_connections = 20000
+max_connect_errors = 4000
+open_files_limit = 65535
+table_open_cache = 1000
+skip-name-resolve
+```
 
 ```yml
-version: '2' # 注意这里不能为1
+version: '2' #Docker Compose 发展至今，有 Version 1、Version 2、Version 3 三个大版本。如果不声明版本，默认为 Version 1。Version 1 不能使用 volumes,、networks、 build参数。Version 2，必须在版本中申明，所有的服务，都必须申明在 service 关键字下。Version 3 删除了 volume_driver、volumes_from、cpu_shares、cpu_quota、cpuset、mem_limit、memswap_limit、extends、group_add关键字，新增了 deploy，全面支持 Swarm mode。更详细的比较可以查看参考链接
 services:
     web:
         image: wordpress:latest ## 使用wordpress最新的镜像
@@ -60,27 +93,6 @@ services:
         volumes:
             - ./mysql/data:/var/lib/mysql # MySQL 的数据存储位置
             - ./mysql/conf:/etc/mysql/conf.d # MySQL 的配置存储位置
-```
-
-## MySQL 数据库配置 ##
-
-给 MySQL 和 wordpress 存储创建目录，
-
-```
-mkdir -p ./mysql/conf
-mkdir -p ./mysql/data
-mkdir -p ./data
-```
-
-然后再配置 MySQL 的基本配置：`vim ./mysql/conf/my.cnf`
-
-```conf
-[mysqld]
-max_connections = 20000
-max_connect_errors = 4000
-open_files_limit = 65535
-table_open_cache = 1000
-skip-name-resolve
 ```
 
 ## 启动 ##
@@ -112,6 +124,34 @@ skip-name-resolve
 如果要删除某个docker服务的话，可以执行`docker-compose stop`，`docker-compose rm`
 
 ![](http://oqos7hrvp.bkt.clouddn.com/blog/docker-compose-stop-rm.png)
+
+##启动docker某个image（镜像）的container（容器）##
+
+如果想再次打开这个container，运行：
+
+`docker start goofy_almeida`
+
+其中“goofy_almeida”是容器的名称。
+
+##进入container（容器）##
+
+使用“docker attach”命令进入
+>使用“docker attach”命令进入container（容器）有一个缺点，那就是每次从container中退出到前台时，container也跟着退出了。
+
+使用“docker exec -it”命令进入
+>要想退出container时，让container仍然在后台运行着，可以使用“docker exec -it”命令。每次使用这个命令进入container，当退出container后，container仍然在后台运行，命令使用方法如下：
+
+`docker exec -it goofy_almeida /bin/bash`
+
+
+Container crashes with code 137 when given high load
+》https://github.com/moby/moby/issues/22211
+
+
+## 参考资料 ##
+
+1. https://www.centos.bz/2017/09/从零开始使用-docker-打包-django-开发环境-3-docker-compose/
+
 
 ----
 

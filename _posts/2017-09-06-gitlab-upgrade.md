@@ -166,13 +166,15 @@ cat /var/opt/gitlab/gitlab-rails/VERSION
   ```
   listen 443 ssl;
   ...
-  ssl_certificate      /var/opt/gitlab/nginx/xiaoenai.net.crt;
-  ssl_certificate_key  /var/opt/gitlab/nginx/xiaoenai.net.key;
+  ssl_certificate      /var/opt/gitlab/nginx/xxxxyyyyy.crt;
+  ssl_certificate_key  /var/opt/gitlab/nginx/xxxxyyyyy.key;
   ssl_session_cache    shared:SSL:10m;
   ssl_session_timeout  10m;
-  ssl_ciphers RC4:HIGH:!aNULL:!MD5;
+  ssl_ciphers XXXXXXXXXXX;
   ssl_prefer_server_ciphers on;
   ```
+
+其中 xxxxyyyyy 是你自己的证书的名字
 
 `sudo gitlab-ctl restart nginx`, 重启 nginx 。
 
