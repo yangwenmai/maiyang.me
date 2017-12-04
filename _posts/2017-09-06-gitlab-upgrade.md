@@ -382,6 +382,29 @@ gitlab Reconfigured!
 
 还有一个要注意的地方就是，每次升级后，你配置的 https 都得重新再配置一次（因为默认升级会覆盖 Nginx 的配置）。
 
+## Forbidden 403的问题 ##
+
+**将 Gitlab 访问受限制的 IP 加入白名单**
+
+- 打开 `/etc/gitlab/gitlab.rb`
+- 查找 `gitlab_rails['rake_attack_git_basic_auth']` 关键字。
+- 取消注释，然后进行相应的配置。
+- 修改 `ip_whitelist` 白名单属性，加入 IP 。
+  
+  ```shell
+  gitlab_rails['rake_attack_git_basic_auth'] = {
+    'enable' =>true,
+    'ip_whitelist' => ['127.0.0.1'],
+    'maxretry' => 300,
+    'findtime' => 5,
+    'bantime' => 60
+  }
+  ```
+
+- 配置好后，执行 `gitlab-ctl reconfigure` 即可。
+
+注：执行之后 Nginx 配置也会被重置。
+
 ## 参考资料 ##
 
 1. https://mirrors.tuna.tsinghua.edu.cn/help/gitlab-ce/
