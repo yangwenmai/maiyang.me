@@ -13,30 +13,11 @@ author: mai
 * content
 {:toc}
 
-    本文是基于 **[gitfeed](https://github.com/yangwenmai/gitfeed)** 项目来教你如何一步一步的用 Github+Slack+TravisCI 构建自动化持续集成的实战指南。
+    本文是基于 **[gitfeed](https://github.com/yangwenmai/gitfeed)** 项目来教你如何一步一步的用 Github+Slack+TravisCI 构建自动化持续集成。
 
 ----
 
-**[gitfeed](https://github.com/yangwenmai/gitfeed)** 项目也欢迎大家的使用，多提 Issue 和 PR。
-
-## 什么是 Github ？ ##
-
->GitHub 是一个通过 Git 进行版本控制的软件源代码托管服务，由 GitHub 公司（曾称Logical Awesome）的开发者 Chris Wanstrath、PJ Hyett 和 Tom Preston-Werner 使用 Ruby on Rails 编写而成。 摘自维基百科。
-
-## 什么是 Slack ？ ##
-
->Slack 是聊天群组 + 大规模工具集成 + 文件整合 + 统一搜索。Slack 整合了电子邮件、短信、Google Drives、Twitter、Trello、Asana、GitHub 等多种工具和服务，可以把各种碎片化的企业沟通、协作集中到一起。
-
-**Slack 致力于在整个团队中创造了一致性和共同的理解，使你更有效率，更少压力，更快乐一点。**
-
-## 什么是 Travis-CI ？ ##
-
->Travis CI 是在软件开发领域中的一个在线的，分布式的持续集成服务，用来构建及测试在 GitHub 托管的代码。这个软件的代码同时也是开源的，放在 GitHub上，尽管开发者当前并不推荐在闭源项目中单独使用它。
-它提供了多种编程语言的支持，包括Ruby，JavaScript，Java，Scala，PHP，Haskell，Go 和 Erlang 在内的多种语言。许多知名的开源项目都使用它在每次提交的时候进行构建测试。
-
-## 什么是自动化？ ##
-
-这个应该不用我过多解释吧,反正意思就是不需要人为干预咯。
+欢迎大家使用 [gitfeed](https://github.com/yangwenmai/gitfeed) 项目，有什么意见或想法都可以提 Issue 给我，更欢迎大家提 PR。
 
 ## 什么是持续集成？ ##
 
@@ -59,9 +40,9 @@ author: mai
 
 ----
 
-## 实战 ##
+## 开始实战 ##
 
-废话不多说，我一步一步教你用 GitHub+Slack+TravisCI 来构建自动化持续集成（Go 语言）。
+废话不多说，下面我就一步一步教你用 GitHub+Slack+TravisCI 来构建自动化持续集成。
 
 ### 准备工作 ###
 
@@ -71,9 +52,9 @@ author: mai
 2. Slack 账号
 3. TravisCI 账号
 
-### Github 上创建 Go 项目 ###
+### Github 上创建项目 ###
 
-创建一个 Go 项目：(当然你也可以直接 Fork 我的 [gitfeed](https://github.com/yangwenmai/gitfeed) 项目。)
+创建一个项目：(当然你也可以直接 Fork 我的 [gitfeed](https://github.com/yangwenmai/gitfeed) 项目。)
 
 - 项目名称：取一个名字；
 - 项目描述：添加一些描述，让大家知道你这个项目是干什么的；
@@ -94,7 +75,7 @@ author: mai
 
 ### TravisCI: 构建项目 ##
 
-前提是你已经创建好了 Github 项目，并且你为 Go 项目添加了 `.travis.yml` 文件，更多详细内容可以参考我的另一篇文章[怎么给你的GitHub README添加徽章](https://github.com/yangwenmai/how-to-add-badge-in-github-readme)。
+前提是你已经创建好了 Github 项目，并且你给项目添加了 `.travis.yml` 文件，更多详细内容可以参考我的另一篇文章[怎么给你的GitHub README添加徽章](https://github.com/yangwenmai/how-to-add-badge-in-github-readme)。
 
 ----
 
@@ -118,9 +99,9 @@ Slack 有类似于 QQ/钉钉 的讨论组，叫做 Channel ，它使用起来非
 
 ### Slack 管理 Apps ###
 
-要对 Go 项目进行自动化持续集成，咱们得先给 Slack 添加 Github 和 TravisCI App。
+要让项目可以自动化持续集成，咱们先得给 Slack 添加 Github 和 TravisCI App。
 
-#### 怎么添加呢？ ####
+**怎么添加呢？**
 
 你可以在主面板上的 Apps 进行添加
 
@@ -142,7 +123,6 @@ Slack 有类似于 QQ/钉钉 的讨论组，叫做 Channel ，它使用起来非
 授权通过之后，你就可以选择项目进行 Slack 集成了。
 
 ![](http://oqos7hrvp.bkt.clouddn.com/blog/slack-github-chose-repo.png)
-
 ![](http://oqos7hrvp.bkt.clouddn.com/blog/slack-github-repo-events.png)
 ![](http://oqos7hrvp.bkt.clouddn.com/blog/slack-github-post-config.png)
 
@@ -165,7 +145,7 @@ Slack 有类似于 QQ/钉钉 的讨论组，叫做 Channel ，它使用起来非
 
 需要你将上面的 notifications 配置到你项目中的 `.travis.yml` 文件中 。
 
-你可以点击 `create a new channle` 创建一个 channle 用于推送消息的接收通道。
+你可以点击 `create a new channel` 创建一个 channel 用于推送消息的接收通道。
 
 配置这些之后，点击 **Save Settings** 即可。
 
@@ -179,28 +159,46 @@ Slack 有类似于 QQ/钉钉 的讨论组，叫做 Channel ，它使用起来非
 
 ![](http://oqos7hrvp.bkt.clouddn.com/blog/slack-notification-info.png)
 
-至此整个 Github+Slack+Travis 构建 Go 的自动化持续集成环境就配置完成了。
+至此整个 Github+Slack+TravisCI 构建的自动化持续集成环境就配置完成了。
 
 ## 实际测试 ##
 
-如果你只想体验 Github+Slack+TravisCI 的自动化持续集成，你可以直接加入进来。
+如果你只想体验如何构建自动化持续集成，你可以直接加入进来就好了。
 
 [Join Slack](https://join.slack.com/t/gitfeed/shared_invite/enQtMjgwNTU5MTE5NjgxLTA5NDQwYzE4NGNhNDI3N2E0ZmYwOGM2MWNjMDUyNjczY2I0OThiNzA5ZTk0MTc1MGYyYzk0NTA0MjM4OTZhYWE)
 
 ## 参考资料 ##
 
-1. **特别感谢 Cui YingJie** 在 Gopher 深圳 Meetup 给我们带来的分享：《[Go 持续集成开发环境搭建示例](https://github.com/nihuo/go_meetup_sz1)》，本文就是参考它而完成的
+1. **特别感谢 Cui YingJie** 在 Gopher 深圳 Meetup 给我们带来的分享：《[Go 持续集成开发环境搭建示例](https://github.com/nihuo/go_meetup_sz1)》，本文就是参考它而完成的。
 
 2. [怎么给你的GitHub README添加徽章](https://github.com/yangwenmai/how-to-add-badge-in-github-readme)
+
+## 附录 ##
+
+## 什么是 Github ？ ##
+
+>GitHub 是一个通过 Git 进行版本控制的软件源代码托管服务，由 GitHub 公司（曾称Logical Awesome）的开发者 Chris Wanstrath、PJ Hyett 和 Tom Preston-Werner 使用 Ruby on Rails 编写而成。 摘自维基百科。
+
+## 什么是 Slack ？ ##
+
+>Slack 是聊天群组 + 大规模工具集成 + 文件整合 + 统一搜索。Slack 整合了电子邮件、短信、Google Drives、Twitter、Trello、Asana、GitHub 等多种工具和服务，可以把各种碎片化的企业沟通、协作集中到一起。
+
+**Slack 致力于在整个团队中创造了一致性和共同的理解，使你更有效率，更少压力，更快乐一点。**
+
+## 什么是 Travis-CI ？ ##
+
+>Travis CI 是在软件开发领域中的一个在线的，分布式的持续集成服务，用来构建及测试在 GitHub 托管的代码。这个软件的代码同时也是开源的，放在 GitHub上，尽管开发者当前并不推荐在闭源项目中单独使用它。
+它提供了多种编程语言的支持，包括Ruby，JavaScript，Java，Scala，PHP，Haskell，Go 和 Erlang 在内的多种语言。许多知名的开源项目都使用它在每次提交的时候进行构建测试。
+
+## 什么是自动化？ ##
+
+这个应该不用我过多解释吧,反正意思就是不需要人为干预咯。
 
 ----
 
 **茶歇驿站**
 
-一个可以让你停下来看一看，在茶歇之余给你帮助的小站。
-
-![打赏](http://oqos7hrvp.bkt.clouddn.com/blog/money.jpg)
-
-这里的内容主要是后端技术，个人管理，团队管理，以及其他个人杂想。
+一个可以让你停下来看一看，在茶歇之余给你帮助的小站，这里的内容主要是后端技术，个人管理，团队管理，以及其他个人杂想。
 
 ![茶歇驿站二维码](http://oqos7hrvp.bkt.clouddn.com/blog/tech_tea.jpg)
+![打赏](http://oqos7hrvp.bkt.clouddn.com/blog/money.jpg)
