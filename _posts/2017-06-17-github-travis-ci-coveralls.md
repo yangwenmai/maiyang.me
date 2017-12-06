@@ -57,7 +57,7 @@ language: go # 声明构建语言环境
 sudo: false # 开启基于容器的Travis CI任务，让编译效率更高。
 
 notifications: # 每次构建的时候是否通知，如果不想收到通知，那就设置false吧(email: false,也可以是Slack)
-  slack: maiyang:7VvXYbpv9dJ3fcRyxtqKjIqZ
+  slack: xxxx:xxxxxxxxxx
   on_success: change
   on_failure: always
 
@@ -132,15 +132,15 @@ repo_token涉及安全不应该提交到`.travis.yml`，coveralls提供了非对
 
 # 添加 Codecov
 
-[Codecov](http://codecov.io/) 的作用功效：
+[Codecov](http://codecov.io/) 的功能：
 
 **加强开发工作流程，提高代码质量**。
 
 - 一行脚本即可上传报告，非常简单。
 
-  在 `.travis.yml` 中增加如下代码即可。
-
 ```yaml
+# .travis.yml
+
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 ```
@@ -155,6 +155,14 @@ after_success:
 ![codecov](http://oqos7hrvp.bkt.clouddn.com/blog/codecov-01.png)
 ![codecov](http://oqos7hrvp.bkt.clouddn.com/blog/codecov-02.png)
 ![codecov](http://oqos7hrvp.bkt.clouddn.com/blog/codecov-03.png)
+
+大家仔细看的话，应该会发现，怎么机器人名称是coveralls，而不是 codecov 呢？
+
+因为我们在 `.travis.yml` 里面没有加下面这行脚本。
+
+`- go test -race -coverprofile=coverage.txt -covermode=atomic`
+
+![codecov](http://oqos7hrvp.bkt.clouddn.com/blog/codecov-04.png)
 
 ## 最后:如何在自己的项目中显示Status Image?
 
