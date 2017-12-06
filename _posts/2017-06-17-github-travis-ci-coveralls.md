@@ -51,19 +51,18 @@ icon: file-o
 <!--more-->
 
 下面给一个我的`.travis.yml`例子:
-```yml
+
+```yaml
 language: go # 声明构建语言环境
 sudo: false # 开启基于容器的Travis CI任务，让编译效率更高。
 
-notifications: # 每次构建的时候是否通知，如果不想收到通知，那就设置false吧(email: false)
-  email:
-    recipients:
-      - yournam@xxx.com
+notifications: # 每次构建的时候是否通知，如果不想收到通知，那就设置false吧(email: false,也可以是Slack)
+  slack: maiyang:7VvXYbpv9dJ3fcRyxtqKjIqZ
   on_success: change
   on_failure: always
 
 go:
-  - 1.8.3
+  - 1.9.2
 
 install:#依赖安装
   - go get github.com/go-playground/overalls #overalls能够支持到各级子目录
@@ -75,7 +74,11 @@ install:#依赖安装
 script:# 集成脚本
     - overalls -project=github.com/yangwenmai/ratelimit -covermode=count -ignore='.git,_vendor'
     - goveralls -coverprofile=overalls.coverprofile -service=travis-ci -repotoken $COVERALLS_TOKEN
+    - go test -race -coverprofile=coverage.txt -covermode=atomic
     - go test ./...
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
 
 env:#env环境变量设置，travis提供的repo_token安全方式
   global:
@@ -126,6 +129,32 @@ repo_token涉及安全不应该提交到`.travis.yml`，coveralls提供了非对
 `travis encrypt COVERALLS_TOKEN=your_token`
 
 将得到的值填写到`.travis.yml`的secure中即可。
+
+# 添加 Codecov
+
+[Codecov](http://codecov.io/) 的作用功效：
+
+**加强开发工作流程，提高代码质量**。
+
+- 一行脚本即可上传报告，非常简单。
+
+  在 `.travis.yml` 中增加如下代码即可。
+
+```yaml
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+```
+
+- 报告合并，完美无缺。
+- 审核报告，无缝连接。
+- 从现在开始覆盖你的代码，免费。
+- 全世界有上百万开发者用 Codecov 覆盖他们的代码。
+
+以下是一些截图，大家可以看看
+
+![codecov](http://oqos7hrvp.bkt.clouddn.com/blog/codecov-01.png)
+![codecov](http://oqos7hrvp.bkt.clouddn.com/blog/codecov-02.png)
+![codecov](http://oqos7hrvp.bkt.clouddn.com/blog/codecov-03.png)
 
 ## 最后:如何在自己的项目中显示Status Image?
 
