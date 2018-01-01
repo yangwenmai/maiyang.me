@@ -35,6 +35,8 @@ Go强大之处是它已经在语言层面集成了profile采样工具,并且允�
 * block profile、traces等
 Go语言常见的profiling使用场景
 
+<!--more-->
+
 * 基准测试文件：例如使用命令go test . -bench . -cpuprofile prof.cpu 生成采样文件后，再通过命令 go tool pprof [binary] prof.cpu 来进行分析。
 * import _ net/http/pprof：如果我们的应用是一个web服务，我们可以在http服务启动的代码文件(eg: main.go)添加 import _ net/http/pprof，这样我们的服务 便能自动开启profile功能，有助于我们直接分析采样结果。
 * 通过在代码里面调用 runtime.StartCPUProfile或者runtime.WriteHeapProfile

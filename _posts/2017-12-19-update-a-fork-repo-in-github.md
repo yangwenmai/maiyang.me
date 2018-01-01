@@ -93,8 +93,10 @@ Fast-forward
 
 ## 参考资料 ##
 
-1. [](https://help.github.com/articles/configuring-a-remote-for-a-fork/)
+1. [fork](https://help.github.com/articles/configuring-a-remote-for-a-fork/)
 2. [Syncing a fork](https://help.github.com/articles/syncing-a-fork/)
+
+<!--more-->
 
 ----
 

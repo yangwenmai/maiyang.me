@@ -40,6 +40,8 @@ author: mai
 
 ----
 
+<!--more-->
+
 # 实战演示
 
 1. 本地运行 Docker `jaegertracing/all-in-one:latest`，打开 `http://localhost:16686` 如果能够看到 Jaeger UI 即表示运行成功了；

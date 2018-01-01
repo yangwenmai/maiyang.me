@@ -19,10 +19,7 @@ author: mai
 
 其实用 Docker 来构建真的很简单，这里就给大家贴我的实际配置和运行命令吧。
 
-<!--more-->
-
 。。。
-
 
 ### 检查 ElasticSearch 状态 ###
 
@@ -98,6 +95,7 @@ curl -XPUT 'localhost:9200/twitter/tweet/1?pretty' -H 'Content-Type: application
 https://github.com/olivere/elastic/issues/312
 https://github.com/olivere/elastic/wiki/Connection-Problems#how-to-figure-out-connection-problems
 
+<!--more-->
 
 ----
 

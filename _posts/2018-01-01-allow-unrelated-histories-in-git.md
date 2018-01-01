@@ -2,7 +2,7 @@
 layout: post
 title: '解决Git fatal错误提示'
 keywords: Git, Github
-date: 2017-01-01 15:00
+date: 2018-01-01 15:00
 description: '本文是在git push数据时遇到的一个问题解决方法。'
 categories: [git]
 tags: [Git, Github]
@@ -35,6 +35,8 @@ author: mai
 直接本地文件重命名，然后再从 GitHub 拉取项目，然后把本地项目的所有文件拷贝到拉取到的项目文件中，然后再提交数据并推上去。
 
 这虽然是一种解决办法，也不无伤大雅，但是这个办法终归不是正统的解决之道，本着学习和专研的精神，不应该逃避问题的方式来达到解决问题，所以我 Google 了。
+
+<!--more-->
 
 ## 那究竟我如何解决以上错误的呢？ ##
 

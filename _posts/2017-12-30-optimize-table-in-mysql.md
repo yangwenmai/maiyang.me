@@ -38,6 +38,8 @@ author: mai
 
 虽然 `optimize table table_name` 也能够释放表锁片空间，但是我们还是建议使用 `ALTER TABLE table_name ENGINE=InnoDB;`
 
+<!--more-->
+
 ## 参考资料 ##
 
 1. 没有参考资料；
