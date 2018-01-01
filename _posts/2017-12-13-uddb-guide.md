@@ -46,17 +46,18 @@ UDDB 只要在初始化时创建好表之后，只需要不断扩展这个表就
 Q1：如果我的表分区是时间分区的或者表分区后续要调整的话，应该如何变更呢？
 
 初始表语句：
+
 ```
-CREATE TABLE `g_msg` (
-  `seq` bigint(20) unsigned NOT NULL COMMENT '群组消息ID',
-  `group_id` bigint(20) NOT NULL COMMENT '群组ID',
-  `send_id` bigint(20) NOT NULL COMMENT '发送者',
-  `data` longtext COMMENT '消息内容',
+CREATE TABLE `gmsg` (
+  `id` bigint(20) unsigned NOT NULL COMMENT 'ID',
+  `gid` bigint(20) NOT NULL COMMENT 'GID',
+  `sid` bigint(20) NOT NULL COMMENT 'SID',
+  `data` longtext COMMENT 'data',
   `nts` bigint(20) DEFAULT NULL COMMENT '纳秒时间戳',
-  PRIMARY KEY (`seq`,`group_id`)
+  PRIMARY KEY (`id`,`gid`)
 ) ENGINE=TokuDB DEFAULT CHARSET=utf8mb4 COMMENT='消息表'
 upartition by range(unix_timestamp(nts)) 
-usubpartition by hash(seq)
+usubpartition by hash(id)
 usubpartitions 2
 (
 upartition m1 values less than (unix_timestamp('2017-02-01')), 
@@ -67,7 +68,7 @@ upartition m3 values less than (unix_timestamp('2017-04-01'))
 
 以上表分区只能支持到4月1日，所以在此之后我们需要通过 SQL 来更新表分区：
 
-`Alter table group_msg add upartition(upartition m4 values less than (unix_timestamp('2017-05-01')));`
+`Alter table gmsg add upartition(upartition m4 values less than (unix_timestamp('2017-05-01')));`
 
 - 对 upartition by range(unix_timestamp(nts)) 解释一下：根据 nts 这个字段做分区。 
 
@@ -80,9 +81,9 @@ upartition m3 values less than (unix_timestamp('2018-01-01'))
 ) 
 ```
 
-- 对 `usubpartition by hash(seq) usubpartitions 2` 解释一下：
+- 对 `usubpartition by hash(id) usubpartitions 2` 解释一下：
 
-在月分区的情况下再进行分区：根据 seq 又划分为两张子表，hash 只支持一个字段 seq。
+在月分区的情况下再进行分区：根据 id 又划分为两张子表，hash 只支持一个字段 id。
 
 如果分区指定的是 `upartition d4 values less than (120000000)`，那么超过 120000000 就会被拒绝，数据无法插入。
 
@@ -117,7 +118,7 @@ UDDB 支持 ON DUPLICATE KEY UPDATE
 Q7: 另外一个报错
 
 ```
-INSERT INTO `xxx` (`id1`,`id2`, `group_id`,created_at,updated_at)VALUES(999999,29999999,12,1512634733,1512634733) ON DUPLICATE KEY UPDATE `id1`=999999,`id2`=29999999,`group_id`=12,`updated_at`=1512634744
+INSERT INTO `xxx` (`id1`,`id2`, `gid`,created_at,updated_at)VALUES(999999,29999999,12,1512634733,1512634733) ON DUPLICATE KEY UPDATE `id1`=999999,`id2`=29999999,`gid`=12,`updated_at`=1512634744
 
 routing key in update expression。
 ```
@@ -127,17 +128,17 @@ routing key in update expression。
 改造后的 SQL：
 
 ```sql
-INSERT INTO `xxx` (`id1`,`id2,`group_id`,created_at,updated_at)VALUES(999999,29999999,12,1512634733,1512634733) ON DUPLICATE KEY UPDATE group_id`=12,`updated_at`=1512634744
+INSERT INTO `xxx` (`id1`,`id2,`gid`,created_at,updated_at)VALUES(999999,29999999,12,1512634733,1512634733) ON DUPLICATE KEY UPDATE group_id`=12,`updated_at`=1512634744
 ```
 
 Q8: 不同业务是否建议不要放在同一个 UDDB 上？(
-小恩爱案例：user_friends和group_msg是否建议放一个UDDB呢)
+小恩爱案例：ufs和gmsg是否建议放一个UDDB呢)
 
 >放在一起没问题，分开也有分开的好处但是好处也不大。放在一起要解决的问题，是某个表数据量突增，水平扩展如何不影响其他表。
 
->目前来看，如果第一次分区就合理，后面都不需要非标操作和数据迁移了，直接加节点就可以把新的分区建到新的节点上了。这样 msg 表的扩容，对 friends 表是没有影响的。
+>目前来看，如果第一次分区就合理，后面都不需要非标操作和数据迁移了，直接加节点就可以把新的分区建到新的节点上了。这样 m 表的扩容，对 f 表是没有影响的。
 
->如果后面需要做数据迁移，我们也可以只迁msg，不迁friends的。但是如果存储引擎不一样，那就必须使用不同的 UDDB 了。
+>如果后面需要做数据迁移，我们也可以只迁m，不迁f的。但是如果存储引擎不一样，那就必须使用不同的 UDDB 了。
 
 >UDDB的配置如何选择呢？内存怎么分配？主要是看业务压力怎么样？也就是看最大QPS是多少。
 
@@ -154,7 +155,7 @@ Q10: 对于分布式插入问题如何解决？
 
 - 如何查看 UDDB 分区信息？
 
->`show create table group_msg`
+>`show create table gmsg`
 
 - 如何查看 UDDB 后端实际的数据库分布呢？
 
@@ -239,8 +240,8 @@ UPARTITION d2 VALUES LESS THAN (20000000)
 
 这个得看情况：
 
-- 如果range没有产生数据， 那么是可以变小的（通过我们后台的非标操作，直接修改分区信息）。
-- 如果range产生的数据，那么可以加节点，做数据迁移。比如一开始 1-2000w 都在一个 UDB 节点上，做了二级分区，分成了 2*10 =20份。如果数据量大，可以加新的节点，然后做数据迁移，把20份数据均匀分散到新老节点上，此后再加新的 range 分区时，则可以缩小规模，比如 100w 一个 range。
+- 如果 range 没有产生数据， 那么是可以变小的（通过我们后台的非标操作，直接修改分区信息）。
+- 如果 range 产生的数据，那么可以加节点，做数据迁移。比如一开始 1-2000w 都在一个 UDB 节点上，做了二级分区，分成了 2*10 =20份。如果数据量大，可以加新的节点，然后做数据迁移，把20份数据均匀分散到新老节点上，此后再加新的 range 分区时，则可以缩小规模，比如 100w 一个 range。
 
 这个数据迁移是标准操作，可以通过 SQL 命令发起迁移，迁移不会影响业务，稳定性绝对有保证。
 
@@ -270,55 +271,17 @@ launch trans_data_task(
 
 ## 其他 ##
 
-- 如何评价kingshard？
-
->kingshard是非常优秀的，kingshard基本功能其实是很稳定的，一些底层的模块，写的是想当成熟的，但也有不少坑，在group by， order by，集函数上，我们踩了很多，后来干脆全部重写。
-
-其中有关于 UCloud 改造 kingshard 的介绍分享：《快与稳的平衡-公有云分布式数据库研发运营.pdf》
-
 - 为何选择kingshard？
 
 >当时分析了一堆中间件 果断选择了 Go。
-
-- UCloud 对 Go 是什么姿态？
-
->UCloud 对 Go 是全力投入，现在新的项目基本上都转 Go 了，开发效率高，还特稳定。
-并且你会有一个感觉就是：以前写代码都没有什么感觉，现在感觉很舒服，很想写代码，很喜欢去造轮子了，感觉 Go 就是你的一把利器，随时有想法随时都可以帮助你去实现它。
-
-以前用 c++/Java 写代码碰到需求都是要推一推的，现在用 Go 都是毫不犹豫地马上动手。
 
 - UDDB 是用Go开发的吗？
 
 UDDB 的所有代码：中间件和管理系统，都是用 Go 来开发。
 
-- UDDB 现在做到了 CI/CD 吗？
-
->CI有，测试用例还不够完善，经过一年多，也有好几万条了，都是拿客户测试或线上的 SQL。
-
-- UDDB 是从什么时候开始的？
-
->UDDB 是从 2016年5月份基于 kingshard 开发，然后在2016年11月份上线，到现在运营1年多了。
-
 - UDB 最大支持多大存储空间？
 
 >非标操作可以扩大到 2TB，正常是 500GB。
-
-- UDDB 跟 TiDB 比较过吗？
-
->公有云数据库有自己的发展逻辑，跟 TiDB 还不太一样。
-UDB 和 UDDB 对齐的目标是 aws 的 aurora，redshift 以及阿里云的 polardb，hybrid MySQL。
-
->分布式数据库的发展应该分三层：存储分布化（用分布式文件系统代替单机系统），事务引擎分布式化， sql执行分布式化。
-
->利用公有云，结合最新的硬件（比如高速网卡，原子钟等），可以从存储层开始做起，一步步将存储、事务、sql执行分布式化。
-
->UDDB 现在做的其实就是最终的步骤：sql 执行分布式化。
-
->但是我们存储分布式化和事务分布式化现在还没有做。而aws，阿里云已经做了存储分布式化，Google 完成了存储和事务分布式化。
-
->这三步完成后，公有云的分布式数据库，将带来和传统数据库和传统分布式数据库（比如 TiDB，OceanBase）更好的体验和价值。比如，秒级扩容，按需付费，自动化运维等。
-
->TiDB 是 UCloud 的一个战略，就是和业内做基础软件的创业公司，进行联盟， 一起把影响力做大，但就做公有云的数据库而言，aws和阿里云才是正确的道路。
 
 - 怎么进行数据库的选择呢？
 
