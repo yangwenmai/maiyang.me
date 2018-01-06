@@ -22,7 +22,7 @@ author: mai
 **pt 表：**
 
 ```sql
-CREATE TABLE `push_task` (
+CREATE TABLE `pt` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `data` longtext COMMENT '内容',
   `next_at` bigint(20) DEFAULT NULL COMMENT '下次时间',
