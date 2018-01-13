@@ -153,6 +153,18 @@ Q10: 对于分布式插入问题如何解决？
 >multi insert 有一个开关控制，默认是关闭的，主要是因为会有分布式事务的问题。
 >但是如果只是 insert 的话，其实是可以把 multi insert 改成 multi replace（如果遇到主键冲突则直接替换），前提是咱们业务没有 delete，update。
 
+例：
+
+```sql
+INSERT INTO table_name (id, name, deleted) VALUES(...),(...),(...),(...);
+```
+
+应该改为：
+
+```sql
+REPLACE INTO table_name (id, name, deleted) VALUES(...),(...),(...),(...);
+```
+
 ## UDDB 日常运维 ##
 
 - 如何查看 UDDB 分区信息？
