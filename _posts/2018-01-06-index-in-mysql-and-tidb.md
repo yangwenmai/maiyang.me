@@ -2,7 +2,7 @@
 layout: post
 title: 'TiDB 和 MySQL 的索引实践'
 keywords: MySQL, index, TiDB
-date: 2018-01-03 00:25
+date: 2018-01-06 00:25
 description: '本文是我在比对 MySQL 和 TiDB 使用索引以及执行计划的一些总结。'
 categories: [git]
 tags: [Git, Github]

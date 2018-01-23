@@ -34,7 +34,8 @@ icon: file-o
 6. WIP: Work In Progress. 传说中提 PR 的最佳实践是，如果你有个改动很大的 PR，可以在写了一部分的情况下先提交，但是在标题里写上 WIP，以告诉项目维护者这个功能还未完成，方便维护者提前 review 部分提交的代码。
 7. PTAL: Please Take A Look. 你来瞅瞅？用来提示别人来看一下
 8. TBR: To Be Reviewed. 提示维护者进行 review
-9. TBD: To Be Done(or Defined/Discussed/Decided/Determined). 根据语境不同意义有所区别，但一般都是还没搞定的意思
+9. TBD: To Be Done(or Defined/Discussed/Decided/Determined). 根据语境不同意义有所区别，但一般都是还没搞定的意思。
+10. IMO: In my opinion 在我看来、依我看、依我所见。
 
 由tldr启发，还有一些开源项目。
 
