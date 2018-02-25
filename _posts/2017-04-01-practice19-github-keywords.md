@@ -28,7 +28,7 @@ icon: file-o
 1. TL;DR: Too Long; Didn't Read. 太长懒得看。
 现在有也有很多文档在做简略描述之前会写这么一句
 2. PR：Pull Request. 拉取请求，给其他项目提交代码
-3. PTAL：
+3. PTAL：Please take a look. 请看一看
 4. LGTM: Looks Good To Me. 代码已经过 review，可以合并。
 5. SGTM: Sounds Good To Me. 和上面那句意思差不多，也是已经通过了 review 的意思
 6. WIP: Work In Progress. 传说中提 PR 的最佳实践是，如果你有个改动很大的 PR，可以在写了一部分的情况下先提交，但是在标题里写上 WIP，以告诉项目维护者这个功能还未完成，方便维护者提前 review 部分提交的代码。
@@ -36,8 +36,11 @@ icon: file-o
 8. TBR: To Be Reviewed. 提示维护者进行 review
 9. TBD: To Be Done(or Defined/Discussed/Decided/Determined). 根据语境不同意义有所区别，但一般都是还没搞定的意思。
 10. IMO: In my opinion 在我看来、依我看、依我所见。
+11. LGT1: Looks Good To 1. 如果有一个回复 LGTM 则可以添加为LGT1，1代表目前有1个赞。
+12. LGT2: Looks Good To 2. 如果有两个回复 LGTM 则可以添加为LGT2，2代表目前有2个赞。
+13. DNM: Do not merge. 不要合并。
 
-由tldr启发，还有一些开源项目。
+由 tldr 启发，还有一些开源项目。
 
 比方说：https://github.com/tldr-pages/tldr
 
