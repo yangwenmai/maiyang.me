@@ -74,6 +74,21 @@ Q3:Grafana 有哪些酷炫的图表啊？
 
 >[http://play.grafana.org](http://play.grafana.org) 这里有很多好玩的模板
 
+Q4:为什么我的 Grafana 上的图表没有形成曲线呢？
+
+![](http://oqos7hrvp.bkt.clouddn.com/blog/grafana_graph_metrics_groupby_03.jpg)
+![](http://oqos7hrvp.bkt.clouddn.com/blog/grafana_graph_metrics_groupby_04.jpg)
+
+可能你的数据中存在 空 或 0 值，你需要进行以下设置。
+
+![](http://oqos7hrvp.bkt.clouddn.com/blog/grafana_graph_metrics_groupby_02.jpg)
+
+主要原因是因为数据波动很大，然后数据点都比较小，所以你可以把维度调大一点。
+
+![](http://oqos7hrvp.bkt.clouddn.com/blog/grafana_graph_metrics_groupby_time_interval.jpg)
+
+![](http://oqos7hrvp.bkt.clouddn.com/blog/grafana_graph_metrics_groupby_01.jpg)
+
 ----
 
 ## logdb 和 Kibana 的 QA ##
