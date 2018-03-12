@@ -1,9 +1,9 @@
 ---
 layout: post
-title: '小白怎么对 TiDB 进行源码分析？'
+title: '小白是怎么对 TiDB 进行源码分析的？'
 keywords: Golang, TiDB
 date: 2018-03-10 23:50
-description: '小白怎么对 TiDB 进行源码分析？'
+description: '小白是怎么对 TiDB 进行源码分析的？'
 categories: [Golang]
 tags: [Golang, TiDB]
 comments: true
@@ -13,7 +13,7 @@ author: mai
 * content
 {:toc}
 
-    本文是我对于如何成为 TiDB Contributor 的一些简单总结，我将拿一个很简单的例子来讲解如何让小白进行 TiDB 源码分析和修复过程。
+    本文我将拿一个很简单的例子来讲解小白是怎么对 TiDB 进行源码分析和修复问题的过程的，还有我对于如何成为 TiDB Contributor 的一些简单总结。
 
 ----
 
@@ -25,17 +25,6 @@ author: mai
 >从上面两个题外话，我们不难看出社区的力量好强大，并且这也彰显了 PingCAP 的社区正向引导力也好厉害，点赞！！！
 
 希望未来有更多的企业、组织能够关注社区正向引导力，有更多的人参与和输出。
-
-## 如何成为一个开源项目的 Contributor？
-
-这一部分，大家可以去看我去年的一篇[文章](http://maiyang.me/2017/03/19/how-to-do-contributor/)，我在这里就不再多说了。
-
-只补充几点小感触（小建议）：
-
-1. 不要怕从 0 开始；
-2. 不要怕从简单开始；
-3. 不要怕犯错（特别是不要怕犯低级错误）；
-4. 不要怕开口（不懂就问，社区的人都非常的nice）；
 
 ## 实战
 
@@ -199,7 +188,7 @@ func (b *builtinPasswordSig) evalString(row types.Row) (d string, isNull bool, e
 
 ### 其他
 
-虽然这次的 PR 不是我提交的，但是其实我从始至终的整个过程还是理清楚了，并且修复并验证了此问题，只是还没来得及完善有关测试用例，我收到了来自 TiDB 的邮件提醒。
+虽然这次的 PR 最终不是我提交的，但我把整个过程理清楚了，并且修复并验证了此问题，只是还没来得及完善测试用例，正准备开始时我收到了来自 TiDB 的邮件提醒。
 
 ![tidb_pr_6000_email](http://oqos7hrvp.bkt.clouddn.com/blog/tidb_pr_6000_email.png)
 
@@ -213,6 +202,17 @@ func (b *builtinPasswordSig) evalString(row types.Row) (d string, isNull bool, e
 
 ### 开源项目的参与方法和学习方法
 
+#### 如何成为一个开源项目的 Contributor？
+
+这一部分，大家可以去看我去年的一篇[文章](http://maiyang.me/2017/03/19/how-to-do-contributor/)，我在这里就不再多说了。
+
+只补充几点小感触（小建议）：
+
+1. 不要怕从 0 开始；
+2. 不要怕从简单开始；
+3. 不要怕犯错（特别是不要怕犯低级错误）；
+4. 不要怕开口（不懂就问，社区的人都非常的nice）；
+
 #### 怎么参与开源项目（TiDB）呢?
 
 + 可以查看 issue，帮助解答用户的问题；
@@ -220,6 +220,7 @@ func (b *builtinPasswordSig) evalString(row types.Row) (d string, isNull bool, e
 + 可以为增加测试代码，提升代码模块的测试覆盖率；
 + 可以关注 GoReportCard 对于 TiDB 的评分（主要是应用 Go 官方最佳实践的检测）；
 + 可以增加或修复一些文档；
++ 可以给复杂逻辑添加注释；
 
 #### 怎么学习开源项目（TiDB）呢？
 
