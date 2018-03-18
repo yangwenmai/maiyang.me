@@ -13,7 +13,7 @@ author: mai
 * content
 {:toc}
 
-    本文是一篇基于 Docker构建 Wordpress 的入门级指南。
+    本文是一篇基于 Docker 构建 Wordpress 的入门级指南。
 
 ----
 
@@ -136,16 +136,18 @@ services:
 ##进入container（容器）##
 
 使用“docker attach”命令进入
+
 >使用“docker attach”命令进入container（容器）有一个缺点，那就是每次从container中退出到前台时，container也跟着退出了。
 
 使用“docker exec -it”命令进入
+
 >要想退出container时，让container仍然在后台运行着，可以使用“docker exec -it”命令。每次使用这个命令进入container，当退出container后，container仍然在后台运行，命令使用方法如下：
 
 `docker exec -it goofy_almeida /bin/bash`
 
-
 Container crashes with code 137 when given high load
-》https://github.com/moby/moby/issues/22211
+》
+https://github.com/moby/moby/issues/22211
 
 
 ## 参考资料 ##

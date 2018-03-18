@@ -235,6 +235,7 @@ func (b *builtinPasswordSig) evalString(row types.Row) (d string, isNull bool, e
 3. [十分钟成为 TiDB Contributor 系列 | 添加內建函数](https://www.pingcap.com/blog-cn/add-a-built-in-function/)
 4. [十分钟成为 Contributor 系列 | 为 TiDB 重构 built-in 函数](https://www.pingcap.com/blog-cn/reconstruct-built-in-function/)
 5. [强烈推荐！！！PingCAP 中文博客](https://www.pingcap.com/blog-cn/)
+6. [TiDB 的最佳实践](https://github.com/pingcap/tidb/blob/master/CONTRIBUTING.md#workflow)
 
 ----
 
