@@ -95,8 +95,7 @@ Fast-forward
 
 1. [fork](https://help.github.com/articles/configuring-a-remote-for-a-fork/)
 2. [Syncing a fork](https://help.github.com/articles/syncing-a-fork/)
-
-<!--more-->
+3. https://github.com/pingcap/tidb/blob/master/CONTRIBUTING.md#workflow
 
 ----
 
