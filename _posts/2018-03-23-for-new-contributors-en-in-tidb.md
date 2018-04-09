@@ -37,7 +37,7 @@ author: mai
 
 ![](github_tidb_review_3.png)
 
-<!-- more -->
+<!--more-->
 
 ## 如何测试验证呢？
 

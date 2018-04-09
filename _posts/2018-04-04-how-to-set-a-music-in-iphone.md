@@ -30,7 +30,7 @@ author: mai
 ![](http://oqos7hrvp.bkt.clouddn.com/blog/itunes_setting_01.png)
 ![](http://oqos7hrvp.bkt.clouddn.com/blog/itunes_setting_02.png)
 
-<!-- more -->
+<!--more-->
 
 ## 2. 进入想制作铃声的歌曲的「歌曲信息」界面
 

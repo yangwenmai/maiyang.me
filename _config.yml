@@ -9,7 +9,7 @@
 title: 茶歇驿站
 brief-intro: 成长之路由我相伴。
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://maiyang.me" # the base hostname & protocol for your site
+url: "https://maiyang.me" # the base hostname & protocol for your site
 
 permalink: /:year/:month/:day/:title/
 

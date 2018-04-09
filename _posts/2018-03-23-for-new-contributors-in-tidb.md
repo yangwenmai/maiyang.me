@@ -33,7 +33,7 @@ I can give you a reference note. If you use the Go syntax highlighting plug-in, 
 
 <img width="814" alt="github_tidb_review_3" src="https://user-images.githubusercontent.com/1710912/37811378-d18fb8b6-2e94-11e8-9d69-991577141357.png">
 
-<!-- more -->
+<!--more-->
 
 ## How to test and verify?
 
