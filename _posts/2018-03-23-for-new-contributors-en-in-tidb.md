@@ -37,6 +37,8 @@ author: mai
 
 ![](github_tidb_review_3.png)
 
+<!-- more -->
+
 ## 如何测试验证呢？
 
 1. 首先你得 fork TiDB（这样你才可以在GitHub上对文件进行编辑）

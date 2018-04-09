@@ -30,6 +30,8 @@ author: mai
 ![](http://oqos7hrvp.bkt.clouddn.com/blog/itunes_setting_01.png)
 ![](http://oqos7hrvp.bkt.clouddn.com/blog/itunes_setting_02.png)
 
+<!-- more -->
+
 ## 2. 进入想制作铃声的歌曲的「歌曲信息」界面
 
 返回 iTunes 并翻到音乐页面，选择想制作铃声的歌曲按右键选择「歌曲信息」或输入快捷键「Command+I」﹐打开「歌曲信息」界面。

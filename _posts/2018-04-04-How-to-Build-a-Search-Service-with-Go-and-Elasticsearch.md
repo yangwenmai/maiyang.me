@@ -53,6 +53,8 @@ services:
 
 search_api 服务是在端口 8080 上托管我们的应用程序，而 elasticsearch 是运行在官方的 Elasticsearch Docker 镜像上，服务端口是 9200 。
 
+<!-- more -->
+
 接下来，咱们首先先来创建一个 `search-api` 子目录并且用 `dep` 来初始化这个项目。
 
 ```shell
