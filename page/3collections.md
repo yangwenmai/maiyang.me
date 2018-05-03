@@ -9,6 +9,10 @@ type: page
 * content
 {:toc}
 
+## Go
+
+* [Go 学习之路](https://github.com/yangwenmai/learning-golang)
+
 ## 工具
 
 * [box-shadow generator](http://www.cssmatic.com/box-shadow)
