@@ -413,6 +413,7 @@ gitlab Reconfigured!
 4. https://segmentfault.com/a/1190000007180257
 5. http://blog.licess.com/sshd_listen_address/
 6. https://unix.stackexchange.com/questions/92346/why-does-find-mtime-1-only-return-files-older-than-2-days
+7. https://gitlab.com/gitlab-org/gitlab-ce/blob/master/doc/update/8.8-to-8.9.md
 
 ----
 
