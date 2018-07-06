@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '给你一次成为 TiDB Contributor 的机会'
+title: '萌新如何成为 TiDB Contributor'
 keywords: Golang, TiDB
 date: 2018-03-23 19:00
 description: '给你一次成为 TiDB Contributor 的机会'
@@ -13,59 +13,55 @@ author: mai
 * content
 {:toc}
 
-    本文是我给你一次成为 TiDB Contributor 的机会，就看你要不要了。
+    This article is an opportunity for me to give you TiDB Contributor, depending on whether you want it or not.
 
 ----
 
->点击 [issue #6129](https://github.com/pingcap/tidb/issues/6129) 即可参加。
+## Intro
 
-## 由来
+This article was written under the leadership of Liu boss. I also hope that more people will be involved through such small activities. Although these tasks are very simple, these small tasks can reflect our TiDB team's perfect pursuit of code quality. This is what we should learn. This is an opportunity for you to improve/improve your code level. You shouldn't give up easily.
 
-​本文来源于一次跟刘老大在 TiDB Contributor Club 的交流，最终成文也得到了刘老大的很多帮助和点拨，在这里表示一下感谢。我也希望可以通过这样的小活动让更多的人参与进来，让社区更加的活跃，也让你有更多的收获。
+## Overview of the problem
 
-​虽然这些任务很简单，但这些小任务是可以折射出咱们 TiDB 团队对于代码质量的完美追求。这就是我们作为开发者应该追寻和要去学习的，其实这就是给你提高代码水平的机会，你不把握要轻易放弃，我也没办法了。
+Some of the `%` in TiDB's test cases enclose the statement with double quotes `""`, but Github escaping it when displayed, so it will be marked with `%` red, and we are doing a review of It doesn't look beautiful at the moment, so we need to change this and recommend replacing it with the Go language.
 
-## 问题概述说明
+For examples: [PR #5697](https://github.com/pingcap/tidb/pull/5697/files)
 
-在 TiDB 的测试用例里面的 % 有一些是用双引号 "" 把整个 SQL 语句括起来的，但是 Github 在显示时会进行转义，所以我们会看到 % 被标红了，当我们在做 code review 的时候看起来是极其不美观的，程序员追求的是完美，所以咱们肯定要想办法进行修改，这里推荐的就是 Go 语言里面的 `。
+## How to decide?
 
-比方说这个 PR https://github.com/pingcap/tidb/pull/5697/files
+I can give you a reference note. If you use the Go syntax highlighting plug-in, then you can see that the unhighlighted part is escaping. It may be problematic. Then we need to make changes. [eg, 100%500, %W %r].
 
-## 如何判定呢？
-
-我可以给大家一个参考说明，如果你使用了 Go 语法高亮插件的话，那么你就可以看到无法高亮的部分就说明转义了，可能是有问题的，那么就需要我们进行修改。【比如 100%500，%W %r】
-
-![](github_tidb_review_3.png)
+<img width="814" alt="github_tidb_review_3" src="https://user-images.githubusercontent.com/1710912/37811378-d18fb8b6-2e94-11e8-9d69-991577141357.png">
 
 <!--more-->
 
-## 如何测试验证呢？
+## How to test and verify?
 
-1. 首先你得 fork TiDB（这样你才可以在GitHub上对文件进行编辑）
-2. 打开某个疑似的文件（比方说：https://github.com/yangwenmai/tidb/edit/master/util/stringutil/string_util_test.go）
-3. 找到问题概述说明的代码语句
-4. 修改3所对应的代码语句
-5. 点击 `Preview changes`
-6. 查看并验证你的修改是否正确
+1. First you have to fork TiDB (so that you can edit the file on GitHub).
+2. Open a suspicious file (For examples: [util/stringutil/string_util_test.go](https://github.com/yangwenmai/tidb/edit/master/util/stringutil/string_util_test.go)）.
+3. Find the code statement for the problem overview description.
+4. Modify the 3 corresponding code statement.
+5. Click `Preview changes`.
+6. Check and verify that your changes are correct.
 
-我给大家一个例子，看一下就清楚了。
+Let me give you an example. It will be clear to see.
 
-![github_review_1](github_review_1.png)
-![github_review_2](github_review_2.png)
+<img width="1224" alt="github_tidb_review_1" src="https://user-images.githubusercontent.com/1710912/37811361-ac8d4416-2e94-11e8-8e45-c11edb4774e8.png">
+<img width="1003" alt="github_tidb_review_2" src="https://user-images.githubusercontent.com/1710912/37811798-0f2413be-2e97-11e8-89f8-f7ef1686ce76.png">
 
-## 补充内容
+## to add on
 
-以上所说的内容是我们应该要去修改的初衷，但其实我们还可以做的更多。
+The above content is the original intention that we should change, but in fact we can do more.
 
->将所有 testkit 的待执行 SQL 语句的都用 `` 来包起来。
+> Wrap all testkit's pending SQL statements with `` .
 
-所以我们在修改的时候，应该顺便把以下方法的 SQL 语句也一并修改了。
+Therefore, we should modify the SQL statements of the following methods by the way when we modify them.
 
 - `Exec`
 - `MustExec`
 - `MustQuery`
 
-## 任务清单
+## Todo List
 
 
 - [x] executor/aggregate_test.go @yangwenmai #6130 
@@ -89,9 +85,9 @@ author: mai
 - [x] util/stringutil/string_util_test.go @yangwenmai #6177
 - [x] util/ranger/ranger_test.go @hechen0 #6144
 
-整个修复过程耗时约 10 天。
+The entire repair process took about 10 days.
 
-## 参考资料
+## Reference
 
 1. https://golang.org/ref/spec#String_literals
 
