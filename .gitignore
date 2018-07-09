@@ -24,3 +24,5 @@ sync_hook.script
 
 **/.Archive
 *.bak
+.sass-cache
+.md_configs.data
