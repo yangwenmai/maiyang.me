@@ -12,16 +12,20 @@ module.exports = {
         path: '/',
       },
       {
-        label: 'Golang',
-        path: '/category/Golang',
+        label: 'Exploring JavaScript',
+        path: '/category/Exploring%20JavaScript',
       },
       {
-        label: 'DB',
-        path: '/category/DB',
+        label: 'How I React',
+        path: '/category/How%20I%20React',
       },
       {
-        label: 'About Me',
-        path: '/about-me',
+        label: 'I Know Node',
+        path: '/category/I%20Know%20Node',
+      },
+      {
+        label: 'More About Lei',
+        path: '/more-about-mai',
       },
     ],
     author: {
