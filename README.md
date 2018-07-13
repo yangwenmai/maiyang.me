@@ -1,1 +1,0 @@
-A personal blog made with Gatsby.js, theme by [Lumen](https://github.com/alxshelepenok/gatsby-starter-lumen)
