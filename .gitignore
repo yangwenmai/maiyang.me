@@ -26,3 +26,4 @@ sync_hook.script
 *.bak
 .sass-cache
 .md_configs.data
+public
