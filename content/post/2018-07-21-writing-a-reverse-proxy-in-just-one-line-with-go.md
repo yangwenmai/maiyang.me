@@ -3,7 +3,7 @@ title: '[译]用一行 Go 代码实现一个反向代理'
 keywords: golang, proxy, reverse-proxy
 date: 2018-07-21T11:40:23+08:00
 lastmod: 2018-07-21T11:40:23+08:00
-draft: true
+draft: false
 description: '用一行 Go 代码实现一个反向代理'
 categories: [golang]
 tags: [golang, proxy, reverse-proxy]

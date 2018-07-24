@@ -3,7 +3,7 @@ title: '无比强大的 Alfred Workflow'
 keywords: alfred, workflow
 date: 2018-07-23T09:40:23+08:00
 lastmod: 2018-07-23T09:40:23+08:00
-draft: true
+draft: false
 description: '无比强大的 Alfred workflow'
 categories: [tools]
 tags: [alfred, workflow]
