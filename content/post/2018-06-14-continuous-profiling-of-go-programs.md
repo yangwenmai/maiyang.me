@@ -65,7 +65,6 @@ if err := profiler.Start(profiler.Config{
 当分析被报告给后端后，你将在 [https://console.cloud.google.com/profiler](https://console.cloud.google.com/profiler) 上看到火焰图。你可以按标签过滤并更改时间范围，也可以按服务名称和版本进行细分。数据将会长达 30 天。
 
 ![](https://cdn-images-1.medium.com/max/1600/1*JdCm1WwmTgExzee5-ZWfNw.gif)
-![](https://dn-linuxcn.qbox.me/data/attachment/album/201806/04/110031zrl3tvppvs2v67s3.gif)
 
 你可以选择其中一个可用的来分析，按服务，区域和版本分解，你可以在火焰中移动并通过标签进行过滤。
 
@@ -75,8 +74,6 @@ if err := profiler.Start(profiler.Config{
 
 ![](https://cdn-images-1.medium.com/max/1600/1*QqzFJlV9v7U1s1reYsaXog.png)
 
-![](https://dn-linuxcn.qbox.me/data/attachment/album/201806/04/110038t61nopp64mzoimvo.png)
-
 我们将查看一个 CPU 分析，但这也适用于其他分析。
 
 - 最上面的 x 轴表示整个程序。火焰上的每个框表示调用路径上的一帧。框的宽度与执行该函数花费的 CPU 时间成正比。
@@ -85,7 +82,6 @@ if err := profiler.Start(profiler.Config{
 - 你可以单击任何框进一步展开执行树。
 
 ![](https://cdn-images-1.medium.com/max/1600/1*1jCm6f-Fl2mpkRe3-57mTg.png)
-![](https://dn-linuxcn.qbox.me/data/attachment/album/201806/04/110040svh65h9nh44v96oz.png)
 
 你可以将鼠标悬停在任何框上查看任何帧的详细信息。
 
@@ -94,7 +90,6 @@ if err := profiler.Start(profiler.Config{
 你可以显示、隐藏和高亮符号名称。如果你特别想了解某个特定调用或包的消耗，这些信息非常有用。
 
 ![](https://cdn-images-1.medium.com/max/1600/1*ka9fA-AAuKggAuIBq_uhGQ.png)
-![](https://dn-linuxcn.qbox.me/data/attachment/album/201806/04/110047mix5uqofmoefimug.png)
 
 - 选择你的过滤器。你可以组合多个过滤器。在这里，我们将高亮显示 runtime.memmove 。
 - 火焰将使用过滤器过滤帧并可视化过滤后的框。在这种情况下，它高亮显示所有 runtime.memmove 框。
