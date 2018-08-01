@@ -14,17 +14,17 @@ mathjax: true
 中国的技术社区有一个很没意思的毛病，就是技术深了，看不懂骂不知所云，技术浅了，看得懂骂没有技术含量。不过管那么孙子做啥，对于现在可能还不知道怎么阅读文档的人，希望这篇文章有所教益吧。
 
 #Xcode文档的结构#
-![orginzer](http://oqos7hrvp.bkt.clouddn.com/blog/xcodedocument.png)
+![orginzer](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/xcodedocument.png)
 
 如上图，整个文档界面有左面的侧栏和右面的内容区域构成。左面的侧栏可以选择不同的文档库。你的Xcode里面一般来说有一组不同版本的iOS文档库、一组不同版本的OS X文档库，以及一个Xcode文档库。
 
 如果你这里没有你要查看的文档库，你可以选择Xcode的Preferences菜单，然后选择Downloads -> Documentation。在这里可以看到已经下载安装了的文档库，还没有下载的文档库，可以酌情选择。如下图：
 
-![download](http://oqos7hrvp.bkt.clouddn.com/blog/xcodedownload.png)
+![download](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/xcodedownload.png)
 
 然后我们看，文档内容区域的左侧导航区域，这里揭示了文档库的结构。如下图：
 
-![iOS developer library](http://oqos7hrvp.bkt.clouddn.com/blog/xcodedocnav.png)
+![iOS developer library](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/xcodedocnav.png)
 
 首先是，Resource Types，也就是资源类型。文档库里面全部的文档都是这几个类型中的一个：
 
@@ -67,7 +67,7 @@ Video —— 视频。目前主要是WWDC的视频，实际上是登录到开发
 
 现在我们看内容区域的右边。注意上面的文档过滤器。如下图：
 
-![document](http://oqos7hrvp.bkt.clouddn.com/blog/xcodedocumentfilter.png)
+![document](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/xcodedocumentfilter.png)
 
 假设，你现在想看关于性能方面的Guides，那么你应该做的就是在左面的导航，点击Topics -> Performance，然后在右边的文档过滤器上面输入Guides。或者你也可以在左边的导航，点击 Resource Types -> Guides，然后在文档过滤器里面输入 Performance。
 

@@ -34,13 +34,13 @@ icon: file-o
 
 打开 travis 官网:https://travis-ci.org/
 
-![travis-ci 官网首页截屏](http://oqos7hrvp.bkt.clouddn.com/blog/travis-ci-index.png)
+![travis-ci 官网首页截屏](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/travis-ci-index.png)
 
 使用github账号授权登录。
 
 添加项目，这里使用我的 Golang 示例项目 ratelimit。
 
-![项目选择](http://oqos7hrvp.bkt.clouddn.com/blog/travis-ci-step.png)
+![项目选择](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/travis-ci-step.png)
 
 整个 ci 的过程有以下几步:
 1. 在 travis-ci 你的 profile 页面，勾选上你要持续集成的项目
@@ -91,7 +91,7 @@ env:#env环境变量设置，travis提供的repo_token安全方式
 
 ### 开通Coveralls
 
-![Coveralls官网截图](http://oqos7hrvp.bkt.clouddn.com/blog/coveralls-index.png)
+![Coveralls官网截图](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/coveralls-index.png)
 
 #### 授权登录
 
@@ -99,12 +99,12 @@ env:#env环境变量设置，travis提供的repo_token安全方式
 
 #### 添加项目
 
-![add repo截图](http://oqos7hrvp.bkt.clouddn.com/blog/coveralls-add-repo.png)
-![add repo截图](http://oqos7hrvp.bkt.clouddn.com/blog/coveralls-add-repos.png)
+![add repo截图](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/coveralls-add-repo.png)
+![add repo截图](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/coveralls-add-repos.png)
 
 #### 查看repo_token
 
-![repo_token截图](http://oqos7hrvp.bkt.clouddn.com/blog/coveralls-repo-token.png)
+![repo_token截图](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/coveralls-repo-token.png)
 
 repo_token涉及安全不应该提交到`.travis.yml`，coveralls提供了非对称加密repo_token的方法。
 
@@ -113,7 +113,7 @@ repo_token涉及安全不应该提交到`.travis.yml`，coveralls提供了非对
 - 对密码等敏感信息进行加密，然后再构建环境时解密。
 - 在Travis CI控制台设置环境变量，然后使用System.getenv()获取值。
 
-![配置环境变量](http://oqos7hrvp.bkt.clouddn.com/blog/travis-ci-env-params-setting)
+![配置环境变量](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/travis-ci-env-params-setting)
 
 对于文件加密，Travis CI提供了一个基于ruby的CLI命令行工具，可以直接使用gem安装：
 
@@ -152,9 +152,9 @@ after_success:
 
 以下是一些截图，大家可以看看
 
-![codecov](http://oqos7hrvp.bkt.clouddn.com/blog/codecov-01.png)
-![codecov](http://oqos7hrvp.bkt.clouddn.com/blog/codecov-02.png)
-![codecov](http://oqos7hrvp.bkt.clouddn.com/blog/codecov-03.png)
+![codecov](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/codecov-01.png)
+![codecov](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/codecov-02.png)
+![codecov](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/codecov-03.png)
 
 大家仔细看的话，应该会发现，怎么机器人名称是coveralls，而不是 codecov 呢？
 
@@ -162,17 +162,17 @@ after_success:
 
 `- go test -race -coverprofile=coverage.txt -covermode=atomic`
 
-![codecov](http://oqos7hrvp.bkt.clouddn.com/blog/codecov-04.png)
+![codecov](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/codecov-04.png)
 
 ## 最后:如何在自己的项目中显示Status Image?
 
 操作起来很简单，只需要在你的README.md中增加badge链接即可。
 
 travis页面复制图标标签
-![coveralls](http://oqos7hrvp.bkt.clouddn.com/blog/travis-build-status-badge.png)
+![coveralls](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/travis-build-status-badge.png)
 
 coveralls复制图标标签
-![coveralls](http://oqos7hrvp.bkt.clouddn.com/blog/coveralls-status-badge.png)
+![coveralls](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/coveralls-status-badge.png)
 
 然后将代码全部提交到 Github，你就可以看到build status和coveralls了。
 
@@ -192,7 +192,7 @@ coveralls复制图标标签
 
 这里的内容主要是后端技术，个人管理，团队管理，以及其他个人杂想。
 
-![茶歇驿站二维码](http://oqos7hrvp.bkt.clouddn.com/blog/tech_tea.jpg)
+![茶歇驿站二维码](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/tech_tea.jpg)
 
 当然，你觉得对你有帮助，也可以给我打赏。
-![打赏](http://oqos7hrvp.bkt.clouddn.com/blog/wxpay.png)
+![打赏](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/wxpay.png)

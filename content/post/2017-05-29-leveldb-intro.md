@@ -55,13 +55,13 @@ leveldb 运行后会在目录下产生几个文件，简要说下各个文件的
 
 下图是LevelDB运行一段时间后的存储模型快照：内存中的MemTable和Immutable MemTable以及磁盘上的几种主要文件：Current文件，Manifest文件，log文件以及SSTable文件。当然，LevelDb除了这六个主要部分还有一些辅助的文件，但是以上六个文件和数据结构是LevelDb的主体构成元素。
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/leveldb_01.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/leveldb_01.png)
 
 log文件、MemTable、SSTable文件都是用来存储k-v记录的，
 SSTable中的某个文件属于特定层级，而且其存储的记录是key有序的，那么必然有文件中的最小key和最大key，这是非常重要的信息，Manifest 就记载了SSTable各个文件的管理信息，比如属于哪个Level，文件名称叫啥，最小key和最大key各自是多少。
 
 下图是Manifest所存储内容的示意：
-![](http://oqos7hrvp.bkt.clouddn.com/blog/leveldb_02.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/leveldb_02.png)
 另外，在LevleDb的运行过程中，随着Compaction的进行，SSTable文件会发生变化，会有新的文件产生，老的文件被废弃，Manifest也会跟着反映这种变化，此时往往会新生成Manifest文件来记载这种变化，而Current则用来指出哪个Manifest文件才是我们关心的那个Manifest文件。
 
 ## 读写数据
@@ -85,7 +85,7 @@ SSTable中的某个文件属于特定层级，而且其存储的记录是key有�
 2、如果配置了cache，查找cache；
 3、根据mainfest索引文件，在磁盘中查找SST文件；
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/leveldb_03.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/leveldb_03.png)
 
 举个例子：我们先往levelDb里面插入一条数据 {key="www.samecity.com"  value="我们"}，过了几天，samecity网站改名为：69同城，此时我们插入数据{key="www.samecity.com"  value="69同城"}，同样的key,不同的value；逻辑上理解好像levelDb中只有一个存储记录，即第二个记录，但是在levelDb中很可能存在两条记录，即上面的两个记录都在levelDb中存储了，此时如果用户查询key="www.samecity.com"，我们当然希望找到最新的更新记录，也就是第二个记录返回，因此，查找的顺序应该依照数据更新的新鲜度来，对于SSTable文件来说，如果同时在level L和Level L+1找到同一个key，level L的信息一定比level L+1的要新。
 
@@ -134,7 +134,7 @@ full compaction就是将所有SSTable进行合并；
 LevelDb包含其中两种，minor和major。
 
 Minor compaction 的目的是当内存中的memtable大小到了一定值时，将内容保存到磁盘文件中，如下图：
-![](http://oqos7hrvp.bkt.clouddn.com/blog/leveldb_04.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/leveldb_04.png)
 
 immutable memtable其实是一个SkipList，其中的记录是根据key有序排列的，遍历key并依次写入一个level 0 的新建SSTable文件中，写完后建立文件的index 数据，这样就完成了一次minor compaction。从图中也可以看出，对于被删除的记录，在minor compaction过程中并不真正删除这个记录，原因也很简单，这里只知道要删掉key记录，但是这个KV数据在哪里？那需要复杂的查找，所以在minor compaction的时候并不做删除，只是将这个key作为一个记录写入文件中，至于真正的删除操作，在以后更高层级的compaction中会去做。
 
@@ -146,7 +146,7 @@ LevelDb在选定某个level进行compaction后，还要选择是具体哪个文�
 
 如果选好了level L的文件A和level L+1层的文件进行合并，那么问题又来了，应该选择level L+1哪些文件进行合并？levelDb选择L+1层中和文件A在key range上有重叠的所有文件来和文件A进行合并。也就是说，选定了level L的文件A，之后在level L+1中找到了所有需要合并的文件B,C,D…..等等。剩下的问题就是具体是如何进行major 合并的？就是说给定了一系列文件，每个文件内部是key有序的，如何对这些文件进行合并，使得新生成的文件仍然Key有序，同时抛掉哪些不再有价值的KV 数据。
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/leveldb_05.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/leveldb_05.png)
 
 Major compaction的过程如下：对多个文件采用多路归并排序的方式，依次找出其中最小的Key记录，也就是对多个文件中的所有记录重新进行排序。之后采取一定的标准判断这个Key是否还需要保存，如果判断没有保存价值，那么直接抛掉，如果觉得还需要继续保存，那么就将其写入level L+1层中新生成的一个SSTable文件中。就这样对KV数据一一处理，形成了一系列新的L+1层数据文件，之前的L层文件和L+1层参与compaction 的文件数据此时已经没有意义了，所以全部删除。这样就完成了L层和L+1层文件记录的合并过程。
 
@@ -158,13 +158,13 @@ Major compaction的过程如下：对多个文件采用多路归并排序的方�
 
 LevelDb中引入了两个不同的Cache:Table Cache和Block Cache。其中Block Cache是配置可选的，即在配置文件中指定是否打开这个功能。
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/leveldb_06.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/leveldb_06.png)
 
 如上图，在Table Cache中，key值是SSTable的文件名称，Value部分包含两部分，一个是指向磁盘打开的SSTable文件的文件指针，这是为了方便读取内容；另外一个是指向内存中这个SSTable文件对应的Table结构指针，table结构在内存中，保存了SSTable的index内容以及用来指示block cache用的cache_id ,当然除此外还有其它一些内容。
 
 比如在get(key)读取操作中，如果levelDb确定了key在某个level下某个文件A的key range范围内，那么需要判断是不是文件A真的包含这个KV。此时，levelDb会首先查找Table Cache，看这个文件是否在缓存里，如果找到了，那么根据index部分就可以查找是哪个block包含这个key。如果没有在缓存中找到文件，那么打开SSTable文件，将其index部分读入内存，然后插入Cache里面，去index里面定位哪个block包含这个Key 。如果确定了文件哪个block包含这个key，那么需要读入block内容，这是第二次读取。
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/leveldb_07.jpg)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/leveldb_07.jpg)
 
 Block Cache是为了加快这个过程的，其中的key是文件的cache_id加上这个block在文件中的起始位置block_offset。而value则是这个Block的内容。
 
@@ -233,7 +233,7 @@ Github: https://github.com/syndtr/goleveldb
 
 这里的内容主要是后端技术，个人管理，团队管理，以及其他个人杂想。
 
-![茶歇驿站二维码](http://oqos7hrvp.bkt.clouddn.com/blog/tech_tea.jpg)
+![茶歇驿站二维码](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/tech_tea.jpg)
 
 当然，你觉得对你有帮助，也可以给我打赏。
-![打赏](http://oqos7hrvp.bkt.clouddn.com/blog/wxpay.png)
+![打赏](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/wxpay.png)

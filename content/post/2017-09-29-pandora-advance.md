@@ -20,8 +20,8 @@ icon: file-o
 
 首先恭喜一下 logkit 项目上 go trending 榜单了。
 
-![go-trending](http://oqos7hrvp.bkt.clouddn.com/blog/logkit_trending_2017-09-27.jpg)
-![go-trending-junjin](http://oqos7hrvp.bkt.clouddn.com/blog/logkit_trending_2017-09-27_juejin.jpg)
+![go-trending](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/logkit_trending_2017-09-27.jpg)
+![go-trending-junjin](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/logkit_trending_2017-09-27_juejin.jpg)
 
 <!--more-->
 
@@ -37,8 +37,8 @@ Grafana 都不陌生了，前面几篇文章都有谈及，今天会再对一些
 
 咱们还是先来看看图表吧。
 
-![qas_nginx_log01](http://oqos7hrvp.bkt.clouddn.com/blog/qas_nginx_log03.png)
-![qas_nginx_log02](http://oqos7hrvp.bkt.clouddn.com/blog/qas_nginx_log04.png)
+![qas_nginx_log01](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/qas_nginx_log03.png)
+![qas_nginx_log02](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/qas_nginx_log04.png)
 
 ----
 
@@ -47,25 +47,25 @@ Grafana 都不陌生了，前面几篇文章都有谈及，今天会再对一些
 Q0:我选择的是27号，但是数据有26号和27号的呢？(我确认数据源的数据是没问题的。）
 
 >出现这个问题是时区的问题，我们可以选择 27号的 8 点到 28 号的 8 点来查看显示结果。
-![grafana 时区问题](http://oqos7hrvp.bkt.clouddn.com/blog/grafana_daily_data.jpg)
+![grafana 时区问题](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/grafana_daily_data.jpg)
 
 Q1:Dashboard 可以进行时区设置，但是也不行。
 
 >出现这个问题是时区的问题，我们可以选择 UTC ，然后再选择时间来查看显示结果。
 
-![grafana utc1](http://oqos7hrvp.bkt.clouddn.com/blog/grafana_timezone_utc1.png)
-![grafana Setting](http://oqos7hrvp.bkt.clouddn.com/blog/grafana_timezone.jpg)
-![grafana utc2](http://oqos7hrvp.bkt.clouddn.com/blog/grafana_timezone_utc2.png)
+![grafana utc1](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/grafana_timezone_utc1.png)
+![grafana Setting](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/grafana_timezone.jpg)
+![grafana utc2](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/grafana_timezone_utc2.png)
 
 Q2:从工作流导出 nginx_log 为 logdb 后，再使用 Grafana 模板进行展示时，query 带了这个 `$host` 参数就没有数据?
 
-![无数据](http://oqos7hrvp.bkt.clouddn.com/blog/grafana_no_data1.jpg)
+![无数据](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/grafana_no_data1.jpg)
 
 >`$host` 这个配置参数，是需要我们事先进行配置的，然后根据你的选择来显示相应的数据。
 
 >[模板变量](https://qiniu.github.io/pandora-docs/#/quickstart/grafana?id=%e6%a8%a1%e6%9d%bf%e5%8f%98%e9%87%8f)
 
->![grafana templating](http://oqos7hrvp.bkt.clouddn.com/blog/grafana_templating02.png)
+>![grafana templating](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/grafana_templating02.png)
 
 Q3:Grafana 有哪些酷炫的图表啊？
 
@@ -73,18 +73,18 @@ Q3:Grafana 有哪些酷炫的图表啊？
 
 Q4:为什么我的 Grafana 上的图表没有形成曲线呢？
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/grafana_graph_metrics_groupby_03.jpg)
-![](http://oqos7hrvp.bkt.clouddn.com/blog/grafana_graph_metrics_groupby_04.jpg)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/grafana_graph_metrics_groupby_03.jpg)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/grafana_graph_metrics_groupby_04.jpg)
 
 可能你的数据中存在 空 或 0 值，你需要进行以下设置。
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/grafana_graph_metrics_groupby_02.jpg)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/grafana_graph_metrics_groupby_02.jpg)
 
 主要原因是因为数据波动很大，然后数据点都比较小，所以你可以把维度调大一点。
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/grafana_graph_metrics_groupby_time_interval.jpg)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/grafana_graph_metrics_groupby_time_interval.jpg)
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/grafana_graph_metrics_groupby_01.jpg)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/grafana_graph_metrics_groupby_01.jpg)
 
 ----
 
@@ -96,7 +96,7 @@ Q0:业务日志以 raw 格式上报，打到 Kibana 里面之后，能够搜索�
 
 Q1:为什么出现这个问题？（加入日志文件中的 raw 中包含这个字符串`flkx2fx111KPL0000vpg`, 在 Kibana 中输入`raw:*flkx2fx111`，能搜索到结果，但是输入`raw:*flkx2fx111KPL0`，搜索不到结果。）
 
-![kabana_no_result](http://oqos7hrvp.bkt.clouddn.com/blog/kabana_no_result.jpg)
+![kabana_no_result](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/kabana_no_result.jpg)
 
 >查询的时候，查询字符串都会被 lowercase filter 变成小写。当你的 raw 是不分词的方式，是大小写敏感的，所以查询的字符串就不能匹配到你的大写字符串。
 
@@ -241,4 +241,4 @@ Q1:其实我这几篇文章的问题QA，在文档中都是有介绍说明的。
 
 这里的内容主要是后端技术，个人管理，团队管理，以及其他个人杂想。
 
-![茶歇驿站二维码](http://oqos7hrvp.bkt.clouddn.com/blog/tech_tea.jpg)
+![茶歇驿站二维码](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/tech_tea.jpg)

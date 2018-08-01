@@ -15,7 +15,7 @@ icon: file-o
 
 ----
 
-![pic](http://oqos7hrvp.bkt.clouddn.com/blog/pandora_bigdata.jpg)
+![pic](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/pandora_bigdata.jpg)
 
 ----
 
@@ -33,19 +33,19 @@ icon: file-o
 
 *Grafana 统计监控：*
 
-![Grafana 统计监控1](http://oqos7hrvp.bkt.clouddn.com/blog/pandora_grafana_01.jpg)
-![Grafana 统计监控2](http://oqos7hrvp.bkt.clouddn.com/blog/pandora_grafana_02.jpg)
-![Grafana 统计监控 24h ](http://oqos7hrvp.bkt.clouddn.com/blog/pandora_grafana_24h.jpg)
+![Grafana 统计监控1](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/pandora_grafana_01.jpg)
+![Grafana 统计监控2](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/pandora_grafana_02.jpg)
+![Grafana 统计监控 24h ](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/pandora_grafana_24h.jpg)
 
 *配置告警后的告警历史*
-![Grafana 监控告警](http://oqos7hrvp.bkt.clouddn.com/blog/pandora_grafana_alert.jpg)
+![Grafana 监控告警](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/pandora_grafana_alert.jpg)
 
 触发警戒值之后还会发邮件的哦（带图的哦）
 
-![Grafana 邮件告警](http://oqos7hrvp.bkt.clouddn.com/blog/pandora_alert_email.png)
+![Grafana 邮件告警](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/pandora_alert_email.png)
 
 *日志上报后的查询界面*
-![Kibana 统计](http://oqos7hrvp.bkt.clouddn.com/blog/pandora_kibana.jpg)
+![Kibana 统计](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/pandora_kibana.jpg)
 
 上面这些图表和功能，有没有让你心动呢？
 
@@ -55,7 +55,7 @@ icon: file-o
 
 [Pandora 潘多拉](https://qiniu.github.io/pandora-docs/)是一套面向海量数据，以及基础技术人员的，管理大数据传输、计算、存储和分析的大数据平台。
 
-![Pandora Arch](http://oqos7hrvp.bkt.clouddn.com/blog/arch.png)
+![Pandora Arch](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/arch.png)
 
 Pandora 共包含五个组件级服务：
 
@@ -75,17 +75,17 @@ Pandora 共包含五个组件级服务：
 
 - 申请注册七牛账号，登录之后的界面如下：
 
-![七牛控制台](http://oqos7hrvp.bkt.clouddn.com/blog/qiniu_console.jpg)
+![七牛控制台](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/qiniu_console.jpg)
 
 - 申请 Pandora 大数据平台的相关权限，通过之后登录的界面如下：
 
-![七牛控制台-大数据平台](http://oqos7hrvp.bkt.clouddn.com/blog/qiniu_console_bigdata.jpg)
+![七牛控制台-大数据平台](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/qiniu_console_bigdata.jpg)
 
 从图中，我们可以看出，侧边栏多了大数据工作流引擎、时序数据库、日志检索，容器应用市场，这是 Pandora 包含的 5 个组件的入口。
 
 - 容器应用市场
 
-![容器应用市场-审核中](http://oqos7hrvp.bkt.clouddn.com/blog/container_review.png)
+![容器应用市场-审核中](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/container_review.png)
 
 ----
 
@@ -129,9 +129,9 @@ Pandora 大数据平台的基本流程如下：
 
 直接看我搭建好的效果图吧。
 
-![server_monitor](http://oqos7hrvp.bkt.clouddn.com/blog/pandora_server_monitor.jpg)
-![server_monitor01](http://oqos7hrvp.bkt.clouddn.com/blog/pandora_server_monitor01.png)
-![server_monitor02](http://oqos7hrvp.bkt.clouddn.com/blog/pandora_server_monitor02.png)
+![server_monitor](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/pandora_server_monitor.jpg)
+![server_monitor01](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/pandora_server_monitor01.png)
+![server_monitor02](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/pandora_server_monitor02.png)
 
 以上数据是使用七牛优化过的 telegraf 上报的。
 
@@ -153,7 +153,7 @@ Q1: 运行 telegraf 报错：`create series diskio for repo monitor fail pandora
 
 我们先来看看效果图吧，😜
 
-![Kibana 统计](http://oqos7hrvp.bkt.clouddn.com/blog/pandora_kibana.jpg)
+![Kibana 统计](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/pandora_kibana.jpg)
 
 以上图表数据均由 logkit 自动上报。
 
@@ -182,7 +182,7 @@ Q1: logkit 是什么？
 - Kafka
 - Redis
 
-![logkit_runner](http://oqos7hrvp.bkt.clouddn.com/blog/pandora_logkit_runner.png)
+![logkit_runner](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/pandora_logkit_runner.png)
 
 Q2: logkit 日志多久上报一次？
 
@@ -412,4 +412,4 @@ bugly 偏向于崩溃收集，七牛 APM 偏向于移动性能分析。
 
 这里的内容主要是后端技术，个人管理，团队管理，以及其他个人杂想。
 
-![茶歇驿站二维码](http://oqos7hrvp.bkt.clouddn.com/blog/tech_tea.jpg)
+![茶歇驿站二维码](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/tech_tea.jpg)

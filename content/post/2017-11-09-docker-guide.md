@@ -96,31 +96,31 @@ services:
 
 后台启动 docker 服务:`docker-compose up -d`。
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/docker-compose-up-d.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/docker-compose-up-d.png)
 
 浏览器访问 [http://127.0.0.1:8002/](http://127.0.0.1:8002/) ，有可能出现转菊花的情况，这个是因为 wordpress 正在后台运行创建数据库等初始化操作。
 
 加载完全之后显示如下：
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/docker_wordpress.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/docker_wordpress.png)
 
 数据库访问：root:123456 端口 8003
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/docker_mysql.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/docker_mysql.png)
 
 ## 其他指令 ##
 
 查看当前正在运行的 docker 有哪些：`docker ps`，可以加一个`-a`参数，用于查看所有 docker（包括未运行的）,查看运行的 docker 服务有哪些？
 
-![docker-compose-ps](http://oqos7hrvp.bkt.clouddn.com/blog/docker-compose-ps.png)
+![docker-compose-ps](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/docker-compose-ps.png)
 
 查看服务器运行日志：`docker-compose logs -f`
 
-![docker-compose logs -f](http://oqos7hrvp.bkt.clouddn.com/blog/docker-compose-logs.png)
+![docker-compose logs -f](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/docker-compose-logs.png)
 
 如果要删除某个docker服务的话，可以执行`docker-compose stop`，`docker-compose rm`
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/docker-compose-stop-rm.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/docker-compose-stop-rm.png)
 
 ##启动docker某个image（镜像）的container（容器）##
 
@@ -158,8 +158,8 @@ https://github.com/moby/moby/issues/22211
 
 一个可以让你停下来看一看，在茶歇之余给你帮助的小站。
 
-![打赏](http://oqos7hrvp.bkt.clouddn.com/blog/money.jpg)
+![打赏](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/money.jpg)
 
 这里的内容主要是后端技术，个人管理，团队管理，以及其他个人杂想。
 
-![茶歇驿站二维码](http://oqos7hrvp.bkt.clouddn.com/blog/tech_tea.jpg)
+![茶歇驿站二维码](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/tech_tea.jpg)

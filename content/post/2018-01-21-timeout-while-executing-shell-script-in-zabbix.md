@@ -18,7 +18,7 @@ author: mai
 
 用 zabbix 的图表功能(Graphs)来展示了一个统计需求--同时在线用户数。
 
-![all_established_connections.png](http://oqos7hrvp.bkt.clouddn.com/blog/all_established_connections.png)
+![all_established_connections.png](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/all_established_connections.png)
 
 ## 操作步骤 ##
 
@@ -61,5 +61,5 @@ Timeout=30
 
 一个可以让你停下来看一看，在茶歇之余给你帮助的小站，这里的内容主要是后端技术，个人管理，团队管理，以及其他个人杂想。
 
-![茶歇驿站二维码](http://oqos7hrvp.bkt.clouddn.com/blog/tech_tea.jpg)
-![打赏](http://oqos7hrvp.bkt.clouddn.com/blog/money.jpg)
+![茶歇驿站二维码](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/tech_tea.jpg)
+![打赏](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/money.jpg)

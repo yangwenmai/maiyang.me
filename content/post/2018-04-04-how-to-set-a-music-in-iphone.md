@@ -20,12 +20,12 @@ author: mai
 
 ## 1. 检查输入编码
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/itunes_version_01.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/itunes_version_01.png)
 
 首先更新 iTunes 到最新版本，并在 iTunes 的「偏好设置」→「通用」分页按「导入设置」，确保「导入时使用」的编码器是「AAC 编码器」。
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/itunes_setting_01.png)
-![](http://oqos7hrvp.bkt.clouddn.com/blog/itunes_setting_02.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/itunes_setting_01.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/itunes_setting_02.png)
 
 <!--more-->
 
@@ -33,19 +33,19 @@ author: mai
 
 返回 iTunes 并翻到音乐页面，选择想制作铃声的歌曲按右键选择「歌曲信息」或输入快捷键「Command+I」﹐打开「歌曲信息」界面。
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/itunes_music_01.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/itunes_music_01.png)
 
 ## 3. 设定时长
 
 打开歌曲内容之后按「选项」，勾选「开始」和「停止」，设定不多于 40 秒的时长，然后按「好」退出，要留意这动作会影响日后播放歌曲的时长，但可在制作铃声完成之后回到这介面还原。
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/itunes_music_02.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/itunes_music_02.png)
 
 ## 4. 制作 AAC 版本歌曲
 
 选取要制作铃声的歌曲，然后按上方 iTunes 菜单栏的「文件」，选择「转换」→「创建 AAC 版本」，很快 iTunes 资料库就会多出一首只有 40 秒以内的新的歌曲，该歌曲是以 m4a 格式储存的。
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/itunes_music_03.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/itunes_music_03.png)
 
 ## 5. 更改文件名
 
@@ -57,7 +57,7 @@ iOS 设备使用的铃声文件格式是 m4r，所以我们要把 m4a 文件重�
 
 如果你不能拖铃声到 iTunes 并导入到 iPhone，则你需要进入 iTunes ，点击设备，然后进入到你的社保界面的「摘要」页面下方勾选「手动管理音乐和视频」，然后按「完成」，同步之后就可以直接拖拉文件了。
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/itunes_iphone.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/itunes_iphone.png)
 
 ## 7. 检查铃声是否在 iOS 设备出现
 
@@ -73,5 +73,5 @@ iOS 设备使用的铃声文件格式是 m4r，所以我们要把 m4a 文件重�
 
 一个可以让你停下来看一看，在茶歇之余给你帮助的小站，这里的内容主要是后端技术，个人管理，团队管理，以及其他个人杂想。
 
-![茶歇驿站二维码](http://oqos7hrvp.bkt.clouddn.com/blog/tech_tea.jpg)
-![打赏](http://oqos7hrvp.bkt.clouddn.com/blog/money.jpg)
+![茶歇驿站二维码](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/tech_tea.jpg)
+![打赏](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/money.jpg)

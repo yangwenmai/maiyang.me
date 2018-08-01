@@ -35,11 +35,11 @@ author: maiyang
 
 ## 源码清单 ##
 
-![strconv_package](http://oqos7hrvp.bkt.clouddn.com/blog/go_1.9.1_strconv.png)
+![strconv_package](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/go_1.9.1_strconv.png)
 
 ## 1. atob.go ##
 
-![strconv_package](http://oqos7hrvp.bkt.clouddn.com/blog/go_1.9.1_strconv_atob.png)
+![strconv_package](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/go_1.9.1_strconv_atob.png)
 
 `atob.go` 的代码真简单。
 
@@ -65,7 +65,7 @@ author: maiyang
 
 ## 2. atof.go ##
 
-![atof.go](http://oqos7hrvp.bkt.clouddn.com/blog/go_1.9.1_strconv_atof.png)
+![atof.go](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/go_1.9.1_strconv_atof.png)
 
 `atof.go` 一共有 539 行代码，却只有一个可导出函数 `func ParseFloat(s string, bitSize int) (float64, error)`，可想而知，代码逻辑应该不简单。
 
@@ -76,7 +76,7 @@ author: maiyang
 > 32 位单独处理，其他都当做 64 位来处理，32 位和 64 位的处理流程和方法基本上完全一样，只是对应的类型不同而已。
 
 接下来直接来看代码：
-![重点代码](http://oqos7hrvp.bkt.clouddn.com/blog/go_1.9.1_strconv_atof_atof32.png)
+![重点代码](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/go_1.9.1_strconv_atof_atof32.png)
 
 源码剖析：
 
@@ -95,15 +95,15 @@ author: maiyang
 
 > 1.通过 switch 来判断或处理 `ParseUint` 支持的 base 进制问题（支持从 2 到 36 进制（10+26个字母））；
 
-![switch](http://oqos7hrvp.bkt.clouddn.com/blog/go_1.9.1_strconv_atoi_parseuint32.png)
+![switch](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/go_1.9.1_strconv_atoi_parseuint32.png)
 
 > 2.cutoff （非常关键，非常重要）：cutoff*base > maxUint64 的最小的值（意思就是 `cutoff>maxUint64/base` ==> `cutoff = maxUint64/base+1`）,通常情况是使用编译时常量(`const maxUint64 = (1<<64 - 1)`)。
 
-![cutoff](http://oqos7hrvp.bkt.clouddn.com/blog/go_1.9.1_strconv_atoi_cutoff.png)
+![cutoff](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/go_1.9.1_strconv_atoi_cutoff.png)
 
 > 3.判断单个字符对应的 byte 值是否溢出。
 
-![cutoff](http://oqos7hrvp.bkt.clouddn.com/blog/go_1.9.1_strconv_atoi_exception.png)
+![cutoff](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/go_1.9.1_strconv_atoi_exception.png)
 
 源码剖析：
 
@@ -253,4 +253,4 @@ Error:
 
 这里的内容主要是后端技术，个人管理，团队管理，以及其他个人杂想。
 
-![茶歇驿站二维码](http://oqos7hrvp.bkt.clouddn.com/blog/tech_tea.jpg)
+![茶歇驿站二维码](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/tech_tea.jpg)

@@ -29,7 +29,7 @@ author: mai
 
 今天讲的例子其实是很简单的，咱们先来看一下是什么问题吧？
 
-![tidb_issue#5946](http://oqos7hrvp.bkt.clouddn.com/blog/tidb_issue_5946.png)
+![tidb_issue#5946](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/tidb_issue_5946.png)
 
 执行 SQL 语句： `select password("123456");`
 
@@ -93,11 +93,11 @@ B. 他是一个警告（肯定是什么条件不满足才触发的）；
 
 哇哦！！！
 
-![tidb_pr#6000_code_search_function_password](http://oqos7hrvp.bkt.clouddn.com/blog/tidb_pr_6000_code_search_function_password.png)
+![tidb_pr#6000_code_search_function_password](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/tidb_pr_6000_code_search_function_password.png)
 
 所以最终大家应该可以看到如下图的内容：
 
-![tidb_pr#6000_code_search](http://oqos7hrvp.bkt.clouddn.com/blog/tidb_pr_6000_code_search.png)
+![tidb_pr#6000_code_search](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/tidb_pr_6000_code_search.png)
 
 ### 对 B 的进一步思考和分析
 
@@ -109,7 +109,7 @@ B. 他是一个警告（肯定是什么条件不满足才触发的）；
 
 有很多的实战测试用例，所以我们找一个然后对应核心逻辑去查看。
 
-![tidb_pr#6000_code_search_warnings](http://oqos7hrvp.bkt.clouddn.com/blog/tidb_pr_6000_code_search_warnings.png)
+![tidb_pr#6000_code_search_warnings](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/tidb_pr_6000_code_search_warnings.png)
 
 我们大概知道了 `GetWarnings()` 、`AppendWarning()`、`SetWarnings(...)`
 
@@ -121,7 +121,7 @@ B. 他是一个警告（肯定是什么条件不满足才触发的）；
 
 看到搜索的结果，心情还不错，看图：
 
-![tidb_pr#6000_code_search_warnings_text](http://oqos7hrvp.bkt.clouddn.com/blog/tidb_pr_6000_code_search_warnings_text.png)
+![tidb_pr#6000_code_search_warnings_text](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/tidb_pr_6000_code_search_warnings_text.png)
 
 至此我把小白如何进行源码分析和修复过程进行了简单的介绍，希望对你有所帮助。
 
@@ -187,7 +187,7 @@ func (b *builtinPasswordSig) evalString(row types.Row) (d string, isNull bool, e
 
 虽然这次的 PR 最终不是我提交的，但我把整个过程理清楚了，并且修复并验证了此问题，只是还没来得及完善测试用例，正准备开始时我收到了来自 TiDB 的邮件提醒。
 
-![tidb_pr_6000_email](http://oqos7hrvp.bkt.clouddn.com/blog/tidb_pr_6000_email.png)
+![tidb_pr_6000_email](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/tidb_pr_6000_email.png)
 
 自己正在做的事，别人已经解决好了，你此时是什么心情？
 
@@ -240,5 +240,5 @@ func (b *builtinPasswordSig) evalString(row types.Row) (d string, isNull bool, e
 
 一个可以让你停下来看一看，在茶歇之余给你帮助的小站，这里的内容主要是后端技术，个人管理，团队管理，以及其他个人杂想。
 
-![茶歇驿站二维码](http://oqos7hrvp.bkt.clouddn.com/blog/tech_tea.jpg)
-![打赏](http://oqos7hrvp.bkt.clouddn.com/blog/money.jpg)
+![茶歇驿站二维码](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/tech_tea.jpg)
+![打赏](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/money.jpg)

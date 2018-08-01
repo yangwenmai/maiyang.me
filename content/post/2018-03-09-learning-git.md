@@ -30,7 +30,7 @@ Git 撤销已经 push 到远端的 commit
 
 >git push origin <分支名> --force
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/logrotate_copytruncate.jpg)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/logrotate_copytruncate.jpg)
 
 我们可以参考这个TiDB的最佳实践（https://github.com/pingcap/tidb/blob/master/CONTRIBUTING.md#workflow）
 
@@ -69,5 +69,5 @@ subject：commit 的简短描述
 
 一个可以让你停下来看一看，在茶歇之余给你帮助的小站，这里的内容主要是后端技术，个人管理，团队管理，以及其他个人杂想。
 
-![茶歇驿站二维码](http://oqos7hrvp.bkt.clouddn.com/blog/tech_tea.jpg)
-![打赏](http://oqos7hrvp.bkt.clouddn.com/blog/money.jpg)
+![茶歇驿站二维码](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/tech_tea.jpg)
+![打赏](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/money.jpg)

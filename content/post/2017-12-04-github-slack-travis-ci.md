@@ -20,7 +20,7 @@ author: mai
 
 >持续集成（英语：Continuous integration，缩写为 CI），一种软件工程流程，将所有工程师对于软件的工作复本，每天集成数次到共用主线（mainline）上。 摘自维基百科。
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/continuous-integration.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/continuous-integration.png)
 （图片来源于网络）
 
 持续集成的目的，就是让产品可以快速迭代，同时还能保持高质量。
@@ -58,7 +58,7 @@ author: mai
 - 项目权限：公开或私有（私有项目是付费用户才可以创建的，$7/month）；
 - 初始化仓库：可以选择 `.gitignore`、`license`。
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/github-new-repo.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/github-new-repo.png)
 
 当然你还得为你的项目添加一些测试代码。
 
@@ -66,7 +66,7 @@ author: mai
 
 给你的 Slack 工作空间取一个名字并进行创建。
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/create_new_workspace_in_slack.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/create_new_workspace_in_slack.png)
 
 然后你填写一些你的个人信息或者团队信息，点击下一步即可。
 
@@ -82,15 +82,15 @@ author: mai
 
 它提供了 Web，客户端，移动客户端等多种方式登录，我们可以选择适合自己的方式登录，配置管理最好是 Web。
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/slack-signin.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/slack-signin.png)
 
 登录之后，你就进入了你的工作空间。
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/slack-gitfeed-dashboard.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/slack-gitfeed-dashboard.png)
 
 你还可以邀请你的小伙伴参与到你的工作空间中来，这就是开源协作模式了。
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/slack-invite-people.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/slack-invite-people.png)
 
 Slack 有类似于 QQ/钉钉 的讨论组，叫做 Channel ，它使用起来非常方便。
 
@@ -102,43 +102,43 @@ Slack 有类似于 QQ/钉钉 的讨论组，叫做 Channel ，它使用起来非
 
 你可以在主面板上的 Apps 进行添加
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/slack-dashboard-apps.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/slack-dashboard-apps.png)
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/slack-browse-apps.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/slack-browse-apps.png)
 
 ### Slack 上管理 Github 配置 ###
 
 搜索 Github 后，点击 VIEW 进入：
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/slack-add-app-github.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/slack-add-app-github.png)
 
 点击 **Install**，然后再点击 **Add Github Integration**，即可对 Github 集成进行授权。
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/slack-github-add.png)
-![](http://oqos7hrvp.bkt.clouddn.com/blog/slack-github-add-auth.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/slack-github-add.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/slack-github-add-auth.png)
 
 授权通过之后，你就可以选择项目进行 Slack 集成了。
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/slack-github-chose-repo.png)
-![](http://oqos7hrvp.bkt.clouddn.com/blog/slack-github-repo-events.png)
-![](http://oqos7hrvp.bkt.clouddn.com/blog/slack-github-post-config.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/slack-github-chose-repo.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/slack-github-repo-events.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/slack-github-post-config.png)
 
 当你所选择的项目有 Commit，Issues，Pull Request，Branch or tag created or deleted 等事件时，你的 Slack channel #github 将会收到来自 Github 推送。
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/slack-notification-info.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/slack-notification-info.png)
 
 ### Slack 上管理 TravisCI 配置 ###
 
 搜索 Travis 后点击 VIEW 进入
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/slack-add-app-travisci.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/slack-add-app-travisci.png)
 
 点击 **Install**，然后再点击 **Add Travis Integration**，即可对 Travis 集成进行授权。
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/slack-travis-add.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/slack-travis-add.png)
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/slack-travis-add-auth-00.png)
-![](http://oqos7hrvp.bkt.clouddn.com/blog/slack-travis-add-auth-01.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/slack-travis-add-auth-00.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/slack-travis-add-auth-01.png)
 
 需要你将上面的 notifications 配置到你项目中的 `.travis.yml` 文件中 。
 
@@ -148,13 +148,13 @@ Slack 有类似于 QQ/钉钉 的讨论组，叫做 Channel ，它使用起来非
 
 当你的 Github 项目构建完成之后，可以在 https://travis-ci.org 上查看到构建情况。
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/travis-00.png)
-![](http://oqos7hrvp.bkt.clouddn.com/blog/travis-01.png)
-![](http://oqos7hrvp.bkt.clouddn.com/blog/travis-02.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/travis-00.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/travis-01.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/travis-02.png)
 
 与此同时它也会把构建结果同步到你的 Slack channel 上。
 
-![](http://oqos7hrvp.bkt.clouddn.com/blog/slack-notification-info.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/slack-notification-info.png)
 
 至此整个 Github+Slack+TravisCI 构建的自动化持续集成环境就配置完成了。
 
@@ -197,5 +197,5 @@ Slack 有类似于 QQ/钉钉 的讨论组，叫做 Channel ，它使用起来非
 
 一个可以让你停下来看一看，在茶歇之余给你帮助的小站，这里的内容主要是后端技术，个人管理，团队管理，以及其他个人杂想。
 
-![茶歇驿站二维码](http://oqos7hrvp.bkt.clouddn.com/blog/tech_tea.jpg)
-![打赏](http://oqos7hrvp.bkt.clouddn.com/blog/money.jpg)
+![茶歇驿站二维码](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/tech_tea.jpg)
+![打赏](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/money.jpg)

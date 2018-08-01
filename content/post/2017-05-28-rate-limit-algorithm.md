@@ -48,7 +48,7 @@ icon: file-o
 3. 当一个 n 字节的数据包到达时，消耗 n 个令牌，然后发送该数据包；
 4. 如果桶中可用令牌小于 n，则该数据包将被缓存或丢弃。
 
-![令牌桶算法示意图](http://oqos7hrvp.bkt.clouddn.com/blog/token-bucket.jpg)
+![令牌桶算法示意图](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/token-bucket.jpg)
 
 优缺点:
 1. 令牌桶的另外一个好处是可以方便的改变速度。 一旦需要提高速率，则按需提高放入桶中的令牌的速率。
@@ -65,7 +65,7 @@ icon: file-o
 
 漏桶算法思路很简单，水（请求）先进入到漏桶里，漏桶以一定的速度出水，当水流入速度过大会直接溢出，可以看出漏桶算法能强行限制数据的传输速率。
 
-![漏桶算法示意图](http://oqos7hrvp.bkt.clouddn.com/blog/leaky-bucket.png)
+![漏桶算法示意图](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/leaky-bucket.png)
 
 漏桶算法实现上来说，就是建立一个队列，队列上实现FIFO，在请求前实现插入，请求完成后实现删除。
 
@@ -95,7 +95,7 @@ icon: file-o
 
 这里的内容主要是后端技术，个人管理，团队管理，以及其他个人杂想。
 
-![茶歇驿站二维码](http://oqos7hrvp.bkt.clouddn.com/blog/tech_tea.jpg)
+![茶歇驿站二维码](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/tech_tea.jpg)
 
 当然，你觉得对你有帮助，也可以给我打赏。
-![打赏](http://oqos7hrvp.bkt.clouddn.com/blog/wxpay.png)
+![打赏](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/wxpay.png)

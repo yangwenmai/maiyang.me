@@ -11,7 +11,7 @@ comments: true
 author: mai
 ---
 
-本教程的目标是将一个简单的 Hello World Go 应用程序转换为在 Kubernetes 上运行的应用程序。
+本教程的目标是将一个简单的 Go 程序转换为在 Kubernetes 上运行的程序。
 
 本教程将向你展示如何获取在计算机上开发的代码，将其转换为 Docker 容器映像，然后在 Minikube 上运行该映像。
 

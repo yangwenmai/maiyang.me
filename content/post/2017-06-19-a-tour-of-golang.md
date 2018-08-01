@@ -359,4 +359,4 @@ Go 标准库中文文档：http://cngolib.com
 
 这里的内容主要是团队管理，个人管理，后台技术相关，其他个人杂想。
 
-![茶歇驿站二维码](http://oqos7hrvp.bkt.clouddn.com/blog/tech_tea.jpg)
+![茶歇驿站二维码](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/tech_tea.jpg)

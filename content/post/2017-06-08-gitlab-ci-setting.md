@@ -31,7 +31,7 @@ icon: file-o
 1. 有可能你的项目没有Pipelines，也没有Runners，所以我们需要打开 builds。(怎么打开呢？点击Edit Project，然后在`Feature Visibility`中找到 builds，改变权限，然后点击保存。)
 2. 这个选项是需要你上一步选择之后，才会出来：Only allow merge requests to be merged if the build succeeds。(Builds need to be configured to enable this feature.)
 
-![mr](http://oqos7hrvp.bkt.clouddn.com/blog/merge_when_build_succeeds_only_if_succeeds_settings.png)
+![mr](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/merge_when_build_succeeds_only_if_succeeds_settings.png)
 
 所以，我们应该把这个选项都全部勾选上，用于要求被Merge的代码一定是通过  build 的。
 
@@ -85,7 +85,7 @@ test-project:
 
 这里的内容主要是后端技术，个人管理，团队管理，以及其他个人杂想。
 
-![茶歇驿站二维码](http://oqos7hrvp.bkt.clouddn.com/blog/tech_tea.jpg)
+![茶歇驿站二维码](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/tech_tea.jpg)
 
 当然，你觉得对你有帮助，也可以给我打赏。
-![打赏](http://oqos7hrvp.bkt.clouddn.com/blog/wxpay.png)
+![打赏](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/wxpay.png)

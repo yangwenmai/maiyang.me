@@ -26,7 +26,7 @@ icon: file-o
 
 再来回看一下效果图吧，😜
 
-![Kibana 统计](http://oqos7hrvp.bkt.clouddn.com/blog/pandora_kibana.jpg)
+![Kibana 统计](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/pandora_kibana.jpg)
 
 以上图表中的数据均由 logkit 上报所得。
 
@@ -49,7 +49,7 @@ icon: file-o
 
 >[logkit](https://github.com/qiniu/logkit) 是七牛 Pandora 开发的一个通用的日志收集工具，可以将不同数据源的数据方便的发送到 Pandora 进行数据分析，除了基本的数据发送功能，logkit 还有容错、并发、监控、删除等功能。
 
-![logkit_arch](http://oqos7hrvp.bkt.clouddn.com/blog/pandora_logkit_runner.png)
+![logkit_arch](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/pandora_logkit_runner.png)
 
 logkit 支持的数据源：
 
@@ -67,10 +67,10 @@ logkit 的 `README.md` 对于安装和使用的介绍非常详尽，我就不再
 
 为了把逼格装得高一点，我把图盗过来了，大家先睹为快吧。
 
-![logkitnewconfig1](http://oqos7hrvp.bkt.clouddn.com/blog/logkitnewconfig1.png)
-![logkitnewconfig2](http://oqos7hrvp.bkt.clouddn.com/blog/logkitnewconfig2.png)
-![logkitnewconfig3](http://oqos7hrvp.bkt.clouddn.com/blog/logkitnewconfig3.png)
-![logkitnewconfig4](http://oqos7hrvp.bkt.clouddn.com/blog/logkitnewconfig4.png)
+![logkitnewconfig1](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/logkitnewconfig1.png)
+![logkitnewconfig2](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/logkitnewconfig2.png)
+![logkitnewconfig3](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/logkitnewconfig3.png)
+![logkitnewconfig4](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/logkitnewconfig4.png)
 
 **logkit 提供的*【logkit 配置文件助手】*，对主配置、Runner 配置方便使用，还有运行情况监控可视化了，真的是业界良心有木有啊。**
 
@@ -147,7 +147,7 @@ Q0: 在 Grafana 监控系统中如何按照特定字段进行排序？
 >tsdb 默认是按照 time 来进行的，但是你再导出数据时，可以进行指定。但是有一个前提要求是：你使用logkit收集时指定你所需要按照排序的字段为date就可以了。
 
 >如果你在导出时找不到你想要选择的排序字段，如下图
-![tsdb_export_time](http://oqos7hrvp.bkt.clouddn.com/blog/tsdb_export_stat_date.jpg)
+![tsdb_export_time](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/tsdb_export_stat_date.jpg)
 
 >那么你应该检查你的上报字段是不是 date 类型（必须是date类型，或者long类型才能作为时间戳）。
 
@@ -170,7 +170,7 @@ Q4: Runner 配置修改需要重启 logkit 吗？
 Q5: Runner 配置修改了批量上报间隔 `batch_interval` 为 300s ，但是 Grafana 展示数据显示不到 300s 呢？
 
 >工作流的导出数据可能存在延时，具体延迟可以在工作流的导出任务中看到明细。
-![batch_interval](http://oqos7hrvp.bkt.clouddn.com/blog/tsdb_export_internal_300s.jpg)
+![batch_interval](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/tsdb_export_internal_300s.jpg)
 
 Q6: 工作流导出数据到 TSDB 报错 `E7103: Timestamp of points are too far from` ?
 
@@ -218,13 +218,13 @@ Q10: 写数据到文件了，为什么没有上报呢？
 
 >我在 Google 上搜索 logkit 时，看到了下面这张图。
 
-![pic](http://oqos7hrvp.bkt.clouddn.com/blog/logkit_logo.png)
+![pic](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/logkit_logo.png)
 
 佐世保最有名气的 [LOG KIT 汉堡](http://logkit.jp)，既然已经上了图，也不在乎再多上两张。
 
-![门店](http://oqos7hrvp.bkt.clouddn.com/blog/logkit_01.jpg)
-![LogKit 门店](http://oqos7hrvp.bkt.clouddn.com/blog/logkit_02.jpg)
-![LogKit 汉堡包](http://oqos7hrvp.bkt.clouddn.com/blog/logkit_03.jpg)
+![门店](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/logkit_01.jpg)
+![LogKit 门店](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/logkit_02.jpg)
+![LogKit 汉堡包](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/logkit_03.jpg)
 
 不喜勿喷。
 
@@ -242,4 +242,4 @@ Q10: 写数据到文件了，为什么没有上报呢？
 
 这里的内容主要是后端技术，个人管理，团队管理，以及其他个人杂想。
 
-![茶歇驿站二维码](http://oqos7hrvp.bkt.clouddn.com/blog/tech_tea.jpg)
+![茶歇驿站二维码](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/tech_tea.jpg)

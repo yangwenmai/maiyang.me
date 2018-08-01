@@ -171,11 +171,11 @@ TiDB 集群的所有监控是基于 Prometheus + Pushgateway + Grafana 来构建
 监控地址 http://172.16.0.1:3000/
 节点上报状态 http://172.16.0.1:9091/
 
-![overview](http://oqos7hrvp.bkt.clouddn.com/blog/overview.jpg)
-![tidb](http://oqos7hrvp.bkt.clouddn.com/blog/tidb.jpg)
-![tidb_qps](http://oqos7hrvp.bkt.clouddn.com/blog/tidb_qps.jpg)
-![tikv](http://oqos7hrvp.bkt.clouddn.com/blog/tikv.jpg)
-![disk_performance](http://oqos7hrvp.bkt.clouddn.com/blog/disk_performance.jpg)
+![overview](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/overview.jpg)
+![tidb](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/tidb.jpg)
+![tidb_qps](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/tidb_qps.jpg)
+![tikv](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/tikv.jpg)
+![disk_performance](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/disk_performance.jpg)
 
 Prometheus 在运行后期挺占资源的，这个在早期搭建的时候要考虑资源以及调优。
 
@@ -200,4 +200,4 @@ Prometheus 在运行后期挺占资源的，这个在早期搭建的时候要考
 
 这里的内容主要是后端技术，个人管理，团队管理，以及其他个人杂想。
 
-![茶歇驿站二维码](http://oqos7hrvp.bkt.clouddn.com/blog/tech_tea.jpg)
+![茶歇驿站二维码](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/tech_tea.jpg)
