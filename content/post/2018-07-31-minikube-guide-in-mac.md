@@ -268,7 +268,6 @@ hello-go-648b9c5f5f-zdlnc   1/1       Running   0          1m
 
 ```shell
 $ kubectl get events
- kubectl get events
 LAST SEEN   FIRST SEEN   COUNT     NAME                                           KIND         SUBOBJECT                     TYPE      REASON                  SOURCE                  MESSAGE
 2m          2m           1         hello-go-648b9c5f5f-zdlnc.15468316fd9704a1     Pod                                        Normal    Scheduled               default-scheduler       Successfully assigned hello-go-648b9c5f5f-zdlnc to minikube
 2m          2m           1         hello-go-648b9c5f5f.15468316fd36e46d           ReplicaSet                                 Normal    SuccessfulCreate        replicaset-controller   Created pod: hello-go-648b9c5f5f-zdlnc
