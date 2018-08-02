@@ -19,7 +19,7 @@ author: mai
 
 超快速发布
 
-当 istio 注入 envoy 容器 sidecar 到你的 pod 中，每一个进出的请求都会附加一些 http 头，然后将他们用于跟踪。
+当 istio 注入 envoy 容器 sidecar 到你的 pod 中，每一个进出的请求都会附加一些 http 头信息，然后将他们用于跟踪。
 
 这是 istio 所拥有的 “sidecar 注入” 方法的众多好处之一，有点干扰，但到目前为止似乎工作得很好。
 
@@ -27,13 +27,13 @@ author: mai
 
 [helm istio values](https://github.com/istio/istio/blob/master/install/kubernetes/helm/istio/values.yaml#L415)
 
-如果你还没有启用它。然后，如果你能在图表上看一小块，你会发现如下参考：
+如果你还没有启用它，然后如果你能在图表上看到一小块，你会发现如下参考：
 
 ![](https://cdn-images-1.medium.com/max/1600/1*IeIAfZClvqJHvDkXTulDrg.png)
 
 它是 Mixer，不需要太多的深入，你可以看到 mixer 如何将统计数据传递给 zipkin，并记住 mixer 看到的一切。
 
-因此，如果我们使用 port-forward（端口转发） 查看 jaeger 的监听：
+因此，我们可以使用 port-forward（端口转发） 查看 jaeger 的监听：
 
 ```shell
 $ kubectl port-forward -n istio-system istio-tracing-754cdfd695-ngssw
@@ -48,7 +48,7 @@ $ kubectl port-forward -n istio-system istio-tracing-754cdfd695-ngssw
 
 ![](https://cdn-images-1.medium.com/max/1600/1*gECzUb6Hh5QjxK0-ueYT8g.png)
 
-如果 nginx pod 会调用额外的服务，那么它们也应该在那里显示，因此请记住所有入口/出口流量都是由你的 pod 中的 `envoy`， `sidecar` 捕获的。
+如果 nginx pod 会调用额外的服务，那么它们也应该在那里显示，因此请记住所有入口/出口流量都是由你的 pod 中的 `envoy sidecar` 捕获的。
 
 ----
 
