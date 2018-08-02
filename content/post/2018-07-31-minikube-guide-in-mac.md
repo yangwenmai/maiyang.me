@@ -491,6 +491,24 @@ $ eval $(minikube docker-env -u)
 $ minikube delete
 ```
 
+## 其他问题
+
+1. `Error restarting cluster:  restarting kube-proxy: waiting for kube-proxy to be up for configmap update: timed out waiting for the condition`
+
+这个原因很可能是有 minikube 旧版本导致的，你可以执行 `minikube delete`，然后再执行 `minikube start`
+
+2. `Error starting host: Error creating new host: Driver "hyperkit" not found. Do you have the plugin binary "docker-machine-driver-hyperkit" accessible in your PATH?`
+
+从 RELEASE 上下载，然后将其移动到 `/usr/local/bin/` 目录下；
+
+还需要执行以下命令，给予权限：
+
+```shell
+$ sudo chown root:wheel /usr/local/bin/docker-machine-driver-hyperkit && sudo chmod u+s /usr/local/bin/docker-machine-driver-hyperkit
+```
+
+然后再运行：`minikube start --vm-driver=hyperkit --bootstrapper=localkube --docker-env HTTP_PROXY=http://127.0.0.1:1087 --docker-env HTTPS_PROXY=http://127.0.0.1:1087` 即可（`--docker-env` 可要可不要）。
+
 ## 参考资料
 
 1. [Hello Minikube](https://kubernetes.io/docs/tutorials/hello-minikube/)
