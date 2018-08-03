@@ -657,6 +657,259 @@ $ cargo watch -s "cargo check"
 
 Rust 编译运行程序太消耗电脑了，一运行，电脑风扇转个不停，都可以煮鸡蛋了。。。
 
+>以上是我们安装 Rust 以及其相关依赖，还有 TiKV 的项目编译、测试、检查学习。
+
+----
+
+>接下来，我将记录我的 TiKV Contributors 工作流程，如有遗漏欢迎指正。
+
+----
+
+## Contribution flow
+
+This is a rough outline of what a contributor's workflow looks like:
+
+### Step 1: Fork in the cloud
+
+1. Visit https://github.com/pingcap/tikv
+2. Click Fork button (top right) to establish a cloud-based fork.
+
+### Step 2: Clone fork to local storage
+
+Define a local working directory:
+
+```sh
+# Define a local working directory:
+$ working_dir=/.../src/github.com/pingcap
+$ user={your github profile name}
+```
+
+Create your clone:
+
+```sh
+$ mkdir -p $working_dir
+$ cd $working_dir
+$ git clone https://github.com/$user/tikv.git
+$ cd $working_dir/tikv
+```
+
+Set remote:
+
+```sh
+$ git remote -v
+origin	https://github.com/$user/tikv.git (fetch)
+origin	https://github.com/$user/tikv.git (push)
+
+$ git remote add upstream https://github.com/pingcap/tikv.git
+$ git remote -v
+origin	https://github.com/$user/tikv.git (fetch)
+origin	https://github.com/$user/tikv.git (push)
+upstream	https://github.com/pingcap/tikv.git (fetch)
+upstream	https://github.com/pingcap/tikv.git (push)
+
+# Never push to upstream master since you do not have write access.
+$ git remote set-url --push upstream no_push
+$ git remote -v
+origin	https://github.com/$user/tikv.git (fetch)
+origin	https://github.com/$user/tikv.git (push)
+upstream	https://github.com/pingcap/tikv.git (fetch)
+upstream	no_push (push)
+```
+
+### Step 3: Branch
+
+Get your local master up to date:
+
+```sh
+cd $working_dir/tikv
+git fetch upstream
+git checkout master
+git rebase upstream/master
+```
+
+Branch from master:
+
+```sh
+git checkout -b myfeature
+```
+
+### Step 4: Develop
+
+#### Edit the code
+
+You can now edit the code on the `myfeature` branch.
+
+#### Run stand-alone mode
+
+```sh
+$ make build
+```
+
+#### Run Test
+
+When you're ready to test out your changes, use the `dev` task. It will format your codebase, build with clippy enabled, and run tests. This should run without failure before you create a PR.
+
+```sh
+$ make dev
+```
+
+- Run tests and make sure all the tests are passed.
+- Make sure your commit messages are in the proper format.
+
+### Step 5: Keep your branch in sync
+
+```sh
+# While on your myfeature branch.
+git fetch upstream
+git rebase upstream/master
+```
+
+### Step 6: Commit
+
+Commit your changes.
+
+```sh
+git commit
+```
+
+### Step 7: Push
+
+When ready to review (or just to establish an offsite backup or your work), push your branch to your fork on github.com:
+
+```sh
+git push -f origin myfeature
+```
+
+### Step 8: Create a pull request
+
+1. Visit your fork at [https://github.com/$user/tikv](https://github.com/$user/tikv) (replace $user obviously).
+2. Click the Compare & pull request button next to your `myfeature` branch.
+
+### Step 9: Get a code review
+
+Once your pull request has been opened, it will be assigned to at least two reviewers. Those reviewers will do a thorough code review, looking for correctness, bugs, opportunities for improvement, documentation and comments, and style.
+
+Commit changes made in response to review comments to the same branch on your fork.
+
+Very small PRs are easy to review. Very large PRs are very difficult to review.
+
+Thanks for your contributions!
+
+----
+
+## TiKV Contributors 工作流程
+
+### 第一步：Fork TiKV 项目
+
+1. 访问 [https://github.com/pingcap/tikv](https://github.com/pingcap/tikv)；
+2. 点击 Fork 按钮（顶部右侧），简历基于此的分支；
+
+### 第二步：克隆分支到你本地
+
+```sh
+# Define a local working directory:
+$ working_dir=/.../src/github.com/pingcap
+$ user={your github profile name}
+$ mkdir -p $working_dir
+$ cd $working_dir
+$ git clone https://github.com/$user/tikv.git
+$ cd $working_dir/tikv
+$ git remote -v
+origin	https://github.com/$user/tikv.git (fetch)
+origin	https://github.com/$user/tikv.git (push)
+
+$ git remote add upstream https://github.com/pingcap/tikv.git
+$ git remote -v
+origin	https://github.com/$user/tikv.git (fetch)
+origin	https://github.com/$user/tikv.git (push)
+upstream	https://github.com/pingcap/tikv.git (fetch)
+upstream	https://github.com/pingcap/tikv.git (push)
+
+# Never push to upstream master since you do not have write access.
+$ git remote set-url --push upstream no_push
+$ git remote -v
+origin	https://github.com/$user/tikv.git (fetch)
+origin	https://github.com/$user/tikv.git (push)
+upstream	https://github.com/pingcap/tikv.git (fetch)
+upstream	no_push (push)
+```
+
+### 第三步：分支
+
+让你本地 master 分支保持最新：
+
+```sh
+$ cd $working_dir/tikv
+$ git fetch upstream
+$ git checkout master
+$ git rebase upstream/master
+```
+
+从 master 开分支：
+
+```sh
+$ git checkout -b myfeature
+```
+
+### 第四步：开发
+
+#### 编辑代码
+
+你现在能在 `myfeature` 分支上编辑代码了。
+
+#### 独立运行模式
+
+```sh
+$ make build
+```
+
+当你准备测试修改的代码，可以使用 `dev` 指令，它将格式化你的代码库，在启用 `clippy` 的情况下构建，并运行测试。在创建 PR 之前，你要保证这是没有失败的。
+
+```sh
+$ make dev
+```
+
+#### 运行测试
+
+```sh
+# Run the full suite
+$ make test
+```
+
+### 第五步：保持分支同步
+
+```sh
+# While on your myfeature branch.
+$ git fetch upstream
+$ git rebase upstream/master
+```
+
+### 第六步：提交
+
+提交你的修改：
+
+```sh
+$ git commit
+```
+
+### 第七步：推送
+
+准备好审核：
+
+```sh
+git push -f origin myfeature
+```
+
+### 第八步：创建一个 pull request
+
+1. 访问你 fork 的 [https://github.com/$user/tikv](https://github.com/$user/tikv) (替换 $user)；
+2. 点击 myfeature 分支旁边的 Compare & pull request 按钮；
+
+### 第九步：获取代码审核
+
+一旦你的 Pull Request 被打开，它将被分配给至少两个审核者。
+这些审核人员将进行彻底的代码审查，寻找正确性，错误，改进机会，文档和评论以及样式。
+
 ## 参考资料
 
 1. [Rust install](https://www.rust-lang.org/zh-CN/install.html)
