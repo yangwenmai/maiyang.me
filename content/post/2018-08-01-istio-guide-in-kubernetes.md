@@ -36,7 +36,6 @@ export PATH="/Users/xxx/istio-1.0.0/bin:$PATH"
 ```
 
 
-
 ## 参考资料
 
 1. [从零搭建一个基于 istio 的服务网格](http://emacoo.cn/devops/istio-tutorial/)

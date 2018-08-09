@@ -802,7 +802,7 @@ Thanks for your contributions!
 ### 第一步：Fork TiKV 项目
 
 1. 访问 [https://github.com/pingcap/tikv](https://github.com/pingcap/tikv)；
-2. 点击 Fork 按钮（顶部右侧），简历基于此的分支；
+2. 点击 Fork 按钮（顶部右侧），建立基于此的分支；
 
 ### 第二步：克隆分支到你本地
 
