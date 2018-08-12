@@ -54,10 +54,7 @@ defaultContentLanguage = "zh-cn"           # Default language to use
 [[menu.main]]
   name = "Go 夜读"
   weight = 70
-  url = "https://github.com/developer-learning/night-reading-go"
-  name = "Rust 夜读"
-  weight = 70
-  url = "https://github.com/developer-learning/night-reading-rust"
+  url = "https://github.com/developer-learning"
 
 [params]
   debug = false             # If true, load `eruda.min.js`. See https://github.com/liriliri/eruda
