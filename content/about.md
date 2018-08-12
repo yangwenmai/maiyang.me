@@ -11,6 +11,7 @@ mathjax: false
 ---
 
 <iframe src="https://githubbadge.appspot.com/yangwenmai?s=1" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder="0"></iframe>
+<iframe src="https://githubbadge.appspot.com/developer-learning?s=1" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder="0"></iframe>
 
 - 目前在深圳一家创业公司，负责技术团队，拥有超过 8 年的研发管理经验，能 hold 住各类开发应用场景（秒杀、亿级 API 调用、百亿级的大数据量存储、微服务架构等）。
 
