@@ -12,18 +12,12 @@ mathjax: false
 
 <iframe src="https://githubbadge.appspot.com/yangwenmai?s=1" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder="0"></iframe>
 
-目前在深圳一家创业公司，负责技术团队，对Golang，Java，Python，Ruby等开发语言都有所了解。
+- 目前在深圳一家创业公司，负责技术团队，拥有超过 8 年的研发管理经验，能 hold 住各类开发应用场景（秒杀、亿级 API 调用、百亿级的大数据量存储、微服务架构等）。
 
-最近正在研究 leveldb，rocksdb，TiDB，并为 TiDB 提交过几次 PR ，有什么想法也可以给我留言。
+- 对 Go 和 Rust 情有独钟，与此同时我也是一个开源热衷粉，TiDB，logkit, kingshard 等多个开源项目的 Contributor，[Go 夜读](https://github.com/developer-learning/night-reading-go)、[Rust 夜读](https://github.com/developer-learning/night-reading-rust)的发起人，深圳地区 Gopher meetup 组织者和分享嘉宾。
 
-喜欢体育。
+- 个人比较喜欢体育和旅游，偶尔也会将一些技术、管理和生活发布到个人公众号：茶歇驿站（tech_tea）。
 
-目前在深圳一家创业公司，负责技术团队，拥有超过8年的开发管理经验，Go 开发者，开源爱好者，能 hold 住各类开发应用场景（秒杀、亿级API调用、上百亿级的大数据量存储、微服务架构），TiDB，logkit, kingshard 等开源项目 Contributor，深圳地区 Gopher meetup 组织者和分享嘉宾。
+- 最近在学习 Rust，欢迎有兴趣的小伙伴们一起参与，也在研究 kubernetes，istio 等云原生相关技术。
 
-最近在研究 k8s，Ansible 等 DevOps 相关内容。
-
-个人比较喜欢体育赛事，偶尔也会去现场看一看球赛。
-
-个人公众号：茶歇驿站（tech_tea），Go 夜读（Github: https://github.com/developer-learning/night-reading-go）
-
-[打赏](http://oqos7hrvp.bkt.clouddn.com/blog/money.jpg)
+<img src="https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/money.jpg" width="350px;"/>
