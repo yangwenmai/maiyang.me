@@ -91,50 +91,58 @@ and the repository exists.
 ```
 >你只需要进入到 `~/.ssh/known_hosts` 删除你之前已经配置过的一行记录即可重新提交。
 
+- Drone 不能自己创建数据库，所以数据库需要单独分开部署，不能在一个 `docker-compose.yml` 中一起构建。
+  >我已经解决了，解决方案是：MySQL 在启动后执行 SQL 语句，来创建所需要的数据库。
+
 ----
 
 ## 附录
 
-# docker-compose.yml
+### `docker-compose.yml`
 
 ```yml
 version: '2'
 
 services:
+  mysql-server:
+    image: mysql:5.7.23
+    restart: always
+    #    command: --init-file /sql/init.sql
+    volumes:
+      - ./mysql/data/:/var/lib/mysql
+      - ./mysql/logs:/logs
+        #  - ./init.sql:/sql/init.sql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+
   gogs:
     image: gogs/gogs
     # container_name: drone_gogs
     restart: always
+    depends_on:
+      - mysql-server
     volumes:
-    - ./gogs:/data
+      - ./gogs:/data
     ports:
-    - "10022:22"
-    - "3000:3000"
+      - "10022:22"
+      - "3000:3000"
 
-  gitlab:
-  	image: gitlab/gitlab-ce:11.1.0-ce.0
-  	restart: always
-  	volumes:
-  	- ./data/conf:/etc/gitlab
-  	- ./data:/var/opt/gitlab
-  	- ./data/log:/var/log/gitlab
-  	ports:
-  	- "443:443"
-  	- "80:80"
-  	- "22:22"
-  	environment:
-    - "GITLAB_HOST=192.168.0.56"
-
-  mysql-server:
-  	image: mysql:5.7.23
-  	restart: always
-  	volumes:
-  	- ./mysql/data/:/var/lib/mysql
-    - ./mysql/logs:/logs
-  	ports:
-  	- "3306:3306"
-  	environment:
-    - MYSQL_ROOT_PASSWORD=123456
+        #  gitlab:
+        #    image: gitlab/gitlab-ce:11.1.0-ce.0
+        #    restart: always
+        #    volumes:
+        #      - ./data/conf:/etc/gitlab
+        #      - ./data/log:/var/log/gitlab
+        #      - ./data:/var/opt/gitlab
+        #    ports:
+        #      - "443:443"
+        #      - "80:80"
+        #      - "22:22"
+        #    environment:
+        #      - "GITLAB_HOST=192.168.0.56"
 
   drone-server:
     image: drone/drone:0.8
@@ -146,23 +154,24 @@ services:
     restart: always
     depends_on:
       - mysql-server
+        #      - gitlab
     environment:
       - DRONE_OPEN=true
       - DRONE_DEBUG=true
       - DRONE_HOST=http://192.168.0.56:9000
-      #- DRONE_GOGS=true
-      #- DRONE_GOGS_URL=http://192.168.0.56:3000
-      - DRONE_GITLAB=true
-      - DRONE_GITLAB_CLIENT=8b176db54eaab72a41759f71ca087bc65a87bf9db80a11363e73a5eff2fda0e4
-      - DRONE_GITLAB_SECRET=fb05e4ca7264a5a2bf06065b1a7893bda968fc771b2ca71514e008b0b5b86207
-      - DRONE_GITLAB_URL=http://192.168.0.56
-      - DRONE_GITLAB_SKIP_VERIFY=true
+      - DRONE_GOGS=true
+      - DRONE_GOGS_URL=http://192.168.0.56:3000
+      #- DRONE_GITLAB=true
+      #- DRONE_GITLAB_CLIENT=8b176db54eaab72a41759f71ca087bc65a87bf9db80a11363e73a5eff2fda0e4
+      #- DRONE_GITLAB_SECRET=fb05e4ca7264a5a2bf06065b1a7893bda968fc771b2ca71514e008b0b5b86207
+      #- DRONE_GITLAB_URL=http://192.168.0.56
+      #- DRONE_GITLAB_SKIP_VERIFY=true
       #  - DRONE_GITLAB_PRIVATE_MODE=true
-      - DRONE_GITLAB_GIT_USERNAME=root
-      - DRONE_GITLAB_GIT_PASSWORD=rckNtecW8BhqEkZx
+      #- DRONE_GITLAB_GIT_USERNAME=root
+      #- DRONE_GITLAB_GIT_PASSWORD=rckNtecW8BhqEkZx
       - DRONE_SECRET=ZHJvbmVfZ29nc19naXRsYWIK
       - DRONE_DATABASE_DRIVER=mysql
-      - DRONE_DATABASE_DATASOURCE=root:123456@tcp(mysql-server:3306)/drone?parseTime=true
+      - DRONE_DATABASE_DATASOURCE=drone:drone_123456@tcp(mysql-server:3306)/drone?parseTime=true
       - HTTP_PROXY=http://192.168.0.56:1087
       - HTTPS_PROXY=http://192.168.0.56:1087
 
@@ -180,6 +189,15 @@ services:
 ```
 
 其中 `DRONE_SECRET` 是根据 `echo -e "<your type content>" | base64` 生成的。
+
+说明：
+
+**mysql-server**:
+
+- `command: --init-file /sql/init.sql` 和 # `- ./init.sql:/sql/init.sql` 结合着用。
+- 也可以使用：`- ./init.sql:/docker-entrypoint-initdb.d/init.sql`
+
+[更多内容，请参考](https://github.com/yangwenmai/docker-scripts/tree/master/drone-gogs-gitlab-mysql)
 
 ----
 
