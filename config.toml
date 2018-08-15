@@ -134,7 +134,9 @@ defaultContentLanguage = "zh-cn"           # Default language to use
     e-linkedin = "https://www.linkedin.com/in/mai-yang-2a082777/"
     g-github = "https://github.com/yangwenmai"
     h-weibo = "https://www.weibo.com/yangwen0o0"
-
+  [params.counter.busuanzi]
+    enable = true
+    
 # jsonfeed support
 # more information: https://github.com/xianmin/hugo-theme-jane/issues/23
 # to have json output it's necessary to uncomment this block of code and create a index.jsonfeed.json template, using hugo template specs

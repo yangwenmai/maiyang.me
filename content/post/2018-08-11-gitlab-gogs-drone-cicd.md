@@ -196,6 +196,7 @@ services:
 
 - `command: --init-file /sql/init.sql` 和 # `- ./init.sql:/sql/init.sql` 结合着用。
 - 也可以使用：`- ./init.sql:/docker-entrypoint-initdb.d/init.sql`
+- 还有一个更简单的方法：直接指定 `environment: - MYSQL_DATABASE=drone` 即可。
 
 [更多内容，请参考](https://github.com/yangwenmai/docker-scripts/tree/master/drone-gogs-gitlab-mysql)
 
