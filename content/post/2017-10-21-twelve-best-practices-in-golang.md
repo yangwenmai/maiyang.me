@@ -11,7 +11,7 @@ group: archive
 icon: file-o
 ---
 
-    本文是对十二条 Golang 最佳实践的解读。
+    本文是对十二条 Golang 最佳实践的解读，补充了 Rob Pike 给我们整理的 Go 箴言，大家可以学习学习。
 
 ----
 
@@ -676,6 +676,36 @@ func broadcastMsg(msg string, addrs []string) error {
     return nil
 }
 ```
+
+----
+
+Go 箴言 ['prɔvə:bz] [https://go-proverbs.github.io/](https://go-proverbs.github.io/)
+
+https://speakerdeck.com/ajstarks/go-proverbs
+
+[Go 箴言 - Rob Pike YouTube](https://www.youtube.com/watch?v=PAAkCSZUG1c)
+
+![](https://ws1.sinaimg.cn/large/cfe1407cgy1fh5dfxouv0j212o0lsdop.jpg)
+
+- 在go里, goroutines之间通信不要用共享内存的方式实现, 应该用channel来实现
+- 并发不是并行
+- channel是编排, mutexs是串行
+- interface定义越多的方法, 抽象程度越低. Go提倡用接口组合的方式实现更大的接口
+- 零值, 猜测这里说的是struct{}吧, struct{}是一个不占内存的空结构体, 在用map实现set, channel发送无额外意义的signal时能降低内存分配
+- 提倡gofmt
+- 一点点复制比一点点依赖好. 官方包里有时能见到一些复制的代码, 这是为了不互相依赖
+- syscall每个平台实现不一样, 要加build tags
+- cgo每个平台的lib不一样, 要加build tags
+- Cgo不是go
+- unsafe包不提供保障
+- 简洁胜过高效
+- error是值 可以用值的方式去处理错误: 传递, 比较
+- 不用仅检查错误, 要优雅地处理
+- 多花精力设计架构, 模块命名, 写详细的文档
+- 写良好的文档给用户
+- 对于普通错误, 应该用多值返回错误, 而不是手动panic
+
+----
 
 ## 参考资料 ##
 
