@@ -15,7 +15,7 @@ author: mai
 ----
 
 1. 准备好 k8s 集群。
-2. 参照 [guestbook-go/README.md](https://github.com/kubernetes/examples/blob/master/guestbook-go/README.md) 即可完成。
+2. 参照 [guestbook-go/README.md](https://github.com/kubernetes/examples/blob/master/guestbook-go/README.md)即可完成。
 
 ----
 
