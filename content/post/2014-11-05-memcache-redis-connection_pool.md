@@ -2,7 +2,7 @@
 layout: post
 title: 'memcache和redis的连接池connection_pool使用'
 keywords: memcache, redis, connection_pool, 连接池
-date: 2014-11-05 10:30
+date: 2014-11-05 10:30:00
 description: 'memcache和redis在ruby中的客户端dalli和hiredis在高并发下连接池的使用'
 categories: [ruby]
 tags: [memcache, redis, ruby, 连接池]

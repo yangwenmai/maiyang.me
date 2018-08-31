@@ -2,7 +2,7 @@
 layout: post
 title: '更换驾照'
 keywords: 驾照, driving license, 异地转入, 深圳
-date: 2015-04-16 23:59
+date: 2015-04-16 23:59:00
 description: '更换驾照'
 categories: [life]
 tags: [驾照, driving license, 异地转入, 深圳]

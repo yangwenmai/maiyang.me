@@ -2,7 +2,7 @@
 layout: post
 title: '我和jekyll、github的悲惨幸福故事'
 keywords: 个人博客, jekyll, github pages
-date: 2014-10-20 23:59
+date: 2014-10-20 23:59:00
 description: '某一天，我发现我喜欢上了github,随后就有了我和jekyll、github的悲惨幸福故事'
 categories: [生活]
 tags: [jekyll, github pages, 个人博客]

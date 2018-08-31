@@ -2,7 +2,7 @@
 layout: post
 title: '苹果推送异常处理'
 keywords: certificate_unknown
-date: 2014-08-29 10:20
+date: 2014-08-29 10:20:00
 description: '苹果推送异常处理'
 categories: [推送]
 tags: [certificate_unknown]

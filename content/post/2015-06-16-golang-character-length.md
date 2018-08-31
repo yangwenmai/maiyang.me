@@ -2,7 +2,7 @@
 layout: post
 title: 'Golang 中获取字符个数以及 emoji 表情处理'
 keywords: Golang, 字符串, emoji, 表情
-date: 2015-06-16 14:00
+date: 2015-06-16 14:00:00
 description: 'Golang 中获取字符个数以及 emoji 表情处理'
 categories: [golang]
 tags: [Golang, 字符串, emoji, 表情]

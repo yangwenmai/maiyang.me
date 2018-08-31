@@ -2,7 +2,7 @@
 layout: post
 title: 'Golang 开发技术分享'
 keywords: Golang, 分享, share
-date: 2015-12-25 15:33
+date: 2015-12-25 15:33:00
 description: 'Golang 开发技术分享'
 categories: [golang]
 tags: [Golang, 分享, share]

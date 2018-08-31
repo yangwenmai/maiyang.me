@@ -2,7 +2,7 @@
 layout: post
 title: '在ruby中redis客户端在log上的使用'
 keywords: redis, log, ruby
-date: 2014-11-01 10:30
+date: 2014-11-01 10:30:00
 description: '在ruby中redis客户端在log上的使用'
 categories: [ruby]
 tags: [redis, log, ruby]

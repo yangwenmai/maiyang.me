@@ -2,7 +2,7 @@
 layout: post
 title: '在Mac上安装nginx'
 keywords: Mac, nginx, install
-date: 2015-07-22 20:46
+date: 2015-07-22 20:46:00
 description: '在Mac上安装nginx'
 categories: [tools]
 tags: [Mac, nginx, install]

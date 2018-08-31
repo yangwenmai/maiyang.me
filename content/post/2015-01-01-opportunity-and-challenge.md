@@ -2,7 +2,7 @@
 layout: post
 title: '2015年的计划'
 keywords: 2015, 机遇, 挑战, 计划
-date: 2015-01-01 00:01
+date: 2015-01-01 00:01:00
 description: '记录自己2015年的个人目标和想法，自己的机遇和挑战'
 categories: [life]
 tags: [机遇, 挑战, 计划]

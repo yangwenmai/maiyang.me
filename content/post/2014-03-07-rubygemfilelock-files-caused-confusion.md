@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '[Ruby]gemfile.lock文件引发的困惑'
-date: 2014-03-07 02:28
+date: 2014-03-07 02:28:00
 comments: true
 categories: [ruby]
 tags: [ruby, json, gemfile.lock, JBuilder]

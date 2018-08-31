@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'MacBookPro自动切换网络和代理'
-date: 2014-03-14 02:23
+date: 2014-03-14 02:23:00
 comments: true
 categories: [tools]
 tags: [Shell, macbookpro, 网络设置, networksetup, 代理]

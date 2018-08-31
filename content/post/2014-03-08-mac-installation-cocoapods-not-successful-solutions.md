@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'mac安装cocoapods不成功解决办法'
-date: 2014-03-08 11:02
+date: 2014-03-08 11:02:00
 comments: true
 categories: [tools]
 ---
