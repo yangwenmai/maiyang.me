@@ -1,5 +1,5 @@
 ---
-title: 'Drone 同步 repos 的策略研讨和源码分析'
+title: 'Drone 源码分析之同步 repos 的策略研讨'
 keywords: golang, sync, drone, CI/CD, DevOps
 date: 2018-08-28T06:00:00+08:00
 lastmod: 2018-08-28T06:00:00+08:00
