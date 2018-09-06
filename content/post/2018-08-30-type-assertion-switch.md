@@ -11,9 +11,6 @@ comments: true
 author: mai
 ---
 
-
-----
-
 ## Type assertions
 
 >类型断言并不真正将接口转换为另一种数据类型，但它提供了对接口具体值的访问，这通常是你想要的。
@@ -76,6 +73,82 @@ case *R:
     fmt.Println("i store *R", t)
 }
 ```
+
+## 示例分析
+
+为什么示例 1 报错，而示例 2 可以正常运行？
+
+\#示例 1：
+```golang
+var idx interface {}
+var idx2 int
+switch v := idx.(type) {
+    case int, int8, int16, int32, int64:
+    case float32, float64:// cannot convert v (type interface {}) to type int: need type assertion
+        idx2 = int(v)
+}
+```
+
+\#示例 2：
+```golang
+var idx interface {}
+var idx2 int
+switch v := idx.(type) {
+    case int, int8, int16, int32, int64:
+    case float32:
+    case float64:
+        idx2 = int(v)
+}
+```
+
+**详细解释：**
+
+```golang
+package main
+
+import "fmt"
+import "reflect"
+
+func foo(idx interface{}) {
+    switch v := idx.(type) {
+    case int, int32:
+        fmt.Println(reflect.TypeOf(&v))
+    case float64:
+        fmt.Println(reflect.TypeOf(&v))
+    }
+}
+func main() {
+    foo(1)
+    foo(1.)
+}
+// Result:
+// *interface {}
+// *float64
+```
+
+对于语句：
+
+```golang
+switch v := idx.(type)
+```
+
+在 case 语句里面 v 的类型可能有两种：
+
+- case 指定为明确的类型，如 float32 ，则 v 的类型就是 float32 ，等价于如下语句：
+
+```golang
+var v float32 = idx.(float32)
+idx2 := int(v)
+```
+
+- case 如果指定了多个类型，由于 v 无法同时是指定的这些类型，所以 v 只能为 `interface{}` 类型，所以以上语句变成了：
+
+```golang
+var v interface{} = idx
+idx2 := int(v)
+```
+
+这里的直接强转，自然就通不过了，需要做一次 `type assersion`。
 
 ----
 
