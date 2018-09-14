@@ -79,6 +79,14 @@ All tools successfully installed. You're ready to Go :).
   "go.inferGopath": true,
 ```
 
+- 如果引用的包使用了 ( . "aa.com/text") 那这个text包下的函数也无法跳转进去，这是为什么？
+
+修改 `"go.docsTool"` 为 `gogetdoc`，默认是 `godoc`。
+
+```json
+  "go.docsTool": "gogetdoc",
+```
+
 ## 其他
 
 1. 当我们在使用 import 功能的时候，如果无法通过 lint 检查，则不会执行自动 import。
@@ -96,7 +104,7 @@ All tools successfully installed. You're ready to Go :).
   "go.gotoSymbol.includeImports": true,
   "go.useCodeSnippetsOnFunctionSuggest": true,
   "go.useCodeSnippetsOnFunctionSuggestWithoutType": true,
-  ...
+  "go.docsTool": "gogetdoc",
 }
 ```
 
@@ -104,6 +112,7 @@ All tools successfully installed. You're ready to Go :).
 
 1. [GOPATH in the VS Code Go extension](https://github.com/Microsoft/vscode-go/wiki/GOPATH-in-the-VS-Code-Go-extension)
 2. [VSCode Golang 开发配置之代码提示](https://www.cnblogs.com/Dennis-mi/p/8280552.html)
+3. [Use gogetdoc instead of godef and godoc #622](https://github.com/Microsoft/vscode-go/pull/622)
 
 ----
 
