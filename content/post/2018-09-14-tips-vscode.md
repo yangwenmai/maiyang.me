@@ -11,7 +11,9 @@ comments: true
 author: mai
 ---
 
-必须安装以下插件：
+VSCode 必须安装以下插件：
+
+首先你必须安装 Golang 插件，然后再给 Go 安装工具包。
 
 在 VS Code 中，使用快捷键：`command+shift+P`，然后键入：`go:install/update tools`，将所有 16 个插件都勾选上，然后点击 OK 即开始安装。
 
@@ -54,20 +56,34 @@ Installing github.com/haya14busa/goplay/cmd/goplay SUCCEEDED
 All tools successfully installed. You're ready to Go :).
 ```
 
-然后在 Preferences -> Setting 然后输入 go，然后选择 `setting.json`，填入以下配置（自动完成未导入的包）：
+修改默认配置的方法：
+
+>在 Preferences -> Setting 然后输入 go，然后选择 `setting.json`，填入你想要修改的配置
+
+
+- 自动完成未导入的包。
 
 ```json
   "go.autocompleteUnimportedPackages": true,
 ```
 
-特别注意：
+- VSCode 的一些插件需要配置代理，才能够正常安装。
 
-VS Code 需要安装好代理，才能够正常安装，否则可能无法安装成功。
+```json
+  "http.proxy": "192.168.0.100:1087",
+```
+
+- 如果你遇到使用标准包可以出现代码提示，但是使用自己的包或者第三方库无法出现代码提示，你可以查看一下你的配置项。
+
+```json
+  "go.inferGopath": true,
+```
 
 ## 其他
 
 1. 当我们在使用 import 功能的时候，如果无法通过 lint 检查，则不会执行自动 import。
 2. 如果你需要自动 import 的前提是你必须把要导入的包的函数写完整。
+
 
 ----
 
