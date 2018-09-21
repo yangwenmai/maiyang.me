@@ -1,10 +1,10 @@
 ---
-title: '用 gRPC 和 Kubernetes 构建一个 TTS Server'
+title: '一步一步迭代实践用 gRPC 和 Kubernetes 构建一个 TTS Server'
 keywords: golang, protobuf, gRPC, kubernetes, tts
 date: 2018-09-18T09:00:00+08:00
 lastmod: 2018-09-18T09:00:00+08:00
 draft: false
-description: '用 gRPC 和 Kubernetes 构建一个 TTS Server'
+description: '一步一步迭代实践用 gRPC 和 Kubernetes 构建一个 TTS Server'
 categories: [golang]
 tags: [golang, protobuf, gRPC, kubernetes, tts]
 comments: true
