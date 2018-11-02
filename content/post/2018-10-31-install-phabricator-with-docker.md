@@ -181,7 +181,7 @@ server {
 
 **至此，您在浏览器输入 your.domain.com 便可以正常使用 phabricator 了，GIT 及 SVN 等都可正常使用了。注意：最好先去 http://your.domain.com/auth/config/new/ 开启 Username/Password 登录方式**
 
-## 部署时遇到的问题
+## 遇到的问题
 
 `mariadb_1 | Error executing 'postInstallation': EACCES: permission denied, mkdir '/bitnami/mariadb'`
 
@@ -192,6 +192,66 @@ server {
 - STMP
 - 其他配置参数...
 
+### 上传文件报错：
+
+```sh
+Server responded: 
+<html>
+<head><title>413 Request Entity Too Large</title></head>
+<body bgcolor="white">
+<center><h1>413 Request Entity Too Large</h1></center>
+<hr><center>openresty/1.13.6.2</center>
+</body>
+</html>
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+```
+
+如果你是使用 nginx 作为反向代理，则需要在 `nginx.conf` 中添加以下配置（设置 body 最大尺寸为 30MB）：
+
+```sh
+http {
+  ...
+  client_max_body_size 30m;
+  ...
+}
+```
+
+### 如何删除上传的不需要的文件？
+
+>你不会以为只需要将文档中的文件号引用去掉就可以了吧。
+
+遇到问题，Google 知：
+
+Provide some way for administrators to remove/reset a user's profile image
+
+In Wikimedia Phabricator we sometimes experience vandalism (as our policies are pretty liberal).
+
+Steps:
+
+- A Phab user uploads and sets an {offending | NSFW | copyrights/license violating} image as their Phab profile image.
+- (Unrelated: I disable the user account via the web interface, due to the user's vandalism actions.)
+- I ssh onto the Phab instance and run sudo ./phabricator/bin/remove destroy F11729470 to delete their uploaded image.
+- I go to /file/query/all/ to also find the ID of the corresponding image called profile, created by Phab. (Slightly cumbersome, but okay.)
+- I run sudo ./phabricator/bin/remove destroy F11729471 to delete the corresponding profile image.
+
+Expected outcome:**
+
+The image on the profile gets reset to some default fallback image, or displays nothing, or is broken, or... well, anything that makes their image not get displayed anymore in people's web browsers.
+
+Actual outcome:**
+The image is still displayed on the user profile and I don't know how to get it removed. Meh.
+
+
+这个是管理员处理方式，用户自己应该怎么处理呢？
+
+查询你能可见的所有文件：[http://your.domain.com/file/query/all/](http://your.domain.com/file/query/all/)
+查询你自己上传的所有文件：[http://your.domain.com/file/](http://your.domain.com/file/)
+
 ----
 
 ## 参考资料
@@ -200,6 +260,9 @@ server {
 2. [https://github.com/bylucky/phabricator-docker](https://github.com/bylucky/phabricator-docker)
 3. [用户指南：管理Phabricator电子邮件](https://phabricator.webfuns.net/book/phabricator/article/mail_rules/)
 4. [搭建 Phabricator 我遇到的那些坑](https://halfrost.com/phabricator_trouble/)
+5. [Provide some way for administrators to remove/reset a user's profile image](https://secure.phabricator.com/T13029)
+6. [default-nginx-client-max-body-size](https://stackoverflow.com/questions/28476643/default-nginx-client-max-body-size)
+7. [Phabricator 用户文档 (配置)-配置文件存储](https://phabricator.webfuns.net/book/phabricator/article/configuring_file_storage/)
 
 ----
 
