@@ -78,6 +78,17 @@ $ docker-compose restart phabricator
 
 另外，[acme.sh](https://github.com/Neilpang/acme.sh) 项目看起来挺不错的，可以参考。
 
+`acme.sh` 实现了 `acme` 协议, 可以从 letsencrypt 生成免费的证书.
+
+主要步骤:
+
+- 安装 `acme.sh`
+- 生成证书
+- copy 证书到 nginx/apache 或者其他服务
+- 更新证书
+- 更新 `acme.sh`
+- 出错怎么办, 如何调试
+
 ## 参考资料
 
 1. https://github.com/bitnami/bitnami-docker-phabricator/issues/57
