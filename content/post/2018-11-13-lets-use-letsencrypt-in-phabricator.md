@@ -1,10 +1,10 @@
 ---
-title: '给 Phabricator 增加 Let's Encrypt 证书'
+title: '给 Phabricator 增加 Lets Encrypt 证书'
 keywords: Phabricator, HTTPS, TTL, SSL, Encrypt
 date: 2018-11-13T11:17:00+08:00
 lastmod: 2018-11-14T23:58:00+08:00
 draft: false
-description: '给 Phabricator 增加 Let's Encrypt 证书'
+description: '给 Phabricator 增加 Lets Encrypt 证书'
 categories: [https]
 tags: [Phabricator, HTTPS, TTL, SSL, Encrypt]
 comments: true
