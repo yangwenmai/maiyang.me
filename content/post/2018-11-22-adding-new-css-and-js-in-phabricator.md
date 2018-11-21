@@ -2,7 +2,7 @@
 title: '如何在 phabricator 中添加或更新 js 或 CSS 文件资源？'
 keywords: Docker, Docker-Compose, phabricator, assets, js, css
 date: 2018-11-22T00:52:00+08:00
-lastmod: 2018-11-14T23:57:00+08:00
+lastmod: 2018-11-22T00:52:00+08:00
 draft: false
 description: '如何在 phabricator 中更新资源？'
 categories: [tools]
