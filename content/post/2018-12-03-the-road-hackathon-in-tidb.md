@@ -13,6 +13,8 @@ author: mai
 
 >本文是我参加此次 TiDB Hackathon 2018 比赛的一个学习总结纪要，希望明年再接再厉，与此同时我也希望它可以帮助到一些朋友，希望明年你们也来参加。
 
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/cs229-machine-learning.jpg)
+
 >待补充：我后续会补充到博客中。
 
 ## Hackathon 回顾
@@ -28,10 +30,29 @@ D 先生是在比赛前一天早上到达北京的，我则是比赛前一天晚
 
 - 比赛前一日 20:05 从广州南站出发，次日 6:38 抵达北京西站。
 - 7:58 抵达地铁西小口
+
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/hackathon-2018-01.jpg)
+
+- 8:06 经过转转
+
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/hackathon-2018-zhuanzhuan.jpg)
+
 - 8:12 抵达比赛所在大厦：东升科技园 C-1 楼
+
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/hackathon-2018-c1.jpg)
+
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/hackathon-2018-pingcap.jpg)
+
 - 8:16 签到，逛 PingCAP
+
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/hackathon-2018-sign.jpg)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/hackathon-2018-my-card.jpg)
+
 - 8:40 跟 D 先生汇合，了解贝叶斯模型
 - 9:20 DSG 团队成员全部集结完毕
+
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/hackathon-2018-dsg.jpg)
+
 - 10:00 比赛正式开始
 - 10:00 Hacking Time: Trello 构建整个比赛分工、准备工作、需求分析
 - 搭建 TiDB 集群（2套）
@@ -48,9 +69,21 @@ D 先生是在比赛前一天早上到达北京的，我则是比赛前一天晚
 - 次日 9:00 抽签确定 Demo 时间
 - 次日 9:00 ~ 12:00 Hacking Time: 调优
 - 次日 12:00 ~ 12:30 午餐时间
+
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/hackathon-2018-my-team-desktop.jpg)
+
 - 次日 13:00 ~ 14:00 Hacking Time: PPT，调优
 - 次日 14:30 ~ 18:30 Demo Time（B 站直播）
+
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/hackathon-2018-daddies.jpg)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/hackathon-2018-demo-show.jpg)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/hackathon-2018-ppt-1.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/hackathon-2018-ppt-2.png)
+
 - 次日 18:30 ~ 19:00 颁奖（B 站直播）
+
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/hackathon-2018-prize-dsg.jpg)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/hackathon-2018-special-prize.jpg)
 
 ## Hackathon 实操
 
