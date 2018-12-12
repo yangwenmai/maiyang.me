@@ -344,6 +344,8 @@ https://github.com/pingcap/pd/blob/master/server/schedulers/hot_region.go#L374
 
 *简述*：循环遍历 candidateStoreIDs 的时候，如果满足条件有多台，那么最后一个总会覆盖前面已经存储到 destStoreID 里面的数据，最终我们拿到的 destStoreID 有可能不是最优的。
 
+>https://github.com/pingcap/pd/issues/1359
+
 ```golang
 // selectDestStore selects a target store to hold the region of the source region.
 // We choose a target store based on the hot region number and flow bytes of this store.
