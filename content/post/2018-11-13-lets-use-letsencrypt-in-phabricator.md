@@ -89,9 +89,21 @@ $ docker-compose restart phabricator
 - 更新 `acme.sh`
 - 出错怎么办, 如何调试
 
+## 如果你是通过 certbot new 创建的，怎么实现自动更新呢？
+
+0. 停掉机器的所有 nginx 服务；（否则 `certbot renew` 会有 nginx restart 错误）
+1. `certbot renew`；（会将最新的 *pem* 证书生成到:`/etc/letsencrypt/live/p.xxx.com/fullchain.pem`）
+2. 拷贝证书：
+	- `cp /etc/letsencrypt/live/p.xxx.com/privkey.pem /data/phabricator/nginx/ssl/privkey.pem`
+	- `cp /etc/letsencrypt/live/p.xxx.com/fullchain.pem /data/phabricator/nginx/ssl/fullchain.pem`
+3. `docker-compose restart -f /..../docker-compose.yml` 或者 `docker start 先前的容器名`
+4. 配置 `crontab` 自动更新任务；
+
 ## 参考资料
 
 1. https://github.com/bitnami/bitnami-docker-phabricator/issues/57
+2. [Let's Encrypt证书自动更新](https://blog.csdn.net/shasharoman/article/details/80915222)
+	- 这里面详细讲解了配置 crontab 所遇到的问题。
 
 ----
 
