@@ -2,7 +2,7 @@
 title: '从查看 docker 服务 restart 次数说起->'
 keywords: docker, golang, docker-compose, restart, times
 date: 2019-02-13T16:13:00+08:00
-lastmod: 2019-02-13T16:13:00+08:00
+lastmod: 2019-02-14T17:53:00+08:00
 draft: false
 description: '从查看 docker 服务 restart 次数说起->'
 categories: [docker]
@@ -411,6 +411,12 @@ func (cli *Client) ContainerInspectWithRaw(ctx context.Context, containerID stri
 docker inspect --format '{{$e := . }}{{with .NetworkSettings}} {{$e.Name}} 
 {{range $index, $net := .Networks}}{{$index}} {{.IPAddress}}
 {{end}}{{end}}' $(docker ps -q)
+```
+
+**查看当前所有的 docker 服务的重启次数，服务名称，创建时间，最后一次启动时间：**
+
+```sh
+$ docker inspect -f "RestartCount:{{.RestartCount}}, ServiceName: {{.Config.Hostname}}, Created: {{.Created}}, LastUp: {{.State.StartedAt}}" $(docker ps -q)
 ```
 
 ## 参考资料
