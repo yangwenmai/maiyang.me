@@ -97,7 +97,23 @@ $ docker-compose restart phabricator
 	- `cp /etc/letsencrypt/live/p.xxx.com/privkey.pem /data/phabricator/nginx/ssl/privkey.pem`
 	- `cp /etc/letsencrypt/live/p.xxx.com/fullchain.pem /data/phabricator/nginx/ssl/fullchain.pem`
 3. `docker-compose restart -f /..../docker-compose.yml` 或者 `docker start 先前的容器名`
-4. 配置 `crontab` 自动更新任务；
+4. 配置 `crontab` 自动更新任务；(注意 crontab 读取环境变量的问题，可以查看参考资料)
+
+## dns 模式（感谢 Kios）
+
+dns01 模式 是 Let's Encrypt 提供的一种验证域名的方式，可以使用 CertBot 去验证 具体就是 使用 CertBot 启用 dns01 然后他会提供给你一个 域名解析中 的一个 TXT Record 然后你把这个放到你的域名解析上，最后记得现在你的服务器上 dig 一下 txt 记录看一下是否递归成功，最终完成 certbot 的提示 enter 就可以获取到新的证书或者更新证书了。
+
+执行这条命令会提示你加一条 TXT 记录：
+```sh
+$ ./certbot-auto -d www.example.com --manual --prefered-challenges dns certonly
+```
+
+查询DNS是否递归完成：
+```sh
+dig -t txt _acme-challenge.www.example.com
+```
+
+我未进行验证，有需要的自己去试验吧。
 
 ## 参考资料
 
