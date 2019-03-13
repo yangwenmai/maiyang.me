@@ -152,6 +152,8 @@ cd /var/www/test/phabricator;
 
 默认情况下，邮件提醒比较多，你可以给个人或者全局设置一下提醒的种类。
 
+(https://xxxx.com/settings/builtin/global/page/emailpreferences/)
+
 ## 4. 配置宿主机的 Nginx，让外网可以通过 80 端口访问 phabricator Container
 
 ```sh
