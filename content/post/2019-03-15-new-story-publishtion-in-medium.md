@@ -18,7 +18,7 @@ author: mai
 
 使用 google ，Facebook 账号登录，并申请一个 medium 账号。
 
-2. 申请好之后，提供你的 medium 账号 @maiyang (https://medium.com/@maiyang) 给我；
+2. 申请好之后，提供你的 medium 账号给管理员；
 3. 我将你加入到 https://medium.com/impopper-engineering 写作者中。
 
 ## 第二步
