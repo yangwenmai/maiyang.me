@@ -279,9 +279,9 @@ func main() {
 
 ## 实战四
 
->将 gRPC 服务部署到 kubernetes 集群中，并且做多借点，客户端调用的时候，可以校验其负载均衡。
+>将 gRPC 服务部署到 kubernetes 集群中，并且做多节点，客户端调用的时候，可以校验其负载均衡。
 
-因为 kubernetes 这里的镜像跟你使用 Docker 去 run 镜像是不一样的，所以你最好将镜像push到远端，比方说 Docker hub。
+因为 kubernetes 这里的镜像跟你使用 Docker 去 run 镜像是不一样的，所以你最好将镜像 push 到远端，比方说 Docker hub。
 
 ```sh
 docker build x.x.x.x:5000/say .
