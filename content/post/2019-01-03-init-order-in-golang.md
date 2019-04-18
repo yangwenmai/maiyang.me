@@ -29,11 +29,12 @@ author: mai
 
 ## 参考资料
 
-1. [](https://golang.org/ref/spec#Package_initialization)
-2. [](https://stackoverflow.com/questions/24790175/when-is-the-init-function-run)
-3. [](https://golang.org/doc/effective_go.html#init)
-4. [](https://medium.com/golangspec/init-functions-in-go-eac191b3860a)
+1. [go spec Package_initialization](https://golang.org/ref/spec#Package_initialization)
+2. [When is the init() function run?](https://stackoverflow.com/questions/24790175/when-is-the-init-function-run)
+3. [The init function](https://golang.org/doc/effective_go.html#init)
+4. [init functions in Go](https://medium.com/golangspec/init-functions-in-go-eac191b3860a)
 5. [go语言的初始化顺序，包，变量，init](https://studygolang.com/articles/6464) - 这一篇文章写的很不错。
+6. [The Go init Function](https://tutorialedge.net/golang/the-go-init-function/)
 
 ----
 
