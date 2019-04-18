@@ -382,8 +382,12 @@ from [@Jack Lindamood](https://medium.com/@cep21)
 
 ## 扩展阅读
 
-1. https://golang.org/pkg/context/
-2. http://www.flysnow.org/2017/05/12/go-in-action-go-context.html
+1. [golang.org/pkg/context/](https://golang.org/pkg/context/)
+2. [Go语言实战笔记（二十）| Go Context](https://www.flysnow.org/2017/05/12/go-in-action-go-context.html)
+3. https://medium.com/@cep21/how-to-correctly-use-context-context-in-go-1-7-8f2c0fafdf39
+    - 翻译：[[译]如何在 Go 中正确使用 context.Context](https://maiyang.me/post/2018-02-12-how-to-correctly-use-context.context-in-golang/)
+4. [Golang 并发 与 context标准库](https://mp.weixin.qq.com/s/FJLH4o7Y1TG9I0seiNwR_w)
+5. [Go语言经典库使用分析（二）| Gorilla Context](https://www.flysnow.org/2017/07/29/go-classic-libs-gorilla-context.html)
 
 ----
 
