@@ -47,7 +47,6 @@ CREATE TABLE `test_key_len` (
 
 结论：在 MySQL 5.7.17 上，一个表的字段 column 作为主键、唯一索引、索引时都是会被限制 key 长度为 3072 bytes。
 
-
 ```sql
 # 主键
 CREATE TABLE `test_key_len` (
@@ -77,6 +76,16 @@ utf8mb4 支持4字节，utf8 支持3字节（区分范围就是 769 和 1025 ）
 2. 如果是其他存储引擎的话，这个长度也是不一样的。
 
 如果是 MyISAM 的 `Specified key was too long; max key length is 1000 bytes`，区分范围就是 1000/4 或者 1000/3。
+
+对于 MyISAM 表，组合索引的长度跟各个列总和长度有关。
+对于 InnoDB 表，组合索引的长度跟各列的长度和无关，跟单列的长度有关，且能创建成功。
+
+坑爹的是：阿里云 RDS 的 `innodb_large_prefix` 默认是关闭。
+
+## 参考资料
+
+1. https://dev.mysql.com/doc/refman/5.7/en/create-index.html
+2. https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_large_prefix
 
 ----
 
