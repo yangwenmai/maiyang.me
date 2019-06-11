@@ -789,7 +789,7 @@ spec:
 
 Kubernetes监视scaleTargetRef中指定的部署。在这种情况下，它是工人。
 您正在使用消息指标来扩展您的Pod。当队列中有超过十条消息时，Kubernetes将触发自动扩展。
-至少，部署应该有两个Pod。 Ten Pods是上限。
+至少，部署应该有 2 个 Pod, 10 个 Pod 是上限。
 您可以使用以下命令创建资源：
 
 ```sh

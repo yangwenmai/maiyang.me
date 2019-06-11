@@ -138,7 +138,7 @@ sudo ./bin/config set phpmailer.smtp-protocol SSL
 查看 phabricator 的邮件内容：
 
 ```sh
-cd /var/www/test/phabricator;
+cd /opt/bitnami/phabricator
 #查看邮件日志
 ./bin/mail list-outbound;
 #清单
@@ -193,6 +193,8 @@ server {
 
 - STMP
 - 其他配置参数...
+- Message: SMTP Error: Could not authenticate. (修改一下密码)
+- Message: SMTP Error: Could not connect to SMTP host.
 
 ### 上传文件报错：
 

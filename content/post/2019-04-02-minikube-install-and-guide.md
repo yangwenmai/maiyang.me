@@ -48,7 +48,6 @@ All Formula dependencies satisfied.
 
 ```sh
 $ minikube start
-minikube start
 😄  minikube v1.0.0 on darwin (amd64)
 🤹  Downloading Kubernetes v1.14.0 images in the background ...
 🔥  Creating virtualbox VM (CPUs=2, Memory=2048MB, Disk=20000MB) ...
@@ -69,6 +68,42 @@ minikube start
 💗  kubectl is now configured to use "minikube"
 🏄  Done! Thank you for using minikube!
 ```
+
+再升级：
+
+```sh
+$ minikube start
+😄  minikube v1.1.0 on darwin (amd64)
+👍  minikube will upgrade the local cluster from Kubernetes 1.14.0 to 1.14.2
+💿  Downloading Minikube ISO ...
+ 131.28 MB / 131.28 MB [============================================] 100.00% 0s
+💡  Tip: Use 'minikube start -p <name>' to create a new cluster, or 'minikube delete' to delete this one.
+🔄  Restarting existing virtualbox VM for "minikube" ...
+⌛  Waiting for SSH access ...
+🐳  Configuring environment for Kubernetes v1.14.2 on Docker 18.06.2-ce
+💾  Downloading kubelet v1.14.2
+💾  Downloading kubeadm v1.14.2
+🚜  Pulling images ...
+🔄  Relaunching Kubernetes v1.14.2 using kubeadm ...
+⌛  Verifying: apiserver proxy etcd scheduler controller dns
+🏄  Done! kubectl is now configured to use "minikube"
+```
+
+## 问题
+
+1. 启动后发现 apiserver 是 stopped ：
+
+```sh
+host: Running
+kubelet: Running
+apiserver: Stopped
+kubectl: Correctly Configured: pointing to minikube-vm at 192.168.99.100
+```
+
+我们可以通过 `minikube logs` 查看错误。
+>原因是：`Get https://localhost:8443/apis/coordination.k8s.io/v1beta1/namespaces/kube-node-lease/leases/minikube?timeout=10s: dial tcp 127.0.0.1:8443: connect: connection refused`
+
+可能需要你去设置一下翻墙。（shadowsocks 配置 http://127.0.0.1:1087 ，如果是 surge3 你可以配置 proxy 为全局即可）
 
 ## 扩展阅读
 
