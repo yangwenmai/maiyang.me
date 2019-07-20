@@ -108,6 +108,7 @@ kubectl: Correctly Configured: pointing to minikube-vm at 192.168.99.100
 ## 扩展阅读
 
 1. [2018-07-31-minikube-guide-in-mac.md](https://maiyang.me/post/2018-07-31-minikube-guide-in-mac/)
+2. [apiserver: stopped - connection to the server x:8443 was refused #3649](https://github.com/kubernetes/minikube/issues/3649)
 
 ----
 
