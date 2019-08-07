@@ -490,7 +490,7 @@ Deleted [https://container.googleapis.com/v1/projects/maiyang1/zones/us-west1-a/
 
 未删除时：
 
-![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/tidb-operator-gcp-02.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/tidb-operator-gcp-vm-02.png)
 
 ## 实践过程中遇到的问题
 
