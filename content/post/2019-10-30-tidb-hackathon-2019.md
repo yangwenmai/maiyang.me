@@ -203,6 +203,7 @@ API 访问 member 的 node_info 时，返回了 Leader 的数据。
 
 1. [Hackathon TiDB/TiKV 参考文档资料汇总](https://github.com/pingcap/presentations/blob/master/hackathon-2019/reference-document-of-hackathon-2019.md)
 2. [TiDB Hackathon 2019 完整参赛项目展示](https://github.com/pingcap/presentations/blob/master/hackathon-2019/hackathon-2019-projects.md)
+3. [Manage many as one with SQL Slides](https://docs.google.com/presentation/d/1sWG4LYnW-LHAPgDa1HoT6uvFwCfKDCYR47mCjOoLSf4/edit#slide=id.g6f8409298b_0_149)
 
 ----
 
