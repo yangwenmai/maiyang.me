@@ -3,7 +3,7 @@ title: '如何判断一些数据是否造假呢？本福特定律'
 keywords: 本福特, benford's law, 本福特定律, go 夜读, 造假, YouTube, Bilibili
 date: 2019-11-16T14:22:00+08:00
 lastmod: 2019-11-17T17:50:00+08:00
-draft: true
+draft: false
 description: '如何判断一些数据是否造假呢？本福特定律'
 categories: [学习]
 tags: [本福特, benford's law, 本福特定律, go 夜读, 造假, YouTube, Bilibili]

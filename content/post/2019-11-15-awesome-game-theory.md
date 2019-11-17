@@ -3,7 +3,7 @@ title: '什么是博弈论？你对它了解多少？'
 keywords: 博弈论
 date: 2019-11-15T18:22:00+08:00
 lastmod: 2019-11-15T18:22:00+08:00
-draft: true
+draft: false
 description: '什么是博弈论？你对它了解多少？它对你可能会有什么影响？'
 categories: [学习]
 tags: [博弈论]
