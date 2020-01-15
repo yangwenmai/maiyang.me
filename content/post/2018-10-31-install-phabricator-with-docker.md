@@ -183,6 +183,21 @@ server {
 
 **至此，您在浏览器输入 your.domain.com 便可以正常使用 phabricator 了，GIT 及 SVN 等都可正常使用了。注意：最好先去 http://your.domain.com/auth/config/new/ 开启 Username/Password 登录方式**
 
+## 6. 配置了 HTTP -> HTTPS
+
+在 `phabricator_data/phabricator/support/preamble.php` 中配置：
+
+```php
+<?php
+
+$_SERVER['HTTPS'] = true;
+```
+
+服务是需要配置：`phabricator.base-uri: https://xxxx.com ` 和 `security.require-https: true`
+
+如果做了以上配置，则还需要修改 nginx 的配置 proxy_pass 为 https://xxx.com ，否则可能会一直出现 302 。
+
+
 ## 遇到的问题
 
 `mariadb_1 | Error executing 'postInstallation': EACCES: permission denied, mkdir '/bitnami/mariadb'`
