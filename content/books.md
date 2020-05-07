@@ -6,14 +6,6 @@ menu: "main"
 weight: 41
 ---
 
-来到这里的小伙伴，100% 真爱粉了，不妨一起交流分享，可以直接加入知识星球来交流讨论。
-
-## 「阅读之美」免费知识星球
-
-我会将阅读笔记以及一些感受，分享到「阅读之美」知识星球，欢迎大家关注。
-
-<img width="240" alt="read_beautiful" src="https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/read_beautiful.jpg">
-
 ## 正在读
 
 | 书名             | 评价                                                                             |
@@ -43,3 +35,8 @@ weight: 41
 
 想读的太多了，但是我们不能贪心，所以我就不罗列他们了。
 
+## 「阅读之美」免费知识星球
+
+我会将阅读笔记以及一些感受，分享到「阅读之美」知识星球，欢迎大家一起来分享和交流。
+
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/read_beautiful.jpg)
