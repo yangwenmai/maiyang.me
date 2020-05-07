@@ -12,7 +12,7 @@ weight: 41
 
 我会将阅读笔记以及一些感受，分享到「阅读之美」知识星球，欢迎大家关注。
 
-![](![read_beautiful](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/read_beautiful.jpg)
+<img width="240" alt="read_beautiful" src="https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/read_beautiful.jpg">
 
 ## 正在读
 
