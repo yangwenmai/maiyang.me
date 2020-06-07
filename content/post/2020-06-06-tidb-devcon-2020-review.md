@@ -2,7 +2,7 @@
 title: 'TiDB DevCon 2020 参会回顾笔记'
 keywords: TiDB, DevCon, Conf, 参会, 回顾, 笔记, PingCAP
 date: 2020-06-06T13:34:00+08:00
-lastmod: 2020-06-06T13:34:00+08:00
+lastmod: 2020-06-07T11:48:00+08:00
 draft: false
 description: 'TiDB DevCon 2020 参会回顾笔记'
 categories: [learn]
@@ -11,11 +11,11 @@ comments: true
 author: mai
 ---
 
-上午的 topic 总结的几个关键词：**全球化**，**安全**，**生态**，**展望**
+总结的几个关键词：**全球化，安全，生态，展望，大神**
 
 收看于 Biliibili 直播：
 
-![tidb_devcon_2020_bilibili|690x73](upload://6qgaLUdoDDBeuw6p4r7ZdDZmNN4.png) 
+![tidb_devcon_2020_bilibili](https://asktug.com/uploads/default/original/3X/2/d/2d04fd0753d9cffcc52b1597fd94253be0f96da6.png) 
 
 ## 刘奇（CEO） Opening Keynote
 
@@ -205,7 +205,7 @@ TiDB 是由开发者来创造的。（1017 contributors， 9 commiter 7 reviewer
 
 TiDB 4.0 GA（TiDB+TiKV）
 
-![tidb_devcon_2020_company|689x386](upload://7aXTC8q8IKc6KGJVFKlMSqaT2lK.png) 
+![tidb_devcon_2020_company](https://asktug.com/uploads/default/original/3X/3/2/324c8eb271bdd38bb385759a9136caa73618d674.png) 
 
 ### 怎么比较好的从零到一的参与呢？
 
@@ -258,7 +258,7 @@ https://university.pingcap.com/
 
 查看 拉勾网(Slides 上一个笔误哦~)
 
-![tidb_devcon_2020_lagou|689x386](upload://6HXocbJ5WSJeya6DFhPMgJvEW3E.png) 
+![tidb_devcon_2020_lagou](https://asktug.com/uploads/default/original/3X/2/f/2f051c4887f5736731e4521f28dac5cdd2a32fda.png) 
 
 TIDB 服务专家=asktug + pingcap university + ?
 
@@ -275,7 +275,7 @@ TIDB 服务专家=asktug + pingcap university + ?
 
 评价：the paper is going to start a new line of research and products.
 
-![tidb_devcon_2020_vldb2020_paper|689x388](upload://d0S1FtoHuEfOEvTuCP1M4bJvATO.png) 
+![tidb_devcon_2020_vldb2020_paper](https://asktug.com/uploads/default/original/3X/5/b/5b357a7d6fb924f161c5ae064dcd5c50084f978c.png) 
 
 ## 模仿
 
@@ -341,6 +341,508 @@ kubernetes 会将基础能力标准化。
 ----
 
 整个直播时长：3小时~
+
+----
+
+# 第二天 DevCon 活动
+
+# 姚维(PingCAP TiDB 开源社区运营负责人)：怎么样跟 1000 个开发者合作？
+
+TiDB 23000 star 斜率都看得出来
+
+1017 Contributors 3 maintainers 9 Committers 7 Reviewers 76 Active Contributors
+
+TiDB 4.0 GA 31086 stars 6755 issues 18738 pull requests 15954 contributors
+
+## TiDB Challege Program (挑战赛)
+
+### 第一届
+
+165 注册人数（23 team，122 individual contributor）
+
+TiDB Performance Challenge Program
+
+GC 性能优化
+
+作者：tabokie
+
+分数：27000 分
+
+### 第二届
+
+162 注册人数（324 任务被领取，142 已完成）
+
+ddl: support the operation of adding multi-columns
+
+作者：gauss1314
+
+分数：2996
+
+抓bug大赛：
+
+40 注册人数
+
+发现 81 个bug：p0:7, p1: 39
+
+Manuel Rigger From ETH Zurich(自研算法来找 bug)
+
+（苏黎世博士后）
+
+## Cooperate With 1000+ Contributors
+
+SIG 和 WG
+
+## How to contribute
+
+- README CONTRIBUTION
+- Learning materials
+- Talent Plan
+- Ask anything?
+    - Issues
+    - AskTUG
+- Join SIG
+
+### How to participate in SIG?
+
+- SIG list
+- Know about SIG
+    - Meeting Notes
+    - Meeting Link
+    - Contribution Map
+    - Github
+        - SIG Project
+        - Release Project
+        - Milestone
+- Join Slack Channel to communicate
+    - #everyone
+    - #sig-tiup
+    - #sig-xxx
+- Create a new SIG
+    - Submit a PR by follwing the step
+    - Wait for PMC LGTM
+
+### 展望未来
+
+## 荣誉时刻
+
+### TiKV Maintainer
+
+李道兵@京东云
+
+陈付@一点资讯
+
+孙晓光@知乎
+
+### TiKV Committer
+
+庄天翼@阿里巴巴
+
+聂殿辉@掌门科技
+
+### Best Contributor 2020
+
+由 SIG Leader 投票产生
+
+TennyZhuang
+
+### TiDB Usability Challenge Program
+
+.* Team(TennyZhuang)
+
+gauss1314 Team
+
+SSebo Team
+
+### TiDB Bug hunting Program
+
+Manuel rigger
+
+wwar
+
+章鱼烧
+
+# 陈付（一点资讯）：TiKV Contributor 的进阶之路- engine sig 方向
+
+毕业于浙江大学
+
+## TiKV 在一点资讯上的使用
+
+使用 RocksDB Merge Operator(Atomic Read-Modify-Write) 实现原子列 upsert
+
+数据和业务在线迁移
+
+## TiKV 社区初接触
+
+开启 titan engine 会导致 tikv-server 间歇性 core 重启
+
+- titan 进行了 KV 分离，不支持 merge operator 特性导致
+
+TIKV TITAN 和 RocksDB BlobDB 都由于 compaction 过程中触发的
+
+基于 titan 的 level-merge GC 特性，设计了 merge operator 实现方案，减少 blob file 的更新问题。（PR 4095）（不具备通用性就没有合入主干 master 分支）
+
+### RawKV 性能优化
+
+#### RawKV 链路优化
+
+优化 tikv raw get 读流程，实现 direct local reader，减少 cpu context 切换，提升性能 4% （PR 4222）
+
+对 tikv storage 和 coprocessor 的 readpool 进行改进，提升集群数据读取性能，p999 降低 20%（PR 4486, 4628）
+
+#### RawKV 设计优化
+
+- 将分片 hash 与基于 range 的 tikv 数据分布方式进行结合的方案，消除了热点读写问题
+- 表预分裂和预分布，解决了初始数据导入集群数据分布不均造成的单盘打满问题，并减少写放大
+- 表数据 multi-CF 物理隔离方案，并通过单表多 CF 减少 RocksDB 实例大小，提升读写性能
+
+### Engine SIG 介绍
+
+Rust-rocksdb FFI 优化
+
+- RocksDB 的 Rust 封装
+- tikv/rust-rocksdb/pull/401
+- tikv/rust-rocksdb/pull/402
+- tikv/rust-rocksdb/pull/418
+
+VerKV 提案和实现
+
+解决 RawKV 无法增量备份、CDC、集群数据迁移和同步的问题。
+
+VerKV 也会支持到 TiKV API 中，现有 TxnKV, RawKV
+
+## 心路感想
+
+ 和社区一期成长
+
+- 开放
+- 友善
+- 极客
+
+# 孙晓光（知乎）：BigTable on TiKV
+
+2020年4月中经历了异地机房的迁移。
+
+### BigTable & HBase
+
+### Google BigTable @ 2005
+
+数据模型：Sparse Multidimensional Sorted Map
+
+### Apache HBase @ 2007
+
+好：生态成熟
+
+不太好：跨行事务/二级索引不完善
+
+好：Tephra/Omid/Phoenix/Trafodion 生态工具完善事务、二级索引和SQL支持
+
+不太好：组件多运维工作量大
+
+## Yet Another BigTable
+
+### Yet Another BigTable @ 2017 → 2019
+
+BigTable 数据模型
+
+中等数据规模 → 迅速膨胀
+
+基于成熟组件 k8s、kafka、redis、MySQL → TiDB
+
+Cache Through 缓存，数据最终一致
+
+MySQL 集群：8台→18台
+
+## NewSQL 时代的 NoSQL
+
+- Web Scale Dataset
+- Non Relational
+- Relaxed Consistency
+
+### Yet Another BigTable @ 2020
+
+- ✅跨行事务/二级索引
+- ✅Schema/Schema Free 混合数据模型
+- 多协议访问
+- 可选的一致性级别
+- 全文检索
+- 离线分析能力
+
+## Table Store （https://github.com/zhihu/zetta）
+
+Native Data Model
+
+Data Model for MySQL Protocol
+
+## 开源
+
+# 万继光：
+
+## 团队简介
+
+15个老师，100多个研究生
+
+## NVM KV 性能优化研究
+
+### 研究背景
+
+- 全球数据量爆发式增长
+- 键值存储系统快速发展
+- NVM（非易失性内存） 技术成熟：intel 发布了商用的NVM 存储介质 3D XPoint，读写性能接近 DRAM,且拥有非易失的特点。
+
+TiKV 存储引擎 RocksDB
+
+- 合并操作导致严重的写放大的问题；
+- 合并操作（特别是L0-L1的合并）导致写性能波动问题；
+
+L0-L1 大数据量合并（2.5-4.5GB)
+
+粗粒度合并：因L0未排序，导致一次合并几乎涉及L0与L1的所有文件。
+
+- 减少波动：采用 NVM 矩阵结构的 Matrix-Table
+
+按行快速写入，按列细粒度合并；
+
+- 减少写放大：扩大L0空间，降低层数，从而减少写放大；
+
+### Matrix-Table 查询优化
+
+- 二分查找；
+- 向下索引指针（指向下层大于它的最小key），加速查找。
+- 第一层采用二分查找，下面就可以利用向下索引查找；
+
+太干了，没有太听懂。。。
+
+![tidb_devcon_2020_matrix_table_search_improve](https://asktug.com/uploads/default/original/3X/7/8/78c86b2c947fca23d899c7b95b7872c1514d80ce.jpeg) 
+
+### 按列细粒度合并
+
+MatrixKV 采用 按列细粒度合并：减少一次合并的数据量；减少了写波动；
+
+### 测试与分析
+
+![tidb_devcon_2020_matrix_table_test](https://asktug.com/uploads/default/original/3X/3/5/353f9e8f910a3ffdbbfe1da02bf697b6b9ef5671.jpeg) 
+
+MatrixKV 的写性能波动明显优于小于其它3种方案
+
+乣因为我们采用按列细粒度的合并操作；
+
+论文1篇，专利1个
+
+姚婷博士是第一作者：https://github.com/PDS-Lab/MatrixKV
+
+## AI 预测的弹性调度研究
+
+### 研究背景
+
+tikv 实现了弹性调度方案，采用按负载动态调整节点数；
+
+存在调度滞后导致负载高峰冲突的问题；
+
+### 研究目标
+
+目标调度：提前调度
+
+目标方案：AI预测+弹性调度
+
+### 整体结构设计
+
+应用负载智能预测；
+
+调度方案设计；
+
+推荐调度方案给 tikv 自身的调度系统；
+
+### 调度方案分析
+
+核心是选择：调度时机
+
+高峰期之前把调度做完；
+
+### 测试环境
+
+模拟2种周期性变化负载；
+
+历史负载预测未来负载曲线；
+
+先的拟合度在 90% 以上；
+
+调度前 QPS 峰值：7867
+
+调度后 QPS 峰值：9787 
+
+提升1.24倍
+
+延迟降低：158ms
+
+KV 指令延迟降低：288ms
+
+![tidb_devcon_2020_matrix_table_ycsb_test](https://asktug.com/uploads/default/original/3X/7/2/725ac78aa157635c9019ba6d075b3a6c1e0e17c7.jpeg) 
+
+### Talent Plan
+
+华科-PingCAP 联合培训
+
+第一阶段（线上）
+
+第二阶段（线下）
+
+第三阶段（PingCAP 实习）
+
+丰富学生的知识体系
+
+评价：干，清晰
+
+# 李永坤（中国科学技术大学 | 计算机学院副教授）：DiffKV 实践
+
+KV 存储系统
+
+数据存储格式
+
+## 典型架构：LSM-Tree
+
+主要问题：Compaction 引起的写放大，多层查找I/O引起的读放大
+
+优化技术
+
+- 放松有序性
+- KV分离
+- 索引优化
+- 新型介质
+
+### DiffKV 动机
+
+关键原因：Key 和 Value 的有序性
+
+## 核心思想
+
+差异化数据管理
+
+- KV 的有序性差异化
+- 异构数据的差异化管理
+
+## DiffKV 关键设计
+
+小KV：LSM-tree, kv均有序同时保证写范围查询
+
+中KV：增强LSM-tree，KV 分离保证写性能 范围查询：value 部分有序
+
+大KV：KV 分离保证写性能垃圾回收开销
+
+## 关键挑战
+
+两颗 LSM-tree 的同步管理：松耦合机制
+
+同步提升写性能，范围查询与单点查询性能，同时降低空间开销。
+
+## 落地实现
+
+实现功能：实现 level merge 功能，维护键值分离后的value有序性
+
+为titan 设计了独立的空间回收逻辑
+
+## 困难与经验
+
+- 代码质量/系统正确性/开发效率
+
+人员安排：基础+兴趣+组合
+
+- 学生培养
+
+工程能力：面向实际生产环境编写高质量代码/熟练各种工具
+
+综合能力：协作开发/问题凝练/主导性思维
+
+### 合作机制
+
+自上而下-DiffKV
+
+领域认识→科研问题→系统设计 → 落地验证
+
+自下而上-分布式KV热点均衡
+
+领域认识-系统设计-问题抽象← 实际问题
+
+如何弥补研究成果与实际产品的差距。
+
+### 合作体会（高校方）
+
+企业：系统能力、实际问题、系统规模、真实数据
+
+高校：创新空间、发散思维、宽松目标、育人为本
+
+双方定位：共同兴趣点，共赢的诉求
+
+合作方式：相对自由度，高度耦合
+
+学生培养：能力培养更全面，综合素质要求更高
+
+![tidb_devcon_2020_talent_plan_keji](https://asktug.com/uploads/default/optimized/3X/a/e/ae975607266a71207fc681438297dca9723fccea_2_1380x778.jpeg) 
+
+**评语**：语速好快。
+
+# 庄天翼：参与 tikv 的心路历程
+
+2018年毕业于清华大学
+
+2018年 tidb hackathon UDF 支持
+
+2019年 tidb hackathon Cross-DC TiDB (二等奖)
+
+infra-meetup 118
+
+## (Active) Contributor
+
+tikv #3374
+
+### Reviewer
+
+medium #5866
+
+leetcode discuss/672692/
+
+### Committer
+
+Datetime format #14278 #14288
+
+(改动了 81 个文件）
+
+### Mentee → Mentor
+
+### Toy → Production
+
+### Rust
+
+（为工程化设计的）
+
+### Improvement
+
+### Impact++
+
+为什么要贡献开源社区？
+
+个人影响力的提升；
+
+交流能使人进步；
+
+评语：tql: 太强了
+
+# Manuel Rigger（苏黎世联邦理工学院）：
+
+奥地利，29岁
+
+苏振东教授
+
+## Goal
+
+ logic bugs
+
+Differential Testing
+
+Larger Picture
+
+- NoREC
+- PQS(Pivoted Query Synthesis)
+- TLP
 
 ----
 
