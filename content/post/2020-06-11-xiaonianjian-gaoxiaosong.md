@@ -1,10 +1,10 @@
 ---
-title: '晓年鉴 1969-2019 by 高晓松'
+title: '晓年鉴 1969 ~ 2019 by 高晓松'
 keywords: 高晓松, 晓年鉴, 历史, 年鉴, 娱乐, 历史
-date: 2020-06-11T06:30:00+08:00
-lastmod: 2020-06-11T06:30:00+08:00
+date: 2020-06-11T03:20:00+08:00
+lastmod: 2020-06-11T03:20:00+08:00
 draft: false
-description: '晓年鉴 1969-2019 by 高晓松'
+description: '晓年鉴 1969 ~ 2019 by 高晓松'
 categories: [娱乐]
 tags: [高晓松, 晓年鉴, 历史, 年鉴, 娱乐, 历史]
 comments: true
