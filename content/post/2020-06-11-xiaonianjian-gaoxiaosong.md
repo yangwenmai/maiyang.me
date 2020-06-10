@@ -51,7 +51,7 @@ author: mai
 
 通过 Chrome Inspect 获取页面请求的 curl
 
-![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/chrome_inspect_curl.jpg)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/chrome_inspect_curl.png)
 
 以下代码通过 https://mholt.github.io/curl-to-go 生成
 
