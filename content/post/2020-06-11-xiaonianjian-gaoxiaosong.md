@@ -2,7 +2,7 @@
 title: '晓年鉴 1969 ~ 2019 by 高晓松'
 keywords: 高晓松, 晓年鉴, 历史, 年鉴, 娱乐, 历史
 date: 2020-06-11T03:20:00+08:00
-lastmod: 2020-06-11T03:49:00+08:00
+lastmod: 2020-06-11T08:09:00+08:00
 draft: false
 description: '晓年鉴 1969 ~ 2019 by 高晓松'
 categories: [娱乐]
@@ -174,9 +174,9 @@ func downloadFile(filepath, fileURL string) error {
 2018年11月5日，高晓松出现在蜻蜓FM内容生态发布会上，宣布与蜻蜓FM联合推出其全新的付费音频节目《晓年鉴》。该节目将于2018年11月14日，即高晓松本人49岁生日当天正式在蜻蜓FM独家开播。
 2019年12月4日，《晓年鉴》推出最后一期《尾声》，《晓年鉴》宣告结束。
 
-<img width="460" src="https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/xiao_renjian.jpg">
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/xiao_renjian.jpg)
 
-<img width="460" src="https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/xiao_shijie.jpg">
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/xiao_shijie.jpg)
 
 ### 高晓松家世背景
 
