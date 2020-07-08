@@ -19,7 +19,7 @@ author: mai
 
 ### 第一季全季中文回看
 
-![](https://wx3.sinaimg.cn/large/0072ktqqgy1gbzp2yo9k7j30rs0fm4k9.jpg)
+![](http://wx3.sinaimg.cn/large/0072ktqqgy1gbzp2yo9k7j30rs0fm4k9.jpg)
 
 视频回看：https://www.bilibili.com/video/av90018223/
 
