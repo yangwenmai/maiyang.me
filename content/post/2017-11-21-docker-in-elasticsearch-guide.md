@@ -113,4 +113,4 @@ https://github.com/olivere/elastic/wiki/Connection-Problems#how-to-figure-out-co
 
 这里的内容主要是后端技术，个人管理，团队管理，以及其他个人杂想。
 
-![茶歇驿站二维码](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/tech_tea.jpg)
+

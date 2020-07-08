@@ -47,5 +47,3 @@ http://www.cnblogs.com/Bob-FD/p/3352216.html
 
 这里的内容主要是团队管理，个人管理，后台技术相关，其他个人杂想。
 
-![茶歇驿站二维码](http://ww4.sinaimg.cn/large/824dcde4gw1f358o5j022j20by0bywf8.jpg)
-

@@ -46,16 +46,16 @@ etcd 推荐使用奇数作为集群节点个数。
 综合考虑性能和容错能力，etcd 官方文档推荐的 etcd 集群大小是 3, 5, 7。
 至于我们怎么选择？是 3, 5 还是 7，你可根据需要的容错能力而定。
 
-集群节点个数|最大容错|
-----|----|
-1|0|
-3|1|
-4|1|
-5|2|
-6|2|
-7|3|
-8|3|
-9|4|
+| 集群节点个数 | 最大容错 |
+| ------------ | -------- |
+| 1            | 0        |
+| 3            | 1        |
+| 4            | 1        |
+| 5            | 2        |
+| 6            | 2        |
+| 7            | 3        |
+| 8            | 3        |
+| 9            | 4        |
 
 ### 搭建 etcd 集群 ###
 
@@ -67,11 +67,11 @@ etcd 集群的搭建有三种方式，包括：static 方式，etcd discovery �
 
 首先我们要准备 3 台机器，对应的名字和IP如下：
 
-名字|IP|
-----|----|
-node0|10.10.0.10|
-node1|10.10.0.11|
-node2|10.10.0.12|
+| 名字  | IP         |
+| ----- | ---------- |
+| node0 | 10.10.0.10 |
+| node1 | 10.10.0.11 |
+| node2 | 10.10.0.12 |
 
 etcd 启动参数，可以以命令行参数的方式附加，也可以以环境变量的方式。
 
@@ -100,17 +100,17 @@ etcd 启动参数，可以以命令行参数的方式附加，也可以以环境
 	
 命令行参数介绍：
 
-参数|描述|
-----|----|
--—name|节点名称|
--—listen-peer-urls|监听URL，用于与其他节点通讯|
--—listen-client-urls||
-—-advertise-client-urls|告知客户端url, 也就是服务的url|
--—initial-advertise-peer-urls|告知集群其他节点url.|
-—-initial-cluster-token|集群的ID|
-—-initial-cluster|集群中所有节点|
--—data-dir|指定节点的数据存储目录，这些数据包括节点ID，集群ID，集群初始化配置，Snapshot文件，若未指定—wal-dir，还会存储WAL文件；|
--—wal-dir|指定节点的was文件的存储目录，若指定了该参数，wal文件会和其他数据文件分开存储。|
+| 参数                          | 描述                                                                                                                  |
+| ----------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| -—name                        | 节点名称                                                                                                              |
+| -—listen-peer-urls            | 监听URL，用于与其他节点通讯                                                                                           |
+| -—listen-client-urls          |                                                                                                                       |
+| —-advertise-client-urls       | 告知客户端url, 也就是服务的url                                                                                        |
+| -—initial-advertise-peer-urls | 告知集群其他节点url.                                                                                                  |
+| —-initial-cluster-token       | 集群的ID                                                                                                              |
+| —-initial-cluster             | 集群中所有节点                                                                                                        |
+| -—data-dir                    | 指定节点的数据存储目录，这些数据包括节点ID，集群ID，集群初始化配置，Snapshot文件，若未指定—wal-dir，还会存储WAL文件； |
+| -—wal-dir                     | 指定节点的was文件的存储目录，若指定了该参数，wal文件会和其他数据文件分开存储。                                        |
 
 常用配置的参数和它们的解释，方便理解：
 
@@ -144,12 +144,12 @@ curl http://10.10.0.14:2379/v2/members
 
 ### etcdctl 操作 ###
 
-etcdctl命令|描述|
-----|----|
->etcdctl member list|列出所有节点|
->etcdctl member update ID http://10.10.0.12:2380|更新 ID 的节点的 peerURLs 为：http://10.0.1.10:2380|
->etcdctl member remove ID|删除 ID 的节点|
->etcdctl member add node2 http://10.10.0.13:2380|添加新节点|
+| etcdctl命令                                      | 描述                                                |
+| ------------------------------------------------ | --------------------------------------------------- |
+| >etcdctl member list                             | 列出所有节点                                        |
+| >etcdctl member update ID http://10.10.0.12:2380 | 更新 ID 的节点的 peerURLs 为：http://10.0.1.10:2380 |
+| >etcdctl member remove ID                        | 删除 ID 的节点                                      |
+| >etcdctl member add node2 http://10.10.0.13:2380 | 添加新节点                                          |
 
 备注：
 
@@ -186,5 +186,3 @@ etcdctl命令|描述|
 一个让你可以在茶歇之余，停下来看一看，里面的内容或许对你有一些帮助。
 
 这里的内容主要是团队管理，个人管理，后台技术相关，其他个人杂想。
-
-![茶歇驿站二维码](http://ww4.sinaimg.cn/large/824dcde4gw1f358o5j022j20by0bywf8.jpg)
