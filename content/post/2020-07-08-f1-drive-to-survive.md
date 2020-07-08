@@ -1,8 +1,8 @@
 ---
 title: '强烈推荐：Netflix 极速求生'
 keywords: 体育, 生活, F1, Netflix, 极速求生, Drive to Survive, Formula1
-date: 2020-07-07T23:10:00+08:00
-lastmod: 2020-07-07T23:10:00+08:00
+date: 2020-07-08T21:54:00+08:00
+lastmod: 2020-07-08T21:54:00+08:00
 draft: false
 description: '聊聊我对新赛季的一些看法和了解到的一些信息。'
 categories: [体育]

@@ -1,8 +1,8 @@
 ---
 title: 'DigitalOcean 服务器迁移'
 keywords: digitalocean, migrate, 服务器, 迁移
-date: 2020-07-07T23:10:00+08:00
-lastmod: 2020-07-07T23:10:00+08:00
+date: 2020-07-06T23:10:00+08:00
+lastmod: 2020-07-06T23:10:00+08:00
 draft: false
 description: '记录我在做 DigitalOcean 迁移时遇到的问题。'
 categories: [体育]
