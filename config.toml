@@ -52,9 +52,9 @@ defaultContentLanguage = "zh-cn"           # Default language to use
   identifier = "categories"
   url = "/categories/"
 [[menu.main]]
-  name = "Go 夜读"
+  name = "TalkGo"
   weight = 70
-  url = "https://github.com/talk-go"
+  url = "https://talkgo.org/"
 
 [params]
   debug = false             # If true, load `eruda.min.js`. See https://github.com/liriliri/eruda
