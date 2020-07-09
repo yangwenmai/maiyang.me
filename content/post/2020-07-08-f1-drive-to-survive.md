@@ -21,7 +21,7 @@ author: mai
 
 ![](http://wx3.sinaimg.cn/large/0072ktqqgy1gbzp2yo9k7j30rs0fm4k9.jpg)
 
-视频回看：https://www.bilibili.com/video/av90018223/
+[第一季中文视频回看](https://www.bilibili.com/video/av90018223/)
 
 - 1 摩拳擦掌 All to Play For：澳大利亚大奖赛开赛在即，红牛车队车手丹尼尔·里卡多摩拳擦掌希望拿下开门红，而车队也在为新赛季揭幕站做着最后的准备。
 - 2 西班牙之王 The King of Spain：在巴塞罗那举行的西班牙大奖赛上，本土作战的费尔南多·阿隆索将要面对来自雷诺车队车手小卡洛斯·塞恩斯的挑战，而他所在的迈凯伦车队更是希望能借此扭转颓势。
@@ -38,7 +38,7 @@ author: mai
 
 ![](http://5b0988e595225.cdn.sohucs.com/images/20200228/a35105b667e249b3b8201e63b6915c8a.jpeg)
 
-视频回看：https://www.bilibili.com/video/av92342806/
+[第二季中文视频回看](https://www.bilibili.com/video/av92342806/)
 
 在一级方程式赛车每个激烈的赛季中，车手、经理、车队老板在赛场内外，每天都过着紧张刺激的精采生活。数名顶尖车手转换队伍，为新的一级方程式赛车车队效忠，2019年正是联盟瓦解并竞争再起的一季。
 - 1 熄灯出发：全新的一级方程式赛车赛季从澳洲大奖赛起跑，十支赛车队一齐竞逐奖项。
