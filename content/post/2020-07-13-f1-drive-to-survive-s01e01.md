@@ -34,6 +34,8 @@ author: mai
 
 ## 哈斯车队
 
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/f1_haas.jpg)
+
 哈斯车队是一支美国车队，他的大老板是吉恩，也是一个其他赛车的大老板。（后续有机会可以跟大家一起去挖一挖）
 
 哈斯车队经理是京特·施泰纳，是一个说服吉恩加入 F1 的人，可想而知他在车队的地位了。（“剧透一下”，他是那个 F 打头的代言人）
