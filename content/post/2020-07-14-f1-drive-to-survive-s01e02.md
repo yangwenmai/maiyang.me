@@ -1,8 +1,8 @@
 ---
 title: '带着你看 Netflix F1 极速求生之西班牙之王'
 keywords: 体育, 生活, F1, Netflix, 极速求生, Drive to Survive, Formula1, 西班牙
-date: 2020-07-13T12:54:00+08:00
-lastmod: 2020-07-13T12:54:00+08:00
+date: 2020-07-14T08:54:00+08:00
+lastmod: 2020-07-14T08:54:00+08:00
 draft: false
 description: '聊聊我对本集的一些观后感，欢迎大家一起交流讨论。'
 categories: [体育]
