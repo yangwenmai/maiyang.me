@@ -15,7 +15,7 @@ author: mai
 
 | File name	|Kind	|OS	|Arch	|Size |
 |----|----|----|----|----|
-| go1.14.5.src.tar.gz	| Source |		| 21MB |
+| go1.14.5.src.tar.gz	| Source |	|	| 21MB |
 | go1.14.5.darwin-amd64.tar.gz  |	Archive  |	macOS	 | x86-64  |	119MB |
 | go1.13.13.darwin-amd64.tar.gz | Archive | macOS | x86-64	 | 116MB |
 
