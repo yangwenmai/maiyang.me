@@ -1,8 +1,8 @@
 ---
 title: 'Go Release Archive Size up! up! up!'
 keywords: Go, Golang, Archive, Size, Analyze
-date: 2020-07-16T23:04:00+08:00
-lastmod: 2020-07-16T23:04:00+08:00
+date: 2020-07-16T19:24:00+08:00
+lastmod: 2020-07-16T19:24:00+08:00
 draft: false
 description: 'Go 发布包大小一直在增长，Go 团队有没有关注到这个问题呢？有没有必要考虑把它降下来？'
 categories: [golang]
