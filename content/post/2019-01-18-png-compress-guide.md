@@ -2,7 +2,7 @@
 title: 'png 压缩处理介绍'
 keywords: tools, png, image, compression, guide
 date: 2019-01-18T10:00:00+08:00
-lastmod: 2019-01-18T10:00:00+08:00
+lastmod: 2020-07-23T00:53:00+08:00
 draft: false
 description: 'png 压缩处理介绍'
 categories: [tools]
@@ -25,7 +25,7 @@ pngcrush-1.8.13
 [pngquant](https://github.com/kornelski/pngquant)
 [Crunch](https://github.com/chrissimpkins/Crunch)
 [ImageOptim](https://github.com/ImageOptim/ImageOptim)
-
+[imagecompressor](https://www.websiteplanet.com/webtools/imagecompressor/)
 
 ## 参考资料
 
