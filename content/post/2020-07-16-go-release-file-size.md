@@ -2,7 +2,7 @@
 title: 'Go Release Archive Size up! up! up!'
 keywords: Go, Golang, Archive, Size, Analyze
 date: 2020-07-16T19:24:00+08:00
-lastmod: 2020-07-16T19:24:00+08:00
+lastmod: 2020-07-21T02:42:58+08:00
 draft: false
 description: 'Go 发布包大小一直在增长，Go 团队有没有关注到这个问题呢？有没有必要考虑把它降下来？'
 categories: [golang]
@@ -137,6 +137,20 @@ func fetch() *http.Response {
 - 增大的包都包括哪些内容呢？
 - Go Team 有没有关注到这个问题？
 - 有没有必要考虑把它降下来？
+
+## 后续
+
+The Go 1 compatibility guarantee (https://golang.org/doc/go1compat)
+pretty much guarantees that every new release will be larger. It's
+hard for us to get rid of existing code.
+
+Although the size is increasing the increase does not seem all that
+big, and the file size doesn't seem particularly large by modern
+standards.
+
+来源于 Go Team Ian 的答复。
+
+- [the go archive size must be smaller？ Golang Nuts Group 的相关回答](https://groups.google.com/g/golang-nuts/c/dLX1lCA5k7I/m/n8d5xqE5BgAJ)
 
 ----
 
