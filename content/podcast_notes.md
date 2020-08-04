@@ -17,6 +17,7 @@ weight: 41
 
 视频地址：
 - [House Judiciary | Online Platforms and Market Power: Examining the Dominance of Amazon, Apple, Facebook, and Google](https://youtu.be/WBFDQvIrWYM)
+>来自于美国众议院司法委员会（U.S. House Committee On The Judiciary）官方发布视频。
 - [Washington Post | Tech CEOs testify at House hearing on Facebook, Google, Apple and Amazon | 7/27 (FULL LIVE STREAM)](https://youtu.be/BpPHLh7cI0g)
 - [The Sun | Live: CEOs of Amazon, Apple, Facebook and Google face antitrust hearing](https://youtu.be/XzqrwsPtLxE)
 
