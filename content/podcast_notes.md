@@ -13,7 +13,7 @@ weight: 41
 ## 2020-08-03
 
 [硅谷早知道 #35 轮番被轰炸，美国国会要拿四大科技巨头怎样？](https://overcast.fm/+Vlf-m7xcQ) 
->推荐语：大家可以配合这篇文章收听 https://sspai.com/post/61872
+>推荐语：大家可以配合这篇文章收听 https://sspai.com/post/61872 文章中所提到的很多论点都有英文原版链接，有兴趣的小伙伴可以深度了解。
 
 视频地址：
 - [House Judiciary | Online Platforms and Market Power: Examining the Dominance of Amazon, Apple, Facebook, and Google](https://youtu.be/WBFDQvIrWYM)
