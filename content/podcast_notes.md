@@ -1,7 +1,7 @@
 ---
 title: "有推荐语的推荐播客"
 date: 2020-08-04T10:00:00+08:00
-lastmod: 2020-08-04T10:45:00+08:00
+lastmod: 2020-08-04T14:28:00+08:00
 menu: "main"
 weight: 41
 ---
@@ -13,7 +13,14 @@ weight: 41
 ## 2020-08-03
 
 [硅谷早知道 #35 轮番被轰炸，美国国会要拿四大科技巨头怎样？](https://overcast.fm/+Vlf-m7xcQ) 
->推荐语：大家可以配合这篇文章收听 https://sspai.com/post/61872 from 杨文
+>推荐语：大家可以配合这篇文章收听 https://sspai.com/post/61872
+
+视频地址：
+- [House Judiciary | Online Platforms and Market Power: Examining the Dominance of Amazon, Apple, Facebook, and Google](https://youtu.be/WBFDQvIrWYM)
+- [Washington Post | Tech CEOs testify at House hearing on Facebook, Google, Apple and Amazon | 7/27 (FULL LIVE STREAM)](https://youtu.be/BpPHLh7cI0g)
+- [The Sun | Live: CEOs of Amazon, Apple, Facebook and Google face antitrust hearing](https://youtu.be/XzqrwsPtLxE)
+
+from 杨文
 
 ## 2020-07-28
 
