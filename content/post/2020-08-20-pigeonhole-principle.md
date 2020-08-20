@@ -36,8 +36,7 @@ author: mai
 1. https://en.wikipedia.org/wiki/Pigeonhole_principle
 2. https://zh.wikipedia.org/wiki/%E9%B4%BF%E5%B7%A2%E5%8E%9F%E7%90%86
 3. https://wenku.baidu.com/view/9e66fe068e9951e79b892783.html
-4. [浅谈基于 simhash 的文本去重原理
- - 将鸽巢原理应用到 simhash 去重问题](https://mp.weixin.qq.com/s/CM4jB2ExWXR4PbyyhYMZ_w)
+4. [浅谈基于 simhash 的文本去重原理 - 将鸽巢原理应用到 simhash 去重问题](https://mp.weixin.qq.com/s/CM4jB2ExWXR4PbyyhYMZ_w)
 5. [鸽巢原理简单形式及应用 by 北航计算机学院 - 李建欣](http://act.buaa.edu.cn/lijx/course/combinatorics/ppt/Combinatorics2015.Chapter3.1.pdf)
 6. [应用鸽巢原理的纸牌魔术一则](https://youtu.be/_OBiiYhGb0c)
 7. [MIT mathematics for computer science exams](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-spring-2015/counting/tp10-1/the-pigeonhole-principle/)
