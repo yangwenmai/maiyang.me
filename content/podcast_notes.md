@@ -1,7 +1,7 @@
 ---
-title: "推荐播客（附推荐语）"
+title: "大家推荐的播客节目"
 date: 2020-08-04T10:00:00+08:00
-lastmod: 2020-09-28T00:13:00+08:00
+lastmod: 2020-10-09T12:13:00+08:00
 menu: "main"
 weight: 41
 ---
@@ -10,9 +10,16 @@ weight: 41
 
 以下内容均来自于「重度播客听友群」，推荐语主要是来自于听众群，感谢作者和推荐者。
 
+## 2020-10-07
+
+[The Changelog: Software Dev & Open Source | Estimating systems with napkin math](https://overcast.fm/+HZUfSP4Cw)
+>推荐语：我最近听了这集挺牛x的，这个主讲18岁没上大学直接去shopify工作，现在开了一个系统设计的每月一题邮件列表。
+
+from 鱼丸
+
 ## 2020-09-27
 
-「对话」 | [冲顶GitHub，52岁程序员创业获2000万美元融资，他却将公司的核心代码“泄露”了丨开源创新30人](https://www.infoq.cn/article/0A6gwxdX99w6etADHCe7)
+[「对话」 | 冲顶GitHub，52岁程序员创业获2000万美元融资，他却将公司的核心代码“泄露”了丨开源创新30人](https://www.infoq.cn/article/0A6gwxdX99w6etADHCe7)
 
 - 推荐语：所有的创新都来自于跨界
 
