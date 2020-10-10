@@ -54,9 +54,10 @@ LINE 上的音乐服务，【LINE MUSIC】可以独家去原唱跟唱：歌神�
 - DataBase 使用 [GORM](https://github.com/go-gorm/gorm) 来连接 MySQL 加速开发效率，在使用 Preload、hook、Auto Migration 方面都很方便
 - Redis 部分会处理 cookie、Session、Cache 的部分，推荐使用 [go-redis](https://github.com/go-redis/redis)
 - Kafka 大多处理 Event log ，因为 Log 的使用场景是不需要非常即时的，所以使用 Queue 当做 Middleware 降低数据库的负担，推荐使用 [Shopify/sarama](https://github.com/Shopify/sarama)，使用场景的流程图如下：
-
-- 前面提到使用 WebSocket 来对接前端，而 Server 端则是使用 [melody](https://github.com/olahol/melody) 来启服务
 ![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/line_kafka_event_log.png)
+- 连接 elasticsearch [go-elasticsearch](https://github.com/elastic/go-elasticsearch)
+- 前面提到使用 WebSocket 来对接前端，而 Server 端则是使用 [melody](https://github.com/olahol/melody) 来启服务
+
 - LINE Music Team 的微服务目录，参考的是 [golang-standards/project-layout](https://github.com/golang-standards/project-layout) 结构来建立所有的目录，借用集众人贡献的 project ，也可以看出 LINE 是很重视参与开源
 
 - 每段程序中会有生命周期，当开发者在使用特定程序做依赖注入（Dependency Injection），让代码可以处理事件前后所需要做的相关功能（比如：显示错误日志时可以发送到 [Sentry](https://sentry.io/welcome/)）
@@ -65,6 +66,11 @@ LINE 上的音乐服务，【LINE MUSIC】可以独家去原唱跟唱：歌神�
 
 - dig: [https://github.com/uber-go/dig](https://github.com/uber-go/dig)
 - fix: [https://github.com/uber-go/fx](https://github.com/uber-go/fx)
+
+- 配置管理 [spf13/viper](https://github.com/spf13/viper)
+- 开发工具
+  - [gowatch](https://github.com/silenceper/gowatch)
+  - [db2struct](https://github.com/Shelnutt2/db2struct)
 
 上面介绍了很多在开发上使用的工具组件，最后一定要写测试来确保自己的程序是具有可靠性的，推荐 [testify](https://github.com/stretchr/testify) 和 [goconvey](https://github.com/smartystreets/goconvey) 来做测试相关的操作
 
