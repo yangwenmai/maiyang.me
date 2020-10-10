@@ -64,8 +64,8 @@ LINE 上的音乐服务，【LINE MUSIC】可以独家去原唱跟唱：歌神�
 
 以下两个组件可以参考：
 
-- dig: [https://github.com/uber-go/dig](https://github.com/uber-go/dig)
-- fix: [https://github.com/uber-go/fx](https://github.com/uber-go/fx)
+  - dig: [https://github.com/uber-go/dig](https://github.com/uber-go/dig)
+  - fix: [https://github.com/uber-go/fx](https://github.com/uber-go/fx)
 
 - 配置管理 [spf13/viper](https://github.com/spf13/viper)
 - 开发工具
