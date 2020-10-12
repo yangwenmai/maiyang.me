@@ -1,12 +1,14 @@
 ---
-title: "YouTube(Golang)"
+title: "Golang Channel"
 date: 2020-10-11T07:21:00+08:00
-lastmod: 2020-10-11T07:21:00+08:00
+lastmod: 2020-10-12T09:21:00+08:00
 menu: "main"
 weight: 42
 ---
 
-| YouTube Golang | Intro | Subscribers |
+## YouTube
+
+| Golang Channel | Intro | Subscribers |
 |----|----|----|
 | [justforfunc: Programming in Go](https://www.youtube.com/channel/UC_BzFbxG2za3bp5NRRRXJSw) | Series of talk recordings and screencasts mainly about Go and the Google Cloud Platform | 33.1K subscribers |
 | [The Go Programming Language](https://www.youtube.com/channel/UCO3LEtymiLrgvpb59cNsb8A) | Videos about working with the Go Programming Language. | 26K subscribers |
@@ -19,6 +21,7 @@ weight: 42
 | [Asta Xie](https://www.youtube.com/channel/UCLiAl_5hNOMQdeN0safxV6Q) | Gopher China 大会的一些视频回看 | 3.37K subscribers |
 | [Singapore Gophers](https://www.youtube.com/channel/UCazkIMpjghmT8fugD1WF_DQ) | Singapore Gophers | 2.99K subscribers |
 | [Bo-Yi Wu](https://www.youtube.com/channel/UCLCZJ9d_I7UJP2bpXpge8KA) | http://blog.wu-boy.com/ | 2.16K subscribers |
+| [Changkun Ou](https://www.youtube.com/channel/UCtujb7c9eudbVEkAsIRZR3w) | Science and art, life in between. | 1.56K subscribers |
 | [GopherCon Europe](https://www.youtube.com/channel/UCxm3-iHEMy7IkU0_gwDVGAQ) | GopherCon has arrived to Europe on 2018 and we're traveling the continent: 2018 - Reykjavik, Iceland 2019 - Tenerife, Canary Islands 2020 - Online 2021 - Berlin, Germany | 1.36K subscribers |
 | [Go Northwest](https://www.youtube.com/channel/UCq9zCm9qiQ6glsz8B3kwsxw) | Go Northwest is a single day, community-driven conference devoted to the Go programming language held in the Pacific Northwest. https://gonorthwest.io/ | 836 subscribers |
 | [GopherCon Israel](https://www.youtube.com/channel/UCV_ox3kVvV5HrUz4JOuZpdQ) | GopherCon brings the Israeli Go community together through its events. The GopherCon brand is well known and respected for its high standards and diverse appeal. | 677 subscribers |
@@ -26,3 +29,13 @@ weight: 42
 | [Forge Utah](https://www.youtube.com/channel/UC7aCz1ur-s48fwm8Zfhjlbg) | The Utah FORGE team at the University of Utah is committed to publicizing and improving basic knowledge of geothermal energy and EGS technologies. | 148 subscribers |
 | [Utah Golang User Group](https://www.youtube.com/channel/UCcqNIz8w85qa25W8A_0NG6Q) | Presentations from the Utah Golang User Group (#UTGO) | 92 subscribers |
 
+## Bilibili
+
+| Golang Channel | Intro | Subscribers |
+|----|----|----|
+| [土妹编程](https://space.bilibili.com/555585221/) | 硅谷老年(senior)程序员，认真做对技术人有帮助的干货视频！ | 1.7 万粉丝 |
+| [Go 夜读](https://space.bilibili.com/326749661) | 所有与 Go 相关的技术知识、架构实践，TalkGo 读书会的阅读清单，读书笔记，读书小结等。 | 1.4 万粉丝 |
+| [eggo-tech](https://space.bilibili.com/567195437/) | 公众号：幼麟实验室。我们师徒二人，就想做点儿形象通透的编程教程。 | 5674 粉丝 |
+| [面向加薪学习](https://space.bilibili.com/375038855) | 专注于Go、Java、Flutter、Vue、React、Taro、小程序、Android、项目管理、软件架构 | 3202 粉丝 |
+| [GopherChina](https://space.bilibili.com/436361287) | GopherChina | 2396 粉丝 |
+| [欧长坤](https://space.bilibili.com/2757295/) | https://changkun.de | 725 粉丝 |
