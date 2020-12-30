@@ -93,6 +93,16 @@ MAX_INT = 2147483647
 
 有没有大佬可以解释一下这个维基百科上这种说法是否正确，以及它是什么原因？
 
+
+While modern processors usually perform addition and multiplication just as fast as bitwise operations due to their longer instruction pipelines and other architectural design choices, bitwise operations do commonly use less power because of the reduced use of resources.[1]
+
+
+https://en.wikipedia.org/wiki/Instruction_pipelining
+
+https://en.wikipedia.org/wiki/Computer_architecture
+
+https://cs.stackexchange.com/questions/75811/why-is-addition-as-fast-as-bit-wise-operations-in-modern-processors
+
 ## 参考资料
 
 1. [位运算](https://zh.wikipedia.org/wiki/%E4%BD%8D%E6%93%8D%E4%BD%9C)
