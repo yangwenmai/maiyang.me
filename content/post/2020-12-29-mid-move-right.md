@@ -70,8 +70,6 @@ MAX_INT = 2147483647
 
 如果要将性能优化到极致的话，我们可以将这里的除以 2 操作转化成位运算 `low+((high-low)>>1)`。
 
-`low+((high-low)>>1)` 还可以被优化成：`(low + high) >> 1` （具体演算见前面的数学演算）
-
 因为相比除法运算来说，计算机处理位运算要快得多。
 
 所以，在第 50 天打卡的 searchInts 函数的优化，大家应该就很容易理解了吧？
@@ -89,13 +87,11 @@ MAX_INT = 2147483647
 
 维基百科：位操作是程序设计中对位模式或二进制数的一元和二元操作。在许多古老的微处理器上，位运算比加减运算略快，通常位运算比乘除法运算要快很多。在现代架构中，情况并非如此：位运算的运算速度通常与加法运算相同（仍然快于乘法运算）。
 
-其中提到了一点说在现代架构中，位运算的运算速度通常与加法运算相同。（我通过 Go benchmark 来看，位运算还是要更快的。
+其中提到了一点说在现代架构中，位运算的运算速度通常与加法运算相同。
 
-有没有大佬可以解释一下这个维基百科上这种说法是否正确，以及它是什么原因？
-
+那维基百科上这种说法是否正确，以及它是什么原因？
 
 While modern processors usually perform addition and multiplication just as fast as bitwise operations due to their longer instruction pipelines and other architectural design choices, bitwise operations do commonly use less power because of the reduced use of resources.[1]
-
 
 https://en.wikipedia.org/wiki/Instruction_pipelining
 
