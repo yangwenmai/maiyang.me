@@ -134,7 +134,7 @@ defaultContentLanguage = "zh-cn"           # Default language to use
     e-linkedin = "https://www.linkedin.com/in/mai-yang-2a082777/"
     g-github = "https://github.com/yangwenmai"
     h-weibo = "https://www.weibo.com/yangwen0o0"
-  [params.counter.busuanzi]
+  [params.counter.urlstat]
     enable = true
     
 # jsonfeed support
