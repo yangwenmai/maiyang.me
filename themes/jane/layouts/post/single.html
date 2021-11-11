@@ -30,13 +30,6 @@
           <span id="urlstat-page-uv"><!-- info will be inserted --></span>
         {{ end }}
 
-        <!-- Counter busuanzi -->
-        {{ if .Site.Params.counter.busuanzi.enable }}
-          <span id="busuanzi_container_page_pv">
-            | 阅读 <span id="busuanzi_value_page_pv"></span>
-          </span>
-        {{ end }}
-
         <!-- Counter leancloud -->
         {{ if .Site.Params.counter.leancloud.enable }}
           <span id="{{ .RelPermalink }}" class="leancloud_visitors" data-flag-title="{{ .Title }}">
