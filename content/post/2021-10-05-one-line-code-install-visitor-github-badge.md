@@ -45,7 +45,7 @@ author: mai
 
 以下是一个 golang.design/research 例子 [golang.design/research 例子](https://golang.design/research/zero-alloc-call-sched/ "golang.design/research 例子")
 
-![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/golang.design/research.png)
+![](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/research.png)
 
 ### 用法二：GitHub 模式
 
