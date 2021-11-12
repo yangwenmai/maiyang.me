@@ -8,11 +8,11 @@
       <time datetime="{{ .Date.Format "2006-01-02" }}" class="post-time">
         {{ .Date.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }}
       </time>
+      <!-- Counter urlstat -->
+      {{ if .Site.Params.counter.urlstat.enable }}
+        · 访问量/访客数：<span id="urlstat-page-pv"><!-- info will be inserted --></span>/<span id="urlstat-page-uv"><!-- info will be inserted --></span>
+      {{ end }}
     </div>
-    <!-- Counter urlstat -->
-    {{ if .Site.Params.counter.urlstat.enable }}
-      · 访问量/访客数：<span id="urlstat-page-pv"><!-- info will be inserted --></span>/<span id="urlstat-page-uv"><!-- info will be inserted --></span>
-    {{ end }}
   </header>
 
   <!-- TOC -->
