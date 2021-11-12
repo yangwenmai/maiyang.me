@@ -30,10 +30,6 @@
         <span class="more-meta"> <a href="{{ .Permalink }}#disqus_thread">{{ i18n "comments" }}</a> </span>
       {{ end }}
       {{- end }}
-      <!-- Counter urlstat -->
-      {{ if .Site.Params.counter.urlstat.enable }}
-        · 访问量/访客数：<span id="urlstat-page-pv"><!-- info will be inserted --></span>/<span id="urlstat-page-uv"><!-- info will be inserted --></span>
-      {{ end }}
 
       <!-- Counter leancloud -->
       {{ if .Site.Params.counter.leancloud.enable }}
