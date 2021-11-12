@@ -6,6 +6,11 @@ menu: "main"
 weight: 50
 ---
 
+<!-- Counter urlstat -->
+{{ if .Site.Params.counter.urlstat.enable }}
+  · 访问量/访客数：<span id="urlstat-page-pv"><!-- info will be inserted --></span>/<span id="urlstat-page-uv"><!-- info will be inserted --></span>
+{{ end }}
+
 - 2021年9月份，我回到深圳，加入了一家[全球化电商 SaaS 创业公司](https://maiyang.me/post/2021-09-13-new-journey/)。
 - 之前在 2c 赛道做过将近 9 年，一直在技术和管理方向，经历过大大小小各种复杂的应用场景（秒杀、亿级 API 调用、百亿级的数据量存储、微服务架构等）。
 - 对 Go 情有独钟，也是一个开源爱好者，Go，TiDB，logkit, kingshard 等多个开源项目的 Contributor，[Go 夜读](https://github.com/talkgo/night) 社区发起人，TGO 深圳董事会成员，任职 2 年 TUG 华南区 Leader，多次深圳地区 Gopher meetup 的组织者和分享嘉宾。
