@@ -1,5 +1,5 @@
 baseURL = "https://maiyang.me/"
-title = "MaiYangAI - 茶歇驿站 - AI, Cursor, Gopher, OpenSource Fans, 成长之路有我相伴。"
+title = "MaiYangAI - AI, Cursor, Gopher, OpenSource Fans, 成长之路有我相伴。"
 enableRobotsTXT = true
 enableEmoji = true
 theme = "jane"
@@ -9,7 +9,7 @@ paginate = 10                                              # 首页每页显示�
 rssLimit = 20             # Limit Entry Count to Rss file # 限制 Rss 文章输出数量
 disqusShortname = "https-maiyang-me"      # disqus_shortname
 googleAnalytics = "UA-42862533-1"      # UA-XXXXXXXX-X
-copyright = "MaiYangAI - 茶歇驿站"            # default: author.name ↓        # 默认为下面配置的author.name ↓
+copyright = "MaiYangAI"            # default: author.name ↓        # 默认为下面配置的author.name ↓
 # uglyURLs = true         # more info: https://gohugo.io/content-management/urls/#ugly-urls
 
 # Highlight options. See https://gohugo.io/content-management/syntax-highlighting/
@@ -24,7 +24,7 @@ defaultContentLanguage = "zh-cn"           # Default language to use
   languageCode = "zh-cn"
 
 [author]                  # essential                     # 必需
-  name = "MaiYangAI - 茶歇驿站"
+  name = "MaiYangAI"
 
 [sitemap]                 # essential                     # 必需
   changefreq = "weekly"
@@ -68,8 +68,8 @@ defaultContentLanguage = "zh-cn"           # Default language to use
   rssFullContent = true     # if false, Rss feed instead of the summary
 
   # site info (optional)                                  # 站点信息（可选，不需要的可以直接注释掉）
-  logoTitle = "MaiYangAI - 茶歇驿站"        # default: the title value    # 默认值: 上面设置的title值
-  keywords = ["MaiYangAI", "茶歇驿站", "ai", "cursor", "go", "golang", "gopher"]
+  logoTitle = "MaiYangAI"        # default: the title value    # 默认值: 上面设置的title值
+  keywords = ["MaiYangAI", "ai", "cursor", "go", "golang", "gopher"]
   description = "Gopher，这里的内容主要是团队管理，个人管理，后台技术相关，其他个人杂想。"
 
   # paginate of archives, tags and categories             # 归档、标签、分类每页显示的文章数目，建议修改为一个较大的值
