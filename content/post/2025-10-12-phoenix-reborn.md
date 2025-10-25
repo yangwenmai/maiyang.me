@@ -51,7 +51,7 @@ Aravind 是那种典型的 “Google 派” 工程师：
 我几乎拍案叫绝。
 那一刻，我觉得他看透了一个时代。
 
-他还提到 David Deutsch 在《The Beginning of Infinity》中的那句话：
+他还提到 David Deutsch 在《The Beginning of Infinity 无穷的开始》中的那句话：
 > “知识是无止境的，我们只能不断地学习与成长。”
 
 我记得当时就想：
@@ -74,7 +74,7 @@ Aravind 是那种典型的 “Google 派” 工程师：
 ---
 
 我开始反思：
-听播客、看访谈、读书——这些我都在做，
+听播客、看访谈、读书 —— 这些我都在做，
 但我有没有真的留下什么，好像并没有意义。
 
 ---
