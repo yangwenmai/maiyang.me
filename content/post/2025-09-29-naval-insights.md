@@ -12,6 +12,7 @@ author: MaiYang
 ---
 
 下面这段话，是我在 #CursorMeetupXiamen Cursor Meetup 厦门站上分享最后环节的汇总。
+[MaiYangAI Twitter source](https://x.com/MaiYangAI/status/1972527565647892482)
 
 对待 AI 你得行动起来！
 
