@@ -20,12 +20,12 @@ author: MaiYang
 
 制作方法：根据 YC 访谈视频的大量 design review，总结提炼而成。
 
-Ⅰ. 设计哲学（Design Philosophy）
-Ⅱ. 设计准则（Design Principles）
-Ⅲ. 审美标准（Aesthetic Criteria）
-Ⅳ. 反模式（Anti-patterns）
-Ⅴ. Builder 向的设计工作方式（The Ryo Working Style）
-Ⅵ. 一句话总结 Ryo 的设计体系
++ Ⅰ. 设计哲学（Design Philosophy）
++ Ⅱ. 设计准则（Design Principles）
++ Ⅲ. 审美标准（Aesthetic Criteria）
++ Ⅳ. 反模式（Anti-patterns）
++ Ⅴ. Builder 向的设计工作方式（The Ryo Working Style）
++ Ⅵ. 一句话总结 Ryo 的设计体系
 
 ---
 
