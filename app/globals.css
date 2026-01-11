@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+:root {
+  /* 默认使用暗色主题，避免首屏闪白 */
+  --background: #0a0a0a;
+  --foreground: #fafafa;
+  --muted: #a1a1a1;
+  --border: #262626;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+}
+
+/* Dark mode: both media query and manual class */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --background: #0a0a0a;
+    --foreground: #fafafa;
+    --muted: #a1a1a1;
+    --border: #262626;
+  }
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #fafafa;
+  --muted: #a1a1a1;
+  --border: #262626;
+}
+
+.light {
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+  --muted: #525252;
+  --border: #e5e5e5;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Terminal-style monospace for code and commands */
+.font-mono {
+  font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace;
+}
+
+/* Prose styles for article content */
+.prose {
+  color: var(--foreground);
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  color: var(--foreground);
+}
+
+.prose p {
+  color: var(--foreground);
+}
+
+.prose a {
+  color: var(--foreground);
+}
+
+.prose strong {
+  color: var(--foreground);
+}
+
+.prose code {
+  color: var(--foreground);
+  background-color: var(--background);
+  border: 1px solid var(--border);
+}
+
+.prose pre {
+  background-color: var(--background);
+  border: 1px solid var(--border);
+}
+
+.prose pre code {
+  background-color: transparent;
+  border: none;
+}
+
+.prose blockquote {
+  color: var(--muted);
+  border-left-color: var(--border);
+}
+
+.prose img {
+  border-color: var(--border);
+}
+
+.prose hr {
+  border-color: var(--border);
+}
+
+.prose table {
+  border-color: var(--border);
+}
+
+.prose th,
+.prose td {
+  border-color: var(--border);
+}
+
+/* Smooth transitions */
+* {
+  transition-property: color, background-color, border-color, opacity, transform;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Better link hover */
+a {
+  transition: all 0.15s ease;
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) .card-hover:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.dark .card-hover:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
