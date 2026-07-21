@@ -28,3 +28,8 @@ sync_hook.script
 .md_configs.data
 public
 resources
+
+.next
+next-env.d.ts
+node_modules
+out/*
