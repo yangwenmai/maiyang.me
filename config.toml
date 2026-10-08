@@ -124,8 +124,14 @@ defaultContentLanguage = "zh-cn"           # Default language to use
     g-github = "https://github.com/yangwenmai"
     h-weibo = "https://www.weibo.com/yangwen0o0"
     t-twitter = "https://x.com/maiyangai"
-  [params.counter.urlstat]
+  [params.counter.urlstat]   # 文章页和页脚的访问量 / 访客数
     enable = true
+
+  [params.disqus]            # 文章底部点击加载评论；front matter 写 comments: false 可单篇关闭
+    shortname = "https-maiyang-me"
+
+  [params.analytics]         # 只在生产构建里输出
+    google = "UA-42862533-1"
     
 # jsonfeed support
 # more information: https://github.com/xianmin/hugo-theme-jane/issues/23

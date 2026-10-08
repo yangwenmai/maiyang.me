@@ -245,6 +245,22 @@
   if (location.hash === "#agent") setMode("agent");
   window.addEventListener("hashchange", function () { setMode(location.hash === "#agent" ? "agent" : "human"); });
 
+  // ---------- Disqus：点击才加载，本地预览不加载 ----------
+  $$("[data-disqus]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      if (/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) { btn.textContent = "本地预览不加载 Disqus"; return; }
+      var url = btn.getAttribute("data-url");
+      window.disqus_config = function () { this.page.url = url; };
+      var sc = document.createElement("script");
+      sc.src = "https://" + btn.getAttribute("data-disqus") + ".disqus.com/embed.js";
+      sc.setAttribute("data-timestamp", String(+new Date()));
+      sc.async = true;
+      sc.onerror = function () { btn.hidden = false; btn.textContent = "Disqus 加载失败，可能需要换个网络"; };
+      document.head.appendChild(sc);
+      btn.hidden = true;
+    });
+  });
+
   // ---------- 搜索：标题 + 标签，索引在 /index.json ----------
   var dlg = $("#search"), input = $("#search-input"), list = $("#search-results");
   if (!dlg || !input || !list || typeof dlg.showModal !== "function") {

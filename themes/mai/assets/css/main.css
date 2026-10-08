@@ -669,3 +669,11 @@ body.agent-mode { overflow: hidden; }
   .ticker-track { transform: none; }
 }
 .hero-title span { display: inline-block; }
+
+/* ============ comments / counters ============ */
+.comments { margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--line); }
+.btn-line { border-color: var(--line-2); }
+.comments-note { margin: 14px 0 0; font-size: 13.5px; color: var(--faint); }
+#disqus_thread { margin-top: 24px; }
+.pv b, .site-stat b { font-weight: 500; color: var(--muted); font-variant-numeric: tabular-nums; }
+.site-stat { font: 12px/1.6 var(--mono); color: var(--faint); }

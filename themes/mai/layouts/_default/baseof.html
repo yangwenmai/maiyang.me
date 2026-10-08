@@ -11,6 +11,9 @@
   </main>
   {{ partial "footer.html" . }}
   {{ partial "agent-view.html" . }}
+  {{- if .Site.Params.counter.urlstat.enable }}
+  <script async src="https://changkun.de/urlstat/client.js"></script>
+  {{- end }}
   {{- $js := resources.Get "js/main.js" | minify | fingerprint }}
   <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
 </body>

@@ -1,0 +1,9 @@
+{{- $short := .Site.Params.disqus.shortname }}
+{{- if and $short (ne .Params.comments false) }}
+<section class="comments" id="comments" aria-label="评论">
+  <p class="kicker"><span>//</span> Comments</p>
+  <button type="button" class="btn btn-line" data-disqus="{{ $short }}" data-url="{{ .Permalink }}">加载 Disqus 评论</button>
+  <p class="comments-note">评论由 Disqus 提供，需要能访问 disqus.com。也欢迎直接在 X 上 @MaiYangAI 聊。</p>
+  <div id="disqus_thread"></div>
+</section>
+{{- end }}

@@ -9,6 +9,7 @@
       <span class="sep">/</span><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time>
       {{- range .GetTerms "categories" }}<span class="sep">/</span><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}
       <span class="sep">/</span><span>{{ .ReadingTime }} min</span>
+      {{ if .Site.Params.counter.urlstat.enable }}<span class="sep">/</span><span class="pv">PV <b id="urlstat-page-pv">–</b> · UV <b id="urlstat-page-uv">–</b></span>{{ end }}
     </p>
     <h1>{{ .Title }}</h1>
     {{- with .Description }}<p class="post-lede">{{ . }}</p>{{ end }}
@@ -54,6 +55,8 @@
       {{- with .NextInSection }}<a class="prev" href="{{ .RelPermalink }}"><span>← 新一篇</span>{{ .Title }}</a>{{ else }}<span></span>{{ end }}
       {{- with .PrevInSection }}<a class="next" href="{{ .RelPermalink }}"><span>旧一篇 →</span>{{ .Title }}</a>{{ end }}
     </nav>
+
+    {{ partial "comments.html" . }}
   </footer>
 </article>
 {{ end }}

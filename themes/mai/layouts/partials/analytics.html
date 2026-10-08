@@ -1,0 +1,12 @@
+{{- /* 只在 hugo build（production）里输出，本地 hugo server 不上报 */ -}}
+{{- if eq hugo.Environment "production" }}
+{{- with .Site.Params.analytics.google }}
+{{- if hasPrefix . "G-" }}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config",{{ . }});</script>
+{{- else }}
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga("create",{{ . }},"auto");ga("send","pageview");</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+{{- end }}
+{{- end }}
+{{- end }}
