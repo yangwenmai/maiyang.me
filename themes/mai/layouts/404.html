@@ -1,0 +1,10 @@
+{{ define "main" }}
+<section class="wrap list-page notfound">
+  <p class="kicker"><span>404</span> signal lost</p>
+  <h1>这页跑丢了。</h1>
+  <pre class="lost">$ curl -I {{ .Site.BaseURL }}???
+HTTP/2 404
+x-hint: 链接可能改过，也可能是我写错了</pre>
+  <p class="block-sub">按 <kbd>/</kbd> 搜一下，或者回 <a href="{{ "/" | relURL }}">首页</a>、看 <a href="{{ "/post/" | relURL }}">全部文章</a>。</p>
+</section>
+{{ end }}

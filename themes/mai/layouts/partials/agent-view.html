@@ -1,0 +1,13 @@
+<section class="agent-view" id="agent-view" hidden aria-label="Agent 视图">
+  <div class="agent-bar">
+    <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="agent-path">GET {{ "llms.txt" | absURL }}</span>
+    <span class="agent-actions">
+      <button type="button" class="chip" data-agent-copy>复制给你的 Agent</button>
+      <a class="chip" href="{{ "llms.txt" | relURL }}" target="_blank" rel="noopener">raw</a>
+      <button type="button" class="chip" data-mode="human">× 回到 Human</button>
+    </span>
+  </div>
+  <p class="agent-note">这是同一个站点给 Agent 读的版本：纯文本、无样式、结构化。把上面的链接丢给 Claude、ChatGPT 或 Cursor，它就知道我是谁、做过什么、怎么联系我。</p>
+  <pre class="agent-body" id="agent-body">loading…</pre>
+</section>

@@ -1,0 +1,5 @@
+# 换主题后不再分页（Netlify / Cloudflare Pages 都认这个文件）
+/page/*                /                301
+/post/page/*           /post/           301
+/tags/:tag/page/*      /tags/:tag/      301
+/categories/:c/page/*  /categories/:c/  301

@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  {{- partial "head.html" . }}
+</head>
+<body class="{{ block "bodyclass" . }}page{{ end }}">
+  <a class="skip" href="#main">跳到正文</a>
+  {{ partial "header.html" . }}
+  <main id="main">
+    {{- block "main" . }}{{ end }}
+  </main>
+  {{ partial "footer.html" . }}
+  {{ partial "agent-view.html" . }}
+  {{- if .Site.Params.counter.urlstat.enable }}
+  <script async src="https://changkun.de/urlstat/client.js"></script>
+  {{- end }}
+  {{- $js := resources.Get "js/main.js" | minify | fingerprint }}
+  <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+</body>
+</html>
