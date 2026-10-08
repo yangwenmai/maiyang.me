@@ -33,3 +33,4 @@ resources
 next-env.d.ts
 node_modules
 out/*
+.hugo_build.lock
