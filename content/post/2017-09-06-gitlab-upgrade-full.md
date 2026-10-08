@@ -1,7 +1,7 @@
 ---
 title: 'Gitlab 血泪迁移升级史'
 keywords: Gitlab, upgrade
-date: 2017-09-07 06:30
+date: 2017-09-07 06:30:00
 description: 'Gitlab 血泪迁移升级史，包含了数据盘文件系统损坏，重新挂载磁盘，备份文件，重启服务等各种操作，然后又进行gitlab版本升级，超过10个版本的更迭。'
 categories: [gitlab]
 tags: [gitlab]

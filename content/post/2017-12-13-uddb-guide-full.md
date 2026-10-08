@@ -2,7 +2,7 @@
 layout: post
 title: 'UDDB 入坑指南'
 keywords: UDDB, UDB, MySQL, Kingshard
-date: 2017-12-13 14:36
+date: 2017-12-13 14:36:00
 description: '本文给大家还原一下我们在UDDB入坑的完整指南'
 categories: [MySQL]
 tags: [UDDB, UDB, MySQL]
