@@ -1,0 +1,15 @@
+{{ define "bodyclass" }}archive{{ end }}
+{{ define "main" }}
+<section class="wrap list-page">
+  <header class="list-head">
+    <p class="kicker"><span>{{ if eq .Data.Plural "tags" }}TAGS{{ else }}CATEGORIES{{ end }}</span> {{ len .Data.Terms }} 个</p>
+    <h1>{{ if eq .Data.Plural "tags" }}标签{{ else }}分类{{ end }}</h1>
+    <p class="block-sub">按文章数排序。越亮的写得越多。</p>
+  </header>
+  <ul class="term-cloud">
+    {{- range .Data.Terms.ByCount }}
+    <li><a href="{{ .Page.RelPermalink }}" style="--w:{{ math.Min 1 (div (float .Count) 20) }}">{{ .Page.Title }}<sup>{{ .Count }}</sup></a></li>
+    {{- end }}
+  </ul>
+</section>
+{{ end }}

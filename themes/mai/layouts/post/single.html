@@ -1,0 +1,59 @@
+{{ define "bodyclass" }}article{{ end }}
+{{ define "main" }}
+{{- $toc := and (.Params.toc | default .Site.Params.toc) (gt (len .TableOfContents) 40) }}
+{{- $age := div (sub now.Unix .Date.Unix) 31536000 }}
+<article class="post wrap{{ if $toc }} has-toc{{ end }}">
+  <header class="post-head">
+    <p class="post-meta">
+      <a href="{{ "/post/" | relURL }}" class="back">← LOG</a>
+      <span class="sep">/</span><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time>
+      {{- range .GetTerms "categories" }}<span class="sep">/</span><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}
+      <span class="sep">/</span><span>{{ .ReadingTime }} min</span>
+    </p>
+    <h1>{{ .Title }}</h1>
+    {{- with .Description }}<p class="post-lede">{{ . }}</p>{{ end }}
+  </header>
+
+  {{- if ge $age 3 }}
+  <p class="stale"><b>ARCHIVE</b> 这篇写于 {{ .Date.Year }} 年，距今 {{ $age }} 年多了。里面的版本、链接和做法可能都已经过时，看的时候留个心眼。</p>
+  {{- end }}
+
+  {{- if $toc }}
+  <aside class="toc" aria-label="目录">
+    <details open>
+      <summary>目录</summary>
+      {{ .TableOfContents }}
+    </details>
+  </aside>
+  {{- end }}
+
+  <div class="prose">
+    {{ .Content }}
+  </div>
+
+  <footer class="post-foot">
+    {{- with .GetTerms "tags" }}
+    <ul class="tags">
+      {{- range . }}<li><a href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a></li>{{ end }}
+    </ul>
+    {{- end }}
+
+    <div class="author-card">
+      {{ partial "mark.svg" (dict "size" 44) }}
+      <div>
+        <p><strong>杨文 Mai Yang</strong> · AI Builder，Cursor 中国区首位 Ambassador，Go 夜读发起人。在 X 上 Build in Public。</p>
+        <p class="author-links">
+          <a href="https://x.com/MaiYangAI" target="_blank" rel="me noopener">关注 @MaiYangAI ↗</a>
+          <a href="{{ "/index.xml" | relURL }}">RSS 订阅</a>
+          <button type="button" class="linkish" data-copy="{{ .Permalink }}">复制本文链接 <span class="copy-hint"></span></button>
+        </p>
+      </div>
+    </div>
+
+    <nav class="post-nav" aria-label="上一篇 / 下一篇">
+      {{- with .NextInSection }}<a class="prev" href="{{ .RelPermalink }}"><span>← 新一篇</span>{{ .Title }}</a>{{ else }}<span></span>{{ end }}
+      {{- with .PrevInSection }}<a class="next" href="{{ .RelPermalink }}"><span>旧一篇 →</span>{{ .Title }}</a>{{ end }}
+    </nav>
+  </footer>
+</article>
+{{ end }}

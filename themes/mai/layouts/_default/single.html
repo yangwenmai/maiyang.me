@@ -1,0 +1,12 @@
+{{ define "bodyclass" }}article{{ end }}
+{{ define "main" }}
+<article class="post wrap">
+  <header class="post-head">
+    <p class="post-meta"><a href="{{ "/" | relURL }}" class="back">← HOME</a>{{ with .Lastmod }}<span class="sep">/</span>更新于 <time datetime="{{ .Format "2006-01-02" }}">{{ .Format "2006.01.02" }}</time>{{ end }}</p>
+    <h1>{{ .Title }}</h1>
+  </header>
+  <div class="prose">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

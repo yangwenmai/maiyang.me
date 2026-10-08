@@ -1,0 +1,288 @@
+{{ define "bodyclass" }}home{{ end }}
+{{ define "main" }}
+{{- $p := .Site.Data.profile }}
+{{- $posts := where .Site.RegularPages "Section" "post" }}
+{{- $since := time $p.since }}
+{{- $tplus := div (sub now.Unix $since.Unix) 86400 }}
+
+<section class="hero stage" aria-label="介绍">
+  <canvas class="stars" aria-hidden="true"></canvas>
+  <div class="wrap hero-wrap">
+    <p class="telemetry">
+      <span class="live"><i></i>ONLINE</span>
+      <span>{{ $p.location }} · 22.54°N 114.06°E</span>
+      <span><b data-clock>--:--:--</b> UTC+8</span>
+      <span>T+<b data-tplus data-since="{{ $p.since }}">{{ lang.FormatNumber 0 $tplus }}</b> 天 · 从第一篇博客算起</span>
+    </p>
+
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="hero-kicker"><b>{{ $p.name }}</b> {{ $p.name_en }} — {{ $p.tagline }}</p>
+        <h1 class="hero-title"><span>把想法，</span><span>变成真正可以</span><span><em>交付</em>的产品。</span></h1>
+        <ul class="roles">
+          {{- range $p.roles }}<li>{{ . }}</li>{{ end }}
+        </ul>
+        <div class="hero-intro">
+          {{- range split (trim $p.intro "\n") "\n" }}<p>{{ . }}</p>{{ end }}
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-ignite" href="https://x.com/MaiYangAI" target="_blank" rel="me noopener">
+            <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.2-8.3L1.9 3h6.4l4.4 5.8L17.8 3Zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5Z"/></svg>
+            关注 @MaiYangAI
+          </a>
+          <a class="btn btn-line" href="#ship">看我做了什么 ↓</a>
+          <button class="btn btn-ghost" type="button" data-copy="mai_yang">微信 mai_yang <span class="copy-hint">复制</span></button>
+        </div>
+      </div>
+
+      <figure class="term" aria-label="一段终端会话：我是谁、做过什么">
+        <div class="term-bar">
+          <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="term-title">mai@agent — ~/build-in-public</span>
+        </div>
+        <ol class="term-body" data-term>
+          {{- range $p.terminal }}
+          <li class="t-{{ .type }}">{{ .text }}</li>
+          {{- end }}
+          <li class="t-cmd t-cursor"></li>
+        </ol>
+      </figure>
+    </div>
+  </div>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      {{- range seq 2 }}
+      <span>
+        {{- range $p.products }}<b>{{ .code }}</b> {{ .name }} <i class="s-{{ lower .status }}">● {{ .status }}</i>{{ end }}
+      </span>
+      {{- end }}
+    </div>
+  </div>
+</section>
+
+{{/* ---------- 01 trajectory ---------- */}}
+{{- $n := len $p.trajectory }}
+{{- $W := 1000.0 }}{{ $H := 320.0 }}
+<section class="block trajectory-block" id="trajectory">
+  <div class="wrap">
+    <header class="block-head">
+      <p class="kicker"><span>01</span> Trajectory</p>
+      <h2>一条往上走、中间断过的曲线</h2>
+      <p class="block-sub">从 iOS 到 Go，从一线工程师到研发管理，再到和 Agent 一起做产品。中间停更过近四年，回来以后 all in AI。</p>
+    </header>
+    <div class="trajectory">
+      <svg class="traj-svg" viewBox="0 0 {{ $W }} {{ $H }}" aria-hidden="true">
+        <defs>
+          <linearGradient id="trajGrad" x1="0" x2="1">
+            <stop offset="0" style="stop-color:var(--faint)" />
+            <stop offset=".6" style="stop-color:var(--accent)" />
+            <stop offset="1" style="stop-color:var(--accent-2)" />
+          </linearGradient>
+        </defs>
+        {{- range seq 0 4 }}<line class="traj-grid" x1="0" x2="{{ $W }}" y1="{{ mul . (div $H 4) }}" y2="{{ mul . (div $H 4) }}"/>{{ end }}
+        {{- $d := "" }}
+        {{- range seq 0 50 }}
+          {{- $t := div (float .) 50.0 }}
+          {{- $x := add 40.0 (mul $t (sub $W 80.0)) }}
+          {{- $y := sub (sub $H 36.0) (mul (math.Pow $t 2.2) (sub $H 80.0)) }}
+          {{- $d = printf "%s%s%.1f %.1f " $d (cond (eq . 0) "M" "L") $x $y }}
+        {{- end }}
+        <path class="traj-line" d="{{ $d }}" pathLength="1" fill="none" stroke="url(#trajGrad)" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      <ol class="traj-points">
+        {{- range $i, $m := $p.trajectory }}
+          {{- $t := div (float $i) (sub $n 1) }}
+          {{- $x := add 40.0 (mul $t (sub $W 80.0)) }}
+          {{- $y := sub (sub $H 36.0) (mul (math.Pow $t 2.2) (sub $H 80.0)) }}
+        <li style="--x:{{ div $x $W }};--y:{{ div $y $H }}" class="{{ if eq $m.date "NOW" }}is-now {{ end }}{{ if eq $i 0 }}pos-ar{{ else if or (modBool $i 2) (eq $i (sub $n 1)) }}pos-al{{ else }}pos-br{{ end }}">
+          <i class="node" aria-hidden="true"></i>
+          <div class="traj-label">
+            <span class="traj-date">{{ $m.date }}</span>
+            {{- if $m.url }}<a href="{{ $m.url | relURL }}"{{ if hasPrefix $m.url "http" }} target="_blank" rel="noopener"{{ end }}>{{ $m.title }}</a>{{ else }}<strong>{{ $m.title }}</strong>{{ end }}
+            <span class="traj-desc">{{ $m.desc }}</span>
+          </div>
+        </li>
+        {{- end }}
+      </ol>
+    </div>
+  </div>
+</section>
+
+{{/* ---------- 02 ship log ---------- */}}
+<section class="block" id="ship">
+  <div class="wrap">
+    <header class="block-head block-head-row">
+      <div>
+        <p class="kicker"><span>02</span> Ship Log</p>
+        <h2>已经发射的产品</h2>
+        <p class="block-sub">基本都是业余时间和 Agent 一起做出来的。有的在 App Store，有的开源，有的只是我自己每天在用。</p>
+      </div>
+      <p class="ship-count"><b>{{ len $p.products }}</b> missions<br><span>{{ len (where $p.products "status" "LIVE") }} live · {{ len (where $p.products "status" "OSS") }} open source</span></p>
+    </header>
+    <ul class="ships">
+      {{- range $i, $it := $p.products }}
+      <li class="ship{{ if eq $i 0 }} ship-hero{{ end }}">
+        <a class="ship-link" href="{{ $it.url }}" target="_blank" rel="noopener">
+          <span class="ship-top">
+            <span class="ship-code">{{ $it.code }}</span>
+            <span class="pill s-{{ lower $it.status }}"><i></i>{{ $it.status }}</span>
+          </span>
+          <span class="ship-kind">{{ $it.kind }}</span>
+          <h3>{{ $it.name }} <span class="arrow" aria-hidden="true">↗</span></h3>
+          <p>{{ $it.desc }}</p>
+          {{- with $it.metric }}<span class="ship-metric"><b>{{ .value }}</b>{{ .label }}</span>{{ end }}
+        </a>
+        {{- with $it.note }}<a class="ship-note" href="{{ .url | relURL }}">↳ {{ .text }}</a>{{ end }}
+      </li>
+      {{- end }}
+      <li class="ship ship-next">
+        <a class="ship-link" href="https://x.com/MaiYangAI" target="_blank" rel="noopener">
+          <span class="ship-top"><span class="ship-code">MSN-{{ printf "%02d" (add (len $p.products) 1) }}</span><span class="pill s-building"><i></i>BUILDING</span></span>
+          <h3>下一个 <span class="arrow" aria-hidden="true">↗</span></h3>
+          <p>还没上线的实验和半成品，进展会先发在 X 上。</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+{{/* ---------- 03 telemetry ---------- */}}
+<section class="block" id="telemetry">
+  <div class="wrap">
+    <header class="block-head">
+      <p class="kicker"><span>03</span> Telemetry</p>
+      <h2>一些可以核对的数字</h2>
+    </header>
+    <ul class="readouts">
+      {{- range $p.stats }}
+      {{- $v := .value }}{{ if eq .auto "posts" }}{{ $v = string (len $posts) }}{{ end }}
+      <li>
+        {{- if .url }}<a href="{{ .url }}" target="_blank" rel="noopener">{{ end }}
+        <b data-count="{{ $v }}">{{ $v }}</b>
+        <span>{{ .label }}</span>
+        {{- if .url }}</a>{{ end }}
+      </li>
+      {{- end }}
+    </ul>
+  </div>
+</section>
+
+{{/* ---------- 04 operating principles ---------- */}}
+<section class="block" id="principles">
+  <div class="wrap">
+    <header class="block-head">
+      <p class="kicker"><span>04</span> Operating System</p>
+      <h2>我做事的几条原则</h2>
+      <p class="block-sub">都是我文章里的原话，点进去能看到当时为什么这么说。</p>
+    </header>
+    <ol class="principles">
+      {{- range $i, $it := $p.principles }}
+      <li>
+        <a href="{{ $it.url | relURL }}">
+          <span class="pr-tag"><span>{{ printf "%02d" (add $i 1) }}</span>{{ $it.tag }}</span>
+          <q class="pr-quote">{{ $it.quote }}</q>
+          <span class="pr-from">摘自《{{ $it.from }}》 →</span>
+        </a>
+      </li>
+      {{- end }}
+    </ol>
+  </div>
+</section>
+
+{{/* ---------- 05 community ---------- */}}
+<section class="block" id="community">
+  <div class="wrap community-grid">
+    <header class="block-head">
+      <p class="kicker"><span>05</span> Community</p>
+      <h2>社区这件事，<br>我做了很久</h2>
+      <p class="block-sub">一个人可以走得很快，一群人才能走得很远。</p>
+    </header>
+    <ol class="crew">
+      {{- range $p.community }}
+      <li>
+        <span class="crew-year">{{ .since | default "——" }}</span>
+        <div>
+          <h3>{{ if .url }}<a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }} <span aria-hidden="true">↗</span></a>{{ else }}{{ .name }}{{ end }}</h3>
+          {{- with .desc }}<p>{{ . }}</p>{{ end }}
+        </div>
+      </li>
+      {{- end }}
+    </ol>
+  </div>
+</section>
+
+{{/* ---------- 06 talks ---------- */}}
+<section class="block" id="talks">
+  <div class="wrap">
+    <div class="talks">
+      <div class="talks-head">
+        <p class="kicker"><span>06</span> Talks &amp; Advisory</p>
+        <h2>最近在分享什么</h2>
+        <p>{{ $p.talks.cta }}</p>
+        <button class="btn btn-ignite" type="button" data-copy="mai_yang">加微信 mai_yang 聊聊 <span class="copy-hint">复制</span></button>
+      </div>
+      <ol class="topics">
+        {{- range $i, $t := $p.talks.topics }}
+        <li>
+          <span class="topic-no">T{{ add $i 1 }}</span>
+          <h3>{{ $t.title }}</h3>
+          {{- with $t.url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ $t.url_label }} ↗</a>{{ end }}
+        </li>
+        {{- end }}
+      </ol>
+    </div>
+  </div>
+</section>
+
+{{/* ---------- 07 writing ---------- */}}
+<section class="block" id="writing">
+  <div class="wrap">
+    <header class="block-head block-head-row">
+      <div>
+        <p class="kicker"><span>07</span> Log</p>
+        <h2>最近写的</h2>
+      </div>
+      <a class="more" href="{{ "/post/" | relURL }}">全部 {{ len $posts }} 篇 · 从 {{ (index $posts.ByDate 0).Date.Year }} 年写到现在 →</a>
+    </header>
+    <ol class="log">
+      {{- range first 6 $posts.ByDate.Reverse }}
+      <li>
+        <a href="{{ .RelPermalink }}">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time>
+          <div>
+            <h3>{{ .Title }}</h3>
+            {{- with .Description }}<p>{{ . }}</p>{{ end }}
+          </div>
+          <span class="log-go" aria-hidden="true">→</span>
+        </a>
+      </li>
+      {{- end }}
+    </ol>
+  </div>
+</section>
+
+{{/* ---------- 08 pit wall ---------- */}}
+<section class="block" id="contact">
+  <div class="wrap pit">
+    <div class="pit-card">
+      <p class="kicker"><span>08</span> Off Track</p>
+      <p class="pit-text">{{ $p.offtrack }}</p>
+      <div class="flag" aria-hidden="true"></div>
+    </div>
+    <div class="ping">
+      <p class="kicker">$ ping mai</p>
+      <ul>
+        {{- range $p.contact }}
+        <li>
+          <span class="ping-key">--{{ .label }}</span>
+          {{- if .copy }}<button type="button" class="linkish" data-copy="{{ .copy }}">{{ .value }} <span class="copy-hint">复制</span></button>
+          {{- else }}<a href="{{ .url }}" target="_blank" rel="me noopener">{{ .value }} ↗</a>{{ end }}
+        </li>
+        {{- end }}
+      </ul>
+      <p class="ping-ok">64 bytes from maiyang.me: 欢迎随时来交流。</p>
+    </div>
+  </div>
+</section>
+{{ end }}

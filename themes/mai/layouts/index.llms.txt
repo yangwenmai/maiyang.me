@@ -1,0 +1,57 @@
+{{- $p := .Site.Data.profile -}}
+{{- $posts := (where .Site.RegularPages "Section" "post").ByDate.Reverse -}}
+# {{ $p.name }} {{ $p.name_en }} (@{{ $p.handle }})
+
+> {{ $p.tagline }} {{ delimit $p.roles " · " }}。{{ $p.headline }}
+
+{{ trim $p.intro "\n" }}
+
+- Site: {{ .Site.BaseURL }}
+- Location: {{ $p.location }}
+- X: https://x.com/{{ $p.handle }}
+- GitHub: https://github.com/yangwenmai
+- WeChat: mai_yang
+- Updated: {{ now.Format "2006-01-02" }}
+
+## Roles
+
+{{ range $p.roles }}- {{ . }}
+{{ end }}
+## Products (Ship Log)
+
+{{ range $p.products }}- [{{ .name }}]({{ .url }}) — {{ .kind }}, {{ .status }}. {{ .desc }}
+{{ end }}
+## Community
+
+{{ range $p.community }}- {{ .name }}{{ with .since }} (since {{ . }}){{ end }}{{ with .desc }}: {{ . }}{{ end }}{{ with .url }} {{ . }}{{ end }}
+{{ end }}
+## Operating principles (in my own words)
+
+{{ range $p.principles }}- [{{ .tag }}] {{ .quote }} — {{ absURL .url }}
+{{ end }}
+## Talks
+
+{{ range $p.talks.topics }}- {{ .title }}{{ with .url }} — {{ . }}{{ end }}
+{{ end }}
+{{ $p.talks.cta }}
+
+## Numbers
+
+{{ range $p.stats }}- {{ if eq .auto "posts" }}{{ len $posts }}{{ else }}{{ .value }}{{ end }} {{ .label }}
+{{ end }}
+## Trajectory
+
+{{ range $p.trajectory }}- {{ .date }}: {{ .title }} — {{ .desc }}
+{{ end }}
+## Recent writing
+
+{{ range first 20 $posts }}- [{{ .Title }}]({{ .Permalink }}) ({{ .Date.Format "2006-01-02" }}){{ with .Description }}: {{ . }}{{ end }}
+{{ end }}
+## More
+
+- All posts ({{ len $posts }}, since {{ (index (last 1 $posts) 0).Date.Year }}): {{ absURL "/post/" }}
+- About: {{ absURL "/about/" }}
+- RSS: {{ absURL "/index.xml" }}
+- Search index (JSON): {{ absURL "/index.json" }}
+
+Off track: {{ $p.offtrack }}

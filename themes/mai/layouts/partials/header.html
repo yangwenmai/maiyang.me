@@ -1,0 +1,40 @@
+{{- $section := "" }}
+{{- if .IsHome }}{{ $section = "home" }}
+{{- else if or (eq .Section "post") (eq .Kind "taxonomy") (eq .Kind "term") }}{{ $section = "writing" }}
+{{- else if eq .RelPermalink "/about/" }}{{ $section = "about" }}{{ end }}
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="{{ "/" | relURL }}" aria-label="MaiYang 首页">
+      {{ partial "mark.svg" (dict "size" 28) }}
+      <span class="brand-name">mai<span>yang</span></span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="{{ "/#ship" | relURL }}">作品</a>
+      <a href="{{ "/post/" | relURL }}"{{ if eq $section "writing" }} aria-current="page"{{ end }}>写作</a>
+      <a href="{{ "/about/" | relURL }}"{{ if eq $section "about" }} aria-current="page"{{ end }}>关于</a>
+    </nav>
+    <div class="tools">
+      <button class="icon-btn" type="button" data-search-open aria-label="搜索文章" title="搜索 ( / 或 ⌘K )">
+        <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="切换深浅色">
+        <svg class="i-sun" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="mode" role="group" aria-label="阅读模式">
+        <button type="button" class="mode-btn is-on" data-mode="human" aria-pressed="true">Human</button>
+        <button type="button" class="mode-btn" data-mode="agent" aria-pressed="false" title="切到给 Agent 读的版本（llms.txt）">Agent</button>
+      </div>
+    </div>
+  </div>
+  <div class="progress" aria-hidden="true"><span></span></div>
+</header>
+<dialog class="search" id="search" aria-label="搜索文章">
+  <form method="dialog" class="search-box" role="search">
+    <span class="prompt" aria-hidden="true">›</span>
+    <input type="search" id="search-input" placeholder="grep 标题和标签：Cursor、Go、F1、独立开发…" autocomplete="off" data-index="{{ "index.json" | relURL }}">
+    <kbd>esc</kbd>
+  </form>
+  <ol class="search-results" id="search-results"></ol>
+  <p class="search-foot"><kbd>↑</kbd><kbd>↓</kbd> 选择 · <kbd>↵</kbd> 打开 · 共索引 {{ len (where .Site.RegularPages "Section" "post") }} 篇</p>
+</dialog>

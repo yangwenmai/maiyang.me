@@ -1,0 +1,38 @@
+{{ define "bodyclass" }}archive{{ end }}
+{{ define "main" }}
+{{- $posts := .Pages.ByDate.Reverse }}
+{{- $first := (index (last 1 $posts) 0).Date.Year }}
+{{- $last := (index $posts 0).Date.Year }}
+{{- $max := 1 }}
+{{- range $posts.GroupByDate "2006" }}{{ if gt (len .Pages) $max }}{{ $max = len .Pages }}{{ end }}{{ end }}
+<section class="wrap list-page">
+  <header class="list-head">
+    <p class="kicker"><span>LOG</span> since {{ $first }}</p>
+    <h1>全部文章</h1>
+    <p class="block-sub">{{ len $posts }} 篇。早年写 iOS 和 Node.js，后来写 Go、分布式和团队管理，现在主要写 AI Coding 和独立开发。按 <kbd>/</kbd> 可以直接搜。</p>
+  </header>
+
+  <figure class="histo" aria-label="每年文章数">
+    <ol>
+      {{- range seq $first $last }}
+        {{- $y := . }}{{ $c := 0 }}
+        {{- range $posts }}{{ if eq .Date.Year $y }}{{ $c = add $c 1 }}{{ end }}{{ end }}
+        <li class="{{ if eq $c 0 }}is-gap{{ end }}" style="--h:{{ div (float $c) $max }}">
+          {{- if gt $c 0 }}<a href="#y{{ $y }}" title="{{ $y }} 年 {{ $c }} 篇"><b>{{ $c }}</b><i></i><span>{{ $y }}</span></a>
+          {{- else }}<div class="gap" title="{{ $y }} 年没写"><b>0</b><i></i><span>{{ $y }}</span></div>{{ end }}
+        </li>
+      {{- end }}
+    </ol>
+    <figcaption>每年写了多少篇。中间空着的那几年，就是停更的时候。</figcaption>
+  </figure>
+
+  {{- range $posts.GroupByDate "2006" }}
+  <section class="year" id="y{{ .Key }}">
+    <h2>{{ .Key }}<span>{{ len .Pages }} 篇</span></h2>
+    <ol class="post-list">
+      {{- range .Pages }}{{ partial "post-row.html" . }}{{ end }}
+    </ol>
+  </section>
+  {{- end }}
+</section>
+{{ end }}
