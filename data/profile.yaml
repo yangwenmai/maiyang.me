@@ -1,0 +1,159 @@
+# 首页「个人站」的全部内容都在这里改，模板不用动。
+# 同一份数据也会生成 /llms.txt，给 Agent 读。
+
+name: 杨文
+name_en: Mai Yang
+handle: MaiYangAI
+location: 深圳 Shenzhen
+since: "2013-07-29"   # 第一篇博客，用来算 T+ 天数
+
+headline: 把想法，变成真正可以交付的产品。
+tagline: AI Builder in the age of agents.
+roles:
+  - Cursor 中国区首位 Ambassador
+  - SpaceXAI Ambassador   # TODO: 补链接和时间
+  - Go 夜读发起人
+  - Build in Public
+intro: |
+  过去一年多，我把大部分业余时间都投入到了 AI，持续在构建产品。
+  白天做研发管理，晚上和周末和 Agent 一起写代码、上架、踩坑。
+  成果、思考、弯路和失败，我都会在 X 上记录下来。
+
+# 首页 hero 右侧的终端，逐行打出来。type: cmd / out / ok
+terminal:
+  - { type: cmd, text: "whoami" }
+  - { type: out, text: "杨文 · Mai Yang — builder / community / manager" }
+  - { type: cmd, text: "cat roles.txt" }
+  - { type: out, text: "Cursor 中国区首位 Ambassador" }
+  - { type: out, text: "SpaceXAI Ambassador" }
+  - { type: out, text: "Go 夜读发起人 · since 2018-03-21" }
+  - { type: cmd, text: "agent run --goal \"idea → App Store\"" }
+  - { type: ok,  text: "plan    和 ChatGPT 聊定位" }
+  - { type: ok,  text: "build   Cursor 写完第一行到上架" }
+  - { type: ok,  text: "ship    教育类付费榜 #23" }
+  - { type: err, text: "ICP     中国区被下架 → 补办备案 → 恢复上架" }
+  - { type: cmd, text: "x analytics @MaiYangAI --last 30d" }
+  - { type: ok,  text: "reach   有效流量 500K+，X 原创内容奖励计划已达标" }
+  - { type: ok,  text: "posts   多篇推文几十万浏览" }
+  - { type: cmd, text: "grok \"帮我一起筹备下一场活动\"" }
+  - { type: out, text: "on it. 筹备中…" }
+  - { type: cmd, text: "ls ~/shipped" }
+  - { type: out, text: "ContextEcho  Contextly  CastMind  TweetQuote  SpeakPaste  …" }
+
+trajectory:
+  - { date: "2013", title: 第一篇博客, desc: 从 iOS 和 Node.js 开始写起, url: /post/2013-07-29-hello-world/ }
+  - { date: "2018", title: 发起 Go 夜读, desc: 3 月 21 日第一期，后来 12k+ Star, url: https://github.com/talkgo/night }
+  - { date: "2021", title: 加入创业公司, desc: 回深圳，全球化电商 SaaS, url: /post/2021-09-13-new-journey/ }
+  - { date: "2025", title: 停更近四年后回归, desc: All in AI，重新开始写, url: /post/2025-10-12-phoenix-reborn/ }
+  - { date: "2025", title: Cursor Ambassador, desc: 中国区首位，十余场官方活动, url: https://cursor.directory/u/mai_yang }
+  - { date: "2026", title: ContextEcho 上架, desc: "教育类付费榜 #23，然后被下架", url: /post/2026-07-14-appstore-china-icp-filing/ }
+  - { date: "2026", title: X 原创内容奖励达标, desc: 500K+ 有效流量，多篇几十万浏览, url: "https://x.com/MaiYangAI" }
+  - { date: "NOW", title: SpaceXAI Ambassador, desc: 高频用 Grok，筹备相关活动, url: "" }
+
+stats:
+  - { value: "12k+", label: Go 夜读 GitHub Star }
+  - { value: "160+", label: 期视频分享 }
+  - { value: "5000+", label: 社群成员 }
+  - { value: "10+", label: 场 Cursor 官方活动 }
+  - { value: "130k+", label: 单帖 X 阅读, url: "https://x.com/MaiYangAI/status/2078106397120799002" }
+  - { value: "500K+", label: X 有效流量 · 原创内容奖励达标, url: "https://x.com/MaiYangAI" }
+  - { value: "10+", label: 年研发管理 }
+  - { value: "362", label: 篇博客, auto: posts }
+
+products:
+  - name: ContextEcho
+    code: MSN-01
+    kind: iOS App
+    status: LIVE
+    desc: 一款克制的播客音视频学习统计工具。我每天跑步、通勤都在听，所以先做给自己用。用 Cursor 三个月从第一行代码到上架。
+    metric: { value: "#23", label: 教育类付费榜 }
+    url: https://www.contextecho.top/
+    note: { text: 被下架又恢复上架的复盘, url: /post/2026-07-14-appstore-china-icp-filing/ }
+  - name: Contextly
+    code: MSN-02
+    kind: macOS App
+    status: LIVE
+    desc: 追踪上下文切换次数、专注读写时间，集成了 Quick Note。
+    url: https://ctxly.ai/
+  - name: CastMind.ai
+    code: MSN-03
+    kind: Web
+    status: LIVE
+    desc: AI Leaders 网站。
+    url: https://castmind.ai/
+  - name: TweetQuote
+    code: MSN-04
+    kind: Web
+    status: LIVE
+    desc: 让每一次引用，都带上完整的上下文。
+    url: https://tweetquote.app/
+  - name: NotebookLM Batch Importer
+    code: MSN-05
+    kind: Chrome 插件
+    status: LIVE
+    desc: 一键批量导入 YouTube 视频到 NotebookLM。
+    url: https://chromewebstore.google.com/detail/notebooklm-batch-importer/jnlhckbiagfopcejjgncfoghpicpcpfl
+  - name: SpeakPaste
+    code: MSN-06
+    kind: macOS
+    status: OSS
+    desc: macOS 菜单栏语音输入工具。
+    url: https://github.com/yangwenmai/SpeakPaste
+  - name: weixin-topic-reader
+    code: MSN-07
+    kind: Python
+    status: OSS
+    desc: 微信话题订阅阅读器：订阅管理、即时刷新、阅读计数、本地缓存。
+    url: https://github.com/yangwenmai/weixin-topic-reader
+  - name: 鼎革千年
+    code: MSN-08
+    kind: Web
+    status: LIVE
+    desc: 中国历代权力更迭脉络。
+    url: https://chinese-dynasty-timeline.pages.dev/
+
+# 每一条都是我文章里的原话，链接到出处。
+principles:
+  - tag: BUILDER
+    quote: 先做一个自己每天离不开的东西，再谈给别人用。
+    from: 先做一个自己每天离不开的 App
+    url: /post/2026-07-17-build-app-with-cursor-insight/
+  - tag: FOUNDER
+    quote: 0% 是机会，20% 是陷阱。
+    from: Jeff Dean 那场 YC 访谈里，我抄走了三条判断
+    url: /post/2026-08-11-jeff-dean-1-percent-rule-yc-interview/
+  - tag: AGENT
+    quote: AI 不该只停在更好用的工具，它得能进到工程协作里，成为真正能一起干活的伙伴。
+    from: 关于我
+    url: /about/
+  - tag: LEARNING
+    quote: 只要我看过、听过、想过，就应该要留下点什么。
+    from: 停更近四年，我宣布回归
+    url: /post/2025-10-12-phoenix-reborn/
+  - tag: MANAGER
+    quote: 虽然一个人可以走的很快，但是只有一群人才能走的很远。
+    from: 2021 年的一篇随笔
+    url: /post/2021-12-30-if-you-want-to-go-fast/
+
+community:
+  - { name: Go 夜读, since: "2018", desc: "2018 年 3 月 21 日发起，至今还在持续运营。Bilibili 和 YouTube 上 160+ 期视频，微信群 5000+ 人。", url: "https://github.com/talkgo/night" }
+  - { name: Cursor Ambassador, since: "2025", desc: "Cursor 中国区首位 Ambassador，在中国大陆举办过十余场 Cursor 官方活动。", url: "https://cursor.directory/u/mai_yang" }
+  - { name: Cursor Insider, since: "2025", desc: "专注 Cursor 的中文社区，用业余时间 + Cursor 做出来的。希望各种各样的 Builder 能一起学习，交付自己心目中的产品。", url: "https://cursor-insider.com/" }
+  - { name: SpaceXAI Ambassador, since: "NOW", desc: "高频使用 Grok，正在筹备相关活动。", url: "" }
+  - { name: AGI 探索营, since: "", desc: 主理人之一。, url: "" }
+  - { name: 「AI 新视界」, since: "", desc: 墨问笔记上的小专栏，写我在 AI 上的所见所闻和实践。, url: "" }
+
+talks:
+  topics:
+    - { title: 企业 AI 转型与落地 }
+    - { title: Cursor Context Engineering, url: "https://cursor-insider.com/talks/ai-maker-summit-2026/", url_label: AI Maker Summit 2026 演讲回顾 }
+    - { title: AI Coding 的工程实践 }
+  cta: 如果你正在推进企业内部的 AI 转型，或者对 Cursor、Context Engineering 和 AI Coding 工作流感兴趣，欢迎找我交流。
+
+offtrack: 写代码之外，我是 F1 车迷，也跑马拉松和越野赛。赛道上见。
+
+contact:
+  - { label: x, value: "@MaiYangAI", url: "https://x.com/MaiYangAI" }
+  - { label: wechat, value: mai_yang, copy: mai_yang }
+  - { label: github, value: yangwenmai, url: "https://github.com/yangwenmai" }
+  - { label: email, value: yangwen.yw@gmail.com, url: "mailto:yangwen.yw@gmail.com" }
