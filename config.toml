@@ -131,7 +131,7 @@ defaultContentLanguage = "zh-cn"           # Default language to use
     shortname = "https-maiyang-me"
 
   [params.analytics]         # 只在生产构建里输出
-    google = "UA-42862533-1"
+    google = "G-JP29K5WGX6"
     
 # jsonfeed support
 # more information: https://github.com/xianmin/hugo-theme-jane/issues/23
