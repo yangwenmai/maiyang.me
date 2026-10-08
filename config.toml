@@ -1,25 +1,38 @@
 baseURL = "https://maiyang.me/"
-title = "MaiYangAI - AI, Cursor, Gopher, OpenSource Fans, 成长之路有我相伴。"
+title = "杨文 Mai Yang · AI Builder in the age of agents"
 enableRobotsTXT = true
 enableEmoji = true
-theme = "jane"
+theme = "mai"                                            # 旧主题 jane 仍在 themes/ 下，改回来即可回滚
 
 hasCJKLanguage = true     # has chinese/japanese/korean ? # 自动检测是否包含 中文\日文\韩文
-paginate = 10                                              # 首页每页显示的文章数
-rssLimit = 20             # Limit Entry Count to Rss file # 限制 Rss 文章输出数量
-disqusShortname = "https-maiyang-me"      # disqus_shortname
-googleAnalytics = "UA-42862533-1"      # UA-XXXXXXXX-X
 copyright = "MaiYangAI"            # default: author.name ↓        # 默认为下面配置的author.name ↓
 # uglyURLs = true         # more info: https://gohugo.io/content-management/urls/#ugly-urls
 
-# Highlight options. See https://gohugo.io/content-management/syntax-highlighting/
-PygmentsCodeFences = true # Enable syntax highlighting with GitHub flavoured code fences
-PygmentsUseClasses = true # Use CSS classes to format highlighted code
-PygmentsCodefencesGuessSyntax = true
-PygmentsOptions = "linenos=table"
-
 # language support # en / zh-cn / other... translations present in i18n/
 defaultContentLanguage = "zh-cn"           # Default language to use
+
+[services.rss]
+  limit = 20
+
+[outputs]
+  home = ["HTML", "RSS", "JSON", "llms"]   # JSON 是站内搜索的索引，llms 是给 Agent 读的 /llms.txt
+
+[outputFormats.llms]
+  mediaType = "text/plain"
+  baseName = "llms"
+  isPlainText = true
+  notAlternative = true
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true                  # 老文章里有不少内嵌 HTML
+  [markup.highlight]
+    noClasses = false              # 颜色在 themes/mai/static/css/syntax.css
+    guessSyntax = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+
 [languages.zh-cn]
   languageCode = "zh-cn"
 
@@ -31,46 +44,18 @@ defaultContentLanguage = "zh-cn"           # Default language to use
   priority = 0.5
   filename = "sitemap.xml"
 
-[[menu.main]]             # config your menu              # 配置目录
-  name = "首页"
-  weight = 10
-  identifier = "home"
-  url = "/"
-[[menu.main]]
-  name = "归档"
-  weight = 20
-  identifier = "archives"
-  url = "/post/"
-[[menu.main]]
-  name = "标签"
-  weight = 30
-  identifier = "tags"
-  url = "/tags/"
-[[menu.main]]
-  name = "分类"
-  weight = 40
-  identifier = "categories"
-  url = "/categories/"
-[[menu.main]]
-  name = "TalkGo"
-  weight = 70
-  url = "https://talkgo.org/"
-[[menu.main]]
-  name = "CursorInsider"
-  weight = 80
-  url = "https://cursor-insider.com/"
 
 [params]
   debug = false             # If true, load `eruda.min.js`. See https://github.com/liriliri/eruda
   # uglyURLs = true          # You must set true after use uglyURLs in site (above). because $.Site.UglyURLs can not import.
-  since = "2014"            # Site creation time          # 站点建立时间
+  since = "2013"            # Site creation time          # 站点建立时间
   homeFullContent = false   # if false, show post summaries on home page. Othewise show full content.
   rssFullContent = true     # if false, Rss feed instead of the summary
 
   # site info (optional)                                  # 站点信息（可选，不需要的可以直接注释掉）
-  logoTitle = "MaiYangAI"        # default: the title value    # 默认值: 上面设置的title值
+  logoTitle = "MaiYang"        # default: the title value    # 默认值: 上面设置的title值
   keywords = ["MaiYangAI", "ai", "cursor", "go", "golang", "gopher"]
-  description = "Cursor 中国区首位 Ambassador，Go 夜读发起人。持续 Build in Public 的 AI 产品实践者。"
+  description = "杨文 Mai Yang：AI Builder，Cursor 中国区首位 Ambassador，SpaceXAI Ambassador，Go 夜读发起人。和 Agent 一起把想法变成真正可以交付的产品，持续 Build in Public。"
 
   # paginate of archives, tags and categories             # 归档、标签、分类每页显示的文章数目，建议修改为一个较大的值
   archive-paginate = 50
