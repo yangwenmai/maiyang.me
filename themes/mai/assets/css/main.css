@@ -472,6 +472,23 @@ kbd {
   background: var(--accent-soft); border: 1px solid rgba(255, 91, 31, .25);
 }
 .stale b { font: 600 11px/1 var(--mono); letter-spacing: .1em; color: var(--accent); margin-right: 8px; }
+.x-card {
+  display: block; margin: 32px 0 0; max-width: var(--measure); padding: 16px 18px; border-radius: 12px;
+  background: var(--panel); border: 1px solid var(--line); color: var(--muted); transition: border-color .2s, background .2s;
+}
+.x-card:hover { border-color: var(--accent); background: var(--panel-2); }
+.x-card-head { display: flex; align-items: center; gap: 10px; font: 12px/1 var(--mono); }
+.x-card-logo { flex: none; display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: var(--text); }
+.x-card-logo svg { width: 13px; height: 13px; fill: var(--bg); }
+.x-card-head b { font-weight: 600; font-size: 11px; letter-spacing: .1em; color: var(--accent); }
+.x-card-handle { color: var(--faint); }
+.x-card-cta { margin-left: auto; color: var(--accent); white-space: nowrap; }
+.x-card-note { display: block; margin: 12px 0; font-size: 14px; line-height: 1.6; color: var(--prose); }
+.x-card-stats { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; font: 12.5px/1 var(--mono); }
+.x-card-stats > span { display: inline-flex; align-items: center; gap: 5px; }
+.x-card-stats svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.x-card-stats b { color: var(--text); font-weight: 600; }
+.x-card-stats .x-card-asof { margin-left: auto; color: var(--faint); font-size: 11.5px; }
 .toc { margin: 32px 0 0; max-width: var(--measure); }
 .toc details { border: 1px solid var(--line); border-radius: 12px; background: var(--panel); padding: 12px 18px; }
 .toc summary { cursor: pointer; font: 600 11.5px/2 var(--mono); color: var(--muted); letter-spacing: .12em; text-transform: uppercase; }
