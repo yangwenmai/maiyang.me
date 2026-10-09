@@ -9,6 +9,14 @@ categories: [Thinking]
 tags: ["AI", "职业发展", "Superlinear", "Context Engineering", "学习方法"]
 comments: true
 author: MaiYang
+x:
+  url: https://x.com/MaiYangAI/status/2089715133752938570
+  views: 6369
+  replies: 2
+  reposts: 0
+  likes: 4
+  bookmarks: 3
+  updated: "2026-10-09"
 ---
 
 ## 起因

@@ -1,0 +1,52 @@
+{{- /*
+  X Article card, rendered when a post's front matter has an `x` block:
+
+  x:
+    url: https://x.com/MaiYangAI/status/<id>
+    views: 7992
+    replies: 0
+    reposts: 3
+    likes: 9
+    bookmarks: 12
+    updated: "2026-10-09"   # when the numbers were taken
+
+  Numbers are a snapshot; refresh them with the x2blog skill. Styles: .x-card in assets/css/main.css.
+*/ -}}
+{{- with .Params.x -}}
+{{- $url := .url -}}
+{{- if and $url (hasPrefix $url "https://x.com/") -}}
+{{- $handle := index (split (strings.TrimPrefix "https://x.com/" $url) "/") 0 -}}
+{{- $stats := slice
+  (dict "key" "views" "label" "阅读" "icon" "M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8zm11-3a3 3 0 1 0 0 6 3 3 0 0 0 0-6z")
+  (dict "key" "replies" "label" "回复" "icon" "M21 11.5a8.4 8.4 0 0 1-9 8.4 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.4 8.4 0 0 1 12.5 3a8.4 8.4 0 0 1 8.5 8.5z")
+  (dict "key" "reposts" "label" "转发" "icon" "M17 1l4 4-4 4M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4M21 13v2a4 4 0 0 1-4 4H3")
+  (dict "key" "likes" "label" "点赞" "icon" "M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21.2l8.8-8.8a5.5 5.5 0 0 0 0-7.8z")
+  (dict "key" "bookmarks" "label" "收藏" "icon" "M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z")
+-}}
+<a class="x-card" href="{{ $url }}" target="_blank" rel="noopener">
+  <span class="x-card-head">
+    <span class="x-card-logo" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></span>
+    <b>X ARTICLE</b><span class="x-card-handle">@{{ $handle }}</span>
+    <span class="x-card-cta">在 X 上查看 ↗</span>
+  </span>
+  <span class="x-card-note">这篇文章也发布在 X 上，欢迎去那边点赞、收藏、留言讨论。</span>
+  <span class="x-card-stats">
+    {{- $x := . -}}
+    {{- range $stats -}}
+    {{- $n := index $x .key -}}
+    {{- if ne $n nil -}}
+    {{- $n = int $n -}}
+    <span title="{{ .label }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="{{ .icon }}"/></svg><b>
+      {{- if ge $n 10000 -}}
+        {{- replace (printf "%.1f" (div (float $n) 10000)) ".0" "" -}}万
+      {{- else -}}
+        {{- lang.FormatNumber 0 $n -}}
+      {{- end -}}
+    </b>{{ .label }}</span>
+    {{- end -}}
+    {{- end -}}
+    {{- with .updated }}<span class="x-card-asof">截至 {{ time.Format "2006-01-02" . }}</span>{{ end -}}
+  </span>
+</a>
+{{- end -}}
+{{- end -}}

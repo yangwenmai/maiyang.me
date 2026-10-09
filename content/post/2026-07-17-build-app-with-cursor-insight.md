@@ -9,6 +9,14 @@ categories: [AI]
 tags: [Cursor, AI 编程, iOS, App Store, 独立开发]
 comments: true
 author: MaiYang
+x:
+  url: https://x.com/MaiYangAI/status/2078106397120799002
+  views: 139000
+  replies: 4
+  reposts: 9
+  likes: 95
+  bookmarks: 294
+  updated: "2026-10-09"
 ---
 
 ![先做一个自己每天离不开的 App](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/x-cover.png)

@@ -15,6 +15,8 @@
     {{- with .Description }}<p class="post-lede">{{ . }}</p>{{ end }}
   </header>
 
+  {{- partial "x-card.html" . }}
+
   {{- if ge $age 3 }}
   <p class="stale"><b>ARCHIVE</b> 这篇写于 {{ .Date.Year }} 年，距今 {{ $age }} 年多了。里面的版本、链接和做法可能都已经过时，看的时候留个心眼。</p>
   {{- end }}
