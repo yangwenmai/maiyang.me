@@ -50,7 +50,10 @@ toc: false
 - Cursor Context Engineering；
 - AI Coding 的工程实践。
 
-AI Maker Summit 那次：[https://cursor-insider.com/talks/ai-maker-summit-2026/](https://cursor-insider.com/talks/ai-maker-summit-2026/)
+最近两次有完整记录的：
+
+- 2026.07.25 · DataFun Agentic AI Summit 2026：[从写代码到构建产品：AI Agent 正在改变 Builder 的工作流](https://cursor-insider.com/talks/datafun-agentic-ai-summit-2026/)
+- 2026.05.23 · AI Maker Summit 2026：[Cursor 的核心竞争力：Context Engineering 与日常 Agent 工作法](https://cursor-insider.com/talks/ai-maker-summit-2026/)
 
 如果正在推进企业内部的 AI 转型，或者对 Cursor、Context Engineering 和 AI Coding 工作流感兴趣，欢迎找我交流。
 

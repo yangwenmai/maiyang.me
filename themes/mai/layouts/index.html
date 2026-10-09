@@ -231,6 +231,25 @@
         </li>
         {{- end }}
       </ol>
+      {{- with $p.talks.records }}
+      <div class="talk-records">
+        <h3 class="talk-records-head">讲过的 · {{ len . }} 场有记录</h3>
+        <ol class="log">
+          {{- range . }}
+          <li>
+            <a href="{{ .url }}" target="_blank" rel="noopener">
+              <time>{{ .date }}</time>
+              <div>
+                <h3>{{ .title }}</h3>
+                <p>{{ .event }}{{ with .desc }} · {{ . }}{{ end }}</p>
+              </div>
+              <span class="log-go" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          {{- end }}
+        </ol>
+      </div>
+      {{- end }}
     </div>
   </div>
 </section>
