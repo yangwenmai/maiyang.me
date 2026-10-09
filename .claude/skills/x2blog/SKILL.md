@@ -1,6 +1,6 @@
 ---
 name: x2blog
-description: 把 MaiYang 在 X 上发的 Article（长文）或 thread 回流成本博客（Hugo）的一篇文章：生成符合本仓库约定的 front matter、下载图片到 blog/、加上 X 首发链接、开分支并 commit。用户说 /x2blog、「把这篇 X 文章同步到博客」「X article 回流」「把这条 thread 整理成博客」时使用，参数可以是 x.com 链接、粘贴的全文，或两者都有。
+description: 把 MaiYang 在 X 上发的 Article（长文）或 thread 回流成本博客（Hugo）的一篇文章：生成符合本仓库约定的 front matter、下载图片到 blog/、写入 X 数据快照用于渲染 X Article 卡片、开分支并 commit；也用于「刷新 X 数据」。用户说 /x2blog、「把这篇 X 文章同步到博客」「X article 回流」「把这条 thread 整理成博客」时使用，参数可以是 x.com 链接、粘贴的全文，或两者都有。
 ---
 
 # x2blog：X Article → 博客
@@ -27,7 +27,7 @@ description: 把 MaiYang 在 X 上发的 Article（长文）或 thread 回流成
 
 还需要确认：
 - **发布时间**：用 X 上的发布时间。页面显示的是浏览器本地时区，先用 `Intl.DateTimeFormat().resolvedOptions().timeZone` 确认是 `Asia/Shanghai`，再写成 `+08:00`。拿不到就问用户，不要随便用今天的时间糊弄过去。
-- **原文链接**：没有就问用户要，最后的首发说明要用到。
+- **原文链接**：没有就问用户要，`x.url` 要用到。
 - **语言**：原文是英文就保留英文，不要翻译。
 
 ## 2. 查重
@@ -58,9 +58,19 @@ categories: [AI]
 tags: ["AI", "...", "..."]
 comments: true
 author: MaiYang
+x:
+  url: https://x.com/MaiYangAI/status/<id>
+  views: 7992
+  replies: 0
+  reposts: 3
+  likes: 9
+  bookmarks: 12
+  updated: "2026-10-09"
 ---
 ```
 
+- `x:` 块驱动文章标题下方的 X Article 卡片（`layouts/partials/post/x_card.html`），卡片上会显示阅读、回复、转发、点赞、收藏和「在 X 上查看」链接。数据在 status 页用 [scripts/extract_stats.js](scripts/extract_stats.js) 抓，`updated` 填抓取当天的日期，要加引号。没有 `x:` 的文章不显示卡片。
+- 用户要求「刷新 X 数据」时，对所有带 `x:` 的文章重新跑一遍 `extract_stats.js`，只更新数字和 `updated`，不动 `lastmod`。
 - `categories` 只放一个，优先复用近期在用的：`AI`、`Thinking`、`工具`、`人物`、`macOS`。都不合适时，提出新分类请用户确认。
 - `tags` 3–6 个，用带引号的数组写法。
 - 标题、描述里有单引号时，改用双引号包起来，或者转义。
@@ -75,13 +85,7 @@ author: MaiYang
 - 推文链接去掉 `?s=20` 之类的分享参数。
 - 正文里指向作者自己 X Article 的链接，如果那篇也已经同步到博客，就改成博客链接（`https://maiyang.me/post/<文件名去掉 .md>/`），方便站内互相跳转。
 - 删除线（`<s>`）保留成 `~~…~~`，这通常是作者有意留下的改动痕迹。
-- 文末统一加一段（`<url>` 换成原文链接）：
-
-```markdown
----
-
-> 本文首发于 X：<url>，欢迎在那边留言讨论。
-```
+- 文末不用再写「本文首发于 X」，X 卡片已经覆盖了这个信息。
 
 ## 5. 图片
 
