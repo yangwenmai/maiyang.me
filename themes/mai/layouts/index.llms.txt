@@ -33,6 +33,10 @@
 
 {{ range $p.talks.topics }}- {{ .title }}{{ with .url }} — {{ . }}{{ end }}
 {{ end }}
+### Talk records
+
+{{ range $p.talks.records }}- {{ .date }} · {{ .event }}: {{ .title }} — {{ .url }}
+{{ end }}
 {{ $p.talks.cta }}
 
 ## Numbers
