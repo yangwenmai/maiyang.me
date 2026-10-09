@@ -1,0 +1,19 @@
+{{ define "bodyclass" }}archive{{ end }}
+{{ define "main" }}
+{{- $posts := .Pages.ByDate.Reverse }}
+<section class="wrap list-page">
+  <header class="list-head">
+    <p class="kicker"><span>{{ if eq .Data.Plural "tags" }}TAG{{ else if eq .Data.Plural "categories" }}CATEGORY{{ else }}LIST{{ end }}</span> {{ len $posts }} 篇</p>
+    <h1>{{ if eq .Data.Plural "tags" }}#{{ end }}{{ .Title }}</h1>
+    <p class="block-sub"><a href="{{ "/post/" | relURL }}">← 看全部文章</a> · <a href="{{ printf "/%s/" (.Data.Plural | default "tags") | relURL }}">全部{{ if eq .Data.Plural "categories" }}分类{{ else }}标签{{ end }}</a></p>
+  </header>
+  {{- range $posts.GroupByDate "2006" }}
+  <section class="year">
+    <h2>{{ .Key }}<span>{{ len .Pages }} 篇</span></h2>
+    <ol class="post-list">
+      {{- range .Pages }}{{ partial "post-row.html" . }}{{ end }}
+    </ol>
+  </section>
+  {{- end }}
+</section>
+{{ end }}

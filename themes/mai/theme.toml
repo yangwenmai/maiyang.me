@@ -1,0 +1,4 @@
+name = "mai"
+license = "MIT"
+description = "maiyang.me 的个人站主题：首页是个人主页，下面是写了十几年的博客。"
+min_version = "0.110.0"
