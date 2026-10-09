@@ -9,6 +9,14 @@ categories: [AI]
 tags: ["AI", "Muse", "Meta", "Agent", "增长"]
 comments: true
 author: MaiYang
+x:
+  url: https://x.com/MaiYangAI/status/2103421106929500628
+  views: 12900
+  replies: 25
+  reposts: 0
+  likes: 16
+  bookmarks: 15
+  updated: "2026-10-09"
 ---
 
 ![Muse 祛魅从我做起](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/meta-muse-demystified-1.jpg)
@@ -104,6 +112,3 @@ X 上那些动不动上万阅读的"注册教程帖"，本质上都是推荐码�
 8. https://x.com/GaryDu18/status/2103001284328726966 · 约 1.2 万 · 美区 ID+梯子+约 24h+绑卡
 9. https://x.com/li9292/status/2103367907992354855 · 约 1 万 · WhatsApp 秒过（你线下局里的李韭二）
 
----
-
-> 本文首发于 X：https://x.com/MaiYangAI/status/2103421106929500628 ，欢迎在那边留言讨论。

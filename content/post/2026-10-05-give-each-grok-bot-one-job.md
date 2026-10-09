@@ -9,6 +9,14 @@ categories: [AI]
 tags: ["AI", "Grok Bot", "Agent", "Multi-Agent"]
 comments: true
 author: MaiYang
+x:
+  url: https://x.com/MaiYangAI/status/2106925904551424319
+  views: 7992
+  replies: 0
+  reposts: 3
+  likes: 9
+  bookmarks: 12
+  updated: "2026-10-09"
 ---
 
 ![How to give each Grok Bot one job](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/give-each-grok-bot-one-job-1.jpg)
@@ -56,6 +64,3 @@ One job does not mean the bots sit apart. It means they can be combined when the
 
 If your first bot is still doing everything, take the job it actually finishes, put that job in its own bot, and let the primary bot call it. You will finally be able to see what to improve.
 
----
-
-> 本文首发于 X：https://x.com/MaiYangAI/status/2106925904551424319 ，欢迎在那边留言讨论。

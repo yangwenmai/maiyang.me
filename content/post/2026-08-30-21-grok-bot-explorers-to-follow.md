@@ -9,6 +9,14 @@ categories: [人物]
 tags: ["AI", "Grok Bot", "X", "人物"]
 comments: true
 author: MaiYang
+x:
+  url: https://x.com/MaiYangAI/status/2093912172917121444
+  views: 22800
+  replies: 3
+  reposts: 3
+  likes: 51
+  bookmarks: 149
+  updated: "2026-10-09"
 ---
 
 ![X 上最值得关注的 21 个 Grok Bot 探索者](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/21-grok-bot-explorers-to-follow-1.jpg)
@@ -193,6 +201,3 @@ June 烤箱（后来卖给 Weber），也参与过后来变成 Lyft 的那家公
 
 如果你还有其他人推荐，欢迎评论区聊聊。
 
----
-
-> 本文首发于 X：https://x.com/MaiYangAI/status/2093912172917121444 ，欢迎在那边留言讨论。

@@ -9,6 +9,14 @@ categories: [人物]
 tags: ["AI", "X", "人物", "CastMind"]
 comments: true
 author: MaiYang
+x:
+  url: https://x.com/MaiYangAI/status/2092216065094996220
+  views: 9962
+  replies: 0
+  reposts: 0
+  likes: 7
+  bookmarks: 16
+  updated: "2026-10-09"
 ---
 
 ![X 上最值得关注的 59 个 AI 领袖](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/59-ai-leaders-to-follow-on-x-1.jpg)
@@ -407,6 +415,3 @@ Khan Academy 首席学习官。Khanmigo 那种辅导机器人后面，有她长�
 
 完整人物在 [castmind.ai](https://castmind.ai/)。X list 在 [CastMind AI Leaders](https://x.com/i/lists/2026952806146678957)。
 
----
-
-> 本文首发于 X：https://x.com/MaiYangAI/status/2092216065094996220 ，欢迎在那边留言讨论。

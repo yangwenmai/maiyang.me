@@ -9,6 +9,14 @@ categories: [Thinking]
 tags: ["X", "Twitter", "内容创作", "Build in Public"]
 comments: true
 author: MaiYang
+x:
+  url: https://x.com/MaiYangAI/status/2033564363685265765
+  views: 2288
+  replies: 1
+  reposts: 0
+  likes: 2
+  bookmarks: 4
+  updated: "2026-10-09"
 ---
 
 ![What My Most-Read Tweets Taught Me About the Twitter Algorithm](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/what-my-most-read-tweets-taught-me-1.jpg)
@@ -107,6 +115,3 @@ So instead of trying to "create content", I'm increasingly trying to do somethin
 
 **just document what I actually use, learn, and build.**
 
----
-
-> 本文首发于 X：https://x.com/MaiYangAI/status/2033564363685265765 ，欢迎在那边留言讨论。

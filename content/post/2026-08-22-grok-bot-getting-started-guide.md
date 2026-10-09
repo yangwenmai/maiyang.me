@@ -9,6 +9,14 @@ categories: [AI]
 tags: ["AI", "Grok Bot", "Agent", "SpaceXAI"]
 comments: true
 author: MaiYang
+x:
+  url: https://x.com/MaiYangAI/status/2090919833366040919
+  views: 203100
+  replies: 17
+  reposts: 35
+  likes: 216
+  bookmarks: 485
+  updated: "2026-10-09"
 ---
 
 ![Grok Bot 从入门到进阶](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/grok-bot-getting-started-guide-1.jpg)
@@ -151,6 +159,3 @@ skill 是「怎么做」。routine 是「谁来做、什么时候做」。先拿
 - Ray 把 Bot 当 CTO https://x.com/RayFernando1337/status/2090195841822998888
 - Julien 写人还是 runtime https://x.com/julientalbot974/status/2090172142562492882
 
----
-
-> 本文首发于 X：https://x.com/MaiYangAI/status/2090919833366040919 ，欢迎在那边留言讨论。

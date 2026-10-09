@@ -9,6 +9,14 @@ categories: [AI]
 tags: ["AI", "Grok Bot", "Agent", "Codex"]
 comments: true
 author: MaiYang
+x:
+  url: https://x.com/MaiYangAI/status/2096728181151850917
+  views: 58100
+  replies: 14
+  reposts: 15
+  likes: 116
+  bookmarks: 255
+  updated: "2026-10-09"
 ---
 
 ![Grok Bot 强在哪](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/grok-bot-vs-work-agents-1.jpg)
@@ -99,6 +107,3 @@ https://x.ai/bot/93gOz3op1UQdBdbekQFLK
 
 欢迎关注、收藏、点赞。你在高频用哪个 Bot，是否有开放 template ，欢迎评论区留言。
 
----
-
-> 本文首发于 X：https://x.com/MaiYangAI/status/2096728181151850917 ，欢迎在那边留言讨论。

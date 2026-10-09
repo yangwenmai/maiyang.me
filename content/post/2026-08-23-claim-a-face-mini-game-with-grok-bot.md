@@ -9,6 +9,14 @@ categories: [AI]
 tags: ["AI", "Grok Bot", "Cloudflare", "Supabase", "独立开发"]
 comments: true
 author: MaiYang
+x:
+  url: https://x.com/MaiYangAI/status/2091496824326562221
+  views: 1110
+  replies: 0
+  reposts: 0
+  likes: 1
+  bookmarks: 0
+  updated: "2026-10-09"
 ---
 
 ![Claim a face](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/claim-a-face-mini-game-with-grok-bot-1.jpg)
@@ -51,6 +59,3 @@ The game itself is still pretty rough. But I got the whole loop working in a sho
 
 If you have an idea, just try it. If this helps you, even better.
 
----
-
-> 本文首发于 X：https://x.com/MaiYangAI/status/2091496824326562221 ，欢迎在那边留言讨论。

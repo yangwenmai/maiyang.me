@@ -9,6 +9,14 @@ categories: [Thinking]
 tags: ["AI", "Linear", "产品", "Quality Growth", "Craft"]
 comments: true
 author: MaiYang
+x:
+  url: https://x.com/MaiYangAI/status/2037513875206320195
+  views: 540
+  replies: 0
+  reposts: 0
+  likes: 2
+  bookmarks: 0
+  updated: "2026-10-09"
 ---
 
 ![Everyone can build now. Almost no one can judge.](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/everyone-can-build-almost-no-one-can-judge-1.jpg)
@@ -111,6 +119,3 @@ Linear 自己在公开表达里也反复体现出这种倾向：他们不是想�
 
 **做一个纯粹的手艺人，反而可能是最现实、也最长期的商业竞争力。**
 
----
-
-> 本文首发于 X：https://x.com/MaiYangAI/status/2037513875206320195 ，欢迎在那边留言讨论。

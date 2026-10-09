@@ -9,6 +9,14 @@ categories: [AI]
 tags: ["AI", "Grok Bot", "Agent", "踩坑"]
 comments: true
 author: MaiYang
+x:
+  url: https://x.com/MaiYangAI/status/2098175391089430539
+  views: 4748
+  replies: 0
+  reposts: 0
+  likes: 8
+  bookmarks: 14
+  updated: "2026-10-09"
 ---
 
 ![从 Lauren 不信规划说起](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/grok-bot-growth-researcher-pitfalls-1.jpg)
@@ -125,6 +133,3 @@ Growth Researcher 的岗位一度写得像整个增长部。全球扫描、策�
 
 你在用 Grok Bot 时是否也踩过这些坑？欢迎评论分享。
 
----
-
-> 本文首发于 X：https://x.com/MaiYangAI/status/2098175391089430539 ，欢迎在那边留言讨论。

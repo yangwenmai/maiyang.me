@@ -9,6 +9,14 @@ categories: [AI]
 tags: ["AI", "Grok Bot", "信息过载", "资讯"]
 comments: true
 author: MaiYang
+x:
+  url: https://x.com/MaiYangAI/status/2105276569262682264
+  views: 1074
+  replies: 0
+  reposts: 0
+  likes: 1
+  bookmarks: 0
+  updated: "2026-10-09"
 ---
 
 ![刷不完的 AI 资讯，缺的不是更多精选](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/ai-news-overload-build-your-own-digest-bot-1.jpg)
@@ -53,6 +61,3 @@ https://x.ai/bot/D6WMfjHcTnMwm0XS0MFLs
 
 封面用 [@AdrianPunk115](https://x.com/AdrianPunk115) 开源的 [Punk Cover Skill](https://github.com/adrianpunk/Punk-Skill) 画出来的。
 
----
-
-> 本文首发于 X：https://x.com/MaiYangAI/status/2105276569262682264 ，欢迎在那边留言讨论。

@@ -9,6 +9,14 @@ categories: [AI]
 tags: ["AI", "Grok Bot", "Token", "Context Engineering"]
 comments: true
 author: MaiYang
+x:
+  url: https://x.com/MaiYangAI/status/2098961066663580030
+  views: 33600
+  replies: 8
+  reposts: 6
+  likes: 70
+  bookmarks: 171
+  updated: "2026-10-09"
 ---
 
 ![Grok Bot 怎么省额度](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/grok-bot-save-usage-sweeper-1.jpg)
@@ -114,6 +122,3 @@ https://x.ai/bot/SD6hgpiXqbV_LkMetf2fC
 
 **看懂不是懂。自己清一遍才算。**
 
----
-
-> 本文首发于 X：https://x.com/MaiYangAI/status/2098961066663580030 ，欢迎在那边留言讨论。
