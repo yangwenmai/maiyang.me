@@ -1,0 +1,78 @@
+{{- /*
+  X Article card, rendered when a post's front matter has an `x` block:
+
+  x:
+    url: https://x.com/MaiYangAI/status/<id>
+    views: 7992
+    replies: 0
+    reposts: 3
+    likes: 9
+    bookmarks: 12
+    updated: "2026-10-09"   # when the numbers were taken
+
+  Numbers are a snapshot; refresh them with the x2blog skill.
+*/ -}}
+{{- with .Params.x -}}
+{{- $url := .url -}}
+{{- if and $url (hasPrefix $url "https://x.com/") -}}
+{{- $handle := index (split (strings.TrimPrefix "https://x.com/" $url) "/") 0 -}}
+{{- $name := .name | default "Mai Yang" -}}
+{{- $stats := slice
+  (dict "key" "views" "label" "阅读" "icon" "M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8zm11-3a3 3 0 1 0 0 6 3 3 0 0 0 0-6z")
+  (dict "key" "replies" "label" "回复" "icon" "M21 11.5a8.4 8.4 0 0 1-9 8.4 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.4 8.4 0 0 1 12.5 3a8.4 8.4 0 0 1 8.5 8.5z")
+  (dict "key" "reposts" "label" "转发" "icon" "M17 1l4 4-4 4M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4M21 13v2a4 4 0 0 1-4 4H3")
+  (dict "key" "likes" "label" "点赞" "icon" "M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21.2l8.8-8.8a5.5 5.5 0 0 0 0-7.8z")
+  (dict "key" "bookmarks" "label" "收藏" "icon" "M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z")
+-}}
+<style>
+  .x-card { margin: 0 0 1.8em; }
+  .x-card a.x-card-link { display: block; padding: 14px 16px; border: 1px solid #e1e8ed; border-radius: 12px; background: #fff; color: #0f1419; text-decoration: none; transition: border-color .15s, box-shadow .15s; }
+  .x-card a.x-card-link:hover { border-color: #cfd9de; box-shadow: 0 2px 10px rgba(15, 20, 25, .08); }
+  .x-card-head { display: flex; align-items: center; gap: 10px; }
+  .x-card-logo { flex: none; width: 32px; height: 32px; border-radius: 50%; background: #0f1419; display: flex; align-items: center; justify-content: center; }
+  .x-card-logo svg { width: 16px; height: 16px; fill: #fff; }
+  .x-card-who { flex: 1; min-width: 0; line-height: 1.3; }
+  .x-card-who strong { display: block; font-size: 15px; }
+  .x-card-who span { font-size: 13px; color: #536471; }
+  .x-card-badge { flex: none; font-size: 12px; padding: 2px 8px; border-radius: 999px; background: #eff3f4; color: #536471; }
+  .x-card-note { margin: 10px 0 12px; font-size: 14px; color: #0f1419; }
+  .x-card-stats { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 0; padding: 0; list-style: none; font-size: 13px; color: #536471; }
+  .x-card-stats li { display: flex; align-items: center; gap: 5px; margin: 0; padding: 0; }
+  .x-card-stats li::before { content: none; }
+  .x-card-stats svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .x-card-stats b { color: #0f1419; font-weight: 600; }
+  .x-card-foot { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 12px; padding-top: 10px; border-top: 1px solid #eff3f4; font-size: 12px; color: #8b98a5; }
+  .x-card-foot .x-card-cta { color: #1d9bf0; font-size: 13px; font-weight: 600; white-space: nowrap; }
+</style>
+<aside class="x-card">
+  <a class="x-card-link" href="{{ $url }}" target="_blank" rel="noopener">
+    <div class="x-card-head">
+      <span class="x-card-logo" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></span>
+      <span class="x-card-who"><strong>{{ $name }}</strong><span>@{{ $handle }}</span></span>
+      <span class="x-card-badge">X Article</span>
+    </div>
+    <p class="x-card-note">这篇文章也发布在 X 上，欢迎去那边点赞、收藏、留言讨论。</p>
+    <ul class="x-card-stats">
+      {{- $x := . -}}
+      {{- range $stats -}}
+      {{- $n := index $x .key -}}
+      {{- if ne $n nil -}}
+      {{- $n = int $n -}}
+      <li title="{{ .label }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="{{ .icon }}"/></svg><b>
+        {{- if ge $n 10000 -}}
+          {{- replace (printf "%.1f" (div (float $n) 10000)) ".0" "" -}}万
+        {{- else -}}
+          {{- lang.FormatNumber 0 $n -}}
+        {{- end -}}
+      </b>{{ .label }}</li>
+      {{- end -}}
+      {{- end -}}
+    </ul>
+    <div class="x-card-foot">
+      <span>{{ with .updated }}数据截至 {{ time.Format "2006-01-02" . }}{{ end }}</span>
+      <span class="x-card-cta">在 X 上查看 →</span>
+    </div>
+  </a>
+</aside>
+{{- end -}}
+{{- end -}}
