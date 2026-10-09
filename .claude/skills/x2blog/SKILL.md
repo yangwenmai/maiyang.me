@@ -69,7 +69,7 @@ x:
 ---
 ```
 
-- `x:` 块驱动文章标题下方的 X Article 卡片（`layouts/partials/post/x_card.html`），卡片上会显示阅读、回复、转发、点赞、收藏和「在 X 上查看」链接。数据在 status 页用 [scripts/extract_stats.js](scripts/extract_stats.js) 抓，`updated` 填抓取当天的日期，要加引号。没有 `x:` 的文章不显示卡片。
+- `x:` 块驱动文章标题下方的 X Article 卡片（`themes/mai/layouts/partials/x-card.html`，样式在 `themes/mai/assets/css/main.css` 的 `.x-card`），卡片上会显示阅读、回复、转发、点赞、收藏和「在 X 上查看」链接。数据在 status 页用 [scripts/extract_stats.js](scripts/extract_stats.js) 抓，`updated` 填抓取当天的日期，要加引号。没有 `x:` 的文章不显示卡片。
 - 用户要求「刷新 X 数据」时，对所有带 `x:` 的文章重新跑一遍 `extract_stats.js`，只更新数字和 `updated`，不动 `lastmod`。
 - `categories` 只放一个，优先复用近期在用的：`AI`、`Thinking`、`工具`、`人物`、`macOS`。都不合适时，提出新分类请用户确认。
 - `tags` 3–6 个，用带引号的数组写法。
@@ -126,10 +126,7 @@ python3 -I .claude/skills/x2blog/scripts/fetch_images.py . content/post/<file>.m
 最后给用户：
 - 文章文件链接，以及下载了哪些图片；
 - 需要用户确认的点：标题（尤其是 thread 新起的标题）、分类、发布时间是否准确、哪些内容没抓到；
-- front matter 校验：本地 Hugo（v0.167）跟主题不兼容，主题引用的 `_internal/google_analytics_async.html` 已经被删了，`hugo` 和 `hugo list` 都会报错，用不了。改用 Ruby 解析 YAML 来校验：
-  ```bash
-  ruby -rdate -ryaml -e 'h=YAML.safe_load(File.read(ARGV[0],encoding:"UTF-8").split(/^---\s*$/)[1],permitted_classes:[Time,Date]); puts h["date"], h["title"]' content/post/<file>.md
-  ```
+- 构建校验：`hugo -d <scratchpad>/out` 应该没有 ERROR；`grep -l 'class="x-card"' <out>/post/*/index.html` 能看到新文章。要看效果可以起 `hugo server`，在内置浏览器里打开对应文章。
 
 ## 批量补录
 
