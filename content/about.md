@@ -1,7 +1,7 @@
 ---
 title: "关于我"
 date: 2018-07-13T10:00:00+08:00
-lastmod: 2026-08-17T22:58:00+08:00
+lastmod: 2026-10-15T12:00:00+08:00
 menu: "main"
 weight: 50
 toc: false
@@ -15,10 +15,10 @@ toc: false
 
 对 Go 情有独钟，也是一个开源爱好者。Go、TiDB、logkit、kingshard 等多个开源项目的 Contributor。开源和技术社区这件事，我投入了很长时间。
 
-- 2018 年 3 月 21 日发起「Go 夜读」，[GitHub Star 12k+](https://github.com/talkgo/night)，并持续在 Bilibili 和 YouTube 频道上更新视频内容，超过 160+，微信群人数超过 5000+；
+- 2018 年 3 月 21 日发起「Go 夜读」，至今已 8 年半，[GitHub Star 12k+](https://github.com/talkgo/night)，并持续在 Bilibili 和 YouTube 频道上更新视频内容，超过 160+，微信群人数超过 5000+；
 - TGO 深圳董事会成员，任职 2 年 TUG 华南区 Leader，多次深圳地区 Gopher meetup 的组织者和分享嘉宾；
 - 2025 年 5 月成为 [Cursor 中国区首位 Ambassador](https://cursor.directory/u/mai_yang)，并持续举办过十余场中国大陆地区的 Cursor 官方活动；
-- 创建了 [Cursor Insider](https://cursor-insider.com/) 中文社区。
+- 曾创建 [Cursor Insider](https://cursor-insider.com/) 中文社区。
 
 ## 产品
 
@@ -31,7 +31,7 @@ toc: false
 - AI 实战 · 微信话题订阅阅读器，支持订阅管理、即时刷新、阅读计数、本地缓存，开源项目：[weixin-topic-reader](https://github.com/yangwenmai/weixin-topic-reader)；
 - 鼎革千年 · 中国历代权力更迭脉络：[https://chinese-dynasty-timeline.pages.dev/](https://chinese-dynasty-timeline.pages.dev/)。
 
-目前我会在 X 上进行 Build in Public，记录产品构建过程中的成果、思考、弯路和失败。我还写过一篇帖子，在 X 上获得了 [13 万+ 阅读](https://x.com/MaiYangAI/status/2078106397120799002)。
+目前我会在 X 上进行 Build in Public，记录产品构建过程中的成果、思考、弯路和失败。我还写过一篇帖子，在 X 上获得了 [13 万+ 阅读](https://x.com/MaiYangAI/status/2078106397120799002)；另有多篇 [X 长文](https://x.com/MaiYangAI/articles)阅读量超过 1 万，这些长文也会同步到本博客。
 
 说回 AI Builder 身份。我用 Cursor 开发的 ContextEcho iOS App 上线后，很快进入教育类付费榜第 23 名，却在排名上升期间遭遇突然下架。这个过程让我完整踩了一遍独立开发、App Store 审核和中国区 ICP 备案的坑。我也写过一篇[复盘](/post/2026-07-14-appstore-china-icp-filing/)。
 
