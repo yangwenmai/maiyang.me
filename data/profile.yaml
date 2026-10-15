@@ -36,7 +36,7 @@ terminal:
   - { type: cmd, text: "grok \"帮我一起筹备下一场活动\"" }
   - { type: out, text: "on it. 筹备中…" }
   - { type: cmd, text: "ls ~/shipped" }
-  - { type: out, text: "ContextEcho  Contextly  CastMind  TweetQuote  SpeakPaste  …" }
+  - { type: out, text: "CastMind  Contextly  CastMind.ai  TweetQuote  SpeakPaste  …" }
 
 trajectory:
   - { date: "2013", title: 第一篇博客, desc: 从 iOS 和 Node.js 开始写起, url: /post/2013-07-29-hello-world/ }
@@ -44,7 +44,7 @@ trajectory:
   - { date: "2021", title: 加入创业公司, desc: 回深圳，全球化电商 SaaS, url: /post/2021-09-13-new-journey/ }
   - { date: "2025.05", title: Cursor / SpaceXAI Ambassador, desc: 中国区首位，十余场官方活动, url: "https://cursor.directory/u/mai_yang" }
   - { date: "2025.10", title: 停更近四年后回归, desc: All in AI，重新开始写, url: /post/2025-10-12-phoenix-reborn/ }
-  - { date: "2026", title: ContextEcho 上架, desc: "教育类付费榜 #23，然后被下架", url: /post/2026-07-14-appstore-china-icp-filing/ }
+  - { date: "2026", title: CastMind 上架, desc: "原名 ContextEcho，教育类付费榜 #23，然后被下架", url: /post/2026-07-14-appstore-china-icp-filing/ }
   - { date: "2026", title: X 原创内容奖励达标, desc: 500K+ 有效流量，多篇几十万浏览, url: "https://x.com/MaiYangAI" }
   - { date: "NOW", title: 高频用 Grok, desc: 筹备相关活动，继续 Build in Public, url: "" }
 
@@ -59,13 +59,13 @@ stats:
   - { value: "362", label: 篇博客, auto: posts }
 
 products:
-  - name: ContextEcho
+  - name: CastMind
     code: MSN-01
     kind: iOS App
     status: LIVE
-    desc: 一款克制的播客音视频学习统计工具。我每天跑步、通勤都在听，所以先做给自己用。用 Cursor 三个月从第一行代码到上架。
+    desc: 原名 ContextEcho，与 CastMind.ai 搭配的 iOS App，一款克制的播客音视频学习统计工具。我每天跑步、通勤都在听，所以先做给自己用。用 Cursor 三个月从第一行代码到上架。
     metric: { value: "#23", label: 教育类付费榜 }
-    url: https://www.contextecho.top/
+    url: https://apps.apple.com/app/id6785098787
     note: { text: 被下架又恢复上架的复盘, url: /post/2026-07-14-appstore-china-icp-filing/ }
   - name: Contextly
     code: MSN-02
@@ -150,7 +150,7 @@ talks:
     - date: "2026.07.25"
       event: DataFun Agentic AI Summit 2026
       title: 从写代码到构建产品：AI Agent 正在改变 Builder 的工作流
-      desc: 以 ContextEcho 从 0 到上架为主线：3 天 MVP、76 天上架，五个真实案例、三次失败校准和四条可迁移的方法。
+      desc: 以 CastMind（原名 ContextEcho）从 0 到上架为主线：3 天 MVP、76 天上架，五个真实案例、三次失败校准和四条可迁移的方法。
       url: "https://cursor-insider.com/talks/datafun-agentic-ai-summit-2026/"
     - date: "2026.05.23"
       event: AI Maker Summit 2026

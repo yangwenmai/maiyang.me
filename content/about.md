@@ -24,7 +24,7 @@ toc: false
 
 - 创建了 [Contextly](https://ctxly.ai/) macOS App，用来追踪上下文切换次数、专注读写时间，并集成了 Quick Note；
 - 创建了 AI Leaders 网站 [CastMind.ai](https://castmind.ai/)；
-- 创建了 [ContextEcho](https://www.contextecho.top/) iOS App，一款克制的播客音视频学习统计工具；
+- 创建了 [CastMind](https://apps.apple.com/app/id6785098787) iOS App（原名 ContextEcho），与 CastMind.ai 搭配使用，一款克制的播客音视频学习统计工具；
 - 创建了 [TweetQuote](https://tweetquote.app/)，让每一次引用，都带上完整的上下文；
 - 创建了 Chrome 插件 [NotebookLM Batch Importer](https://chromewebstore.google.com/detail/notebooklm-batch-importer/jnlhckbiagfopcejjgncfoghpicpcpfl)，一键批量导入 YouTube 视频到 NotebookLM；
 - macOS 菜单栏语音输入工具，开源项目：[SpeakPaste](https://github.com/yangwenmai/SpeakPaste)；
@@ -33,7 +33,7 @@ toc: false
 
 目前我会在 X 上进行 Build in Public，记录产品构建过程中的成果、思考、弯路和失败。我还写过一篇帖子，在 X 上获得了 [13 万+ 阅读](https://x.com/MaiYangAI/status/2078106397120799002)；另有多篇 [X 长文](https://x.com/MaiYangAI/articles)阅读量超过 1 万，这些长文也会同步到本博客。
 
-说回 AI Builder 身份。我用 Cursor 开发的 ContextEcho iOS App 上线后，很快进入教育类付费榜第 23 名，却在排名上升期间遭遇突然下架。这个过程让我完整踩了一遍独立开发、App Store 审核和中国区 ICP 备案的坑。我也写过一篇[复盘](/post/2026-07-14-appstore-china-icp-filing/)。
+说回 AI Builder 身份。我用 Cursor 开发的 CastMind iOS App（当时还叫 ContextEcho） 上线后，很快进入教育类付费榜第 23 名，却在排名上升期间遭遇突然下架。这个过程让我完整踩了一遍独立开发、App Store 审核和中国区 ICP 备案的坑。我也写过一篇[复盘](/post/2026-07-14-appstore-china-icp-filing/)。
 
 ## 工作
 
