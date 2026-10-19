@@ -31,7 +31,7 @@ x:
 
 https://x.ai/bot/SD6hgpiXqbV_LkMetf2fC
 
-装完打开 [Sweeper / 清道夫](https://x.ai/bot/SD6hgpiXqbV_LkMetf2fC)，跟它说**「开始」**即可。
+装完打开 [Sweeper / 清道夫](https://x.ai/bot/SD6hgpiXqbV_LkMetf2fC)，跟它说「**开始**」即可。
 
 下面写的是我自己走过的路，方便你对照。不想读正文，那就跳过，效果说话。
 
@@ -55,7 +55,7 @@ Setting Usage & Billing 页面急需要可视化功能，至少要让我们知�
 
 但是，迟迟等不来官方的 Bot token 账本，愁着也是瞎愁。我决定先停住焦虑，自动动手。
 
-**看清、止损、节流、底座减脂**，按我这一套组合拳下来，你的 bot 会瘦身多少，欢迎大家评论区晒一晒。我把他们收成了 bot template: **Sweeper / 清道夫，**安装直接说："开始"。
+**看清、止损、节流、底座减脂**，按我这一套组合拳下来，你的 bot 会瘦身多少，欢迎大家评论区晒一晒。我把他们收成了 bot template: **Sweeper / 清道夫**，安装直接说："开始"。
 
 ## 第一步 - 先看清，再动手
 

@@ -35,13 +35,13 @@ Work 类 Agent 的中心，是一个项目。你打开工作区或仓库，agent
 
 Grok Bot 的中心，是岗位和角色。你给它一个名字，就相当于给它一份工作。选题、调研、写稿、审模板，每个 Bot 只管一块。需要一起干时，把它们拉进同一个 Channel 或 Group Chat，活在群里交接。
 
-官方产品页有一句：**「Message Bots like teammates。」**桌面和 iOS 是同一条对话。你合上手机，任务还在继续。
+官方产品页有一句：「**Message Bots like teammates。**」桌面和 iOS 是同一条对话。你合上手机，任务还在继续。
 
 ![Message Bots like teammates](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/grok-bot-vs-work-agents-3.jpg)
 
 > 补一个经验：发出对话时，要留意是否有被 bot 接收，避免消息遗漏。我自己发生过好几次，明明发了消息，但是过会儿过来看就没有了。原因通常是消息发送未成功。
 
-**我的判断：**Work 和 Grok Bot 在解决的问题是不一样。一个帮你推进项目。一个帮你带（养）一支小队。
+**我的判断**：Work 和 Grok Bot 在解决的问题是不一样。一个帮你推进项目。一个帮你带（养）一支小队。
 
 ## 合上电脑/手机之后，它还在不在干活？
 
