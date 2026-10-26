@@ -135,6 +135,7 @@ principles:
 
 community:
   - { name: Go 夜读, since: "2018", desc: "2018 年 3 月 21 日发起，至今还在持续运营。Bilibili 和 YouTube 上 160+ 期视频，微信群 5000+ 人。", url: "https://github.com/talkgo/night" }
+  - { name: TGO 深圳 · TUG 华南区, since: "", desc: "TGO 深圳董事会成员，任职 2 年 TUG 华南区 Leader，多次深圳 Gopher meetup 的组织者和分享嘉宾。", url: "" }
   - { name: SpaceXAI · Cursor Ambassador, since: "2025.05", desc: "Cursor 中国区首位 Ambassador，现在叫 SpaceXAI Ambassador。在中国大陆举办过十余场 Cursor 官方活动，现在高频使用 Grok，正在筹备相关活动。", url: "https://cursor.directory/u/mai_yang" }
   - { name: Cursor Insider, since: "2025", desc: "专注 Cursor 的中文社区，用业余时间 + Cursor 做出来的。希望各种各样的 Builder 能一起学习，交付自己心目中的产品。", url: "https://cursor-insider.com/" }
   - { name: AGI 探索营, since: "", desc: 主理人之一。, url: "" }

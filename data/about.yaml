@@ -1,0 +1,56 @@
+# /about/ 页面的内容都在这里改，模板是 themes/mai/layouts/_default/about.html。
+# 数字、产品、社区、分享、联系方式直接读 profile.yaml，和首页共用一份。
+
+avatar: /images/avatar.webp
+avatar_fallback: /images/avatar.jpg
+role: SpaceXAI · Cursor 中国区首位 Ambassador · Go 夜读发起人
+lede: 2013 年开始写博客，坚持 Build in Public。白天做研发管理，晚上和周末和 Agent 一起把想法**变成真正可以交付的产品**。现在专注 AI Coding、Context Engineering 和工程实践怎么结合。
+
+# 右侧速览卡
+facts:
+  - { key: Now, value: "做 CastMind，继续 Build in Public", note: 高频用 Grok 筹备活动 }
+  - { key: Base, value: 深圳 Shenzhen }
+  - { key: Work, value: 全球化电商 SaaS · 研发管理, note: 10+ 年技术与管理 }
+  - { key: Focus, value: AI Coding · Context Engineering }
+  - { key: Stack, value: Go · 分布式系统 · 工程效率 }
+  - { key: Off, value: F1 · 马拉松 · 越野跑 }
+
+# 数字条：按 label 从 profile.yaml 的 stats 里挑，最后会自动补上产品数
+stats: [Go 夜读 GitHub Star, 期视频分享, 场 Cursor 官方活动, 篇博客]
+
+now:
+  title: 把业余时间都投给了 AI
+  body: 过去一年多，我把大部分业余时间都投入到了 AI，持续在构建产品，也在探索如何借助 AI Coding，把想法更快地变成真正可以交付的产品。成果、思考、弯路和失败，我都会在 X 上记录下来，其中一篇帖子获得了 [13 万+ 阅读](https://x.com/MaiYangAI/status/2078106397120799002)，另有多篇 [X 长文](https://x.com/MaiYangAI/articles)阅读量超过 1 万，这些长文也会同步到本博客。
+  quote: AI 不该只停在更好用的工具，它得能进到工程协作里，成为真正能一起干活的伙伴。
+
+community:
+  title: 社区和开源，我投入了很长时间
+  intro: 对 Go 情有独钟，也是一个开源爱好者，参与过这些项目：
+  contributor: [Go, TiDB, logkit, kingshard]
+
+products:
+  title: 和 Agent 一起做出来的产品
+  show: 4   # 只放前几个，其余链到首页 Ship Log
+  story: 用 Cursor 开发的 CastMind iOS App（当时还叫 ContextEcho）上线后很快冲到教育类付费榜第 23 名，却在上升期突然被下架。这个过程让我完整踩了一遍独立开发、App Store 审核和中国区 ICP 备案的坑。
+
+work:
+  title: 技术和管理两条线
+  intro: Go、分布式系统、工程效率和质量建设，是我待得最久的几件事。
+  items:
+    - { date: "2021.09", title: 回到深圳 · 全球化电商 SaaS 创业公司, desc: 继续做研发管理。, url: /post/2021-09-13-new-journey/ }
+    - { date: "~9 年", title: 2C 赛道 · 技术与管理, desc: 10 年以上研发管理经验，做过秒杀、亿级 API 调用、百亿级数据存储、微服务架构。 }
+
+talks:
+  title: 最近在分享什么
+
+life:
+  title: 写代码之外
+  items:
+    - { icon: flag, title: F1 车迷, desc: 大家赛道上见。 }
+    - { icon: run, title: 马拉松 · 越野, desc: 偶尔也徒步。 }
+    - { icon: ball, title: NBA · 欧洲足球, desc: 偶尔看看。 }
+    - { icon: car, title: 1700+ km 自驾, desc: 带着家人到处旅行。 }
+
+closing:
+  title: 在推进 AI 转型，或者想聊 Cursor、Agent 工作流？
+  desc: X 私信或者加微信，都会回。
