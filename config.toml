@@ -118,12 +118,6 @@ defaultContentLanguage = "zh-cn"           # Default language to use
     wechat = "/path/to/your/wechat-qr-code.png"           # 微信二维码
     alipay = "/path/to/your/alipay-qr-code.png"           # 支付宝二维码
 
-  [params.social]                                         # 社交链接
-    a-email = "mailto:yangwen.yw@gmail.com"
-    e-linkedin = "https://www.linkedin.com/in/mai-yang-2a082777/"
-    g-github = "https://github.com/yangwenmai"
-    h-weibo = "https://www.weibo.com/yangwen0o0"
-    t-twitter = "https://x.com/maiyangai"
   [params.counter.urlstat]   # 文章页和页脚的访问量 / 访客数
     enable = true
 
