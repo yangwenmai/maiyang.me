@@ -1,0 +1,183 @@
+{{ define "bodyclass" }}page about{{ end }}
+{{ define "main" }}
+{{- $p := hugo.Data.profile }}
+{{- $a := hugo.Data.about }}
+{{- $posts := where .Site.RegularPages "Section" "post" }}
+{{- $x := index (where $p.contact "label" "x") 0 }}
+{{- $wechat := index (where $p.contact "label" "wechat") 0 }}
+{{- $github := index (where $p.contact "label" "github") 0 }}
+{{- $products := first $a.products.show $p.products }}
+{{- $story := index $p.products 0 }}
+
+<div class="ab wrap">
+  <section class="ab-hero" aria-label="个人简介">
+    <div class="ab-id">
+      <div class="ab-id-top">
+        <picture class="ab-avatar">
+          <source srcset="{{ $a.avatar | relURL }}" type="image/webp">
+          <img src="{{ $a.avatar_fallback | relURL }}" alt="{{ $p.name }} {{ $p.name_en }}" width="128" height="128">
+          <i aria-hidden="true"></i>
+        </picture>
+        <div>
+          <p class="ab-kicker"><b>About</b> · 关于我</p>
+          <h1 class="ab-name">{{ $p.name }}<span>{{ $p.name_en }}</span></h1>
+          <p class="ab-role"><b>AI Builder</b> · {{ $a.role }}</p>
+        </div>
+      </div>
+      <p class="ab-lede">{{ $a.lede | markdownify }}</p>
+      <div class="ab-actions">
+        <a class="btn btn-ignite" href="{{ $x.url }}" target="_blank" rel="me noopener">关注 {{ $x.value }}</a>
+        <button class="btn btn-line" type="button" data-copy="{{ $wechat.copy }}">微信 {{ $wechat.value }} <span class="copy-hint">复制</span></button>
+        <a class="btn btn-ghost" href="{{ $github.url }}" target="_blank" rel="me noopener">GitHub ↗</a>
+      </div>
+    </div>
+    <dl class="ab-facts" aria-label="速览">
+      {{- range $a.facts }}
+      <div><dt>{{ .key }}</dt><dd>{{ .value }}{{ with .note }}<small>{{ . }}</small>{{ end }}</dd></div>
+      {{- end }}
+    </dl>
+  </section>
+
+  <ul class="ab-stats">
+    {{- range where $p.stats "label" "in" $a.stats }}
+    {{- $v := .value }}{{ if eq .auto "posts" }}{{ $v = string (len $posts) }}{{ end }}
+    <li><b data-count="{{ $v }}">{{ $v }}</b><span>{{ .label }}</span></li>
+    {{- end }}
+    <li><b data-count="{{ len $p.products }}">{{ len $p.products }}</b><span>个已上线产品</span></li>
+  </ul>
+
+  <div class="ab-body">
+    <nav class="ab-toc" aria-label="目录">
+      <ol>
+        <li><a href="#now"><span>01</span>现在</a></li>
+        <li><a href="#community"><span>02</span>社区和开源</a></li>
+        <li><a href="#products"><span>03</span>产品</a></li>
+        <li><a href="#work"><span>04</span>工作</a></li>
+        <li><a href="#talks"><span>05</span>分享</a></li>
+        <li><a href="#life"><span>06</span>写代码之外</a></li>
+      </ol>
+    </nav>
+
+    <div class="ab-chapters">
+      <section class="ab-ch" id="now">
+        <p class="kicker"><span>01</span> Now</p>
+        <h2>{{ $a.now.title }}</h2>
+        <p>{{ $a.now.body | markdownify }}</p>
+        <blockquote class="ab-quote"><p>{{ $a.now.quote }}</p><small>— 我现在的判断</small></blockquote>
+      </section>
+
+      <section class="ab-ch" id="community">
+        <p class="kicker"><span>02</span> Community</p>
+        <h2>{{ $a.community.title }}</h2>
+        <p>{{ $a.community.intro }}</p>
+        <ul class="ab-chips">
+          {{- range $a.community.contributor }}<li>{{ . }}</li>{{ end }}
+        </ul>
+        <ol class="ab-tl">
+          {{- range $p.community }}
+          <li>
+            <time>{{ .since | default "——" }}</time>
+            <div>
+              <h3>{{ if .url }}<a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }} <span aria-hidden="true">↗</span></a>{{ else }}{{ .name }}{{ end }}</h3>
+              {{- with .desc }}<p>{{ . }}</p>{{ end }}
+            </div>
+          </li>
+          {{- end }}
+        </ol>
+      </section>
+
+      <section class="ab-ch" id="products">
+        <p class="kicker"><span>03</span> Ship Log</p>
+        <h2>{{ $a.products.title }}</h2>
+        <ul class="ab-grid">
+          {{- range $products }}
+          <li>
+            <a class="ab-card" href="{{ .url }}" target="_blank" rel="noopener">
+              <span class="ab-card-meta"><span>{{ .kind }}</span><span class="s-{{ lower .status }}">● {{ .status }}</span></span>
+              <h3>{{ .name }} <span aria-hidden="true">↗</span></h3>
+              <p>{{ .desc }}</p>
+            </a>
+          </li>
+          {{- end }}
+        </ul>
+        {{- with $story.metric }}
+        <a class="ab-story" href="{{ $story.note.url | relURL }}">
+          <span class="ab-story-big">{{ .value }}<small>{{ .label }}</small></span>
+          <span class="ab-story-text">{{ $a.products.story }}</span>
+          <span class="ab-story-go">读复盘 →</span>
+        </a>
+        {{- end }}
+        {{- $rest := sub (len $p.products) (len $products) }}
+        {{- if gt $rest 0 }}
+        <a class="more ab-more" href="{{ "/#ship" | relURL }}">另外 {{ $rest }} 个产品和开源项目，见首页 Ship Log →</a>
+        {{- end }}
+      </section>
+
+      <section class="ab-ch" id="work">
+        <p class="kicker"><span>04</span> Work</p>
+        <h2>{{ $a.work.title }}</h2>
+        <p>{{ $a.work.intro }}</p>
+        <ol class="ab-tl">
+          {{- range $a.work.items }}
+          <li>
+            <time>{{ .date }}</time>
+            <div>
+              <h3>{{ if .url }}<a href="{{ .url | relURL }}">{{ .title }} <span aria-hidden="true">→</span></a>{{ else }}{{ .title }}{{ end }}</h3>
+              <p>{{ .desc }}</p>
+            </div>
+          </li>
+          {{- end }}
+        </ol>
+      </section>
+
+      <section class="ab-ch" id="talks">
+        <p class="kicker"><span>05</span> Talks</p>
+        <h2>{{ $a.talks.title }}</h2>
+        <ul class="ab-chips">
+          {{- range $p.talks.topics }}<li>{{ .title }}</li>{{ end }}
+        </ul>
+        <ol class="ab-talks">
+          {{- range $p.talks.records }}
+          <li>
+            <a class="ab-card ab-talk" href="{{ .url }}" target="_blank" rel="noopener">
+              <time>{{ .date }}</time>
+              <span><h3>{{ .title }}</h3><p>{{ .event }}</p></span>
+              <span class="ab-talk-go" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          {{- end }}
+        </ol>
+      </section>
+
+      <section class="ab-ch" id="life">
+        <p class="kicker"><span>06</span> Off Track</p>
+        <h2>{{ $a.life.title }}</h2>
+        <ul class="ab-life">
+          {{- range $a.life.items }}
+          <li class="ab-card">
+            <svg class="ab-ico" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              {{- if eq .icon "flag" }}<path d="M5 21V4"/><path d="M5 4h14v9H5"/><path d="M9.7 4v9M14.3 4v9M5 8.5h14"/>
+              {{- else if eq .icon "run" }}<circle cx="14.5" cy="4.5" r="1.8"/><path d="M8 21l3.5-6 3 2.5V22"/><path d="M6.5 12.5 9 9l4 .5 2.5 3.5 3 1"/><path d="M11.5 15 13 9.5"/>
+              {{- else if eq .icon "ball" }}<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3v18"/><path d="M5.6 5.6c3.3 3.3 3.3 9.5 0 12.8M18.4 5.6c-3.3 3.3-3.3 9.5 0 12.8"/>
+              {{- else if eq .icon "car" }}<path d="M4 16v-3.5L6 7.5A2 2 0 0 1 7.9 6h8.2A2 2 0 0 1 18 7.5l2 5V16"/><path d="M3 16h18v2H3z"/><circle cx="7.5" cy="16.5" r="1.8"/><circle cx="16.5" cy="16.5" r="1.8"/><path d="M5.5 12h13"/>
+              {{- end }}
+            </svg>
+            <h3>{{ .title }}</h3>
+            <p>{{ .desc }}</p>
+          </li>
+          {{- end }}
+        </ul>
+      </section>
+
+      <section class="ab-end" aria-label="联系我">
+        <picture><source srcset="{{ $a.avatar | relURL }}" type="image/webp"><img src="{{ $a.avatar_fallback | relURL }}" alt="" width="72" height="72" loading="lazy"></picture>
+        <div><h2>{{ $a.closing.title }}</h2><p>{{ $a.closing.desc }}</p></div>
+        <div class="ab-actions">
+          <a class="btn btn-ignite" href="{{ $x.url }}" target="_blank" rel="me noopener">{{ $x.value }}</a>
+          <button class="btn btn-line" type="button" data-copy="{{ $wechat.copy }}">{{ $wechat.value }} <span class="copy-hint">复制</span></button>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+{{ end }}

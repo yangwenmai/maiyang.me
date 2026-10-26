@@ -206,6 +206,19 @@
     }
   }
 
+  // ---------- 关于页：目录高亮 ----------
+  var abLinks = $$(".ab-toc a");
+  if (abLinks.length) {
+    var abSecs = abLinks.map(function (a) { return document.getElementById(a.hash.slice(1)); });
+    var abSpy = function () {
+      var line = innerHeight * .4, cur = 0;
+      abSecs.forEach(function (s, i) { if (s && s.getBoundingClientRect().top < line) cur = i; });
+      abLinks.forEach(function (a, i) { a.classList.toggle("active", i === cur); });
+    };
+    window.addEventListener("scroll", abSpy, { passive: true });
+    abSpy();
+  }
+
   // ---------- Human / Agent 模式 ----------
   var agentView = $("#agent-view"), agentBody = $("#agent-body"), llms = null;
   var llmsURL = ($("link[rel=alternate][type='text/plain']") || {}).href || "/llms.txt";
