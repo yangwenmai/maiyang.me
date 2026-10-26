@@ -106,7 +106,7 @@ kbd {
 .brand-name { font: 600 15px/1 var(--mono); letter-spacing: -.02em; }
 .brand-name span { color: var(--muted); }
 .nav { display: flex; gap: 2px; margin-right: auto; padding-left: 12px; }
-.nav a { padding: 7px 12px; border-radius: 8px; font-size: 14.5px; color: var(--muted); transition: color .2s, background .2s; }
+.nav a { padding: 7px 12px; border-radius: 8px; white-space: nowrap; font-size: 14.5px; color: var(--muted); transition: color .2s, background .2s; }
 .nav a:hover, .nav a[aria-current] { color: var(--text); background: color-mix(in srgb, var(--text) 7%, transparent); }
 .tools { display: flex; align-items: center; gap: 4px; }
 .icon-btn {
@@ -704,7 +704,8 @@ body.agent-mode { overflow: hidden; }
   :root { --gutter: 18px; }
   body { font-size: 15.5px; }
   .nav { padding-left: 0; }
-  .nav a { padding: 7px 8px; }
+  .nav a { padding: 7px 6px; font-size: 14px; }
+  .nav { gap: 0; }
   .brand-name { display: none; }
   .header-inner { gap: 8px; }
   .mode-btn { padding: 6px 8px; }
