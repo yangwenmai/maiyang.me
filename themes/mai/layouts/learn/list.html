@@ -1,0 +1,33 @@
+{{ define "bodyclass" }}archive learn{{ end }}
+{{ define "main" }}
+{{- $lessons := .Pages.ByWeight }}
+<section class="wrap list-page">
+  <header class="list-head">
+    <p class="kicker"><span>LEARN</span> {{ len $lessons }} 篇入门教程</p>
+    <h1>{{ .Title }}</h1>
+    {{- with .Description }}<p class="block-sub">{{ . }}</p>{{ end }}
+  </header>
+
+  {{- with .Content }}<div class="prose learn-intro">{{ . }}</div>{{ end }}
+
+  <ol class="lessons">
+    {{- range $i, $l := $lessons }}
+    <li>
+      <a href="{{ $l.RelPermalink }}">
+        <span class="lesson-no">{{ printf "%02d" (add $i 1) }}</span>
+        <div>
+          <p class="lesson-meta">{{ $l.Params.track }} · {{ $l.Params.level | default "入门" }} · 约 {{ $l.Params.duration | default (printf "%d 分钟" $l.ReadingTime) }}</p>
+          <h2>{{ $l.Title }}</h2>
+          {{- with $l.Description }}<p>{{ . }}</p>{{ end }}
+        </div>
+        <span class="log-go" aria-hidden="true">→</span>
+      </a>
+    </li>
+    {{- end }}
+  </ol>
+
+  <section class="block" id="help">
+    {{ partial "help-ladder.html" (dict "no" "→") }}
+  </section>
+</section>
+{{ end }}

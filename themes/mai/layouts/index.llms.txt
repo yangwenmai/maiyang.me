@@ -10,7 +10,6 @@
 - Location: {{ $p.location }}
 - X: https://x.com/{{ $p.handle }}
 - GitHub: https://github.com/yangwenmai
-- WeChat: mai_yang
 - Updated: {{ now.Format "2006-01-02" }}
 
 ## Roles
@@ -39,6 +38,15 @@
 {{ end }}
 {{ $p.talks.cta }}
 
+## Beginner tutorials (free)
+
+{{ with .Site.GetPage "/learn" }}{{ range .Pages.ByWeight }}- [{{ .Title }}]({{ .Permalink }}){{ with .Description }}: {{ . }}{{ end }}
+{{ end }}{{ end }}
+## How to get help from me
+
+{{ range $p.help.tiers }}- {{ .name }} ({{ .price }}): {{ .desc }}
+{{ end }}WeChat: mai_yang
+
 ## Numbers
 
 {{ range $p.stats }}- {{ if eq .auto "posts" }}{{ len $posts }}{{ else }}{{ .value }}{{ end }} {{ .label }}
@@ -54,6 +62,7 @@
 ## More
 
 - All posts ({{ len $posts }}, since {{ (index (last 1 $posts) 0).Date.Year }}): {{ absURL "/post/" }}
+- Tutorials: {{ absURL "/learn/" }}
 - About: {{ absURL "/about/" }}
 - RSS: {{ absURL "/index.xml" }}
 - Search index (JSON): {{ absURL "/index.json" }}

@@ -1,6 +1,7 @@
 {{- $section := "" }}
 {{- if .IsHome }}{{ $section = "home" }}
 {{- else if or (eq .Section "post") (eq .Kind "taxonomy") (eq .Kind "term") }}{{ $section = "writing" }}
+{{- else if eq .Section "learn" }}{{ $section = "learn" }}
 {{- else if eq .RelPermalink "/about/" }}{{ $section = "about" }}{{ end }}
 <header class="site-header">
   <div class="wrap header-inner">
@@ -10,6 +11,7 @@
     </a>
     <nav class="nav" aria-label="主导航">
       <a href="{{ "/#ship" | relURL }}">作品</a>
+      <a href="{{ "/learn/" | relURL }}"{{ if eq $section "learn" }} aria-current="page"{{ end }}>教程</a>
       <a href="{{ "/post/" | relURL }}"{{ if eq $section "writing" }} aria-current="page"{{ end }}>写作</a>
       <a href="{{ "/about/" | relURL }}"{{ if eq $section "about" }} aria-current="page"{{ end }}>关于</a>
     </nav>

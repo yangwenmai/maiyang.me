@@ -1,0 +1,62 @@
+{{ define "bodyclass" }}article learn{{ end }}
+{{ define "main" }}
+{{- $toc := and (.Params.toc | default .Site.Params.toc) (gt (len .TableOfContents) 40) }}
+{{- $lessons := .CurrentSection.Pages.ByWeight }}
+{{- $idx := 0 }}
+{{- range $i, $l := $lessons }}{{ if eq $l.RelPermalink $.RelPermalink }}{{ $idx = $i }}{{ end }}{{ end }}
+<article class="post wrap{{ if $toc }} has-toc{{ end }}">
+  <header class="post-head">
+    <p class="post-meta">
+      <a href="{{ "/learn/" | relURL }}" class="back">← LEARN</a>
+      <span class="sep">/</span><span>第 {{ add $idx 1 }} 篇 · 共 {{ len $lessons }} 篇</span>
+      <span class="sep">/</span><span>{{ .Params.level | default "入门" }}</span>
+      <span class="sep">/</span><span>约 {{ .Params.duration | default (printf "%d 分钟" .ReadingTime) }}</span>
+      {{- with .Lastmod }}<span class="sep">/</span>更新于 <time datetime="{{ .Format "2006-01-02" }}">{{ .Format "2006.01.02" }}</time>{{ end }}
+    </p>
+    <h1>{{ .Title }}</h1>
+    {{- with .Description }}<p class="post-lede">{{ . }}</p>{{ end }}
+  </header>
+
+  {{- if or .Params.for .Params.outcomes }}
+  <div class="brief">
+    {{- with .Params.for }}
+    <div><p class="brief-key">适合谁</p><p>{{ . }}</p></div>
+    {{- end }}
+    {{- with .Params.outcomes }}
+    <div><p class="brief-key">读完你能</p><ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul></div>
+    {{- end }}
+  </div>
+  {{- end }}
+
+  {{- if $toc }}
+  <aside class="toc" aria-label="目录">
+    <details open>
+      <summary>目录</summary>
+      {{ .TableOfContents }}
+    </details>
+  </aside>
+  {{- end }}
+
+  <div class="prose">
+    {{ .Content }}
+  </div>
+
+  <footer class="post-foot">
+    {{- with .Params.sources }}
+    <div class="sources">
+      <p class="brief-key">这篇教程来自我写过的</p>
+      <ul>{{ range . }}<li><a href="{{ .url | relURL }}">{{ .title }}</a></li>{{ end }}</ul>
+    </div>
+    {{- end }}
+
+    {{ partial "help-ladder.html" (dict "compact" true) }}
+
+    <nav class="post-nav" aria-label="上一篇 / 下一篇教程">
+      {{- if gt $idx 0 }}{{ with index $lessons (sub $idx 1) }}<a class="prev" href="{{ .RelPermalink }}"><span>← 上一篇</span>{{ .Title }}</a>{{ end }}{{ else }}<span></span>{{ end }}
+      {{- if lt (add $idx 1) (len $lessons) }}{{ with index $lessons (add $idx 1) }}<a class="next" href="{{ .RelPermalink }}"><span>下一篇 →</span>{{ .Title }}</a>{{ end }}{{ end }}
+    </nav>
+
+    {{ partial "comments.html" . }}
+  </footer>
+</article>
+{{ end }}

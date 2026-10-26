@@ -30,8 +30,8 @@
             <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.2-8.3L1.9 3h6.4l4.4 5.8L17.8 3Zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5Z"/></svg>
             关注 @MaiYangAI
           </a>
-          <a class="btn btn-line" href="#ship">看我做了什么 ↓</a>
-          <button class="btn btn-ghost" type="button" data-copy="mai_yang">微信 mai_yang <span class="copy-hint">复制</span></button>
+          <a class="btn btn-line" href="{{ "/learn/" | relURL }}">免费入门教程 →</a>
+          <a class="btn btn-ghost" href="#help">599 答疑</a>
         </div>
       </div>
 
@@ -147,11 +147,43 @@
   </div>
 </section>
 
-{{/* ---------- 03 telemetry ---------- */}}
+{{/* ---------- 03 learn ---------- */}}
+{{- with .Site.GetPage "/learn" }}
+{{- $lessons := .Pages.ByWeight }}
+<section class="block learn-block" id="learn">
+  <div class="wrap">
+    <header class="block-head block-head-row">
+      <div>
+        <p class="kicker"><span>03</span> Learn</p>
+        <h2>{{ .Title }}</h2>
+        {{- with .Description }}<p class="block-sub">{{ . }}</p>{{ end }}
+      </div>
+      <a class="more" href="{{ .RelPermalink }}">全部 {{ len $lessons }} 篇教程 →</a>
+    </header>
+    <ol class="lessons">
+      {{- range $i, $l := $lessons }}
+      <li>
+        <a href="{{ $l.RelPermalink }}">
+          <span class="lesson-no">{{ printf "%02d" (add $i 1) }}</span>
+          <div>
+            <p class="lesson-meta">{{ $l.Params.track }} · {{ $l.Params.level | default "入门" }} · 约 {{ $l.Params.duration | default (printf "%d 分钟" $l.ReadingTime) }}</p>
+            <h3>{{ $l.Title }}</h3>
+            {{- with $l.Description }}<p>{{ . }}</p>{{ end }}
+          </div>
+          <span class="log-go" aria-hidden="true">→</span>
+        </a>
+      </li>
+      {{- end }}
+    </ol>
+  </div>
+</section>
+{{- end }}
+
+{{/* ---------- 04 telemetry ---------- */}}
 <section class="block" id="telemetry">
   <div class="wrap">
     <header class="block-head">
-      <p class="kicker"><span>03</span> Telemetry</p>
+      <p class="kicker"><span>04</span> Telemetry</p>
       <h2>一些可以核对的数字</h2>
     </header>
     <ul class="readouts">
@@ -168,11 +200,11 @@
   </div>
 </section>
 
-{{/* ---------- 04 operating principles ---------- */}}
+{{/* ---------- 05 operating principles ---------- */}}
 <section class="block" id="principles">
   <div class="wrap">
     <header class="block-head">
-      <p class="kicker"><span>04</span> Operating System</p>
+      <p class="kicker"><span>05</span> Operating System</p>
       <h2>我做事的几条原则</h2>
       <p class="block-sub">都是我文章里的原话，点进去能看到当时为什么这么说。</p>
     </header>
@@ -190,11 +222,11 @@
   </div>
 </section>
 
-{{/* ---------- 05 community ---------- */}}
+{{/* ---------- 06 community ---------- */}}
 <section class="block" id="community">
   <div class="wrap community-grid">
     <header class="block-head">
-      <p class="kicker"><span>05</span> Community</p>
+      <p class="kicker"><span>06</span> Community</p>
       <h2>社区这件事，<br>我做了很久</h2>
       <p class="block-sub">一个人可以走得很快，一群人才能走得很远。</p>
     </header>
@@ -212,15 +244,15 @@
   </div>
 </section>
 
-{{/* ---------- 06 talks ---------- */}}
+{{/* ---------- 07 talks ---------- */}}
 <section class="block" id="talks">
   <div class="wrap">
     <div class="talks">
       <div class="talks-head">
-        <p class="kicker"><span>06</span> Talks &amp; Advisory</p>
+        <p class="kicker"><span>07</span> Talks &amp; Advisory</p>
         <h2>最近在分享什么</h2>
         <p>{{ $p.talks.cta }}</p>
-        <button class="btn btn-ignite" type="button" data-copy="mai_yang">加微信 mai_yang 聊聊 <span class="copy-hint">复制</span></button>
+        <a class="btn btn-ignite" href="#help">怎么找我帮忙 ↓</a>
       </div>
       <ol class="topics">
         {{- range $i, $t := $p.talks.topics }}
@@ -254,12 +286,19 @@
   </div>
 </section>
 
-{{/* ---------- 07 writing ---------- */}}
+{{/* ---------- 08 help ---------- */}}
+<section class="block" id="help">
+  <div class="wrap">
+    {{ partial "help-ladder.html" (dict "no" "08" "contact" true) }}
+  </div>
+</section>
+
+{{/* ---------- 09 writing ---------- */}}
 <section class="block" id="writing">
   <div class="wrap">
     <header class="block-head block-head-row">
       <div>
-        <p class="kicker"><span>07</span> Log</p>
+        <p class="kicker"><span>09</span> Log</p>
         <h2>最近写的</h2>
       </div>
       <a class="more" href="{{ "/post/" | relURL }}">全部 {{ len $posts }} 篇 · 从 {{ (index $posts.ByDate 0).Date.Year }} 年写到现在 →</a>
@@ -281,11 +320,11 @@
   </div>
 </section>
 
-{{/* ---------- 08 pit wall ---------- */}}
+{{/* ---------- 10 pit wall ---------- */}}
 <section class="block" id="contact">
   <div class="wrap pit">
     <div class="pit-card">
-      <p class="kicker"><span>08</span> Off Track</p>
+      <p class="kicker"><span>10</span> Off Track</p>
       <p class="pit-text">{{ $p.offtrack }}</p>
       <div class="flag" aria-hidden="true"></div>
     </div>

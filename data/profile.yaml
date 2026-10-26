@@ -160,10 +160,29 @@ talks:
       url: "https://cursor-insider.com/talks/ai-maker-summit-2026/"
   cta: 如果你正在推进企业内部的 AI 转型，或者对 Cursor、Context Engineering 和 AI Coding 工作流感兴趣，欢迎找我交流。
 
+# 「想找我帮忙」三档：首页 #help、/learn/、每篇教程结尾、llms.txt 都读这一份。
+# 微信号只在首页 #help 显示，其他页面的 copy 按钮会换成跳到 /#help 的链接。
+help:
+  title: 想找我帮忙？
+  sub: 能公开写的，我都写成了教程和文章，这部分免费。一对一的时间有限，所以收费。
+  tiers:
+    - tag: FREE
+      name: 入门教程 + 文章
+      price: 免费
+      desc: 我自己踩过的坑，整理成新手照着就能走的步骤。看完还有问题，在文章下面留言，或者在 X 上 @我。
+      cta: { label: 从入门教程开始 →, url: /learn/ }
+    - tag: "1:1"
+      name: 答疑解惑
+      price: ¥599
+      desc: 你手上有一个具体的问题：Cursor / Agent 工作流卡住了，独立开发和上架拿不准，技术选型心里没底。
+      cta: { label: 微信 mai_yang, copy: mai_yang }
+    - tag: TEAM
+      name: 深度培训 / 咨询
+      price: 另谈
+      desc: 企业 AI 转型落地、Cursor 与 Context Engineering 团队培训、AI Coding 工程实践。同一个微信，加的时候说明是团队需求。
+
 offtrack: 写代码之外，我是 F1 车迷，也跑马拉松和越野赛。赛道上见。
 
 contact:
   - { label: x, value: "@MaiYangAI", url: "https://x.com/MaiYangAI" }
-  - { label: wechat, value: mai_yang, copy: mai_yang }
   - { label: github, value: yangwenmai, url: "https://github.com/yangwenmai" }
-  - { label: email, value: yangwen.yw@gmail.com, url: "mailto:yangwen.yw@gmail.com" }

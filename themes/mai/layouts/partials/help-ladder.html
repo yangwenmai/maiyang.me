@@ -1,0 +1,34 @@
+{{- /* compact: 教程结尾用，不渲染标题。contact: 只有首页传 true，才显示微信号 */ -}}
+{{- $h := site.Data.profile.help }}
+{{- $compact := .compact | default false }}
+{{- $contact := .contact | default false }}
+<div class="help{{ if $compact }} help-compact{{ end }}">
+  {{- if not $compact }}
+  <header class="block-head">
+    <p class="kicker"><span>{{ .no | default "//" }}</span> Help</p>
+    <h2>{{ $h.title }}</h2>
+    <p class="block-sub">{{ $h.sub }}</p>
+  </header>
+  {{- else }}
+  <p class="help-lead"><b>卡住了？</b>{{ $h.sub }}</p>
+  {{- end }}
+  <ol class="tiers">
+    {{- range $i, $t := $h.tiers }}
+    <li class="tier{{ if eq $i 1 }} tier-hot{{ end }}">
+      <span class="tier-tag">{{ $t.tag }}</span>
+      <h3>{{ $t.name }}</h3>
+      <p class="tier-price">{{ $t.price }}</p>
+      <p class="tier-desc">{{ $t.desc }}</p>
+      {{- with $t.cta }}
+        {{- if and .copy $contact }}
+      <button type="button" class="btn btn-ignite" data-copy="{{ .copy }}">{{ .label }} <span class="copy-hint">复制</span></button>
+        {{- else if .copy }}
+      <a class="btn btn-ignite" href="{{ "/#help" | relURL }}">怎么联系 →</a>
+        {{- else }}
+      <a class="btn btn-line" href="{{ .url | relURL }}">{{ .label }}</a>
+        {{- end }}
+      {{- end }}
+    </li>
+    {{- end }}
+  </ol>
+</div>
