@@ -4,7 +4,6 @@
 {{- $a := hugo.Data.about }}
 {{- $posts := where .Site.RegularPages "Section" "post" }}
 {{- $x := index (where $p.contact "label" "x") 0 }}
-{{- $wechat := index (where $p.contact "label" "wechat") 0 }}
 {{- $github := index (where $p.contact "label" "github") 0 }}
 {{- $products := first $a.products.show $p.products }}
 {{- $story := index $p.products 0 }}
@@ -27,7 +26,7 @@
       <p class="ab-lede">{{ $a.lede | markdownify }}</p>
       <div class="ab-actions">
         <a class="btn btn-ignite" href="{{ $x.url }}" target="_blank" rel="me noopener">关注 {{ $x.value }}</a>
-        <button class="btn btn-line" type="button" data-copy="{{ $wechat.copy }}">微信 {{ $wechat.value }} <span class="copy-hint">复制</span></button>
+        <a class="btn btn-line" href="#help">599 答疑</a>
         <a class="btn btn-ghost" href="{{ $github.url }}" target="_blank" rel="me noopener">GitHub ↗</a>
       </div>
     </div>
@@ -54,7 +53,8 @@
         <li><a href="#products"><span>03</span>产品</a></li>
         <li><a href="#work"><span>04</span>工作</a></li>
         <li><a href="#talks"><span>05</span>分享</a></li>
-        <li><a href="#life"><span>06</span>写代码之外</a></li>
+        <li><a href="#help"><span>06</span>找我帮忙</a></li>
+        <li><a href="#life"><span>07</span>写代码之外</a></li>
       </ol>
     </nav>
 
@@ -149,8 +149,12 @@
         </ol>
       </section>
 
+      <section class="ab-ch" id="help">
+        {{ partial "help-ladder.html" (dict "no" "06" "contact" true) }}
+      </section>
+
       <section class="ab-ch" id="life">
-        <p class="kicker"><span>06</span> Off Track</p>
+        <p class="kicker"><span>07</span> Off Track</p>
         <h2>{{ $a.life.title }}</h2>
         <ul class="ab-life">
           {{- range $a.life.items }}
@@ -174,7 +178,7 @@
         <div><h2>{{ $a.closing.title }}</h2><p>{{ $a.closing.desc }}</p></div>
         <div class="ab-actions">
           <a class="btn btn-ignite" href="{{ $x.url }}" target="_blank" rel="me noopener">{{ $x.value }}</a>
-          <button class="btn btn-line" type="button" data-copy="{{ $wechat.copy }}">{{ $wechat.value }} <span class="copy-hint">复制</span></button>
+          <a class="btn btn-line" href="#help">599 答疑</a>
         </div>
       </section>
     </div>

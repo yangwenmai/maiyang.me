@@ -186,3 +186,4 @@ offtrack: 写代码之外，我是 F1 车迷，也跑马拉松和越野赛。赛
 contact:
   - { label: x, value: "@MaiYangAI", url: "https://x.com/MaiYangAI" }
   - { label: github, value: yangwenmai, url: "https://github.com/yangwenmai" }
+  - { label: wechat, value: mai_yang, copy: mai_yang, private: true }   # private：首页底部不显示，只在 #help 里出现

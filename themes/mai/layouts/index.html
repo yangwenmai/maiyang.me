@@ -331,7 +331,7 @@
     <div class="ping">
       <p class="kicker">$ ping mai</p>
       <ul>
-        {{- range $p.contact }}
+        {{- range where $p.contact "private" "!=" true }}
         <li>
           <span class="ping-key">--{{ .label }}</span>
           {{- if .copy }}<button type="button" class="linkish" data-copy="{{ .copy }}">{{ .value }} <span class="copy-hint">复制</span></button>
