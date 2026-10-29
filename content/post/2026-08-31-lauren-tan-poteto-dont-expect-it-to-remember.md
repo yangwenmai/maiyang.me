@@ -6,6 +6,7 @@ lastmod: 2026-08-31T21:30:00+08:00
 draft: false
 description: '她的博客 2020 年停更，答应要写的领导力原则一直没发。六年后这些原则装进了 pstack。这篇把她那三篇组织文、Grok Bot 的公开表述，和十年时间线放在一起，说清楚 builder 该学什么、为什么学、学不到会怎样。'
 categories: [Thinking]
+genre: notes
 tags: ["Lauren Tan", "poteto", "pstack", "Grok Bot", "React Compiler", "Agent", "开源"]
 comments: true
 author: MaiYang

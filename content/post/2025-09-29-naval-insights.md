@@ -6,6 +6,7 @@ lastmod: 2025-09-29T21:00:00+08:00
 draft: false
 description: ''
 categories: [ai]
+genre: notes
 tags: [ai, Cursor, Meetup, Xiamen]
 comments: true
 author: MaiYang

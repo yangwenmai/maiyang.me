@@ -6,6 +6,7 @@ lastmod: 2026-08-11T22:20:00+08:00
 draft: false
 description: 'Jeff Dean 在 YC Startup School 2026 上给了一条挑项目的判据：去找通用模型成功率 0% 或 1% 的问题，不要碰 20% 的。这篇是我的读后感，包含两位访谈人的资历、我抄下的三条判断、我给这条规则加的两个前提，以及你今晚就能跑的一次测量。'
 categories: [Thinking]
+genre: notes
 tags: ["AI", "Jeff Dean", "Y Combinator", "Agent", "创业"]
 comments: true
 author: MaiYang

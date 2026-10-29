@@ -6,6 +6,7 @@ lastmod: 2025-11-24T20:15:00+08:00
 draft: false
 description: '本文源自于 YC 访谈 Ryo Lu 对一大批 YC 投递的设计作品的评审，通过精炼总结而成！'
 categories: [cursor]
+genre: notes
 tags: [ai, cursor, design]
 comments: true
 author: MaiYang
