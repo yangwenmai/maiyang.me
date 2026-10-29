@@ -58,7 +58,7 @@ grep -rl "<status 或 article id>" content/post/
 - 拿不准时把判断和理由告诉用户，请用户定，不要默认归成原创。
 - **笔记**要检查文中有没有一段作者自己的取舍（认同什么、不认同什么、自己怎么落地）。没有的话，在交付时提醒用户。
 - **清单**先问用户要不要回流。留在 X 上通常就够了；确定要回流，就照常落盘并标 `genre: curation`。
-- 效果：`curation` 不进首页「最近写的」、首页 RSS 和 `llms.txt`；`notes` 和 `curation` 在归档列表和文章页上会显示「笔记」「清单」标签（`themes/mai/layouts/partials/genre.html`）。
+- 效果：首页「最近写的」只放原创；`curation` 也不进首页 RSS 和 `llms.txt`；`notes` 和 `curation` 在归档列表和文章页上会显示「笔记」「清单」标签（`themes/mai/layouts/partials/genre.html`）。
 - X 上的钩子式标题（比如「门槛又又又降了！」）回流时可以建议用户改成陈述式标题，但改不改由用户定。
 
 ## 4. 文件名和 front matter
