@@ -15,7 +15,7 @@ description: 把 MaiYang 在 X 上发的 Article（长文）或 thread 回流成
 
 1. **用户粘贴了全文**：直接用，这种最可靠。
 2. **只给了链接**（`x.com/<user>/status/<id>`）：用内置浏览器（`mcp__Claude_Browser__*`，先读 `built-in-browser` skill）打开。**单篇 status 页不登录也能读**；`x.com/<user>/articles` 列表页需要登录，所以批量时请用户直接给 status 链接清单。
-   - 打开后用 `javascript_tool` 执行 [scripts/extract_article.js](scripts/extract_article.js)，它返回 `{title, date, cover, md}`。`md` 里图片以 `@@IMG <url> | <alt>` 行占位，交给第 5 步的脚本处理。
+   - 打开后用 `javascript_tool` 执行 [scripts/extract_article.js](scripts/extract_article.js)，它返回 `{title, date, cover, md}`。`md` 里图片以 `@@IMG <url> | <alt>` 行占位，交给第 6 步的脚本处理。
    - 抽取结果要人工过一遍再落盘，常见要修的地方：
      - 整行加粗的列表项会被误判成 `##` 小标题（比如 `• opinion`），改回列表；
      - 「1. 人名」这种条目式长清单，写成 `### 1. ...` 小标题，比让 Markdown 当有序列表更稳；
@@ -42,7 +42,26 @@ grep -rl "<status 或 article id>" content/post/
 
 只按 id 查重不够：作者经常是先在博客写好，再发到 X（或者反过来），这种情况下博客里不会有 X 链接。还要拿标题和正文里的关键词（产品名、人名）`grep -il` 一遍。内容相同的、博客版更完整的，直接跳过，在交付时说明。
 
-## 3. 文件名和 front matter
+## 3. 定类型：原创、笔记，还是清单
+
+博客上的文章就是作者的写作样本，先定好类型再落盘。用两个问题判断：
+
+- **删引用测试**：把复述别人的部分全删掉，剩下的还能独立成立吗？
+- **递链接测试**：作者愿意在面试或给 leadership 的材料里主动发这篇的链接吗？
+
+| 类型 | 判断 | front matter |
+|---|---|---|
+| 原创 | 两个测试都过：自己的实践、判断、复盘 | 不写 `genre` |
+| 笔记 | 删引用后剩不到三成：人物拆解、听课笔记、改写别人的文章 | `genre: notes` |
+| 清单 | 名单、资源合集、为涨粉写的引流文 | `genre: curation` |
+
+- 拿不准时把判断和理由告诉用户，请用户定，不要默认归成原创。
+- **笔记**要检查文中有没有一段作者自己的取舍（认同什么、不认同什么、自己怎么落地）。没有的话，在交付时提醒用户。
+- **清单**先问用户要不要回流。留在 X 上通常就够了；确定要回流，就照常落盘并标 `genre: curation`。
+- 效果：首页「最近写的」只放原创；`curation` 也不进首页 RSS 和 `llms.txt`；`notes` 和 `curation` 在归档列表和文章页上会显示「笔记」「清单」标签（`themes/mai/layouts/partials/genre.html`）。
+- X 上的钩子式标题（比如「门槛又又又降了！」）回流时可以建议用户改成陈述式标题，但改不改由用户定。
+
+## 4. 文件名和 front matter
 
 文件路径：`content/post/YYYY-MM-DD-<english-kebab-slug>.md`。slug 用英文，3–7 个词，概括主题，参考已有文件名，比如 `2026-08-11-jeff-dean-1-percent-rule-yc-interview.md`。
 
@@ -57,6 +76,7 @@ lastmod: 2026-10-08T21:30:00+08:00
 draft: false
 description: '<1–3 句，尽量用原文开头的话，不要写成营销文案>'
 categories: [AI]
+genre: notes        # 见第 3 步；原创不写这一行
 tags: ["AI", "...", "..."]
 comments: true
 author: MaiYang
@@ -77,7 +97,7 @@ x:
 - `tags` 3–6 个，用带引号的数组写法。
 - 标题、描述里有单引号时，改用双引号包起来，或者转义。
 
-## 4. 正文转换
+## 5. 正文转换
 
 - X Article 的小标题转成 `##` / `###`；加粗、列表、引用、代码块转成对应的 Markdown。
 - 第一段之前不加 `# 标题`，主题会渲染 `title`。
@@ -89,7 +109,7 @@ x:
 - 删除线（`<s>`）保留成 `~~…~~`，这通常是作者有意留下的改动痕迹。
 - 文末不用再写「本文首发于 X」，X 卡片已经覆盖了这个信息。
 
-## 5. 图片
+## 6. 图片
 
 本仓库的图片放在 `blog/` 目录下，正文里用 GitHub raw 地址引用：
 
@@ -113,7 +133,7 @@ python3 -I .claude/skills/x2blog/scripts/fetch_images.py . content/post/<file>.m
 
 跑完后检查：`grep -l '@@IMG' content/post/*.md` 应该没有结果；`file` 检查新图都是 image data。
 
-## 6. 提交
+## 7. 提交
 
 1. 如果当前在 `master` 上，先开分支：`git checkout -b post/<slug>`。如果已经在一个工作分支上，就直接用。
 2. 把文章和图片一起 commit，commit message 沿用仓库风格：
@@ -123,16 +143,16 @@ python3 -I .claude/skills/x2blog/scripts/fetch_images.py . content/post/<file>.m
    结尾加上系统要求的 Co-Authored-By 行。
 3. **不 push，不开 PR**，除非用户要求。
 
-## 7. 交付
+## 8. 交付
 
 最后给用户：
 - 文章文件链接，以及下载了哪些图片；
-- 需要用户确认的点：标题（尤其是 thread 新起的标题）、分类、发布时间是否准确、哪些内容没抓到；
+- 需要用户确认的点：标题（尤其是 thread 新起的标题）、分类、类型（`genre`）、发布时间是否准确、哪些内容没抓到；
 - 构建校验：`hugo -d <scratchpad>/out` 应该没有 ERROR；`grep -l 'class="x-card"' <out>/post/*/index.html` 能看到新文章。要看效果可以起 `hugo server`，在内置浏览器里打开对应文章。
 
 ## 批量补录
 
 用户要求把一段时间内的 Article 全部补进来时：
 1. 先列出清单（标题 + 链接 + 日期），请用户勾选；
-2. 每篇按上面第 1–5 步处理，每篇单独一个 commit；
+2. 每篇按上面第 1–6 步处理，每篇单独一个 commit；
 3. 最后汇总成功和失败的清单，失败的原因通常是需要登录或者内容抓不全。

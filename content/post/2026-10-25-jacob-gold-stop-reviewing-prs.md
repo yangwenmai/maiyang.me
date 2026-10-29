@@ -6,6 +6,7 @@ lastmod: 2026-10-25T06:24:00+08:00
 draft: false
 description: '7 月底，Jacob Gold 说自己过去四年半的主业，就是给人做一个审代码的界面。10 月 9 日，他又发了一句「convincing people not to review prs is the bottleneck」：现在的瓶颈，是说服大家别去审 PR。'
 categories: [人物]
+genre: notes
 tags: ["AI", "Jacob Gold", "Code Review", "Origin", "Agent"]
 comments: true
 author: MaiYang

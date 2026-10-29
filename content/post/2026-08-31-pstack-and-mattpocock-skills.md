@@ -6,6 +6,7 @@ lastmod: 2026-09-01T11:20:00+08:00
 draft: false
 description: '我从网上读到 Lauren 的 pstack 和 Matt 的 skills。这篇只谈一件事：他们各自要解决什么问题，像我这样的普通人该怎么开始。选一套，或者两套一起用，都可以。'
 categories: [Thinking]
+genre: notes
 tags: ["pstack", "Matt Pocock", "Agent Skills", "Cursor", "grill-me", "poteto-mode"]
 comments: true
 author: MaiYang

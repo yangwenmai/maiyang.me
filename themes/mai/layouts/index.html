@@ -304,12 +304,12 @@
       <a class="more" href="{{ "/post/" | relURL }}">全部 {{ len $posts }} 篇 · 从 {{ (index $posts.ByDate 0).Date.Year }} 年写到现在 →</a>
     </header>
     <ol class="log">
-      {{- range first 6 $posts.ByDate.Reverse }}
+      {{- range first 6 (where $posts "Params.genre" "eq" nil).ByDate.Reverse }}
       <li>
         <a href="{{ .RelPermalink }}">
           <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time>
           <div>
-            <h3>{{ .Title }}</h3>
+            <h3>{{ .Title }}{{ partial "genre.html" . }}</h3>
             {{- with .Description }}<p>{{ . }}</p>{{ end }}
           </div>
           <span class="log-go" aria-hidden="true">→</span>

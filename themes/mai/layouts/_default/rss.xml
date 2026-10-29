@@ -1,4 +1,4 @@
-{{- $pages := where .Site.RegularPages "Section" "post" }}
+{{- $pages := where (where .Site.RegularPages "Section" "post") "Params.genre" "!=" "curation" }}
 {{- if not .IsHome }}{{ $pages = .Pages }}{{ end }}
 {{- $limit := .Site.Config.Services.RSS.Limit | default 20 }}
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}

@@ -1,0 +1,1 @@
+{{- with .Params.genre }}<span class="genre genre-{{ . }}">{{ index (dict "notes" "笔记" "curation" "清单") . | default . }}</span>{{ end -}}

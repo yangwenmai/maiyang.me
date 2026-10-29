@@ -57,7 +57,7 @@
 {{ end }}
 ## Recent writing
 
-{{ range first 20 $posts }}- [{{ .Title }}]({{ .Permalink }}) ({{ .Date.Format "2006-01-02" }}){{ with .Description }}: {{ . }}{{ end }}
+{{ range first 20 (where $posts "Params.genre" "!=" "curation") }}- [{{ .Title }}]({{ .Permalink }}) ({{ .Date.Format "2006-01-02" }}{{ with .Params.genre }}, {{ . }}{{ end }}){{ with .Description }}: {{ . }}{{ end }}
 {{ end }}
 ## More
 

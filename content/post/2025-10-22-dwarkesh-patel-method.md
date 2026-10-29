@@ -6,6 +6,7 @@ lastmod: 2025-10-22T20:46:00+08:00
 draft: false
 description: 'dwarkesh patel 何许人也？为什么他能访谈各行各业的顶级大佬！OpenAI Ilya Sutskever, Andrej Karpathy，Mark Zuckerberg, Marc Andreessen, Demis Hassabis 他的方法论是什么？我们作为学习者能够从他身上学的是什么？'
 categories: [人物]
+genre: notes
 tags: []
 comments: true
 author: MaiYang

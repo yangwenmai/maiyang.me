@@ -6,6 +6,7 @@ lastmod: 2026-08-30T12:02:00+08:00
 draft: false
 description: '刚好今天 Grok Bot Meetup Shenzhen 在线下举办，我顺势整理一批值得你关注的 Grok Bot 探索者：官方团队、把 Bot 当同事用的 builder，以及行业大佬怎么评价 Grok Bot。'
 categories: [人物]
+genre: curation
 tags: ["AI", "Grok Bot", "X", "人物"]
 comments: true
 author: MaiYang
