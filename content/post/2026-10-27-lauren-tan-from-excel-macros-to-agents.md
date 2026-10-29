@@ -6,6 +6,7 @@ lastmod: 2026-10-27T12:26:00+08:00
 draft: false
 description: "Lauren Tan didn't study computer science. In 2024 she was skeptical that agents could write production code; on September 21, 2026 she posted: \"here's how i shipped 2,500 PRs last month to production\"."
 categories: [人物]
+genre: notes
 tags: ["AI", "Lauren Tan", "Agent", "Grok Bot", "pstack"]
 comments: true
 author: MaiYang

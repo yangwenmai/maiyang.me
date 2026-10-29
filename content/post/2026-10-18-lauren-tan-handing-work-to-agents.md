@@ -6,6 +6,7 @@ lastmod: 2026-10-18T07:41:00+08:00
 draft: false
 description: '2024 年那会儿，Lauren Tan 也不太相信 agent 能写出进生产环境的代码；2026 年 9 月，她一个月往生产环境合了 2500 个 PR。她没读过 CS，大学学的是金融。她的路，对没有 CS 背景的人尤其有参考价值。'
 categories: [人物]
+genre: notes
 tags: ["AI", "Lauren Tan", "Agent", "Grok Bot", "pstack"]
 comments: true
 author: MaiYang

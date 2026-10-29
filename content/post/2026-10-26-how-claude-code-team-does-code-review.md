@@ -6,6 +6,7 @@ lastmod: 2026-10-26T22:04:00+08:00
 draft: false
 description: 'Claude Code 大约 90% 的代码是由 Claude 写的。那在这种体量下，Code Review 怎么做？还有人读代码吗？代码出问题了怎么办？改写自 Addy Osmani 分享的 Claude Code 团队原文。'
 categories: [AI]
+genre: notes
 tags: ["AI", "Claude Code", "Code Review", "Agent", "Anthropic"]
 comments: true
 author: MaiYang

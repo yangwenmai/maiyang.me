@@ -6,6 +6,7 @@ lastmod: 2026-08-18T23:00:00+08:00
 draft: false
 description: 'Stay Superlinear 第一场大师课是 Howie Xu 的《AI Era Career》。我花了 4 小时看了两遍，第一遍以为全懂了，第二遍边看边暂停，一动笔才发现自己啥都没记住。这篇是我的完整课堂笔记：徐老师 slide 上的原话、现场速记、事后查证补全的背景历史、扎我最深的思考，以及我真正打算改的三件事。'
 categories: [Thinking]
+genre: notes
 tags: ["AI", "职业发展", "Superlinear", "Context Engineering", "学习方法"]
 comments: true
 author: MaiYang

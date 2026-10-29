@@ -6,6 +6,7 @@ lastmod: 2026-08-25T19:42:00+08:00
 draft: false
 description: '我把 castmind.ai 里活跃在 X 上的 AI 人物筛了一遍，做成一份 X list。按模型和实验室、产品和 Agent、研究、生态四类，给每个人写两段：他做过什么，以及我用来认人的那个标记。'
 categories: [人物]
+genre: curation
 tags: ["AI", "X", "人物", "CastMind"]
 comments: true
 author: MaiYang
