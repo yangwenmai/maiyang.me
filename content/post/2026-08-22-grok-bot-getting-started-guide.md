@@ -21,7 +21,7 @@ x:
 
 ![Grok Bot 从入门到进阶](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/grok-bot-getting-started-guide-1.jpg)
 
-朋友们好呀！我是 SpaceXAI Ambassador **Mai Yang**。
+朋友们好呀！我是 **Mai Yang**，SpaceXSI Community 的 Build ambassador。
 
 [Grok Bot 从 2026.08.11 推出](https://x.ai/news/introducing-grok-bot)以来就得到大家的广泛关注，不过对于还没有接触过的人来说可能会问一个问题：它究竟是什么？它可以怎么用？
 

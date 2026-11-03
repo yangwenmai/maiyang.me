@@ -21,7 +21,7 @@ x:
 
 ![刷不完的 AI 资讯，缺的不是更多精选](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/ai-news-overload-build-your-own-digest-bot-1.jpg)
 
-大家好呀，我是 SpaceXAI 中国区首位 Ambassador MaiYang。
+大家好呀，我是 MaiYang，Cursor 中国区首位 Ambassador，现在是 SpaceXSI Community 的 Build ambassador。
 
 早上打开朋友圈，X 时间线，各种大模型、新产品发布、定价调整、长文解读、融资传闻，一条接一条。不追，怕自己掉队，漏掉让自己变强的机会。追，碎片化时间全耗在各式各样的资讯上了。刷完一圈，能真正用到自己身上的，少之又少。
 

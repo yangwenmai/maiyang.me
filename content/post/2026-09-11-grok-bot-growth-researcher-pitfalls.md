@@ -21,7 +21,7 @@ x:
 
 ![从 Lauren 不信规划说起](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/grok-bot-growth-researcher-pitfalls-1.jpg)
 
-朋友们好呀，我是 SpaceXAI Ambassador MaiYangAI。
+朋友们好呀，我是 MaiYangAI，SpaceXSI Community 的 Build ambassador。
 
 Grok Bot (ex-Cursor) 的 Lauren Tan（[@poteto](https://x.com/poteto)）在 pstack 里说过一句很反常识话。
 
