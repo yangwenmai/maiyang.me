@@ -21,7 +21,7 @@ x:
 
 ![Grok Bot 怎么省额度](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/grok-bot-save-usage-sweeper-1.jpg)
 
-朋友们好呀，我是 SpaceXAI Ambassador MaiYang。
+朋友们好呀，我是 MaiYang，SpaceXSI Community 的 Build ambassador。
 
 先说一句可能得罪人的话。
 

@@ -21,7 +21,7 @@ x:
 
 ![Grok Bot 强在哪](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/grok-bot-vs-work-agents-1.jpg)
 
-朋友们好呀，我是 SpaceXAI Ambassador [@MaiYang](https://x.com/maiyangai)。
+朋友们好呀，我是 [@MaiYang](https://x.com/maiyangai)，SpaceXSI Community 的 Build ambassador。
 
 在 Grok Bot 深圳 Meetup 之后，很多人都有问： Grok Bot 和 Codex、WorkBuddy 等这类按工作区推进的 Agent，有什么差别？ Grok Bot 强在哪？
 

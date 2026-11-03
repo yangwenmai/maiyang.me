@@ -21,7 +21,7 @@ x:
 
 ![一天几百个 PR 有什么意义](https://raw.githubusercontent.com/yangwenmai/maiyang.me/master/blog/hundreds-of-prs-a-day-nine-work-lines-1.jpg)
 
-朋友们好呀，我是 SpaceXAI Ambassador MaiYangAI。
+朋友们好呀，我是 MaiYangAI，SpaceXSI Community 的 Build ambassador。
 
 这篇想聊三件事。
 
