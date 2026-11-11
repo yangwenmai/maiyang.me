@@ -23,7 +23,7 @@ x:
 
 「先学好一个产品，再学好一个人」
 
-我是 Mai Yang，CastMind（原名 ContextEcho）的作者，也是 SpaceXAI Ambassador，平时也办线下活动。这段时间我一直在看别人是怎么做好 builder 的，自己也在琢磨，怎么成为一个更好的 builder。最近，我的 X 关注到了 5000。
+我是 Mai Yang，CastMind（原名 ContextEcho）的作者，也是 SpaceXSI Community 的 Build ambassador，平时也办线下活动。这段时间我一直在看别人是怎么做好 builder 的，自己也在琢磨，怎么成为一个更好的 builder。最近，我的 X 关注到了 5000。
 
 回头看这几个月，有三件事我最想分享给你。
 

@@ -3,7 +3,7 @@
 
 avatar: /images/avatar.webp
 avatar_fallback: /images/avatar.jpg
-role: SpaceXAI · Cursor 中国区首位 Ambassador · Go 夜读发起人
+role: SpaceXSI Community · Build ambassador · Cursor 中国区首位 Ambassador · Go 夜读发起人
 lede: 2013 年开始写博客，坚持 Build in Public。白天做研发管理，晚上和周末和 Agent 一起把想法**变成真正可以交付的产品**。现在专注 AI Coding、Context Engineering 和工程实践怎么结合。
 
 # 右侧速览卡
@@ -16,7 +16,7 @@ facts:
   - { key: Off, value: F1 · 马拉松 · 越野跑 }
 
 # 数字条：按 label 从 profile.yaml 的 stats 里挑，最后会自动补上产品数
-stats: [Go 夜读 GitHub Star, 期视频分享, 场 Cursor 官方活动, 篇博客]
+stats: [Go 夜读 GitHub Star, 期视频分享, 场 Cursor 社区活动, 篇博客]
 
 now:
   title: 把业余时间都投给了 AI
